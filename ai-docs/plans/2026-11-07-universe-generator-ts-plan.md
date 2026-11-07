@@ -36,7 +36,7 @@ Public repo `m4bwav/universe-generator-ts` (guess; the npm name stays `universe-
 
 ### Stage 2. The port (L, several sessions)
 
-Port in dependency order and turn each golden file green before the next: core, tables, names and star-name, galaxy and shapes, system, planet and orbital-elements, moon-belt, cluster, universe, galaxy-extras, constraints, presets, hooks, diagnostics, export. Keep the C# public API's shape in idiomatic TypeScript (camelCase, classes or plain objects, lazy children as getters), and write a mapping table C# to TS in the README. Port the repo rules too (no `Math.random`, no raw `Math.sin/pow/exp/log/atan2` outside dmath, a lint test like `RepoRulesTests.cs`).
+Port in dependency order and turn each golden file green before the next: core, star-name, galaxy and shapes, system, then tables and names (both generate galaxies and systems, so they turn green after system; corrected 2026-11-07), planet and orbital-elements, moon-belt, cluster, universe, galaxy-extras, constraints, presets, hooks, diagnostics, export. Keep the C# public API's shape in idiomatic TypeScript (camelCase, classes or plain objects, lazy children as getters), and write a mapping table C# to TS in the README. Port the repo rules too (no `Math.random`, no raw `Math.sin/pow/exp/log/atan2` outside dmath, a lint test like `RepoRulesTests.cs`).
 
 ### Stage 3. Package (M)
 
