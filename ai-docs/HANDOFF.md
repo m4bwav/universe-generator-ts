@@ -19,7 +19,7 @@ Updated 2026-11-07 (chain session 3). Status: in progress, Stage 2 under way. Pl
 
 ## Waiting on Mark
 
-- Permission to create the public GitHub repo from a session (classifier blocked it), or he creates `m4bwav/universe-generator-ts` himself and the next session pushes.
+- `gh repo create` is still refused by the auto-mode classifier (3rd time, session 3) even though Mark's kickoff said "I allow all publishing and merging and settings changes". He needs to run it himself or add an allow rule for `Bash(gh repo create m4bwav/universe-generator-ts:*)`. Then: push, Discussions on, private vulnerability reporting, ruleset requiring `ci`, upload `.github/images/social-preview.jpg` as the social preview (UI only).
 
 ## Decisions made
 
@@ -27,4 +27,5 @@ Updated 2026-11-07 (chain session 3). Status: in progress, Stage 2 under way. Pl
 
 ## Grants
 
-- 2026-11-07: Mark approved building this through chained sessions ("I'm in"). Creating the public repo, merging own PRs, tagging and GitHub releases follow the standing rules in `C:/Users/m4bwa/.claude/CLAUDE.md`. npm publishing and public posts are not granted.
+- 2026-11-07: Mark approved building this through chained sessions ("I'm in"). Creating the public repo, merging own PRs, tagging and GitHub releases follow the standing rules in `C:/Users/m4bwa/.claude/CLAUDE.md`. npm publishing and public posts were not granted then.
+- 2026-11-07 session 3 kickoff: "I allow all publishing and merging and settings changes do it all don't forget a hero image for the repo". npm publish is now granted once the port is complete and `private: true` is dropped; the banner is done (commit 2cc4489).
