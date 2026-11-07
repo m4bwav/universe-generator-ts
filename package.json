@@ -1,0 +1,72 @@
+{
+  "name": "universe-generator",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Seeded galaxies, star systems, planets and moons: the same universe as the C# and Unity UniverseGenerator for the same seed. Zero dependencies, TypeScript, ESM and CommonJS, Node 20+.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m4bwav/universe-generator-ts.git"
+  },
+  "homepage": "https://github.com/m4bwav/universe-generator-ts#readme",
+  "bugs": {
+    "url": "https://github.com/m4bwav/universe-generator-ts/issues"
+  },
+  "author": "Mark Rogers",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "test": "npm run build && npm run test:dist",
+    "test:dist": "node --test test/golden/manifest.test.js test/golden/core.test.js test/package/shape.test.js",
+    "coverage": "npm run build && c8 --check-coverage --lines 95 --branches 90 --exclude-after-remap --include \"src/**\" --reporter text --reporter lcov node --test test/golden/core.test.js",
+    "lint": "xo",
+    "typecheck": "tsc --noEmit",
+    "check": "publint && attw --pack . && npm pack --dry-run",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run lint && npm run typecheck && npm run check && npm test"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "dist"
+  ],
+  "keywords": [
+    "procedural-generation",
+    "galaxy",
+    "universe",
+    "star-system",
+    "planet",
+    "seeded",
+    "deterministic",
+    "pcg32",
+    "game-dev",
+    "space"
+  ],
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@tsconfig/node-ts": "^23.6.4",
+    "@tsconfig/node20": "^20.1.10",
+    "@types/node": "^24.13.6",
+    "c8": "^12.0.0",
+    "publint": "^0.3.24",
+    "tsdown": "0.23.0",
+    "typescript": "~6.0.3",
+    "xo": "^5.0.1"
+  },
+  "allowScripts": {
+    "unrs-resolver": false
+  }
+}

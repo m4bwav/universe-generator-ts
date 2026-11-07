@@ -1,0 +1,1550 @@
+{
+  "generatorVersion": 1,
+  "default": "{\"schema\":\"universe-generator-tables/1\",\"id\":\"default\",\"tables\":[{\"id\":\"star-classes.young\",\"entries\":[{\"name\":\"M\",\"weight\":260},{\"name\":\"K\",\"weight\":170},{\"name\":\"G\",\"weight\":140},{\"name\":\"F\",\"weight\":110},{\"name\":\"A\",\"weight\":90},{\"name\":\"B\",\"weight\":40},{\"name\":\"O\",\"weight\":10},{\"name\":\"WhiteDwarf\",\"weight\":20},{\"name\":\"Giant\",\"weight\":25},{\"name\":\"Supergiant\",\"weight\":15},{\"name\":\"NeutronStar\",\"weight\":6},{\"name\":\"BlackHole\",\"weight\":3}]},{\"id\":\"star-classes.mature\",\"entries\":[{\"name\":\"M\",\"weight\":300},{\"name\":\"K\",\"weight\":200},{\"name\":\"G\",\"weight\":150},{\"name\":\"F\",\"weight\":90},{\"name\":\"A\",\"weight\":50},{\"name\":\"B\",\"weight\":15},{\"name\":\"O\",\"weight\":3},{\"name\":\"WhiteDwarf\",\"weight\":60},{\"name\":\"Giant\",\"weight\":50},{\"name\":\"Supergiant\",\"weight\":8},{\"name\":\"NeutronStar\",\"weight\":10},{\"name\":\"BlackHole\",\"weight\":5}]},{\"id\":\"star-classes.old\",\"entries\":[{\"name\":\"M\",\"weight\":320},{\"name\":\"K\",\"weight\":210},{\"name\":\"G\",\"weight\":140},{\"name\":\"F\",\"weight\":70},{\"name\":\"A\",\"weight\":25},{\"name\":\"B\",\"weight\":4},{\"name\":\"O\",\"weight\":1},{\"name\":\"WhiteDwarf\",\"weight\":110},{\"name\":\"Giant\",\"weight\":80},{\"name\":\"Supergiant\",\"weight\":4},{\"name\":\"NeutronStar\",\"weight\":14},{\"name\":\"BlackHole\",\"weight\":8}]},{\"id\":\"star-classes.plausible\",\"entries\":[{\"name\":\"M\",\"weight\":7250},{\"name\":\"K\",\"weight\":1290},{\"name\":\"G\",\"weight\":590},{\"name\":\"F\",\"weight\":310},{\"name\":\"A\",\"weight\":60},{\"name\":\"B\",\"weight\":4},{\"name\":\"O\",\"weight\":0},{\"name\":\"WhiteDwarf\",\"weight\":590},{\"name\":\"Giant\",\"weight\":40},{\"name\":\"Supergiant\",\"weight\":1},{\"name\":\"NeutronStar\",\"weight\":10},{\"name\":\"BlackHole\",\"weight\":2}]},{\"id\":\"planet-kinds.hot\",\"entries\":[{\"name\":\"Lava\",\"weight\":30},{\"name\":\"Iron\",\"weight\":20},{\"name\":\"Barren\",\"weight\":40},{\"name\":\"Greenhouse\",\"weight\":10}]},{\"id\":\"planet-kinds.warm\",\"entries\":[{\"name\":\"Barren\",\"weight\":25},{\"name\":\"Desert\",\"weight\":30},{\"name\":\"Greenhouse\",\"weight\":20},{\"name\":\"Rocky\",\"weight\":25}]},{\"id\":\"planet-kinds.temperate\",\"entries\":[{\"name\":\"Rocky\",\"weight\":22},{\"name\":\"Ocean\",\"weight\":25},{\"name\":\"Garden\",\"weight\":22},{\"name\":\"Desert\",\"weight\":15},{\"name\":\"Barren\",\"weight\":10}]},{\"id\":\"planet-kinds.cold\",\"entries\":[{\"name\":\"Barren\",\"weight\":30},{\"name\":\"Rocky\",\"weight\":15},{\"name\":\"Ice\",\"weight\":40},{\"name\":\"Desert\",\"weight\":10}]},{\"id\":\"moon-kinds.giant\",\"entries\":[{\"name\":\"Ice\",\"weight\":45},{\"name\":\"Barren\",\"weight\":20},{\"name\":\"Volcanic\",\"weight\":10},{\"name\":\"Ocean\",\"weight\":15},{\"name\":\"Hazy\",\"weight\":10}]}]}",
+  "cases": [
+    {
+      "tables": "red-sky",
+      "galaxy": {
+        "address": "v1-my-seed/galaxy",
+        "shape": "Ring",
+        "arms": 0,
+        "radius": 1000,
+        "core": 14,
+        "regions": [
+          {
+            "name": "Musca Drift",
+            "age": "Young",
+            "theme": "old empire",
+            "centre": 14
+          },
+          {
+            "name": "Carina Spur",
+            "age": "Young",
+            "theme": "nebula maze",
+            "centre": 7
+          }
+        ],
+        "map": [
+          {
+            "name": "HD 147927",
+            "x": 493.51,
+            "y": 557.144,
+            "star": "M",
+            "region": 0,
+            "hops": 4,
+            "danger": 5,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 165595",
+            "x": 272.638,
+            "y": -689.612,
+            "star": "M",
+            "region": 1,
+            "hops": 8,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 28101",
+            "x": 371.209,
+            "y": -603.408,
+            "star": "M",
+            "region": 1,
+            "hops": 6,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 157953",
+            "x": -676.97,
+            "y": 5.801,
+            "star": "M",
+            "region": 1,
+            "hops": 6,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 72568",
+            "x": -165.289,
+            "y": -662.168,
+            "star": "M",
+            "region": 1,
+            "hops": 8,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "78 Virginis",
+            "x": 32.583,
+            "y": 703.65,
+            "star": "M",
+            "region": 0,
+            "hops": 1,
+            "danger": 2,
+            "chokepoint": false
+          },
+          {
+            "name": "LHS 3983",
+            "x": 174.1,
+            "y": 572.756,
+            "star": "M",
+            "region": 0,
+            "hops": 2,
+            "danger": 2,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 178585",
+            "x": -281.812,
+            "y": -666.662,
+            "star": "M",
+            "region": 1,
+            "hops": 9,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "HIP 107462",
+            "x": -600.889,
+            "y": 395.882,
+            "star": "M",
+            "region": 0,
+            "hops": 4,
+            "danger": 4,
+            "chokepoint": false
+          },
+          {
+            "name": "LHS 1077",
+            "x": -563.767,
+            "y": -291.189,
+            "star": "M",
+            "region": 1,
+            "hops": 8,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "TOI-2951",
+            "x": -755.261,
+            "y": 56.276,
+            "star": "M",
+            "region": 1,
+            "hops": 5,
+            "danger": 7,
+            "chokepoint": false
+          },
+          {
+            "name": "Kepler-1334",
+            "x": 645.341,
+            "y": 316.121,
+            "star": "M",
+            "region": 1,
+            "hops": 5,
+            "danger": 7,
+            "chokepoint": false
+          },
+          {
+            "name": "Wolf 959",
+            "x": -201.455,
+            "y": 587.073,
+            "star": "M",
+            "region": 0,
+            "hops": 1,
+            "danger": 3,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 200873",
+            "x": 466.691,
+            "y": 470.17,
+            "star": "M",
+            "region": 0,
+            "hops": 3,
+            "danger": 5,
+            "chokepoint": true
+          },
+          {
+            "name": "HD 67157",
+            "x": -72.311,
+            "y": 552.964,
+            "star": "M",
+            "region": 0,
+            "hops": 0,
+            "danger": 1,
+            "chokepoint": false
+          },
+          {
+            "name": "Ross 128",
+            "x": 560.377,
+            "y": 416.198,
+            "star": "M",
+            "region": 0,
+            "hops": 4,
+            "danger": 4,
+            "chokepoint": false
+          },
+          {
+            "name": "13 Cephei",
+            "x": -378.482,
+            "y": 550.609,
+            "star": "M",
+            "region": 0,
+            "hops": 2,
+            "danger": 2,
+            "chokepoint": false
+          },
+          {
+            "name": "TOI-3622",
+            "x": -720.672,
+            "y": -80.684,
+            "star": "M",
+            "region": 1,
+            "hops": 7,
+            "danger": 9,
+            "chokepoint": false
+          },
+          {
+            "name": "12 Librae",
+            "x": 244.038,
+            "y": -588.723,
+            "star": "M",
+            "region": 1,
+            "hops": 7,
+            "danger": 10,
+            "chokepoint": true
+          },
+          {
+            "name": "HIP 11990",
+            "x": -356.734,
+            "y": 447.245,
+            "star": "M",
+            "region": 0,
+            "hops": 3,
+            "danger": 5,
+            "chokepoint": false
+          }
+        ],
+        "lanes": [
+          [
+            0,
+            13,
+            true
+          ],
+          [
+            1,
+            18,
+            true
+          ],
+          [
+            2,
+            11,
+            false
+          ],
+          [
+            2,
+            18,
+            false
+          ],
+          [
+            3,
+            10,
+            false
+          ],
+          [
+            3,
+            17,
+            false
+          ],
+          [
+            4,
+            7,
+            false
+          ],
+          [
+            4,
+            18,
+            false
+          ],
+          [
+            5,
+            6,
+            false
+          ],
+          [
+            5,
+            14,
+            false
+          ],
+          [
+            6,
+            13,
+            false
+          ],
+          [
+            7,
+            9,
+            false
+          ],
+          [
+            8,
+            10,
+            false
+          ],
+          [
+            8,
+            19,
+            false
+          ],
+          [
+            9,
+            17,
+            false
+          ],
+          [
+            11,
+            15,
+            false
+          ],
+          [
+            12,
+            14,
+            false
+          ],
+          [
+            12,
+            16,
+            false
+          ],
+          [
+            13,
+            15,
+            false
+          ],
+          [
+            16,
+            19,
+            false
+          ]
+        ]
+      },
+      "systems": [
+        {
+          "address": "v1-my-seed/galaxy/system/0",
+          "name": "HD 147927",
+          "age": "Young",
+          "danger": 5,
+          "star": {
+            "class": "M",
+            "spectralType": "M5V",
+            "mass": 0.193,
+            "luminosity": 0.00526,
+            "radius": 0.268655,
+            "temperature": 3002,
+            "colour": "#ffad51",
+            "description": "red dwarf"
+          },
+          "companion": {
+            "orbit": "Wide",
+            "separation": 581.7278,
+            "star": {
+              "class": "M",
+              "spectralType": "M8V",
+              "mass": 0.088,
+              "luminosity": 0.00086,
+              "radius": 0.142921,
+              "temperature": 2614,
+              "colour": "#ffad51",
+              "description": "red dwarf"
+            }
+          },
+          "habitableZone": [
+            0.0544,
+            0.1282
+          ],
+          "frostLine": 0.1958,
+          "planets": [
+            {
+              "address": "v1-my-seed/galaxy/system/0/planet/0",
+              "name": "HD 147927 d",
+              "kind": "Ocean",
+              "zone": "Temperate",
+              "orbit": 0.1114,
+              "period": 30.91,
+              "mass": 2.33,
+              "radius": 1.266,
+              "rings": false,
+              "descriptor": "a temperate ocean world under a red dwarf",
+              "moons": [
+                {
+                  "name": "HD 147927 d I",
+                  "kind": "Barren",
+                  "orbit": 3.29,
+                  "radius": 218
+                },
+                {
+                  "name": "HD 147927 d II",
+                  "kind": "Ice",
+                  "orbit": 4.6,
+                  "radius": 1881
+                }
+              ]
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/0/planet/1",
+              "name": "HD 147927 c",
+              "kind": "Ice",
+              "zone": "Cold",
+              "orbit": 0.1362,
+              "period": 41.81,
+              "mass": 2.8,
+              "radius": 1.333,
+              "rings": false,
+              "descriptor": "a cold ice world under a red dwarf",
+              "moons": []
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/0/planet/2",
+              "name": "HD 147927 e",
+              "kind": "SubNeptune",
+              "zone": "Cold",
+              "orbit": 0.1754,
+              "period": 61.09,
+              "mass": 8.329,
+              "radius": 2.816,
+              "rings": false,
+              "descriptor": "a cold mini-Neptune under a red dwarf",
+              "moons": [
+                {
+                  "name": "HD 147927 e I",
+                  "kind": "Barren",
+                  "orbit": 4.19,
+                  "radius": 3588
+                },
+                {
+                  "name": "HD 147927 e II",
+                  "kind": "Ice",
+                  "orbit": 6.77,
+                  "radius": 2704
+                }
+              ]
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/0/planet/3",
+              "name": "HD 147927 f",
+              "kind": "IceGiant",
+              "zone": "Outer",
+              "orbit": 0.2456,
+              "period": 101.2,
+              "mass": 49.66,
+              "radius": 8.06,
+              "rings": false,
+              "descriptor": "an ice giant far from a red dwarf",
+              "moons": [
+                {
+                  "name": "HD 147927 f I",
+                  "kind": "Ice",
+                  "orbit": 4.86,
+                  "radius": 2183
+                }
+              ]
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/0/planet/4",
+              "name": "HD 147927 b",
+              "kind": "GasGiant",
+              "zone": "Outer",
+              "orbit": 0.5393,
+              "period": 329.24,
+              "mass": 1994.594,
+              "radius": 10.331,
+              "rings": false,
+              "descriptor": "a gas giant far from a red dwarf",
+              "moons": [
+                {
+                  "name": "HD 147927 b I",
+                  "kind": "Ice",
+                  "orbit": 4.17,
+                  "radius": 1580
+                },
+                {
+                  "name": "HD 147927 b II",
+                  "kind": "Hazy",
+                  "orbit": 5.88,
+                  "radius": 2009
+                },
+                {
+                  "name": "HD 147927 b III",
+                  "kind": "Hazy",
+                  "orbit": 10.1,
+                  "radius": 878
+                },
+                {
+                  "name": "HD 147927 b IV",
+                  "kind": "Barren",
+                  "orbit": 15.67,
+                  "radius": 1908
+                },
+                {
+                  "name": "HD 147927 b V",
+                  "kind": "Barren",
+                  "orbit": 26.74,
+                  "radius": 409
+                },
+                {
+                  "name": "HD 147927 b VI",
+                  "kind": "Ice",
+                  "orbit": 50.41,
+                  "radius": 1894
+                },
+                {
+                  "name": "HD 147927 b VII",
+                  "kind": "Volcanic",
+                  "orbit": 73.69,
+                  "radius": 2445
+                }
+              ]
+            }
+          ],
+          "belts": [
+            {
+              "kind": "Asteroid",
+              "inner": 0.3166,
+              "outer": 0.4185
+            }
+          ],
+          "stations": [],
+          "landmarks": [
+            {
+              "kind": "BinaryStar",
+              "outlier": false,
+              "text": "a red dwarf companion"
+            },
+            {
+              "kind": "AsteroidBelt",
+              "outlier": false,
+              "text": "an asteroid belt"
+            }
+          ],
+          "tags": [
+            "holy site"
+          ],
+          "descriptor": "a red dwarf and red dwarf pair with 5 planets and an asteroid belt"
+        },
+        {
+          "address": "v1-my-seed/galaxy/system/1",
+          "name": "HD 165595",
+          "age": "Young",
+          "danger": 10,
+          "star": {
+            "class": "M",
+            "spectralType": "M8V",
+            "mass": 0.083,
+            "luminosity": 0.00075,
+            "radius": 0.136319,
+            "temperature": 2588,
+            "colour": "#ffad51",
+            "description": "red dwarf"
+          },
+          "companion": null,
+          "habitableZone": [
+            0.0205,
+            0.0484
+          ],
+          "frostLine": 0.0739,
+          "planets": [
+            {
+              "address": "v1-my-seed/galaxy/system/1/planet/0",
+              "name": "HD 165595 b",
+              "kind": "Barren",
+              "zone": "Cold",
+              "orbit": 0.0657,
+              "period": 21.35,
+              "mass": 1.062,
+              "radius": 1.017,
+              "rings": false,
+              "descriptor": "a cold barren rock under a red dwarf",
+              "moons": []
+            }
+          ],
+          "belts": [],
+          "stations": [],
+          "landmarks": [
+            {
+              "kind": "Ruins",
+              "outlier": false,
+              "text": "ruins on HD 165595 b"
+            }
+          ],
+          "tags": [
+            "abandoned colony"
+          ],
+          "descriptor": "a red dwarf with one planet"
+        },
+        {
+          "address": "v1-my-seed/galaxy/system/2",
+          "name": "HD 28101",
+          "age": "Young",
+          "danger": 10,
+          "star": {
+            "class": "M",
+            "spectralType": "M0V",
+            "mass": 0.451,
+            "luminosity": 0.04121,
+            "radius": 0.528433,
+            "temperature": 3581,
+            "colour": "#ffad51",
+            "description": "red dwarf"
+          },
+          "companion": null,
+          "habitableZone": [
+            0.1523,
+            0.3589
+          ],
+          "frostLine": 0.5481,
+          "planets": [
+            {
+              "address": "v1-my-seed/galaxy/system/2/planet/0",
+              "name": "HD 28101 c",
+              "kind": "Greenhouse",
+              "zone": "Warm",
+              "orbit": 0.085,
+              "period": 13.48,
+              "mass": 0.839,
+              "radius": 0.952,
+              "rings": false,
+              "descriptor": "a greenhouse world under a red dwarf",
+              "moons": []
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/2/planet/1",
+              "name": "HD 28101 b",
+              "kind": "SubNeptune",
+              "zone": "Warm",
+              "orbit": 0.1419,
+              "period": 29.06,
+              "mass": 10.256,
+              "radius": 3.183,
+              "rings": false,
+              "descriptor": "a warm mini-Neptune under a red dwarf",
+              "moons": [
+                {
+                  "name": "HD 28101 b I",
+                  "kind": "Barren",
+                  "orbit": 3.66,
+                  "radius": 5755
+                }
+              ]
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/2/planet/2",
+              "name": "HD 28101 g",
+              "kind": "SubNeptune",
+              "zone": "Temperate",
+              "orbit": 0.1941,
+              "period": 46.5,
+              "mass": 11.819,
+              "radius": 3.461,
+              "rings": true,
+              "descriptor": "a ringed temperate mini-Neptune under a red dwarf",
+              "moons": []
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/2/planet/3",
+              "name": "HD 28101 f",
+              "kind": "Ocean",
+              "zone": "Temperate",
+              "orbit": 0.2726,
+              "period": 77.4,
+              "mass": 0.616,
+              "radius": 0.874,
+              "rings": false,
+              "descriptor": "a temperate ocean world under a red dwarf",
+              "moons": [
+                {
+                  "name": "HD 28101 f I",
+                  "kind": "Barren",
+                  "orbit": 5.73,
+                  "radius": 341
+                },
+                {
+                  "name": "HD 28101 f II",
+                  "kind": "Ice",
+                  "orbit": 9.29,
+                  "radius": 1214
+                }
+              ]
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/2/planet/4",
+              "name": "HD 28101 d",
+              "kind": "IceGiant",
+              "zone": "Outer",
+              "orbit": 0.7726,
+              "period": 369.35,
+              "mass": 15.078,
+              "radius": 3.994,
+              "rings": true,
+              "descriptor": "a ringed ice giant far from a red dwarf",
+              "moons": [
+                {
+                  "name": "HD 28101 d I",
+                  "kind": "Hazy",
+                  "orbit": 4.07,
+                  "radius": 628
+                },
+                {
+                  "name": "HD 28101 d II",
+                  "kind": "Barren",
+                  "orbit": 6.15,
+                  "radius": 1203
+                }
+              ]
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/2/planet/5",
+              "name": "HD 28101 e",
+              "kind": "GasGiant",
+              "zone": "Outer",
+              "orbit": 1.5947,
+              "period": 1095.25,
+              "mass": 54.307,
+              "radius": 8.496,
+              "rings": true,
+              "descriptor": "a ringed gas giant far from a red dwarf",
+              "moons": [
+                {
+                  "name": "HD 28101 e I",
+                  "kind": "Ice",
+                  "orbit": 3.62,
+                  "radius": 1481
+                },
+                {
+                  "name": "HD 28101 e II",
+                  "kind": "Ice",
+                  "orbit": 5.05,
+                  "radius": 1065
+                }
+              ]
+            }
+          ],
+          "belts": [],
+          "stations": [
+            {
+              "address": "v1-my-seed/galaxy/system/2/station/0",
+              "name": "Gantry Naval Base",
+              "kind": "NavalBase",
+              "planet": null
+            }
+          ],
+          "landmarks": [
+            {
+              "kind": "RingedGiant",
+              "outlier": false,
+              "text": "the rings of HD 28101 d"
+            },
+            {
+              "kind": "RingedGiant",
+              "outlier": false,
+              "text": "the rings of HD 28101 e"
+            }
+          ],
+          "tags": [
+            "refugee haven",
+            "gas mining"
+          ],
+          "descriptor": "a red dwarf with 6 planets"
+        }
+      ]
+    },
+    {
+      "tables": "gardens",
+      "galaxy": {
+        "address": "v1-my-seed/galaxy",
+        "shape": "Ring",
+        "arms": 0,
+        "radius": 1000,
+        "core": 14,
+        "regions": [
+          {
+            "name": "Musca Drift",
+            "age": "Young",
+            "theme": "old empire",
+            "centre": 14
+          },
+          {
+            "name": "Carina Spur",
+            "age": "Young",
+            "theme": "nebula maze",
+            "centre": 7
+          }
+        ],
+        "map": [
+          {
+            "name": "HD 147927",
+            "x": 493.51,
+            "y": 557.144,
+            "star": "K",
+            "region": 0,
+            "hops": 4,
+            "danger": 5,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 165595",
+            "x": 272.638,
+            "y": -689.612,
+            "star": "M",
+            "region": 1,
+            "hops": 8,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 28101",
+            "x": 371.209,
+            "y": -603.408,
+            "star": "K",
+            "region": 1,
+            "hops": 6,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 157953",
+            "x": -676.97,
+            "y": 5.801,
+            "star": "M",
+            "region": 1,
+            "hops": 6,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 72568",
+            "x": -165.289,
+            "y": -662.168,
+            "star": "M",
+            "region": 1,
+            "hops": 8,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "78 Virginis",
+            "x": 32.583,
+            "y": 703.65,
+            "star": "G",
+            "region": 0,
+            "hops": 1,
+            "danger": 2,
+            "chokepoint": false
+          },
+          {
+            "name": "LHS 3983",
+            "x": 174.1,
+            "y": 572.756,
+            "star": "F",
+            "region": 0,
+            "hops": 2,
+            "danger": 2,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 178585",
+            "x": -281.812,
+            "y": -666.662,
+            "star": "M",
+            "region": 1,
+            "hops": 9,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 129519",
+            "x": -600.889,
+            "y": 395.882,
+            "star": "A",
+            "region": 0,
+            "hops": 4,
+            "danger": 4,
+            "chokepoint": false
+          },
+          {
+            "name": "LHS 1077",
+            "x": -563.767,
+            "y": -291.189,
+            "star": "G",
+            "region": 1,
+            "hops": 8,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "TOI-2951",
+            "x": -755.261,
+            "y": 56.276,
+            "star": "F",
+            "region": 1,
+            "hops": 5,
+            "danger": 7,
+            "chokepoint": false
+          },
+          {
+            "name": "Kepler-1334",
+            "x": 645.341,
+            "y": 316.121,
+            "star": "K",
+            "region": 1,
+            "hops": 5,
+            "danger": 7,
+            "chokepoint": false
+          },
+          {
+            "name": "Wolf 959",
+            "x": -201.455,
+            "y": 587.073,
+            "star": "G",
+            "region": 0,
+            "hops": 1,
+            "danger": 3,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 200873",
+            "x": 466.691,
+            "y": 470.17,
+            "star": "M",
+            "region": 0,
+            "hops": 3,
+            "danger": 5,
+            "chokepoint": true
+          },
+          {
+            "name": "Berehynia",
+            "x": -72.311,
+            "y": 552.964,
+            "star": "A",
+            "region": 0,
+            "hops": 0,
+            "danger": 1,
+            "chokepoint": false
+          },
+          {
+            "name": "Ross 128",
+            "x": 560.377,
+            "y": 416.198,
+            "star": "M",
+            "region": 0,
+            "hops": 4,
+            "danger": 4,
+            "chokepoint": false
+          },
+          {
+            "name": "13 Cephei",
+            "x": -378.482,
+            "y": 550.609,
+            "star": "G",
+            "region": 0,
+            "hops": 2,
+            "danger": 2,
+            "chokepoint": false
+          },
+          {
+            "name": "TOI-3622",
+            "x": -720.672,
+            "y": -80.684,
+            "star": "M",
+            "region": 1,
+            "hops": 7,
+            "danger": 9,
+            "chokepoint": false
+          },
+          {
+            "name": "12 Librae",
+            "x": 244.038,
+            "y": -588.723,
+            "star": "G",
+            "region": 1,
+            "hops": 7,
+            "danger": 10,
+            "chokepoint": true
+          },
+          {
+            "name": "HIP 11990",
+            "x": -356.734,
+            "y": 447.245,
+            "star": "G",
+            "region": 0,
+            "hops": 3,
+            "danger": 5,
+            "chokepoint": false
+          }
+        ],
+        "lanes": [
+          [
+            0,
+            13,
+            true
+          ],
+          [
+            1,
+            18,
+            true
+          ],
+          [
+            2,
+            11,
+            false
+          ],
+          [
+            2,
+            18,
+            false
+          ],
+          [
+            3,
+            10,
+            false
+          ],
+          [
+            3,
+            17,
+            false
+          ],
+          [
+            4,
+            7,
+            false
+          ],
+          [
+            4,
+            18,
+            false
+          ],
+          [
+            5,
+            6,
+            false
+          ],
+          [
+            5,
+            14,
+            false
+          ],
+          [
+            6,
+            13,
+            false
+          ],
+          [
+            7,
+            9,
+            false
+          ],
+          [
+            8,
+            10,
+            false
+          ],
+          [
+            8,
+            19,
+            false
+          ],
+          [
+            9,
+            17,
+            false
+          ],
+          [
+            11,
+            15,
+            false
+          ],
+          [
+            12,
+            14,
+            false
+          ],
+          [
+            12,
+            16,
+            false
+          ],
+          [
+            13,
+            15,
+            false
+          ],
+          [
+            16,
+            19,
+            false
+          ]
+        ]
+      },
+      "systems": [
+        {
+          "address": "v1-my-seed/galaxy/system/0",
+          "name": "HD 147927",
+          "age": "Young",
+          "danger": 5,
+          "star": {
+            "class": "K",
+            "spectralType": "K5V",
+            "mass": 0.631,
+            "luminosity": 0.15823,
+            "radius": 0.691601,
+            "temperature": 4382,
+            "colour": "#ffd2a1",
+            "description": "orange dwarf"
+          },
+          "companion": {
+            "orbit": "Wide",
+            "separation": 581.7278,
+            "star": {
+              "class": "M",
+              "spectralType": "M8V",
+              "mass": 0.088,
+              "luminosity": 0.00086,
+              "radius": 0.142921,
+              "temperature": 2614,
+              "colour": "#ffad51",
+              "description": "red dwarf"
+            }
+          },
+          "habitableZone": [
+            0.2985,
+            0.7032
+          ],
+          "frostLine": 1.074,
+          "planets": [
+            {
+              "address": "v1-my-seed/galaxy/system/0/planet/0",
+              "name": "HD 147927 e",
+              "kind": "Desert",
+              "zone": "Warm",
+              "orbit": 0.1653,
+              "period": 30.91,
+              "mass": 2.33,
+              "radius": 1.266,
+              "rings": false,
+              "descriptor": "a warm desert world under an orange dwarf",
+              "moons": [
+                {
+                  "name": "HD 147927 e I",
+                  "kind": "Barren",
+                  "orbit": 3.29,
+                  "radius": 218
+                },
+                {
+                  "name": "HD 147927 e II",
+                  "kind": "Ice",
+                  "orbit": 4.6,
+                  "radius": 1881
+                }
+              ]
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/0/planet/1",
+              "name": "HD 147927 c",
+              "kind": "Rocky",
+              "zone": "Warm",
+              "orbit": 0.2022,
+              "period": 41.81,
+              "mass": 2.8,
+              "radius": 1.333,
+              "rings": false,
+              "descriptor": "a warm rocky world under an orange dwarf",
+              "moons": []
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/0/planet/2",
+              "name": "HD 147927 d",
+              "kind": "SubNeptune",
+              "zone": "Warm",
+              "orbit": 0.2604,
+              "period": 61.09,
+              "mass": 8.329,
+              "radius": 2.816,
+              "rings": false,
+              "descriptor": "a warm mini-Neptune under an orange dwarf",
+              "moons": [
+                {
+                  "name": "HD 147927 d I",
+                  "kind": "Barren",
+                  "orbit": 4.19,
+                  "radius": 3588
+                },
+                {
+                  "name": "HD 147927 d II",
+                  "kind": "Ice",
+                  "orbit": 6.77,
+                  "radius": 2704
+                }
+              ]
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/0/planet/3",
+              "name": "HD 147927 f",
+              "kind": "IceGiant",
+              "zone": "Outer",
+              "orbit": 1.3447,
+              "period": 717.03,
+              "mass": 49.66,
+              "radius": 8.06,
+              "rings": false,
+              "descriptor": "an ice giant far from an orange dwarf",
+              "moons": [
+                {
+                  "name": "HD 147927 f I",
+                  "kind": "Ocean",
+                  "orbit": 4.86,
+                  "radius": 2183
+                }
+              ]
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/0/planet/4",
+              "name": "HD 147927 g",
+              "kind": "GasGiant",
+              "zone": "Outer",
+              "orbit": 2.9526,
+              "period": 2332.78,
+              "mass": 1994.594,
+              "radius": 10.331,
+              "rings": false,
+              "descriptor": "a gas giant far from an orange dwarf",
+              "moons": [
+                {
+                  "name": "HD 147927 g I",
+                  "kind": "Ocean",
+                  "orbit": 4.17,
+                  "radius": 1580
+                },
+                {
+                  "name": "HD 147927 g II",
+                  "kind": "Ocean",
+                  "orbit": 5.88,
+                  "radius": 2009
+                },
+                {
+                  "name": "HD 147927 g III",
+                  "kind": "Ocean",
+                  "orbit": 10.1,
+                  "radius": 878
+                },
+                {
+                  "name": "HD 147927 g IV",
+                  "kind": "Ocean",
+                  "orbit": 15.67,
+                  "radius": 1908
+                },
+                {
+                  "name": "HD 147927 g V",
+                  "kind": "Ocean",
+                  "orbit": 26.74,
+                  "radius": 409
+                },
+                {
+                  "name": "HD 147927 g VI",
+                  "kind": "Ocean",
+                  "orbit": 50.41,
+                  "radius": 1894
+                },
+                {
+                  "name": "HD 147927 g VII",
+                  "kind": "Ocean",
+                  "orbit": 73.69,
+                  "radius": 2445
+                }
+              ]
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/0/planet/5",
+              "name": "HD 147927 b",
+              "kind": "IceGiant",
+              "zone": "Outer",
+              "orbit": 4.4515,
+              "period": 4318.46,
+              "mass": 29.624,
+              "radius": 5.946,
+              "rings": false,
+              "descriptor": "an ice giant far from an orange dwarf",
+              "moons": [
+                {
+                  "name": "HD 147927 b I",
+                  "kind": "Ocean",
+                  "orbit": 3.54,
+                  "radius": 709
+                },
+                {
+                  "name": "HD 147927 b II",
+                  "kind": "Ocean",
+                  "orbit": 5.98,
+                  "radius": 383
+                }
+              ]
+            }
+          ],
+          "belts": [
+            {
+              "kind": "Asteroid",
+              "inner": 0.5148,
+              "outer": 0.6805
+            }
+          ],
+          "stations": [],
+          "landmarks": [
+            {
+              "kind": "BinaryStar",
+              "outlier": false,
+              "text": "a red dwarf companion"
+            },
+            {
+              "kind": "AsteroidBelt",
+              "outlier": false,
+              "text": "an asteroid belt"
+            }
+          ],
+          "tags": [
+            "smuggler route"
+          ],
+          "descriptor": "an orange dwarf and red dwarf pair with 6 planets and an asteroid belt"
+        },
+        {
+          "address": "v1-my-seed/galaxy/system/1",
+          "name": "HD 165595",
+          "age": "Young",
+          "danger": 10,
+          "star": {
+            "class": "M",
+            "spectralType": "M8V",
+            "mass": 0.083,
+            "luminosity": 0.00075,
+            "radius": 0.136319,
+            "temperature": 2588,
+            "colour": "#ffad51",
+            "description": "red dwarf"
+          },
+          "companion": null,
+          "habitableZone": [
+            0.0205,
+            0.0484
+          ],
+          "frostLine": 0.0739,
+          "planets": [
+            {
+              "address": "v1-my-seed/galaxy/system/1/planet/0",
+              "name": "HD 165595 b",
+              "kind": "Barren",
+              "zone": "Cold",
+              "orbit": 0.0657,
+              "period": 21.35,
+              "mass": 1.062,
+              "radius": 1.017,
+              "rings": false,
+              "descriptor": "a cold barren rock under a red dwarf",
+              "moons": []
+            }
+          ],
+          "belts": [],
+          "stations": [],
+          "landmarks": [
+            {
+              "kind": "Ruins",
+              "outlier": false,
+              "text": "ruins on HD 165595 b"
+            }
+          ],
+          "tags": [
+            "abandoned colony"
+          ],
+          "descriptor": "a red dwarf with one planet"
+        },
+        {
+          "address": "v1-my-seed/galaxy/system/2",
+          "name": "HD 28101",
+          "age": "Young",
+          "danger": 10,
+          "star": {
+            "class": "K",
+            "spectralType": "K0V",
+            "mass": 0.819,
+            "luminosity": 0.4504,
+            "radius": 0.85255,
+            "temperature": 5126,
+            "colour": "#ffd2a1",
+            "description": "orange dwarf"
+          },
+          "companion": null,
+          "habitableZone": [
+            0.5036,
+            1.1864
+          ],
+          "frostLine": 1.812,
+          "planets": [
+            {
+              "address": "v1-my-seed/galaxy/system/2/planet/0",
+              "name": "HD 28101 c",
+              "kind": "Barren",
+              "zone": "Hot",
+              "orbit": 0.1037,
+              "period": 13.48,
+              "mass": 0.839,
+              "radius": 0.952,
+              "rings": false,
+              "descriptor": "a scorched barren rock skimming an orange dwarf",
+              "moons": []
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/2/planet/1",
+              "name": "HD 28101 b",
+              "kind": "SubNeptune",
+              "zone": "Hot",
+              "orbit": 0.1731,
+              "period": 29.06,
+              "mass": 10.256,
+              "radius": 3.183,
+              "rings": false,
+              "descriptor": "a scorched mini-Neptune skimming an orange dwarf",
+              "moons": [
+                {
+                  "name": "HD 28101 b I",
+                  "kind": "Barren",
+                  "orbit": 3.66,
+                  "radius": 5755
+                }
+              ]
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/2/planet/2",
+              "name": "HD 28101 g",
+              "kind": "Barren",
+              "zone": "Hot",
+              "orbit": 0.2368,
+              "period": 46.5,
+              "mass": 0.504,
+              "radius": 0.826,
+              "rings": true,
+              "descriptor": "a ringed scorched barren rock skimming an orange dwarf",
+              "moons": []
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/2/planet/3",
+              "name": "HD 28101 f",
+              "kind": "SubNeptune",
+              "zone": "Warm",
+              "orbit": 0.3604,
+              "period": 87.32,
+              "mass": 10.303,
+              "radius": 3.192,
+              "rings": false,
+              "descriptor": "a warm mini-Neptune under an orange dwarf",
+              "moons": [
+                {
+                  "name": "HD 28101 f I",
+                  "kind": "Barren",
+                  "orbit": 5.73,
+                  "radius": 1021
+                },
+                {
+                  "name": "HD 28101 f II",
+                  "kind": "Ice",
+                  "orbit": 9.29,
+                  "radius": 4357
+                }
+              ]
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/2/planet/4",
+              "name": "HD 28101 d",
+              "kind": "GasGiant",
+              "zone": "Outer",
+              "orbit": 2.5542,
+              "period": 1647.5,
+              "mass": 66.504,
+              "radius": 9.573,
+              "rings": true,
+              "descriptor": "a ringed gas giant far from an orange dwarf",
+              "moons": [
+                {
+                  "name": "HD 28101 d I",
+                  "kind": "Ocean",
+                  "orbit": 4.07,
+                  "radius": 628
+                },
+                {
+                  "name": "HD 28101 d II",
+                  "kind": "Ocean",
+                  "orbit": 6.15,
+                  "radius": 1203
+                },
+                {
+                  "name": "HD 28101 d III",
+                  "kind": "Ocean",
+                  "orbit": 9.54,
+                  "radius": 1825
+                }
+              ]
+            },
+            {
+              "address": "v1-my-seed/galaxy/system/2/planet/5",
+              "name": "HD 28101 e",
+              "kind": "GasGiant",
+              "zone": "Outer",
+              "orbit": 5.272,
+              "period": 4885.48,
+              "mass": 54.307,
+              "radius": 8.496,
+              "rings": true,
+              "descriptor": "a ringed gas giant far from an orange dwarf",
+              "moons": [
+                {
+                  "name": "HD 28101 e I",
+                  "kind": "Ocean",
+                  "orbit": 3.62,
+                  "radius": 1481
+                },
+                {
+                  "name": "HD 28101 e II",
+                  "kind": "Ocean",
+                  "orbit": 5.05,
+                  "radius": 1065
+                }
+              ]
+            }
+          ],
+          "belts": [],
+          "stations": [
+            {
+              "address": "v1-my-seed/galaxy/system/2/station/0",
+              "name": "Gantry Naval Base",
+              "kind": "NavalBase",
+              "planet": null
+            }
+          ],
+          "landmarks": [
+            {
+              "kind": "RingedGiant",
+              "outlier": false,
+              "text": "the rings of HD 28101 d"
+            },
+            {
+              "kind": "RingedGiant",
+              "outlier": false,
+              "text": "the rings of HD 28101 e"
+            }
+          ],
+          "tags": [
+            "gas mining",
+            "naval stronghold"
+          ],
+          "descriptor": "an orange dwarf with 6 planets"
+        }
+      ]
+    }
+  ]
+}

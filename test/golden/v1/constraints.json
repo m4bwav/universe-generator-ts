@@ -1,0 +1,2686 @@
+{
+  "generatorVersion": 1,
+  "cases": [
+    {
+      "seed": "my-seed",
+      "options": "require=garden,ocean,precursor,blue,giant,whitedwarf,neutron,blackhole,sunlike",
+      "warnings": [],
+      "galaxy": {
+        "address": "v1-my-seed/galaxy",
+        "shape": "Ring",
+        "arms": 0,
+        "radius": 1000,
+        "core": 43,
+        "regions": [
+          {
+            "name": "Musca Drift",
+            "age": "Young",
+            "theme": "old empire",
+            "centre": 43
+          },
+          {
+            "name": "Carina Spur",
+            "age": "Young",
+            "theme": "nebula maze",
+            "centre": 11
+          },
+          {
+            "name": "Cygnus March",
+            "age": "Old",
+            "theme": "nebula maze",
+            "centre": 3
+          },
+          {
+            "name": "Fornax Verge",
+            "age": "Mature",
+            "theme": "precursor ruins",
+            "centre": 18
+          },
+          {
+            "name": "Corvus Cluster",
+            "age": "Young",
+            "theme": "pirate haven",
+            "centre": 12
+          },
+          {
+            "name": "Lyra Deep",
+            "age": "Old",
+            "theme": "frontier",
+            "centre": 29
+          },
+          {
+            "name": "Cygnus Expanse",
+            "age": "Mature",
+            "theme": "quarantine zone",
+            "centre": 1
+          }
+        ],
+        "map": [
+          {
+            "name": "HD 147927",
+            "x": 493.51,
+            "y": 557.144,
+            "star": "K",
+            "region": 4,
+            "hops": 9,
+            "danger": 9,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 165595",
+            "x": 272.638,
+            "y": -689.612,
+            "star": "M",
+            "region": 6,
+            "hops": 5,
+            "danger": 6,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 28101",
+            "x": 371.209,
+            "y": -603.408,
+            "star": "K",
+            "region": 3,
+            "hops": 7,
+            "danger": 6,
+            "chokepoint": true
+          },
+          {
+            "name": "HD 157953",
+            "x": -676.97,
+            "y": 5.801,
+            "star": "M",
+            "region": 2,
+            "hops": 7,
+            "danger": 8,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 72568",
+            "x": -165.289,
+            "y": -662.168,
+            "star": "M",
+            "region": 5,
+            "hops": 4,
+            "danger": 5,
+            "chokepoint": false
+          },
+          {
+            "name": "78 Virginis",
+            "x": 32.583,
+            "y": 703.65,
+            "star": "G",
+            "region": 0,
+            "hops": 4,
+            "danger": 4,
+            "chokepoint": false
+          },
+          {
+            "name": "LHS 3983",
+            "x": 174.1,
+            "y": 572.756,
+            "star": "F",
+            "region": 4,
+            "hops": 5,
+            "danger": 5,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 178585",
+            "x": -281.812,
+            "y": -666.662,
+            "star": "M",
+            "region": 5,
+            "hops": 5,
+            "danger": 5,
+            "chokepoint": true
+          },
+          {
+            "name": "HD 129519",
+            "x": -600.889,
+            "y": 395.882,
+            "star": "A",
+            "region": 2,
+            "hops": 4,
+            "danger": 4,
+            "chokepoint": true
+          },
+          {
+            "name": "LHS 1077",
+            "x": -563.767,
+            "y": -291.189,
+            "star": "G",
+            "region": 0,
+            "hops": 3,
+            "danger": 3,
+            "chokepoint": false
+          },
+          {
+            "name": "TOI-2951",
+            "x": -755.261,
+            "y": 56.276,
+            "star": "F",
+            "region": 2,
+            "hops": 6,
+            "danger": 5,
+            "chokepoint": false
+          },
+          {
+            "name": "Kepler-1334",
+            "x": 645.341,
+            "y": 316.121,
+            "star": "K",
+            "region": 1,
+            "hops": 13,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "Wolf 959",
+            "x": 208.493,
+            "y": 640.79,
+            "star": "G",
+            "region": 4,
+            "hops": 6,
+            "danger": 8,
+            "chokepoint": false
+          },
+          {
+            "name": "XTE J0553+743",
+            "x": -201.455,
+            "y": 587.073,
+            "star": "BlackHole",
+            "region": 0,
+            "hops": 2,
+            "danger": 3,
+            "chokepoint": false
+          },
+          {
+            "name": "Berehynia",
+            "x": 466.691,
+            "y": 470.17,
+            "star": "A",
+            "region": 1,
+            "hops": 11,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "Ross 128",
+            "x": 226.787,
+            "y": -661.432,
+            "star": "M",
+            "region": 6,
+            "hops": 4,
+            "danger": 4,
+            "chokepoint": true
+          },
+          {
+            "name": "13 Cephei",
+            "x": -72.311,
+            "y": 552.964,
+            "star": "G",
+            "region": 0,
+            "hops": 1,
+            "danger": 1,
+            "chokepoint": false
+          },
+          {
+            "name": "TOI-3622",
+            "x": 560.377,
+            "y": 416.198,
+            "star": "M",
+            "region": 1,
+            "hops": 11,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "12 Librae",
+            "x": 410.124,
+            "y": -662.768,
+            "star": "G",
+            "region": 3,
+            "hops": 8,
+            "danger": 7,
+            "chokepoint": false
+          },
+          {
+            "name": "HIP 11990",
+            "x": -378.482,
+            "y": 550.609,
+            "star": "G",
+            "region": 0,
+            "hops": 2,
+            "danger": 3,
+            "chokepoint": false
+          },
+          {
+            "name": "GJ 745",
+            "x": 21.267,
+            "y": 617.422,
+            "star": "M",
+            "region": 0,
+            "hops": 3,
+            "danger": 4,
+            "chokepoint": false
+          },
+          {
+            "name": "LHS 4081",
+            "x": 510.427,
+            "y": 507.238,
+            "star": "M",
+            "region": 1,
+            "hops": 10,
+            "danger": 10,
+            "chokepoint": true
+          },
+          {
+            "name": "HIP 102973",
+            "x": -720.672,
+            "y": -80.684,
+            "star": "K",
+            "region": 2,
+            "hops": 6,
+            "danger": 5,
+            "chokepoint": false
+          },
+          {
+            "name": "TOI-3163",
+            "x": 244.038,
+            "y": -588.723,
+            "star": "G",
+            "region": 6,
+            "hops": 5,
+            "danger": 6,
+            "chokepoint": false
+          },
+          {
+            "name": "34 Virginis",
+            "x": -356.734,
+            "y": 447.245,
+            "star": "A",
+            "region": 0,
+            "hops": 1,
+            "danger": 2,
+            "chokepoint": false
+          },
+          {
+            "name": "Beta Andromedae",
+            "x": -647.099,
+            "y": -356.987,
+            "star": "K",
+            "region": 0,
+            "hops": 4,
+            "danger": 4,
+            "chokepoint": false
+          },
+          {
+            "name": "GJ 829",
+            "x": 372.265,
+            "y": 556.647,
+            "star": "K",
+            "region": 4,
+            "hops": 8,
+            "danger": 9,
+            "chokepoint": false
+          },
+          {
+            "name": "Kepler-880",
+            "x": -75.532,
+            "y": 642.129,
+            "star": "F",
+            "region": 0,
+            "hops": 2,
+            "danger": 3,
+            "chokepoint": false
+          },
+          {
+            "name": "Epsilon Antliae",
+            "x": -459.783,
+            "y": 455.531,
+            "star": "G",
+            "region": 0,
+            "hops": 2,
+            "danger": 3,
+            "chokepoint": false
+          },
+          {
+            "name": "HIP 93298",
+            "x": -340.739,
+            "y": -634.373,
+            "star": "F",
+            "region": 5,
+            "hops": 6,
+            "danger": 7,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 165723",
+            "x": -255.921,
+            "y": -763.819,
+            "star": "M",
+            "region": 5,
+            "hops": 6,
+            "danger": 7,
+            "chokepoint": false
+          },
+          {
+            "name": "LHS 1589",
+            "x": 319.996,
+            "y": -565.915,
+            "star": "M",
+            "region": 3,
+            "hops": 6,
+            "danger": 3,
+            "chokepoint": false
+          },
+          {
+            "name": "GJ 28",
+            "x": -478.09,
+            "y": -438.544,
+            "star": "M",
+            "region": 0,
+            "hops": 3,
+            "danger": 2,
+            "chokepoint": false
+          },
+          {
+            "name": "Ross 590",
+            "x": 723.26,
+            "y": -259.801,
+            "star": "M",
+            "region": 3,
+            "hops": 9,
+            "danger": 5,
+            "chokepoint": false
+          },
+          {
+            "name": "GJ 815",
+            "x": -277.171,
+            "y": 639.365,
+            "star": "F",
+            "region": 0,
+            "hops": 3,
+            "danger": 4,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 200735",
+            "x": 621.602,
+            "y": 208.583,
+            "star": "O",
+            "region": 1,
+            "hops": 12,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "HIP 75576",
+            "x": 299.111,
+            "y": 634.78,
+            "star": "K",
+            "region": 4,
+            "hops": 7,
+            "danger": 8,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 66080",
+            "x": 74.361,
+            "y": 593.767,
+            "star": "A",
+            "region": 4,
+            "hops": 4,
+            "danger": 7,
+            "chokepoint": false
+          },
+          {
+            "name": "GJ 495",
+            "x": 733.723,
+            "y": 121.895,
+            "star": "F",
+            "region": 1,
+            "hops": 10,
+            "danger": 9,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 129263",
+            "x": 526.413,
+            "y": -303.525,
+            "star": "M",
+            "region": 3,
+            "hops": 9,
+            "danger": 6,
+            "chokepoint": false
+          },
+          {
+            "name": "LHS 448",
+            "x": 655.211,
+            "y": 253.73,
+            "star": "M",
+            "region": 1,
+            "hops": 12,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "TOI-5009",
+            "x": 589.934,
+            "y": 286.728,
+            "star": "M",
+            "region": 1,
+            "hops": 13,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 120527",
+            "x": 639.233,
+            "y": 412.849,
+            "star": "M",
+            "region": 1,
+            "hops": 12,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "Lambda Pegasi",
+            "x": -19.821,
+            "y": 48.044,
+            "star": "B",
+            "region": 0,
+            "hops": 0,
+            "danger": 2,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 170606",
+            "x": -68.703,
+            "y": 787.057,
+            "star": "G",
+            "region": 0,
+            "hops": 3,
+            "danger": 4,
+            "chokepoint": false
+          },
+          {
+            "name": "PSR J2204+3957",
+            "x": -501.56,
+            "y": -531.483,
+            "star": "NeutronStar",
+            "region": 5,
+            "hops": 4,
+            "danger": 5,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 3736",
+            "x": 567.837,
+            "y": -347.335,
+            "star": "M",
+            "region": 3,
+            "hops": 8,
+            "danger": 5,
+            "chokepoint": true
+          },
+          {
+            "name": "Kepler-1876",
+            "x": -86.147,
+            "y": -17.914,
+            "star": "M",
+            "region": 0,
+            "hops": 1,
+            "danger": 2,
+            "chokepoint": false
+          },
+          {
+            "name": "HIP 63259",
+            "x": -692.321,
+            "y": 288.501,
+            "star": "A",
+            "region": 2,
+            "hops": 5,
+            "danger": 5,
+            "chokepoint": false
+          },
+          {
+            "name": "Ancha",
+            "x": -62.486,
+            "y": -83.347,
+            "star": "M",
+            "region": 0,
+            "hops": 2,
+            "danger": 3,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 31487",
+            "x": -583.598,
+            "y": -447.951,
+            "star": "F",
+            "region": 0,
+            "hops": 4,
+            "danger": 4,
+            "chokepoint": false
+          },
+          {
+            "name": "WD 0858-534",
+            "x": -632.825,
+            "y": -245.712,
+            "star": "WhiteDwarf",
+            "region": 2,
+            "hops": 4,
+            "danger": 5,
+            "chokepoint": false
+          },
+          {
+            "name": "Kepler-649",
+            "x": -669.885,
+            "y": -111.077,
+            "star": "M",
+            "region": 2,
+            "hops": 5,
+            "danger": 5,
+            "chokepoint": false
+          },
+          {
+            "name": "LHS 2268",
+            "x": 701.265,
+            "y": 168.796,
+            "star": "M",
+            "region": 1,
+            "hops": 11,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "GJ 514",
+            "x": -313.18,
+            "y": 692.147,
+            "star": "K",
+            "region": 0,
+            "hops": 4,
+            "danger": 4,
+            "chokepoint": false
+          },
+          {
+            "name": "Irena",
+            "x": -400.92,
+            "y": -576.297,
+            "star": "B",
+            "region": 5,
+            "hops": 5,
+            "danger": 5,
+            "chokepoint": false
+          },
+          {
+            "name": "LHS 346",
+            "x": -38.537,
+            "y": -637.998,
+            "star": "F",
+            "region": 6,
+            "hops": 3,
+            "danger": 3,
+            "chokepoint": false
+          },
+          {
+            "name": "7 Vulpeculae",
+            "x": -376.411,
+            "y": 678.603,
+            "star": "A",
+            "region": 0,
+            "hops": 3,
+            "danger": 4,
+            "chokepoint": false
+          },
+          {
+            "name": "Yunyu",
+            "x": -549.046,
+            "y": 324.759,
+            "star": "Giant",
+            "region": 2,
+            "hops": 5,
+            "danger": 6,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 182432",
+            "x": -521.354,
+            "y": 427.56,
+            "star": "B",
+            "region": 0,
+            "hops": 3,
+            "danger": 3,
+            "chokepoint": false
+          }
+        ],
+        "lanes": [
+          [
+            0,
+            21,
+            false
+          ],
+          [
+            0,
+            26,
+            false
+          ],
+          [
+            1,
+            15,
+            true
+          ],
+          [
+            2,
+            18,
+            true
+          ],
+          [
+            2,
+            31,
+            false
+          ],
+          [
+            2,
+            46,
+            false
+          ],
+          [
+            3,
+            10,
+            false
+          ],
+          [
+            3,
+            22,
+            false
+          ],
+          [
+            4,
+            7,
+            false
+          ],
+          [
+            4,
+            56,
+            false
+          ],
+          [
+            5,
+            20,
+            false
+          ],
+          [
+            5,
+            44,
+            false
+          ],
+          [
+            6,
+            12,
+            false
+          ],
+          [
+            6,
+            37,
+            false
+          ],
+          [
+            7,
+            29,
+            false
+          ],
+          [
+            7,
+            30,
+            true
+          ],
+          [
+            8,
+            48,
+            false
+          ],
+          [
+            8,
+            58,
+            true
+          ],
+          [
+            8,
+            59,
+            false
+          ],
+          [
+            9,
+            25,
+            false
+          ],
+          [
+            9,
+            49,
+            false
+          ],
+          [
+            9,
+            51,
+            false
+          ],
+          [
+            10,
+            48,
+            false
+          ],
+          [
+            11,
+            40,
+            false
+          ],
+          [
+            11,
+            41,
+            false
+          ],
+          [
+            11,
+            42,
+            false
+          ],
+          [
+            12,
+            36,
+            false
+          ],
+          [
+            13,
+            16,
+            false
+          ],
+          [
+            13,
+            24,
+            false
+          ],
+          [
+            13,
+            27,
+            false
+          ],
+          [
+            13,
+            34,
+            false
+          ],
+          [
+            14,
+            21,
+            true
+          ],
+          [
+            15,
+            23,
+            false
+          ],
+          [
+            15,
+            56,
+            false
+          ],
+          [
+            16,
+            27,
+            false
+          ],
+          [
+            16,
+            43,
+            false
+          ],
+          [
+            17,
+            21,
+            false
+          ],
+          [
+            17,
+            42,
+            false
+          ],
+          [
+            19,
+            24,
+            false
+          ],
+          [
+            19,
+            34,
+            false
+          ],
+          [
+            19,
+            57,
+            false
+          ],
+          [
+            20,
+            27,
+            false
+          ],
+          [
+            20,
+            37,
+            false
+          ],
+          [
+            22,
+            52,
+            false
+          ],
+          [
+            23,
+            31,
+            false
+          ],
+          [
+            24,
+            28,
+            false
+          ],
+          [
+            24,
+            43,
+            false
+          ],
+          [
+            25,
+            50,
+            false
+          ],
+          [
+            26,
+            36,
+            false
+          ],
+          [
+            27,
+            44,
+            false
+          ],
+          [
+            28,
+            59,
+            false
+          ],
+          [
+            29,
+            55,
+            false
+          ],
+          [
+            32,
+            45,
+            false
+          ],
+          [
+            32,
+            49,
+            false
+          ],
+          [
+            32,
+            50,
+            false
+          ],
+          [
+            33,
+            38,
+            false
+          ],
+          [
+            33,
+            46,
+            false
+          ],
+          [
+            34,
+            54,
+            false
+          ],
+          [
+            35,
+            40,
+            false
+          ],
+          [
+            35,
+            53,
+            false
+          ],
+          [
+            38,
+            53,
+            false
+          ],
+          [
+            39,
+            46,
+            true
+          ],
+          [
+            40,
+            41,
+            false
+          ],
+          [
+            40,
+            53,
+            false
+          ],
+          [
+            43,
+            47,
+            false
+          ],
+          [
+            44,
+            54,
+            false
+          ],
+          [
+            45,
+            55,
+            false
+          ],
+          [
+            47,
+            49,
+            false
+          ],
+          [
+            49,
+            56,
+            false
+          ],
+          [
+            51,
+            52,
+            false
+          ],
+          [
+            54,
+            57,
+            false
+          ]
+        ]
+      },
+      "extras": {
+        "address": "v1-my-seed/galaxy",
+        "factions": [
+          {
+            "name": "HD 31487 Hegemony",
+            "kind": "Empire",
+            "capital": 50,
+            "systems": 17,
+            "description": "an empire ruled from HD 31487, holding 17 systems"
+          },
+          {
+            "name": "Lambda Pegasi Union",
+            "kind": "Republic",
+            "capital": 43,
+            "systems": 8,
+            "description": "a republic governed from Lambda Pegasi, holding 8 systems"
+          },
+          {
+            "name": "Wolf 959 Raiders",
+            "kind": "Pirates",
+            "capital": 12,
+            "systems": 12,
+            "description": "pirate clans based at Wolf 959, holding 12 systems"
+          }
+        ],
+        "holders": [
+          [
+            2,
+            false
+          ],
+          [
+            0,
+            false
+          ],
+          null,
+          null,
+          [
+            0,
+            false
+          ],
+          [
+            2,
+            false
+          ],
+          [
+            2,
+            false
+          ],
+          [
+            0,
+            false
+          ],
+          null,
+          [
+            0,
+            false
+          ],
+          null,
+          null,
+          [
+            2,
+            false
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            2,
+            false
+          ],
+          [
+            0,
+            false
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            2,
+            false
+          ],
+          null,
+          [
+            1,
+            false
+          ],
+          [
+            2,
+            true
+          ],
+          [
+            2,
+            false
+          ],
+          [
+            0,
+            false
+          ],
+          [
+            0,
+            false
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            0,
+            false
+          ],
+          [
+            2,
+            false
+          ],
+          [
+            1,
+            true
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            0,
+            false
+          ],
+          null,
+          null,
+          [
+            0,
+            false
+          ],
+          null,
+          null,
+          null,
+          [
+            2,
+            false
+          ],
+          [
+            2,
+            false
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          [
+            1,
+            false
+          ],
+          [
+            2,
+            true
+          ],
+          [
+            0,
+            false
+          ],
+          null,
+          [
+            1,
+            true
+          ],
+          null,
+          [
+            0,
+            true
+          ],
+          [
+            0,
+            false
+          ],
+          [
+            0,
+            false
+          ],
+          [
+            0,
+            false
+          ],
+          null,
+          null,
+          [
+            0,
+            false
+          ],
+          [
+            0,
+            false
+          ],
+          null,
+          null,
+          null
+        ],
+        "pointsOfInterest": [
+          {
+            "kind": "PrecursorSite",
+            "system": 7,
+            "name": "the Lantern Path at HD 178585",
+            "text": "site 1 of 4 of a precursor trail; its markings point to HIP 63259",
+            "chainStep": 1,
+            "chainLength": 4
+          },
+          {
+            "kind": "PrecursorSite",
+            "system": 48,
+            "name": "the Lantern Path at HIP 63259",
+            "text": "site 2 of 4 of a precursor trail; its markings point to HD 28101",
+            "chainStep": 2,
+            "chainLength": 4
+          },
+          {
+            "kind": "PrecursorSite",
+            "system": 2,
+            "name": "the Lantern Path at HD 28101",
+            "text": "site 3 of 4 of a precursor trail; its markings point to Ross 128",
+            "chainStep": 3,
+            "chainLength": 4
+          },
+          {
+            "kind": "PrecursorSite",
+            "system": 15,
+            "name": "the Lantern Path at Ross 128",
+            "text": "the last of 4 sites of a precursor trail; whatever it guards is here",
+            "chainStep": 4,
+            "chainLength": 4
+          },
+          {
+            "kind": "Outpost",
+            "system": 6,
+            "name": "LHS 3983 Outpost",
+            "text": "a listening post whose crew left in a hurry",
+            "chainStep": 0,
+            "chainLength": 0
+          },
+          {
+            "kind": "Wreck",
+            "system": 3,
+            "name": "the wreck of the Ashen Star",
+            "text": "a warship broken in an old battle for this crossing",
+            "chainStep": 0,
+            "chainLength": 0
+          },
+          {
+            "kind": "Ruins",
+            "system": 33,
+            "name": "the Fallen City of Ross 590",
+            "text": "towers half buried in dust, their makers long gone",
+            "chainStep": 0,
+            "chainLength": 0
+          },
+          {
+            "kind": "Anomaly",
+            "system": 1,
+            "name": "the HD 165595 Anomaly",
+            "text": "a pocket of space where instruments disagree",
+            "chainStep": 0,
+            "chainLength": 0
+          },
+          {
+            "kind": "Outpost",
+            "system": 42,
+            "name": "HD 120527 Outpost",
+            "text": "a listening post whose crew left in a hurry",
+            "chainStep": 0,
+            "chainLength": 0
+          },
+          {
+            "kind": "Ruins",
+            "system": 46,
+            "name": "the Silent Halls of HD 3736",
+            "text": "towers half buried in dust, their makers long gone",
+            "chainStep": 0,
+            "chainLength": 0
+          },
+          {
+            "kind": "Anomaly",
+            "system": 18,
+            "name": "the 12 Librae Anomaly",
+            "text": "a pocket of space where instruments disagree",
+            "chainStep": 0,
+            "chainLength": 0
+          }
+        ],
+        "hazards": [
+          {
+            "kind": "DarkCloud",
+            "name": "the Thorn Dark",
+            "x": -277.171,
+            "y": 639.365,
+            "radius": 110,
+            "systems": [
+              13,
+              34,
+              54,
+              57
+            ],
+            "effect": "a dark cloud: no starlight, so pilots navigate by beacon"
+          },
+          {
+            "kind": "IonStorm",
+            "name": "the Iron Storm",
+            "x": 466.691,
+            "y": 470.17,
+            "radius": 113,
+            "systems": [
+              0,
+              14,
+              17,
+              21
+            ],
+            "effect": "a lasting ion storm: shields and drives fail without warning"
+          },
+          {
+            "kind": "Nebula",
+            "name": "the Crimson Nebula",
+            "x": 645.341,
+            "y": 316.121,
+            "radius": 186,
+            "systems": [
+              11,
+              17,
+              35,
+              40,
+              41,
+              42,
+              53
+            ],
+            "effect": "a nebula: sensors are blind inside it"
+          },
+          {
+            "kind": "Nebula",
+            "name": "the Iron Nebula",
+            "x": -676.97,
+            "y": 5.801,
+            "radius": 177,
+            "systems": [
+              3,
+              10,
+              22,
+              52
+            ],
+            "effect": "a nebula: sensors are blind inside it"
+          }
+        ],
+        "monuments": [
+          {
+            "region": 0,
+            "system": 20,
+            "kind": "Archive",
+            "name": "the Archive of Musca Drift",
+            "text": "a vault of records older than any living power"
+          },
+          {
+            "region": 1,
+            "system": 38,
+            "kind": "Archive",
+            "name": "the Archive of Carina Spur",
+            "text": "a vault of records older than any living power"
+          },
+          {
+            "region": 2,
+            "system": 52,
+            "kind": "Observatory",
+            "name": "the Cygnus March Observatory",
+            "text": "an array of dishes that listens to the core"
+          },
+          {
+            "region": 3,
+            "system": 39,
+            "kind": "Observatory",
+            "name": "the Fornax Verge Observatory",
+            "text": "an array of dishes that listens to the core"
+          },
+          {
+            "region": 4,
+            "system": 26,
+            "kind": "Battlefield",
+            "name": "the Corvus Cluster Battlefield",
+            "text": "a field of wrecks from the battle that set the region's borders"
+          },
+          {
+            "region": 5,
+            "system": 30,
+            "kind": "ColossalStatue",
+            "name": "the Colossus of Lyra Deep",
+            "text": "a giant figure carved from a moon, facing the core"
+          },
+          {
+            "region": 6,
+            "system": 56,
+            "kind": "Necropolis",
+            "name": "the Cygnus Expanse Necropolis",
+            "text": "catacombs that run through a hollowed moon"
+          }
+        ],
+        "beacons": [
+          {
+            "system": 13,
+            "kind": "AccretionGlow",
+            "name": "the XTE J0553+743 Glow",
+            "text": "the glowing disk around a black hole, seen from every system"
+          },
+          {
+            "system": 18,
+            "kind": "SignalTower",
+            "name": "the 12 Librae Signal",
+            "text": "a tower broadcasting on every channel, heard across the galaxy"
+          }
+        ]
+      },
+      "changedSystems": [
+        {
+          "address": "v1-my-seed/galaxy/system/13",
+          "name": "XTE J0553+743",
+          "age": "Young",
+          "danger": 3,
+          "star": {
+            "class": "BlackHole",
+            "spectralType": "",
+            "mass": 15.048,
+            "luminosity": 0,
+            "radius": 0.000063,
+            "temperature": 0,
+            "colour": "#7a4dff",
+            "description": "black hole"
+          },
+          "companion": null,
+          "habitableZone": [
+            0.0075,
+            0.0177
+          ],
+          "frostLine": 0.027,
+          "planets": [],
+          "belts": [],
+          "stations": [],
+          "landmarks": [
+            {
+              "kind": "UnusualStar",
+              "outlier": false,
+              "text": "a black hole at its heart"
+            }
+          ],
+          "tags": [
+            "holy site"
+          ],
+          "descriptor": "a black hole with no planets"
+        }
+      ]
+    },
+    {
+      "seed": "pocket",
+      "options": "systems=20&planets=6&require=garden,blackhole",
+      "warnings": [],
+      "galaxy": {
+        "address": "v1-pocket/galaxy",
+        "shape": "Elliptical",
+        "arms": 0,
+        "radius": 1000,
+        "core": 12,
+        "regions": [
+          {
+            "name": "Draco Spur",
+            "age": "Mature",
+            "theme": "pirate haven",
+            "centre": 12
+          },
+          {
+            "name": "Volans March",
+            "age": "Old",
+            "theme": "old empire",
+            "centre": 16
+          }
+        ],
+        "map": [
+          {
+            "name": "XTE J0105+054",
+            "x": -73.258,
+            "y": 364.515,
+            "star": "BlackHole",
+            "region": 0,
+            "hops": 2,
+            "danger": 8,
+            "chokepoint": false
+          },
+          {
+            "name": "LHS 542",
+            "x": -149.312,
+            "y": -409.868,
+            "star": "K",
+            "region": 1,
+            "hops": 3,
+            "danger": 7,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 147367",
+            "x": 303.883,
+            "y": 253.321,
+            "star": "K",
+            "region": 0,
+            "hops": 1,
+            "danger": 5,
+            "chokepoint": true
+          },
+          {
+            "name": "HD 8756",
+            "x": 5.211,
+            "y": -832.247,
+            "star": "M",
+            "region": 1,
+            "hops": 3,
+            "danger": 7,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 99848",
+            "x": -11.263,
+            "y": -274.175,
+            "star": "M",
+            "region": 0,
+            "hops": 2,
+            "danger": 9,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 147485",
+            "x": 286.034,
+            "y": -128.732,
+            "star": "M",
+            "region": 0,
+            "hops": 1,
+            "danger": 6,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 1229",
+            "x": 226.188,
+            "y": -433.26,
+            "star": "F",
+            "region": 0,
+            "hops": 2,
+            "danger": 8,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 60109",
+            "x": -222.229,
+            "y": -320.556,
+            "star": "K",
+            "region": 1,
+            "hops": 3,
+            "danger": 6,
+            "chokepoint": false
+          },
+          {
+            "name": "Chi Geminorum",
+            "x": -372.884,
+            "y": 263.247,
+            "star": "Giant",
+            "region": 0,
+            "hops": 2,
+            "danger": 8,
+            "chokepoint": false
+          },
+          {
+            "name": "Wolf 254",
+            "x": -317.617,
+            "y": 540.276,
+            "star": "K",
+            "region": 0,
+            "hops": 3,
+            "danger": 9,
+            "chokepoint": false
+          },
+          {
+            "name": "Ross 590",
+            "x": -85.527,
+            "y": -41.799,
+            "star": "G",
+            "region": 0,
+            "hops": 1,
+            "danger": 6,
+            "chokepoint": false
+          },
+          {
+            "name": "101 Piscium",
+            "x": 450.303,
+            "y": -45.603,
+            "star": "F",
+            "region": 0,
+            "hops": 2,
+            "danger": 8,
+            "chokepoint": false
+          },
+          {
+            "name": "Ross 71",
+            "x": 35.236,
+            "y": 30.673,
+            "star": "G",
+            "region": 0,
+            "hops": 0,
+            "danger": 2,
+            "chokepoint": false
+          },
+          {
+            "name": "21 Leonis Minoris",
+            "x": 145.446,
+            "y": 477.714,
+            "star": "K",
+            "region": 0,
+            "hops": 2,
+            "danger": 7,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 96078",
+            "x": 55.734,
+            "y": -399.509,
+            "star": "M",
+            "region": 0,
+            "hops": 3,
+            "danger": 9,
+            "chokepoint": false
+          },
+          {
+            "name": "Kepler-1475",
+            "x": -467.839,
+            "y": -160.882,
+            "star": "G",
+            "region": 0,
+            "hops": 3,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "TOI-1743",
+            "x": -214.733,
+            "y": -668.916,
+            "star": "G",
+            "region": 1,
+            "hops": 4,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "Homam",
+            "x": -104.949,
+            "y": 275.869,
+            "star": "K",
+            "region": 0,
+            "hops": 1,
+            "danger": 6,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 212535",
+            "x": 581.14,
+            "y": 397.631,
+            "star": "M",
+            "region": 0,
+            "hops": 2,
+            "danger": 8,
+            "chokepoint": false
+          },
+          {
+            "name": "Kepler-775",
+            "x": -265.834,
+            "y": 20.857,
+            "star": "M",
+            "region": 0,
+            "hops": 2,
+            "danger": 7,
+            "chokepoint": false
+          }
+        ],
+        "lanes": [
+          [
+            0,
+            9,
+            false
+          ],
+          [
+            0,
+            13,
+            false
+          ],
+          [
+            0,
+            17,
+            false
+          ],
+          [
+            1,
+            4,
+            false
+          ],
+          [
+            1,
+            7,
+            false
+          ],
+          [
+            1,
+            16,
+            false
+          ],
+          [
+            2,
+            11,
+            false
+          ],
+          [
+            2,
+            12,
+            false
+          ],
+          [
+            2,
+            13,
+            false
+          ],
+          [
+            2,
+            18,
+            true
+          ],
+          [
+            3,
+            6,
+            false
+          ],
+          [
+            3,
+            16,
+            false
+          ],
+          [
+            4,
+            7,
+            false
+          ],
+          [
+            4,
+            10,
+            false
+          ],
+          [
+            4,
+            14,
+            false
+          ],
+          [
+            5,
+            6,
+            false
+          ],
+          [
+            5,
+            11,
+            false
+          ],
+          [
+            5,
+            12,
+            false
+          ],
+          [
+            6,
+            14,
+            false
+          ],
+          [
+            7,
+            15,
+            false
+          ],
+          [
+            8,
+            9,
+            false
+          ],
+          [
+            8,
+            17,
+            false
+          ],
+          [
+            8,
+            19,
+            false
+          ],
+          [
+            10,
+            12,
+            false
+          ],
+          [
+            10,
+            19,
+            false
+          ],
+          [
+            12,
+            17,
+            false
+          ],
+          [
+            15,
+            19,
+            false
+          ]
+        ]
+      },
+      "extras": {
+        "address": "v1-pocket/galaxy",
+        "factions": [
+          {
+            "name": "HD 212535 Compact",
+            "kind": "Guild",
+            "capital": 18,
+            "systems": 4,
+            "description": "a guild league based at HD 212535, holding 4 systems"
+          },
+          {
+            "name": "Free Captains of Ross 71",
+            "kind": "Pirates",
+            "capital": 12,
+            "systems": 16,
+            "description": "pirate clans based at Ross 71, holding 16 systems"
+          }
+        ],
+        "holders": [
+          [
+            1,
+            true
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            0,
+            true
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            1,
+            true
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            0,
+            true
+          ],
+          [
+            1,
+            true
+          ],
+          [
+            0,
+            true
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            1,
+            false
+          ],
+          [
+            0,
+            false
+          ],
+          [
+            1,
+            false
+          ]
+        ],
+        "pointsOfInterest": [
+          {
+            "kind": "Shrine",
+            "system": 5,
+            "name": "the Shrine of HD 147485",
+            "text": "a pilgrims' shrine, tended by a few",
+            "chainStep": 0,
+            "chainLength": 0
+          },
+          {
+            "kind": "Cache",
+            "system": 3,
+            "name": "HD 8756 Cache",
+            "text": "a smugglers' stash, sealed and forgotten",
+            "chainStep": 0,
+            "chainLength": 0
+          }
+        ],
+        "hazards": [
+          {
+            "kind": "IonStorm",
+            "name": "the Iron Storm",
+            "x": -214.733,
+            "y": -668.916,
+            "radius": 157,
+            "systems": [
+              16
+            ],
+            "effect": "a lasting ion storm: shields and drives fail without warning"
+          }
+        ],
+        "monuments": [
+          {
+            "region": 0,
+            "system": 10,
+            "kind": "Market",
+            "name": "the Great Market of Draco Spur",
+            "text": "a bazaar of docked ships that never closes"
+          },
+          {
+            "region": 1,
+            "system": 16,
+            "kind": "Archive",
+            "name": "the Archive of Volans March",
+            "text": "a library ship anchored here for centuries"
+          }
+        ],
+        "beacons": [
+          {
+            "system": 0,
+            "kind": "AccretionGlow",
+            "name": "the XTE J0105+054 Glow",
+            "text": "the glowing disk around a black hole, seen from every system"
+          },
+          {
+            "system": 3,
+            "kind": "NavigationBeacon",
+            "name": "HD 8756 Light",
+            "text": "an ancient navigation light that every chart marks"
+          },
+          {
+            "system": 11,
+            "kind": "SignalTower",
+            "name": "the 101 Piscium Signal",
+            "text": "a tower broadcasting on every channel, heard across the galaxy"
+          },
+          {
+            "system": 15,
+            "kind": "NavigationBeacon",
+            "name": "Kepler-1475 Light",
+            "text": "an ancient navigation light that every chart marks"
+          }
+        ]
+      },
+      "changedSystems": [
+        {
+          "address": "v1-pocket/galaxy/system/0",
+          "name": "XTE J0105+054",
+          "age": "Mature",
+          "danger": 8,
+          "star": {
+            "class": "BlackHole",
+            "spectralType": "",
+            "mass": 6.42,
+            "luminosity": 0,
+            "radius": 0.000027,
+            "temperature": 0,
+            "colour": "#7a4dff",
+            "description": "black hole"
+          },
+          "companion": null,
+          "habitableZone": [
+            0.0075,
+            0.0177
+          ],
+          "frostLine": 0.027,
+          "planets": [],
+          "belts": [
+            {
+              "kind": "Asteroid",
+              "inner": 0.0216,
+              "outer": 0.0324
+            }
+          ],
+          "stations": [],
+          "landmarks": [
+            {
+              "kind": "UnusualStar",
+              "outlier": false,
+              "text": "a black hole at its heart"
+            },
+            {
+              "kind": "AsteroidBelt",
+              "outlier": false,
+              "text": "an asteroid belt"
+            }
+          ],
+          "tags": [
+            "holy site"
+          ],
+          "descriptor": "a black hole with no planets but an asteroid belt"
+        }
+      ]
+    },
+    {
+      "seed": "tiny",
+      "options": "systems=3&require=garden,ocean,precursor,blue,giant,whitedwarf,neutron,blackhole,sunlike",
+      "warnings": [
+        [
+          "GuaranteeUnmet",
+          "Require Giant is not met: every other system already holds a guaranteed star."
+        ],
+        [
+          "GuaranteeUnmet",
+          "Require NeutronStar is not met: every other system already holds a guaranteed star."
+        ],
+        [
+          "GuaranteeUnmet",
+          "Require BlackHole is not met: every other system already holds a guaranteed star."
+        ],
+        [
+          "GuaranteeUnmet",
+          "Require SunLikeStar is not met: every other system already holds a guaranteed star."
+        ],
+        [
+          "GuaranteeUnmet",
+          "Require GardenWorld is not met: no system has a temperate rocky planet to hold it."
+        ],
+        [
+          "GuaranteeUnmet",
+          "Require OceanWorld is not met: no system has a temperate rocky planet to hold it."
+        ]
+      ],
+      "galaxy": {
+        "address": "v1-tiny/galaxy",
+        "shape": "Elliptical",
+        "arms": 0,
+        "radius": 1000,
+        "core": 0,
+        "regions": [
+          {
+            "name": "Ara Verge",
+            "age": "Mature",
+            "theme": "trade corridor",
+            "centre": 0
+          },
+          {
+            "name": "Hydra Drift",
+            "age": "Mature",
+            "theme": "precursor ruins",
+            "centre": 1
+          }
+        ],
+        "map": [
+          {
+            "name": "LHS 1381",
+            "x": 163.951,
+            "y": -47.46,
+            "star": "M",
+            "region": 0,
+            "hops": 0,
+            "danger": 2,
+            "chokepoint": false
+          },
+          {
+            "name": "TOI-2278",
+            "x": -572.822,
+            "y": -284.381,
+            "star": "WhiteDwarf",
+            "region": 1,
+            "hops": 2,
+            "danger": 9,
+            "chokepoint": false
+          },
+          {
+            "name": "Phi Fornacis",
+            "x": -352.101,
+            "y": -136.69,
+            "star": "B",
+            "region": 0,
+            "hops": 1,
+            "danger": 6,
+            "chokepoint": true
+          }
+        ],
+        "lanes": [
+          [
+            0,
+            2,
+            true
+          ],
+          [
+            1,
+            2,
+            true
+          ]
+        ]
+      },
+      "extras": {
+        "address": "v1-tiny/galaxy",
+        "factions": [
+          {
+            "name": "Concord of LHS 1381",
+            "kind": "Guild",
+            "capital": 0,
+            "systems": 2,
+            "description": "a guild league based at LHS 1381, holding 2 systems"
+          }
+        ],
+        "holders": [
+          [
+            0,
+            false
+          ],
+          null,
+          [
+            0,
+            false
+          ]
+        ],
+        "pointsOfInterest": [
+          {
+            "kind": "Outpost",
+            "system": 1,
+            "name": "TOI-2278 Outpost",
+            "text": "a listening post whose crew left in a hurry",
+            "chainStep": 0,
+            "chainLength": 0
+          },
+          {
+            "kind": "PrecursorSite",
+            "system": 2,
+            "name": "the precursor vault at Phi Fornacis",
+            "text": "a lone precursor site, its trail long erased; whatever it guards is here",
+            "chainStep": 1,
+            "chainLength": 1
+          }
+        ],
+        "hazards": [
+          {
+            "kind": "Nebula",
+            "name": "the Pale Nebula",
+            "x": 163.951,
+            "y": -47.46,
+            "radius": 120,
+            "systems": [
+              0
+            ],
+            "effect": "a nebula: sensors are blind inside it"
+          }
+        ],
+        "monuments": [
+          {
+            "region": 0,
+            "system": 2,
+            "kind": "Market",
+            "name": "the Great Market of Ara Verge",
+            "text": "a market where the whole region trades"
+          },
+          {
+            "region": 1,
+            "system": 1,
+            "kind": "Necropolis",
+            "name": "the Hydra Drift Necropolis",
+            "text": "a city of tombs on a dead world"
+          }
+        ],
+        "beacons": [
+          {
+            "system": 2,
+            "kind": "NavigationBeacon",
+            "name": "Phi Fornacis Light",
+            "text": "an ancient navigation light that every chart marks"
+          }
+        ]
+      },
+      "changedSystems": [
+        {
+          "address": "v1-tiny/galaxy/system/2",
+          "name": "Phi Fornacis",
+          "age": "Mature",
+          "danger": 6,
+          "star": {
+            "class": "B",
+            "spectralType": "B8V",
+            "mass": 5.197,
+            "luminosity": 447.97521,
+            "radius": 3.737664,
+            "temperature": 13750,
+            "colour": "#aabfff",
+            "description": "blue-white star"
+          },
+          "companion": null,
+          "habitableZone": [
+            15.882,
+            37.4155
+          ],
+          "frostLine": 57.1466,
+          "planets": [
+            {
+              "address": "v1-tiny/galaxy/system/2/planet/0",
+              "name": "Phi Fornacis b",
+              "kind": "GasGiant",
+              "zone": "Outer",
+              "orbit": 77.7261,
+              "period": 109790.32,
+              "mass": 50.123,
+              "radius": 8.105,
+              "rings": false,
+              "descriptor": "a gas giant far from a blue-white star",
+              "moons": [
+                {
+                  "name": "Phi Fornacis b I",
+                  "kind": "Ice",
+                  "orbit": 4.14,
+                  "radius": 884
+                },
+                {
+                  "name": "Phi Fornacis b II",
+                  "kind": "Ice",
+                  "orbit": 8.09,
+                  "radius": 1850
+                },
+                {
+                  "name": "Phi Fornacis b III",
+                  "kind": "Barren",
+                  "orbit": 11.04,
+                  "radius": 1858
+                },
+                {
+                  "name": "Phi Fornacis b IV",
+                  "kind": "Ice",
+                  "orbit": 16.58,
+                  "radius": 2263
+                },
+                {
+                  "name": "Phi Fornacis b V",
+                  "kind": "Barren",
+                  "orbit": 23.64,
+                  "radius": 1701
+                }
+              ]
+            },
+            {
+              "address": "v1-tiny/galaxy/system/2/planet/1",
+              "name": "Phi Fornacis c",
+              "kind": "Ice",
+              "zone": "Outer",
+              "orbit": 125.9699,
+              "period": 226523.96,
+              "mass": 0.498,
+              "radius": 0.823,
+              "rings": false,
+              "descriptor": "an ice world far from a blue-white star",
+              "moons": [
+                {
+                  "name": "Phi Fornacis c I",
+                  "kind": "Barren",
+                  "orbit": 4.42,
+                  "radius": 624
+                }
+              ]
+            },
+            {
+              "address": "v1-tiny/galaxy/system/2/planet/2",
+              "name": "Phi Fornacis d",
+              "kind": "GasGiant",
+              "zone": "Outer",
+              "orbit": 280.4691,
+              "period": 752560.64,
+              "mass": 309.997,
+              "radius": 11.213,
+              "rings": true,
+              "descriptor": "a ringed gas giant far from a blue-white star",
+              "moons": [
+                {
+                  "name": "Phi Fornacis d I",
+                  "kind": "Ocean",
+                  "orbit": 5.7,
+                  "radius": 1970
+                },
+                {
+                  "name": "Phi Fornacis d II",
+                  "kind": "Ice",
+                  "orbit": 8.62,
+                  "radius": 2543
+                }
+              ]
+            }
+          ],
+          "belts": [
+            {
+              "kind": "Asteroid",
+              "inner": 163.5291,
+              "outer": 216.1592
+            }
+          ],
+          "stations": [],
+          "landmarks": [
+            {
+              "kind": "UnusualStar",
+              "outlier": false,
+              "text": "a blue-white star at its heart"
+            },
+            {
+              "kind": "RingedGiant",
+              "outlier": false,
+              "text": "the rings of Phi Fornacis d"
+            },
+            {
+              "kind": "AsteroidBelt",
+              "outlier": false,
+              "text": "an asteroid belt"
+            }
+          ],
+          "tags": [
+            "scientific curiosity",
+            "gas mining"
+          ],
+          "descriptor": "a blue-white star with 3 planets and an asteroid belt"
+        }
+      ]
+    },
+    {
+      "seed": "bare",
+      "options": "systems=10&planets=0&require=garden",
+      "warnings": [
+        [
+          "GuaranteeUnmet",
+          "Require GardenWorld is not met: no system has a temperate rocky planet to hold it."
+        ]
+      ],
+      "galaxy": {
+        "address": "v1-bare/galaxy",
+        "shape": "Ring",
+        "arms": 0,
+        "radius": 1000,
+        "core": 6,
+        "regions": [
+          {
+            "name": "Pyxis Expanse",
+            "age": "Mature",
+            "theme": "old empire",
+            "centre": 6
+          },
+          {
+            "name": "Vela Reach",
+            "age": "Old",
+            "theme": "precursor ruins",
+            "centre": 2
+          }
+        ],
+        "map": [
+          {
+            "name": "Paikauhale",
+            "x": -744.256,
+            "y": -71.053,
+            "star": "Giant",
+            "region": 0,
+            "hops": 2,
+            "danger": 8,
+            "chokepoint": false
+          },
+          {
+            "name": "Wolf 546",
+            "x": 440.215,
+            "y": -563.813,
+            "star": "M",
+            "region": 1,
+            "hops": 3,
+            "danger": 7,
+            "chokepoint": false
+          },
+          {
+            "name": "Ross 116",
+            "x": 118.533,
+            "y": -634.144,
+            "star": "M",
+            "region": 1,
+            "hops": 5,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "HD 6478",
+            "x": 336.212,
+            "y": -665.979,
+            "star": "M",
+            "region": 1,
+            "hops": 4,
+            "danger": 10,
+            "chokepoint": false
+          },
+          {
+            "name": "HIP 59046",
+            "x": 570.844,
+            "y": -501.939,
+            "star": "F",
+            "region": 0,
+            "hops": 2,
+            "danger": 6,
+            "chokepoint": false
+          },
+          {
+            "name": "46 Leonis Minoris",
+            "x": -724.114,
+            "y": 324.576,
+            "star": "WhiteDwarf",
+            "region": 0,
+            "hops": 1,
+            "danger": 4,
+            "chokepoint": false
+          },
+          {
+            "name": "GJ 473",
+            "x": -462.829,
+            "y": 421.24,
+            "star": "M",
+            "region": 0,
+            "hops": 0,
+            "danger": 3,
+            "chokepoint": false
+          },
+          {
+            "name": "TOI-458",
+            "x": 248.077,
+            "y": 580.957,
+            "star": "WhiteDwarf",
+            "region": 0,
+            "hops": 1,
+            "danger": 5,
+            "chokepoint": false
+          },
+          {
+            "name": "Sualocin",
+            "x": -629.328,
+            "y": -302.13,
+            "star": "Giant",
+            "region": 1,
+            "hops": 3,
+            "danger": 6,
+            "chokepoint": false
+          },
+          {
+            "name": "HIP 37805",
+            "x": -118.824,
+            "y": -616.792,
+            "star": "O",
+            "region": 1,
+            "hops": 4,
+            "danger": 9,
+            "chokepoint": false
+          }
+        ],
+        "lanes": [
+          [
+            0,
+            5,
+            false
+          ],
+          [
+            0,
+            8,
+            false
+          ],
+          [
+            1,
+            3,
+            false
+          ],
+          [
+            1,
+            4,
+            false
+          ],
+          [
+            2,
+            3,
+            false
+          ],
+          [
+            2,
+            9,
+            false
+          ],
+          [
+            4,
+            7,
+            false
+          ],
+          [
+            5,
+            6,
+            false
+          ],
+          [
+            6,
+            7,
+            false
+          ],
+          [
+            8,
+            9,
+            false
+          ]
+        ]
+      },
+      "extras": {
+        "address": "v1-bare/galaxy",
+        "factions": [
+          {
+            "name": "GJ 473 Dominion",
+            "kind": "Empire",
+            "capital": 6,
+            "systems": 6,
+            "description": "an empire ruled from GJ 473, holding 6 systems"
+          },
+          {
+            "name": "HD 6478 Guild",
+            "kind": "Guild",
+            "capital": 3,
+            "systems": 2,
+            "description": "a guild league based at HD 6478, holding 2 systems"
+          }
+        ],
+        "holders": [
+          [
+            0,
+            false
+          ],
+          [
+            1,
+            true
+          ],
+          null,
+          [
+            1,
+            false
+          ],
+          [
+            0,
+            true
+          ],
+          [
+            0,
+            false
+          ],
+          [
+            0,
+            false
+          ],
+          [
+            0,
+            false
+          ],
+          [
+            0,
+            false
+          ],
+          null
+        ],
+        "pointsOfInterest": [
+          {
+            "kind": "Shrine",
+            "system": 9,
+            "name": "the Shrine of HIP 37805",
+            "text": "a shrine where travellers leave tokens for safe passage",
+            "chainStep": 0,
+            "chainLength": 0
+          }
+        ],
+        "hazards": [
+          {
+            "kind": "GravityRift",
+            "name": "the Veil Rift",
+            "x": -629.328,
+            "y": -302.13,
+            "radius": 91,
+            "systems": [
+              8
+            ],
+            "effect": "a rift in space: the lanes shift and travel takes longer"
+          }
+        ],
+        "monuments": [
+          {
+            "region": 0,
+            "system": 0,
+            "kind": "Shrine",
+            "name": "the Pyxis Expanse Sanctum",
+            "text": "a holy place where pilgrims gather from across the region"
+          },
+          {
+            "region": 1,
+            "system": 1,
+            "kind": "Archive",
+            "name": "the Archive of Vela Reach",
+            "text": "a library ship anchored here for centuries"
+          }
+        ],
+        "beacons": [
+          {
+            "system": 0,
+            "kind": "BeaconStar",
+            "name": "the Paikauhale Lantern",
+            "text": "a giant star bright enough to steer by from anywhere in the galaxy"
+          },
+          {
+            "system": 4,
+            "kind": "NavigationBeacon",
+            "name": "HIP 59046 Light",
+            "text": "an ancient navigation light that every chart marks"
+          },
+          {
+            "system": 7,
+            "kind": "NavigationBeacon",
+            "name": "TOI-458 Light",
+            "text": "an ancient navigation light that every chart marks"
+          },
+          {
+            "system": 9,
+            "kind": "SignalTower",
+            "name": "the HIP 37805 Signal",
+            "text": "a tower broadcasting on every channel, heard across the galaxy"
+          }
+        ]
+      },
+      "changedSystems": []
+    }
+  ]
+}

@@ -1,0 +1,4084 @@
+{
+  "generatorVersion": 1,
+  "galaxies": [
+    {
+      "address": "v1-my-seed/galaxy",
+      "factions": [
+        {
+          "name": "HD 31487 Hegemony",
+          "kind": "Empire",
+          "capital": 50,
+          "systems": 17,
+          "description": "an empire ruled from HD 31487, holding 17 systems"
+        },
+        {
+          "name": "Lambda Pegasi Union",
+          "kind": "Republic",
+          "capital": 43,
+          "systems": 8,
+          "description": "a republic governed from Lambda Pegasi, holding 8 systems"
+        },
+        {
+          "name": "Wolf 959 Raiders",
+          "kind": "Pirates",
+          "capital": 12,
+          "systems": 12,
+          "description": "pirate clans based at Wolf 959, holding 12 systems"
+        }
+      ],
+      "holders": [
+        [
+          2,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        [
+          0,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        [
+          2,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          1,
+          true
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        null,
+        [
+          2,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        [
+          1,
+          true
+        ],
+        null,
+        [
+          0,
+          true
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        null
+      ],
+      "pointsOfInterest": [
+        {
+          "kind": "PrecursorSite",
+          "system": 7,
+          "name": "the Lantern Path at HD 178585",
+          "text": "site 1 of 4 of a precursor trail; its markings point to HIP 63259",
+          "chainStep": 1,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 48,
+          "name": "the Lantern Path at HIP 63259",
+          "text": "site 2 of 4 of a precursor trail; its markings point to HD 28101",
+          "chainStep": 2,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 2,
+          "name": "the Lantern Path at HD 28101",
+          "text": "site 3 of 4 of a precursor trail; its markings point to Ross 128",
+          "chainStep": 3,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 15,
+          "name": "the Lantern Path at Ross 128",
+          "text": "the last of 4 sites of a precursor trail; whatever it guards is here",
+          "chainStep": 4,
+          "chainLength": 4
+        },
+        {
+          "kind": "Outpost",
+          "system": 6,
+          "name": "LHS 3983 Outpost",
+          "text": "a listening post whose crew left in a hurry",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Wreck",
+          "system": 3,
+          "name": "the wreck of the Ashen Star",
+          "text": "a warship broken in an old battle for this crossing",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 33,
+          "name": "the Fallen City of Ross 590",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Anomaly",
+          "system": 1,
+          "name": "the HD 165595 Anomaly",
+          "text": "a pocket of space where instruments disagree",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Outpost",
+          "system": 42,
+          "name": "HD 120527 Outpost",
+          "text": "a listening post whose crew left in a hurry",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 46,
+          "name": "the Silent Halls of HD 3736",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Anomaly",
+          "system": 18,
+          "name": "the 12 Librae Anomaly",
+          "text": "a pocket of space where instruments disagree",
+          "chainStep": 0,
+          "chainLength": 0
+        }
+      ],
+      "hazards": [
+        {
+          "kind": "DarkCloud",
+          "name": "the Thorn Dark",
+          "x": -277.171,
+          "y": 639.365,
+          "radius": 110,
+          "systems": [
+            13,
+            34,
+            54,
+            57
+          ],
+          "effect": "a dark cloud: no starlight, so pilots navigate by beacon"
+        },
+        {
+          "kind": "IonStorm",
+          "name": "the Iron Storm",
+          "x": 466.691,
+          "y": 470.17,
+          "radius": 113,
+          "systems": [
+            0,
+            14,
+            17,
+            21
+          ],
+          "effect": "a lasting ion storm: shields and drives fail without warning"
+        },
+        {
+          "kind": "Nebula",
+          "name": "the Crimson Nebula",
+          "x": 645.341,
+          "y": 316.121,
+          "radius": 186,
+          "systems": [
+            11,
+            17,
+            35,
+            40,
+            41,
+            42,
+            53
+          ],
+          "effect": "a nebula: sensors are blind inside it"
+        },
+        {
+          "kind": "Nebula",
+          "name": "the Iron Nebula",
+          "x": -676.97,
+          "y": 5.801,
+          "radius": 177,
+          "systems": [
+            3,
+            10,
+            22,
+            52
+          ],
+          "effect": "a nebula: sensors are blind inside it"
+        }
+      ],
+      "monuments": [
+        {
+          "region": 0,
+          "system": 20,
+          "kind": "Archive",
+          "name": "the Archive of Musca Drift",
+          "text": "a vault of records older than any living power"
+        },
+        {
+          "region": 1,
+          "system": 38,
+          "kind": "Archive",
+          "name": "the Archive of Carina Spur",
+          "text": "a vault of records older than any living power"
+        },
+        {
+          "region": 2,
+          "system": 52,
+          "kind": "Observatory",
+          "name": "the Cygnus March Observatory",
+          "text": "an array of dishes that listens to the core"
+        },
+        {
+          "region": 3,
+          "system": 39,
+          "kind": "Observatory",
+          "name": "the Fornax Verge Observatory",
+          "text": "an array of dishes that listens to the core"
+        },
+        {
+          "region": 4,
+          "system": 26,
+          "kind": "Battlefield",
+          "name": "the Corvus Cluster Battlefield",
+          "text": "a field of wrecks from the battle that set the region's borders"
+        },
+        {
+          "region": 5,
+          "system": 30,
+          "kind": "ColossalStatue",
+          "name": "the Colossus of Lyra Deep",
+          "text": "a giant figure carved from a moon, facing the core"
+        },
+        {
+          "region": 6,
+          "system": 56,
+          "kind": "Necropolis",
+          "name": "the Cygnus Expanse Necropolis",
+          "text": "catacombs that run through a hollowed moon"
+        }
+      ],
+      "beacons": [
+        {
+          "system": 45,
+          "kind": "Pulsar",
+          "name": "the PSR J2204+3957 Pulsar",
+          "text": "a pulsar whose beat every navigator times by"
+        },
+        {
+          "system": 42,
+          "kind": "SignalTower",
+          "name": "the HD 120527 Signal",
+          "text": "a tower broadcasting on every channel, heard across the galaxy"
+        }
+      ]
+    },
+    {
+      "address": "v1-42/galaxy",
+      "factions": [
+        {
+          "name": "Synod of Nekkar",
+          "kind": "Theocracy",
+          "capital": 57,
+          "systems": 10,
+          "description": "a theocracy ruled from Nekkar, holding 10 systems"
+        },
+        {
+          "name": "Concord of Illyrian",
+          "kind": "Guild",
+          "capital": 28,
+          "systems": 15,
+          "description": "a guild league based at Illyrian, holding 15 systems"
+        },
+        {
+          "name": "Free Worlds of TOI-3175",
+          "kind": "Republic",
+          "capital": 0,
+          "systems": 1,
+          "description": "a republic governed from TOI-3175, holding 1 system"
+        },
+        {
+          "name": "WD 1322+141 Consortium",
+          "kind": "Corporate",
+          "capital": 44,
+          "systems": 10,
+          "description": "a corporate state run from WD 1322+141, holding 10 systems"
+        }
+      ],
+      "holders": [
+        [
+          2,
+          false
+        ],
+        [
+          1,
+          true
+        ],
+        null,
+        null,
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          3,
+          false
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          1,
+          true
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          3,
+          true
+        ],
+        null,
+        null,
+        null,
+        [
+          3,
+          true
+        ],
+        [
+          3,
+          true
+        ],
+        null,
+        [
+          1,
+          true
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        [
+          3,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          true
+        ],
+        null,
+        [
+          0,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        [
+          3,
+          false
+        ],
+        [
+          1,
+          true
+        ],
+        null,
+        [
+          0,
+          true
+        ],
+        null,
+        [
+          0,
+          false
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          0,
+          true
+        ],
+        [
+          1,
+          true
+        ],
+        [
+          1,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ]
+      ],
+      "pointsOfInterest": [
+        {
+          "kind": "PrecursorSite",
+          "system": 44,
+          "name": "the Seven Keys at WD 1322+141",
+          "text": "site 1 of 4 of a precursor trail; its markings point to LHS 721",
+          "chainStep": 1,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 4,
+          "name": "the Seven Keys at LHS 721",
+          "text": "site 2 of 4 of a precursor trail; its markings point to LHS 2761",
+          "chainStep": 2,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 30,
+          "name": "the Seven Keys at LHS 2761",
+          "text": "site 3 of 4 of a precursor trail; its markings point to HIP 43884",
+          "chainStep": 3,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 5,
+          "name": "the Seven Keys at HIP 43884",
+          "text": "the last of 4 sites of a precursor trail; whatever it guards is here",
+          "chainStep": 4,
+          "chainLength": 4
+        },
+        {
+          "kind": "Outpost",
+          "system": 16,
+          "name": "Kepler-284 Outpost",
+          "text": "a listening post whose crew left in a hurry",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Cache",
+          "system": 39,
+          "name": "Kepler-1194 Cache",
+          "text": "a smugglers' stash, sealed and forgotten",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Shrine",
+          "system": 7,
+          "name": "the Shrine of Ross 90",
+          "text": "a shrine where travellers leave tokens for safe passage",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Shrine",
+          "system": 0,
+          "name": "the Shrine of TOI-3175",
+          "text": "a pilgrims' shrine, tended by a few",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 32,
+          "name": "the Broken Spires of Kui",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Wreck",
+          "system": 38,
+          "name": "the wreck of the Heron",
+          "text": "a warship broken in an old battle for this crossing",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 2,
+          "name": "the Silent Halls of LHS 1868",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Wreck",
+          "system": 23,
+          "name": "the wreck of the Ashen Star",
+          "text": "a warship broken in an old battle for this crossing",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Shrine",
+          "system": 10,
+          "name": "the Shrine of Wolf 1043",
+          "text": "a pilgrims' shrine, tended by a few",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Anomaly",
+          "system": 43,
+          "name": "the Phi Ophiuchi Anomaly",
+          "text": "a pocket of space where instruments disagree",
+          "chainStep": 0,
+          "chainLength": 0
+        }
+      ],
+      "hazards": [
+        {
+          "kind": "DarkCloud",
+          "name": "the Wraith Dark",
+          "x": 38.211,
+          "y": -212.8,
+          "radius": 132,
+          "systems": [
+            7,
+            11,
+            56
+          ],
+          "effect": "a dark cloud: no starlight, so pilots navigate by beacon"
+        },
+        {
+          "kind": "DarkCloud",
+          "name": "the Shroud Dark",
+          "x": -195.942,
+          "y": -116.025,
+          "radius": 144,
+          "systems": [
+            15,
+            57
+          ],
+          "effect": "a dark cloud: no starlight, so pilots navigate by beacon"
+        },
+        {
+          "kind": "Nebula",
+          "name": "the Lantern Nebula",
+          "x": 108.875,
+          "y": 910.188,
+          "radius": 205,
+          "systems": [
+            28,
+            30,
+            34
+          ],
+          "effect": "a nebula: sensors are blind inside it"
+        },
+        {
+          "kind": "Nebula",
+          "name": "the Iron Nebula",
+          "x": -611.559,
+          "y": -263.84,
+          "radius": 121,
+          "systems": [
+            29
+          ],
+          "effect": "a nebula: sensors are blind inside it"
+        }
+      ],
+      "monuments": [
+        {
+          "region": 0,
+          "system": 12,
+          "kind": "Observatory",
+          "name": "the Draco Verge Observatory",
+          "text": "an array of dishes that listens to the core"
+        },
+        {
+          "region": 1,
+          "system": 25,
+          "kind": "Observatory",
+          "name": "the Musca Spur Observatory",
+          "text": "a telescope the size of a city, still charting the galaxy"
+        },
+        {
+          "region": 2,
+          "system": 52,
+          "kind": "Battlefield",
+          "name": "the Pyxis Spur Battlefield",
+          "text": "a graveyard of fleets, still salvaged and still mourned"
+        },
+        {
+          "region": 3,
+          "system": 58,
+          "kind": "Shrine",
+          "name": "the Aquila March Sanctum",
+          "text": "a holy place where pilgrims gather from across the region"
+        },
+        {
+          "region": 4,
+          "system": 18,
+          "kind": "Shrine",
+          "name": "the Fornax Cluster Sanctum",
+          "text": "a holy place where pilgrims gather from across the region"
+        },
+        {
+          "region": 5,
+          "system": 40,
+          "kind": "Shrine",
+          "name": "the Lupus Verge Sanctum",
+          "text": "a holy place where pilgrims gather from across the region"
+        },
+        {
+          "region": 6,
+          "system": 37,
+          "kind": "Shrine",
+          "name": "the Corvus Verge Sanctum",
+          "text": "a holy place where pilgrims gather from across the region"
+        }
+      ],
+      "beacons": [
+        {
+          "system": 28,
+          "kind": "BeaconStar",
+          "name": "the Illyrian Lantern",
+          "text": "a giant star bright enough to steer by from anywhere in the galaxy"
+        },
+        {
+          "system": 46,
+          "kind": "SignalTower",
+          "name": "the HD 56243 Signal",
+          "text": "a tower broadcasting on every channel, heard across the galaxy"
+        }
+      ]
+    },
+    {
+      "address": "v1-Andromeda%207/galaxy",
+      "factions": [
+        {
+          "name": "Almach Hegemony",
+          "kind": "Empire",
+          "capital": 44,
+          "systems": 6,
+          "description": "an empire ruled from Almach, holding 6 systems"
+        },
+        {
+          "name": "Rho² Cephei Covenant",
+          "kind": "Theocracy",
+          "capital": 18,
+          "systems": 8,
+          "description": "a theocracy ruled from Rho² Cephei, holding 8 systems"
+        },
+        {
+          "name": "Kepler-1629 Covenant",
+          "kind": "Theocracy",
+          "capital": 47,
+          "systems": 2,
+          "description": "a theocracy ruled from Kepler-1629, holding 2 systems"
+        }
+      ],
+      "holders": [
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          1,
+          true
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        [
+          2,
+          false
+        ],
+        [
+          0,
+          true
+        ],
+        null,
+        null,
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        [
+          2,
+          false
+        ],
+        null
+      ],
+      "pointsOfInterest": [
+        {
+          "kind": "PrecursorSite",
+          "system": 12,
+          "name": "the Seven Keys at LHS 4362",
+          "text": "site 1 of 4 of a precursor trail; its markings point to Yildun",
+          "chainStep": 1,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 30,
+          "name": "the Seven Keys at Yildun",
+          "text": "site 2 of 4 of a precursor trail; its markings point to HD 193990",
+          "chainStep": 2,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 46,
+          "name": "the Seven Keys at HD 193990",
+          "text": "site 3 of 4 of a precursor trail; its markings point to Xamidimura",
+          "chainStep": 3,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 31,
+          "name": "the Seven Keys at Xamidimura",
+          "text": "the last of 4 sites of a precursor trail; whatever it guards is here",
+          "chainStep": 4,
+          "chainLength": 4
+        },
+        {
+          "kind": "Cache",
+          "system": 22,
+          "name": "Wolf 238 Cache",
+          "text": "a hidden store of fuel and parts, unclaimed",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Outpost",
+          "system": 6,
+          "name": "GJ 891 Outpost",
+          "text": "an abandoned outpost at the edge of charted space",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 8,
+          "name": "the Buried Vaults of Kepler-915",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Anomaly",
+          "system": 19,
+          "name": "the TOI-3727 Anomaly",
+          "text": "a light that moves against the stars",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 48,
+          "name": "the Fallen City of Wolf 903",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Shrine",
+          "system": 54,
+          "name": "the Shrine of Nu Leporis",
+          "text": "a pilgrims' shrine, tended by a few",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Wreck",
+          "system": 5,
+          "name": "the wreck of the Kestrel",
+          "text": "a warship broken in an old battle for this crossing",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Anomaly",
+          "system": 13,
+          "name": "the Kappa Columbae Anomaly",
+          "text": "a pocket of space where instruments disagree",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 45,
+          "name": "the Buried Vaults of HIP 52282",
+          "text": "the ruins of a city older than the lanes",
+          "chainStep": 0,
+          "chainLength": 0
+        }
+      ],
+      "hazards": [
+        {
+          "kind": "IonStorm",
+          "name": "the Veil Storm",
+          "x": -459.414,
+          "y": 537.718,
+          "radius": 182,
+          "systems": [
+            17,
+            29,
+            40,
+            50
+          ],
+          "effect": "a lasting ion storm: shields and drives fail without warning"
+        },
+        {
+          "kind": "Nebula",
+          "name": "the Azure Nebula",
+          "x": 155.576,
+          "y": -718.922,
+          "radius": 219,
+          "systems": [
+            6,
+            12,
+            19,
+            24
+          ],
+          "effect": "a nebula: sensors are blind inside it"
+        },
+        {
+          "kind": "Nebula",
+          "name": "the Lantern Nebula",
+          "x": -677.592,
+          "y": -374.008,
+          "radius": 160,
+          "systems": [
+            5,
+            13,
+            38
+          ],
+          "effect": "a nebula: sensors are blind inside it"
+        }
+      ],
+      "monuments": [
+        {
+          "region": 0,
+          "system": 15,
+          "kind": "Battlefield",
+          "name": "the Vela Verge Battlefield",
+          "text": "a graveyard of fleets, still salvaged and still mourned"
+        },
+        {
+          "region": 1,
+          "system": 7,
+          "kind": "Archive",
+          "name": "the Archive of Pyxis Spur",
+          "text": "a vault of records older than any living power"
+        },
+        {
+          "region": 2,
+          "system": 29,
+          "kind": "Necropolis",
+          "name": "the Tucana Expanse Necropolis",
+          "text": "a city of tombs on a dead world"
+        },
+        {
+          "region": 3,
+          "system": 37,
+          "kind": "GreatGate",
+          "name": "the Serpens Drift Arch",
+          "text": "a ring of stone and metal wide enough for fleets to pass"
+        },
+        {
+          "region": 4,
+          "system": 34,
+          "kind": "Market",
+          "name": "the Great Market of Ara Cluster",
+          "text": "a market where the whole region trades"
+        },
+        {
+          "region": 5,
+          "system": 11,
+          "kind": "Battlefield",
+          "name": "the Lyra Spur Battlefield",
+          "text": "a field of wrecks from the battle that set the region's borders"
+        },
+        {
+          "region": 6,
+          "system": 4,
+          "kind": "Observatory",
+          "name": "the Norma Expanse Observatory",
+          "text": "a telescope the size of a city, still charting the galaxy"
+        }
+      ],
+      "beacons": [
+        {
+          "system": 26,
+          "kind": "BeaconStar",
+          "name": "the 29 Hydrae Lantern",
+          "text": "a giant star bright enough to steer by from anywhere in the galaxy"
+        },
+        {
+          "system": 34,
+          "kind": "SignalTower",
+          "name": "the HIP 50475 Signal",
+          "text": "a tower broadcasting on every channel, heard across the galaxy"
+        }
+      ]
+    },
+    {
+      "address": "v1-spiral/galaxy",
+      "factions": [
+        {
+          "name": "HD 88894 Covenant",
+          "kind": "Theocracy",
+          "capital": 31,
+          "systems": 8,
+          "description": "a theocracy ruled from HD 88894, holding 8 systems"
+        },
+        {
+          "name": "GJ 221 Combine",
+          "kind": "Corporate",
+          "capital": 42,
+          "systems": 23,
+          "description": "a corporate state run from GJ 221, holding 23 systems"
+        },
+        {
+          "name": "Okab Union",
+          "kind": "Republic",
+          "capital": 90,
+          "systems": 25,
+          "description": "a republic governed from Okab, holding 25 systems"
+        },
+        {
+          "name": "Rho¹ Cancri Republic",
+          "kind": "Republic",
+          "capital": 9,
+          "systems": 23,
+          "description": "a republic governed from Rho¹ Cancri, holding 23 systems"
+        },
+        {
+          "name": "Synod of HIP 50155",
+          "kind": "Theocracy",
+          "capital": 101,
+          "systems": 12,
+          "description": "a theocracy ruled from HIP 50155, holding 12 systems"
+        },
+        {
+          "name": "GJ 385 Corsairs",
+          "kind": "Pirates",
+          "capital": 10,
+          "systems": 10,
+          "description": "pirate clans based at GJ 385, holding 10 systems"
+        }
+      ],
+      "holders": [
+        null,
+        [
+          0,
+          false
+        ],
+        [
+          5,
+          true
+        ],
+        [
+          5,
+          true
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          0,
+          true
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          5,
+          false
+        ],
+        null,
+        null,
+        [
+          2,
+          false
+        ],
+        [
+          4,
+          false
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          4,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          1,
+          true
+        ],
+        [
+          3,
+          false
+        ],
+        null,
+        [
+          2,
+          true
+        ],
+        [
+          4,
+          true
+        ],
+        null,
+        [
+          3,
+          false
+        ],
+        [
+          4,
+          false
+        ],
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          5,
+          false
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          0,
+          true
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          5,
+          true
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        null,
+        [
+          0,
+          true
+        ],
+        [
+          4,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          4,
+          false
+        ],
+        [
+          1,
+          true
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          5,
+          false
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          2,
+          false
+        ],
+        null,
+        [
+          3,
+          false
+        ],
+        null,
+        [
+          1,
+          true
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        [
+          2,
+          false
+        ],
+        [
+          4,
+          false
+        ],
+        null,
+        [
+          2,
+          true
+        ],
+        [
+          3,
+          true
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          4,
+          true
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          5,
+          false
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          5,
+          true
+        ],
+        [
+          5,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          1,
+          true
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          4,
+          false
+        ],
+        [
+          4,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          4,
+          true
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        null,
+        null,
+        [
+          0,
+          true
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          4,
+          true
+        ],
+        [
+          5,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          3,
+          true
+        ]
+      ],
+      "pointsOfInterest": [
+        {
+          "kind": "PrecursorSite",
+          "system": 25,
+          "name": "the First Map at Bubup",
+          "text": "site 1 of 4 of a precursor trail; its markings point to TOI-5822",
+          "chainStep": 1,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 43,
+          "name": "the First Map at TOI-5822",
+          "text": "site 2 of 4 of a precursor trail; its markings point to 82 Geminorum",
+          "chainStep": 2,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 77,
+          "name": "the First Map at 82 Geminorum",
+          "text": "site 3 of 4 of a precursor trail; its markings point to HD 168553",
+          "chainStep": 3,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 114,
+          "name": "the First Map at HD 168553",
+          "text": "the last of 4 sites of a precursor trail; whatever it guards is here",
+          "chainStep": 4,
+          "chainLength": 4
+        },
+        {
+          "kind": "Wreck",
+          "system": 106,
+          "name": "the wreck of the Kestrel",
+          "text": "a warship broken in an old battle for this crossing",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Cache",
+          "system": 83,
+          "name": "Tojil Cache",
+          "text": "a smugglers' stash, sealed and forgotten",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Outpost",
+          "system": 2,
+          "name": "HIP 107007 Outpost",
+          "text": "a listening post whose crew left in a hurry",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Outpost",
+          "system": 119,
+          "name": "Ross 1097 Outpost",
+          "text": "a listening post whose crew left in a hurry",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Outpost",
+          "system": 40,
+          "name": "HIP 56445 Outpost",
+          "text": "a listening post whose crew left in a hurry",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Cache",
+          "system": 68,
+          "name": "Situla Cache",
+          "text": "a smugglers' stash, sealed and forgotten",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Wreck",
+          "system": 67,
+          "name": "the wreck of the Iron Psalm",
+          "text": "a warship broken in an old battle for this crossing",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Wreck",
+          "system": 11,
+          "name": "the wreck of the Heron",
+          "text": "a hulk drifting near the lanes, its logs still intact",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Shrine",
+          "system": 30,
+          "name": "the Shrine of GJ 914",
+          "text": "a shrine where travellers leave tokens for safe passage",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Wreck",
+          "system": 102,
+          "name": "the wreck of the Iron Psalm",
+          "text": "a warship broken in an old battle for this crossing",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Anomaly",
+          "system": 78,
+          "name": "the GJ 128 Anomaly",
+          "text": "a pocket of space where instruments disagree",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Shrine",
+          "system": 86,
+          "name": "the Shrine of Wolf 1167",
+          "text": "a pilgrims' shrine, tended by a few",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Wreck",
+          "system": 73,
+          "name": "the wreck of the Ashen Star",
+          "text": "a hulk drifting near the lanes, its logs still intact",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Cache",
+          "system": 19,
+          "name": "Kepler-666 Cache",
+          "text": "a smugglers' stash, sealed and forgotten",
+          "chainStep": 0,
+          "chainLength": 0
+        }
+      ],
+      "hazards": [
+        {
+          "kind": "IonStorm",
+          "name": "the Wraith Storm",
+          "x": 249.11,
+          "y": 146.739,
+          "radius": 188,
+          "systems": [
+            5,
+            13,
+            24,
+            63,
+            64
+          ],
+          "effect": "a lasting ion storm: shields and drives fail without warning"
+        },
+        {
+          "kind": "Nebula",
+          "name": "the Ember Nebula",
+          "x": 589.286,
+          "y": 422.094,
+          "radius": 179,
+          "systems": [
+            14,
+            18,
+            52,
+            54,
+            101,
+            116
+          ],
+          "effect": "a nebula: sensors are blind inside it"
+        }
+      ],
+      "monuments": [
+        {
+          "region": 0,
+          "system": 58,
+          "kind": "Archive",
+          "name": "the Archive of Cygnus Spur",
+          "text": "a vault of records older than any living power"
+        },
+        {
+          "region": 1,
+          "system": 22,
+          "kind": "Necropolis",
+          "name": "the Lyra Verge Necropolis",
+          "text": "a city of tombs on a dead world"
+        },
+        {
+          "region": 2,
+          "system": 37,
+          "kind": "Necropolis",
+          "name": "the Pyxis Deep Necropolis",
+          "text": "catacombs that run through a hollowed moon"
+        },
+        {
+          "region": 3,
+          "system": 59,
+          "kind": "ColossalStatue",
+          "name": "the Colossus of Corvus Verge",
+          "text": "a giant figure carved from a moon, facing the core"
+        },
+        {
+          "region": 4,
+          "system": 16,
+          "kind": "GreatGate",
+          "name": "the Ara March Arch",
+          "text": "an arch built across the lane by an empire that wanted to be remembered"
+        },
+        {
+          "region": 5,
+          "system": 6,
+          "kind": "ColossalStatue",
+          "name": "the Colossus of Lyra Cluster",
+          "text": "a statue the height of a mountain, of a ruler no one agrees on"
+        },
+        {
+          "region": 6,
+          "system": 57,
+          "kind": "GreatGate",
+          "name": "the Pavo Verge Arch",
+          "text": "a ring of stone and metal wide enough for fleets to pass"
+        },
+        {
+          "region": 7,
+          "system": 18,
+          "kind": "Necropolis",
+          "name": "the Draco March Necropolis",
+          "text": "a city of tombs on a dead world"
+        }
+      ],
+      "beacons": [
+        {
+          "system": 24,
+          "kind": "BeaconStar",
+          "name": "the HD 138078 Lantern",
+          "text": "a giant star bright enough to steer by from anywhere in the galaxy"
+        },
+        {
+          "system": 49,
+          "kind": "SignalTower",
+          "name": "the HIP 49188 Signal",
+          "text": "a tower broadcasting on every channel, heard across the galaxy"
+        }
+      ]
+    },
+    {
+      "address": "v1-bar/galaxy",
+      "factions": [
+        {
+          "name": "PSR J1503+6205 Guild",
+          "kind": "Guild",
+          "capital": 71,
+          "systems": 35,
+          "description": "a guild league based at PSR J1503+6205, holding 35 systems"
+        },
+        {
+          "name": "Free Captains of 14 Lacertae",
+          "kind": "Pirates",
+          "capital": 52,
+          "systems": 12,
+          "description": "pirate clans based at 14 Lacertae, holding 12 systems"
+        },
+        {
+          "name": "34 Piscium Dominion",
+          "kind": "Empire",
+          "capital": 47,
+          "systems": 9,
+          "description": "an empire ruled from 34 Piscium, holding 9 systems"
+        },
+        {
+          "name": "Kepler-150 Guild",
+          "kind": "Guild",
+          "capital": 60,
+          "systems": 7,
+          "description": "a guild league based at Kepler-150, holding 7 systems"
+        }
+      ],
+      "holders": [
+        null,
+        [
+          0,
+          true
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          0,
+          true
+        ],
+        null,
+        null,
+        [
+          0,
+          false
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        [
+          0,
+          false
+        ],
+        [
+          2,
+          true
+        ],
+        null,
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          true
+        ],
+        null,
+        null,
+        [
+          2,
+          true
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        [
+          0,
+          false
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          0,
+          true
+        ],
+        [
+          0,
+          true
+        ],
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          1,
+          true
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        null,
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        [
+          2,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        [
+          1,
+          true
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          true
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ]
+      ],
+      "pointsOfInterest": [
+        {
+          "kind": "PrecursorSite",
+          "system": 60,
+          "name": "the Lantern Path at Kepler-150",
+          "text": "site 1 of 4 of a precursor trail; its markings point to LHS 1376",
+          "chainStep": 1,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 8,
+          "name": "the Lantern Path at LHS 1376",
+          "text": "site 2 of 4 of a precursor trail; its markings point to LHS 1853",
+          "chainStep": 2,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 67,
+          "name": "the Lantern Path at LHS 1853",
+          "text": "site 3 of 4 of a precursor trail; its markings point to TOI-302",
+          "chainStep": 3,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 29,
+          "name": "the Lantern Path at TOI-302",
+          "text": "the last of 4 sites of a precursor trail; whatever it guards is here",
+          "chainStep": 4,
+          "chainLength": 4
+        },
+        {
+          "kind": "Anomaly",
+          "system": 45,
+          "name": "the Wolf 184 Anomaly",
+          "text": "a light that moves against the stars",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 5,
+          "name": "the Silent Halls of WD 2319-709",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 2,
+          "name": "the Broken Spires of HD 103870",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 75,
+          "name": "the Fallen City of GJ 883",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Cache",
+          "system": 72,
+          "name": "TOI-1317 Cache",
+          "text": "a hidden store of fuel and parts, unclaimed",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Shrine",
+          "system": 37,
+          "name": "the Shrine of Kepler-1036",
+          "text": "a shrine where travellers leave tokens for safe passage",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 31,
+          "name": "the Fallen City of HIP 38930",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 46,
+          "name": "the Silent Halls of Kepler-736",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Shrine",
+          "system": 61,
+          "name": "the Shrine of HD 151334",
+          "text": "a pilgrims' shrine, tended by a few",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 30,
+          "name": "the Silent Halls of Tegmine",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        }
+      ],
+      "hazards": [
+        {
+          "kind": "Nebula",
+          "name": "the Crimson Nebula",
+          "x": 839.22,
+          "y": 318.821,
+          "radius": 133,
+          "systems": [
+            4,
+            32,
+            35,
+            66
+          ],
+          "effect": "a nebula: sensors are blind inside it"
+        },
+        {
+          "kind": "DarkCloud",
+          "name": "the Shroud Dark",
+          "x": -338.905,
+          "y": 584.325,
+          "radius": 128,
+          "systems": [
+            15,
+            58
+          ],
+          "effect": "a dark cloud: no starlight, so pilots navigate by beacon"
+        },
+        {
+          "kind": "Nebula",
+          "name": "the Weeping Nebula",
+          "x": -718.982,
+          "y": -534.268,
+          "radius": 142,
+          "systems": [
+            30,
+            52
+          ],
+          "effect": "a nebula: sensors are blind inside it"
+        }
+      ],
+      "monuments": [
+        {
+          "region": 0,
+          "system": 1,
+          "kind": "ColossalStatue",
+          "name": "the Colossus of Carina March",
+          "text": "a statue the height of a mountain, of a ruler no one agrees on"
+        },
+        {
+          "region": 1,
+          "system": 16,
+          "kind": "Market",
+          "name": "the Great Market of Aquila Cluster",
+          "text": "a market where the whole region trades"
+        },
+        {
+          "region": 2,
+          "system": 69,
+          "kind": "Market",
+          "name": "the Great Market of Draco Drift",
+          "text": "a bazaar of docked ships that never closes"
+        },
+        {
+          "region": 3,
+          "system": 19,
+          "kind": "Archive",
+          "name": "the Archive of Draco Spur",
+          "text": "a library ship anchored here for centuries"
+        },
+        {
+          "region": 4,
+          "system": 48,
+          "kind": "Market",
+          "name": "the Great Market of Corvus Reach",
+          "text": "a market where the whole region trades"
+        },
+        {
+          "region": 5,
+          "system": 7,
+          "kind": "Observatory",
+          "name": "the Hydra Deep Observatory",
+          "text": "a telescope the size of a city, still charting the galaxy"
+        },
+        {
+          "region": 6,
+          "system": 9,
+          "kind": "GreatGate",
+          "name": "the Lupus Drift Arch",
+          "text": "a ring of stone and metal wide enough for fleets to pass"
+        },
+        {
+          "region": 7,
+          "system": 28,
+          "kind": "Battlefield",
+          "name": "the Fornax Expanse Battlefield",
+          "text": "a field of wrecks from the battle that set the region's borders"
+        }
+      ],
+      "beacons": [
+        {
+          "system": 3,
+          "kind": "BeaconStar",
+          "name": "the Axólotl Lantern",
+          "text": "a giant star bright enough to steer by from anywhere in the galaxy"
+        },
+        {
+          "system": 9,
+          "kind": "AccretionGlow",
+          "name": "the Gaia BH43 Glow",
+          "text": "the glowing disk around a black hole, seen from every system"
+        },
+        {
+          "system": 35,
+          "kind": "SignalTower",
+          "name": "the Kepler-714 Signal",
+          "text": "a tower broadcasting on every channel, heard across the galaxy"
+        }
+      ]
+    },
+    {
+      "address": "v1-ring/galaxy",
+      "factions": [
+        {
+          "name": "Kepler-514 Covenant",
+          "kind": "Theocracy",
+          "capital": 13,
+          "systems": 1,
+          "description": "a theocracy ruled from Kepler-514, holding 1 system"
+        },
+        {
+          "name": "Free Worlds of Ross 28",
+          "kind": "Republic",
+          "capital": 16,
+          "systems": 10,
+          "description": "a republic governed from Ross 28, holding 10 systems"
+        },
+        {
+          "name": "Free Captains of Kepler-1084",
+          "kind": "Pirates",
+          "capital": 28,
+          "systems": 9,
+          "description": "pirate clans based at Kepler-1084, holding 9 systems"
+        }
+      ],
+      "holders": [
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        [
+          1,
+          true
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          2,
+          true
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        [
+          0,
+          true
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        [
+          2,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        [
+          2,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        null,
+        [
+          2,
+          true
+        ],
+        [
+          2,
+          false
+        ]
+      ],
+      "pointsOfInterest": [
+        {
+          "kind": "PrecursorSite",
+          "system": 11,
+          "name": "the Seven Keys at HD 14484",
+          "text": "site 1 of 3 of a precursor trail; its markings point to Musica",
+          "chainStep": 1,
+          "chainLength": 3
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 20,
+          "name": "the Seven Keys at Musica",
+          "text": "site 2 of 3 of a precursor trail; its markings point to WD 1840+878",
+          "chainStep": 2,
+          "chainLength": 3
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 4,
+          "name": "the Seven Keys at WD 1840+878",
+          "text": "the last of 3 sites of a precursor trail; whatever it guards is here",
+          "chainStep": 3,
+          "chainLength": 3
+        },
+        {
+          "kind": "Wreck",
+          "system": 0,
+          "name": "the wreck of the Morrow",
+          "text": "a hulk drifting near the lanes, its logs still intact",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Wreck",
+          "system": 29,
+          "name": "the wreck of the Long Patience",
+          "text": "a hulk drifting near the lanes, its logs still intact",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Anomaly",
+          "system": 3,
+          "name": "the Wolf 1328 Anomaly",
+          "text": "a light that moves against the stars",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Wreck",
+          "system": 28,
+          "name": "the wreck of the Ashen Star",
+          "text": "a hulk drifting near the lanes, its logs still intact",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 6,
+          "name": "the Buried Vaults of 93 Herculis",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        }
+      ],
+      "hazards": [
+        {
+          "kind": "DarkCloud",
+          "name": "the Gilded Dark",
+          "x": 1.565,
+          "y": 655.573,
+          "radius": 135,
+          "systems": [
+            9
+          ],
+          "effect": "a dark cloud: no starlight, so pilots navigate by beacon"
+        },
+        {
+          "kind": "Nebula",
+          "name": "the Shroud Nebula",
+          "x": 569.084,
+          "y": -559.419,
+          "radius": 201,
+          "systems": [
+            4,
+            10,
+            12,
+            17,
+            29
+          ],
+          "effect": "a nebula: sensors are blind inside it"
+        }
+      ],
+      "monuments": [
+        {
+          "region": 0,
+          "system": 14,
+          "kind": "Archive",
+          "name": "the Archive of Vela Drift",
+          "text": "a vault of records older than any living power"
+        },
+        {
+          "region": 1,
+          "system": 7,
+          "kind": "Necropolis",
+          "name": "the Volans Deep Necropolis",
+          "text": "a city of tombs on a dead world"
+        },
+        {
+          "region": 2,
+          "system": 10,
+          "kind": "Observatory",
+          "name": "the Serpens March Observatory",
+          "text": "an array of dishes that listens to the core"
+        }
+      ],
+      "beacons": [
+        {
+          "system": 6,
+          "kind": "SignalTower",
+          "name": "the 93 Herculis Signal",
+          "text": "a tower broadcasting on every channel, heard across the galaxy"
+        },
+        {
+          "system": 17,
+          "kind": "SignalTower",
+          "name": "the Adhil Signal",
+          "text": "a tower broadcasting on every channel, heard across the galaxy"
+        },
+        {
+          "system": 24,
+          "kind": "SignalTower",
+          "name": "the HD 123549 Signal",
+          "text": "a tower broadcasting on every channel, heard across the galaxy"
+        }
+      ]
+    },
+    {
+      "address": "v1-one/galaxy",
+      "factions": [
+        {
+          "name": "Free Worlds of Krios",
+          "kind": "Republic",
+          "capital": 0,
+          "systems": 1,
+          "description": "a republic governed from Krios, holding 1 system"
+        }
+      ],
+      "holders": [
+        [
+          0,
+          false
+        ]
+      ],
+      "pointsOfInterest": [
+        {
+          "kind": "Wreck",
+          "system": 0,
+          "name": "the wreck of the Iron Psalm",
+          "text": "a warship broken in an old battle for this crossing",
+          "chainStep": 0,
+          "chainLength": 0
+        }
+      ],
+      "hazards": [
+        {
+          "kind": "Nebula",
+          "name": "the Veil Nebula",
+          "x": 72.989,
+          "y": -507.453,
+          "radius": 141,
+          "systems": [
+            0
+          ],
+          "effect": "a nebula: sensors are blind inside it"
+        }
+      ],
+      "monuments": [
+        {
+          "region": 0,
+          "system": 0,
+          "kind": "Archive",
+          "name": "the Archive of Musca March",
+          "text": "a vault of records older than any living power"
+        }
+      ],
+      "beacons": []
+    },
+    {
+      "address": "v1-two/galaxy",
+      "factions": [
+        {
+          "name": "HD 97376 Combine",
+          "kind": "Corporate",
+          "capital": 0,
+          "systems": 2,
+          "description": "a corporate state run from HD 97376, holding 2 systems"
+        }
+      ],
+      "holders": [
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ]
+      ],
+      "pointsOfInterest": [
+        {
+          "kind": "Anomaly",
+          "system": 1,
+          "name": "the Gaia BH7 Anomaly",
+          "text": "a light that moves against the stars",
+          "chainStep": 0,
+          "chainLength": 0
+        }
+      ],
+      "hazards": [
+        {
+          "kind": "DarkCloud",
+          "name": "the Hollow Dark",
+          "x": -163.059,
+          "y": -13.652,
+          "radius": 172,
+          "systems": [
+            0
+          ],
+          "effect": "a dark cloud: no starlight, so pilots navigate by beacon"
+        }
+      ],
+      "monuments": [
+        {
+          "region": 0,
+          "system": 0,
+          "kind": "Battlefield",
+          "name": "the Lyra Verge Battlefield",
+          "text": "a graveyard of fleets, still salvaged and still mourned"
+        },
+        {
+          "region": 1,
+          "system": 1,
+          "kind": "Battlefield",
+          "name": "the Corvus Expanse Battlefield",
+          "text": "a field of wrecks from the battle that set the region's borders"
+        }
+      ],
+      "beacons": [
+        {
+          "system": 1,
+          "kind": "AccretionGlow",
+          "name": "the Gaia BH7 Glow",
+          "text": "the glowing disk around a black hole, seen from every system"
+        }
+      ]
+    },
+    {
+      "address": "v1-Virgo/cluster/galaxy/0",
+      "factions": [
+        {
+          "name": "Free Worlds of TOI-5284",
+          "kind": "Republic",
+          "capital": 53,
+          "systems": 10,
+          "description": "a republic governed from TOI-5284, holding 10 systems"
+        },
+        {
+          "name": "Gaia BH71 Combine",
+          "kind": "Corporate",
+          "capital": 57,
+          "systems": 24,
+          "description": "a corporate state run from Gaia BH71, holding 24 systems"
+        },
+        {
+          "name": "Synod of HD 215539",
+          "kind": "Theocracy",
+          "capital": 23,
+          "systems": 11,
+          "description": "a theocracy ruled from HD 215539, holding 11 systems"
+        },
+        {
+          "name": "Faithful of HIP 13167",
+          "kind": "Theocracy",
+          "capital": 65,
+          "systems": 12,
+          "description": "a theocracy ruled from HIP 13167, holding 12 systems"
+        },
+        {
+          "name": "HD 106821 Corsairs",
+          "kind": "Pirates",
+          "capital": 116,
+          "systems": 10,
+          "description": "pirate clans based at HD 106821, holding 10 systems"
+        }
+      ],
+      "holders": [
+        null,
+        null,
+        [
+          3,
+          false
+        ],
+        [
+          4,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        null,
+        [
+          1,
+          true
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        [
+          3,
+          true
+        ],
+        null,
+        null,
+        null,
+        null,
+        [
+          3,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          true
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          4,
+          false
+        ],
+        null,
+        [
+          2,
+          false
+        ],
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          true
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          0,
+          true
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          1,
+          true
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        [
+          4,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        [
+          2,
+          true
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          4,
+          false
+        ],
+        [
+          0,
+          true
+        ],
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        null,
+        null,
+        [
+          3,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        [
+          3,
+          true
+        ],
+        null,
+        [
+          4,
+          false
+        ],
+        null,
+        null,
+        null,
+        [
+          3,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          4,
+          false
+        ],
+        null,
+        [
+          1,
+          true
+        ],
+        [
+          2,
+          false
+        ],
+        null,
+        [
+          0,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        null,
+        [
+          3,
+          false
+        ],
+        null,
+        [
+          3,
+          false
+        ],
+        null,
+        null,
+        [
+          2,
+          false
+        ],
+        null,
+        [
+          4,
+          false
+        ],
+        null,
+        null,
+        [
+          3,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          2,
+          true
+        ],
+        null,
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        [
+          4,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        [
+          0,
+          true
+        ],
+        [
+          4,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          4,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          true
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        null
+      ],
+      "pointsOfInterest": [
+        {
+          "kind": "PrecursorSite",
+          "system": 37,
+          "name": "the Elder Road at GJ 80",
+          "text": "site 1 of 4 of a precursor trail; its markings point to Wolf 918",
+          "chainStep": 1,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 40,
+          "name": "the Elder Road at Wolf 918",
+          "text": "site 2 of 4 of a precursor trail; its markings point to HD 222928",
+          "chainStep": 2,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 3,
+          "name": "the Elder Road at HD 222928",
+          "text": "site 3 of 4 of a precursor trail; its markings point to GJ 347",
+          "chainStep": 3,
+          "chainLength": 4
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 96,
+          "name": "the Elder Road at GJ 347",
+          "text": "the last of 4 sites of a precursor trail; whatever it guards is here",
+          "chainStep": 4,
+          "chainLength": 4
+        },
+        {
+          "kind": "Ruins",
+          "system": 32,
+          "name": "the Broken Spires of TOI-4469",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Shrine",
+          "system": 100,
+          "name": "the Shrine of HD 39249",
+          "text": "a pilgrims' shrine, tended by a few",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Outpost",
+          "system": 104,
+          "name": "HD 50572 Outpost",
+          "text": "an abandoned outpost at the edge of charted space",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 33,
+          "name": "the Buried Vaults of Wolf 1",
+          "text": "the ruins of a city older than the lanes",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Anomaly",
+          "system": 64,
+          "name": "the TOI-6504 Anomaly",
+          "text": "a light that moves against the stars",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Wreck",
+          "system": 107,
+          "name": "the wreck of the Far Promise",
+          "text": "a warship broken in an old battle for this crossing",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Cache",
+          "system": 26,
+          "name": "GJ 447 Cache",
+          "text": "a smugglers' stash, sealed and forgotten",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Anomaly",
+          "system": 118,
+          "name": "the Petra Anomaly",
+          "text": "a light that moves against the stars",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Wreck",
+          "system": 12,
+          "name": "the wreck of the Kestrel",
+          "text": "a hulk drifting near the lanes, its logs still intact",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 56,
+          "name": "the Broken Spires of HD 42031",
+          "text": "the ruins of a city older than the lanes",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Anomaly",
+          "system": 125,
+          "name": "the PSR J0430-4850 Anomaly",
+          "text": "a pocket of space where instruments disagree",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Shrine",
+          "system": 9,
+          "name": "the Shrine of LHS 4119",
+          "text": "a shrine where travellers leave tokens for safe passage",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 70,
+          "name": "the Silent Halls of Kepler-1793",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Cache",
+          "system": 80,
+          "name": "TOI-2326 Cache",
+          "text": "a hidden store of fuel and parts, unclaimed",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 28,
+          "name": "the Silent Halls of Wolf 659",
+          "text": "the ruins of a city older than the lanes",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 21,
+          "name": "the Buried Vaults of Honores",
+          "text": "the ruins of a city older than the lanes",
+          "chainStep": 0,
+          "chainLength": 0
+        }
+      ],
+      "hazards": [
+        {
+          "kind": "GravityRift",
+          "name": "the Azure Rift",
+          "x": 19.024,
+          "y": -105.192,
+          "radius": 155,
+          "systems": [
+            9,
+            19,
+            28,
+            42,
+            53,
+            56,
+            61,
+            87,
+            102
+          ],
+          "effect": "a rift in space: the lanes shift and travel takes longer"
+        },
+        {
+          "kind": "Nebula",
+          "name": "the Weeping Nebula",
+          "x": -76.684,
+          "y": 432.135,
+          "radius": 160,
+          "systems": [
+            2,
+            65,
+            68,
+            79,
+            90,
+            100
+          ],
+          "effect": "a nebula: sensors are blind inside it"
+        },
+        {
+          "kind": "DarkCloud",
+          "name": "the Hollow Dark",
+          "x": -207.552,
+          "y": -333.018,
+          "radius": 98,
+          "systems": [
+            34,
+            94,
+            109,
+            115
+          ],
+          "effect": "a dark cloud: no starlight, so pilots navigate by beacon"
+        },
+        {
+          "kind": "DarkCloud",
+          "name": "the Ashen Dark",
+          "x": 180.12,
+          "y": -257.598,
+          "radius": 143,
+          "systems": [
+            13,
+            38,
+            48,
+            69,
+            87,
+            98,
+            110
+          ],
+          "effect": "a dark cloud: no starlight, so pilots navigate by beacon"
+        },
+        {
+          "kind": "RadiationZone",
+          "name": "the Core Glare",
+          "x": 0,
+          "y": 0,
+          "radius": 150,
+          "systems": [
+            9,
+            28,
+            42,
+            56,
+            61,
+            84,
+            102
+          ],
+          "effect": "radiation from the active core: shields wear down and crews sicken"
+        }
+      ],
+      "monuments": [
+        {
+          "region": 0,
+          "system": 7,
+          "kind": "Observatory",
+          "name": "the Indus Reach Observatory",
+          "text": "a telescope the size of a city, still charting the galaxy"
+        },
+        {
+          "region": 1,
+          "system": 66,
+          "kind": "Battlefield",
+          "name": "the Hydra Cluster Battlefield",
+          "text": "a field of wrecks from the battle that set the region's borders"
+        },
+        {
+          "region": 2,
+          "system": 112,
+          "kind": "ColossalStatue",
+          "name": "the Colossus of Cygnus Deep",
+          "text": "a giant figure carved from a moon, facing the core"
+        },
+        {
+          "region": 3,
+          "system": 11,
+          "kind": "Battlefield",
+          "name": "the Vela March Battlefield",
+          "text": "a field of wrecks from the battle that set the region's borders"
+        },
+        {
+          "region": 4,
+          "system": 14,
+          "kind": "Archive",
+          "name": "the Archive of Carina Cluster",
+          "text": "a vault of records older than any living power"
+        },
+        {
+          "region": 5,
+          "system": 110,
+          "kind": "Necropolis",
+          "name": "the Orion Drift Necropolis",
+          "text": "catacombs that run through a hollowed moon"
+        },
+        {
+          "region": 6,
+          "system": 92,
+          "kind": "Necropolis",
+          "name": "the Ara Expanse Necropolis",
+          "text": "a city of tombs on a dead world"
+        },
+        {
+          "region": 7,
+          "system": 27,
+          "kind": "ColossalStatue",
+          "name": "the Colossus of Volans Spur",
+          "text": "a giant figure carved from a moon, facing the core"
+        }
+      ],
+      "beacons": [
+        {
+          "system": 93,
+          "kind": "Pulsar",
+          "name": "the PSR J2100-3213 Pulsar",
+          "text": "a pulsar whose beat every navigator times by"
+        },
+        {
+          "system": 35,
+          "kind": "SignalTower",
+          "name": "the Kepler-1130 Signal",
+          "text": "a tower broadcasting on every channel, heard across the galaxy"
+        },
+        {
+          "system": 52,
+          "kind": "NavigationBeacon",
+          "name": "TOI-3020 Light",
+          "text": "an ancient navigation light that every chart marks"
+        }
+      ]
+    },
+    {
+      "address": "v1-Virgo/cluster/galaxy/20",
+      "factions": [
+        {
+          "name": "70 Ursae Majoris Hegemony",
+          "kind": "Empire",
+          "capital": 12,
+          "systems": 1,
+          "description": "an empire ruled from 70 Ursae Majoris, holding 1 system"
+        },
+        {
+          "name": "Yildun Corsairs",
+          "kind": "Pirates",
+          "capital": 0,
+          "systems": 13,
+          "description": "pirate clans based at Yildun, holding 13 systems"
+        }
+      ],
+      "holders": [
+        [
+          1,
+          true
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          true
+        ],
+        [
+          1,
+          false
+        ]
+      ],
+      "pointsOfInterest": [
+        {
+          "kind": "Wreck",
+          "system": 11,
+          "name": "the wreck of the Far Promise",
+          "text": "a hulk drifting near the lanes, its logs still intact",
+          "chainStep": 0,
+          "chainLength": 0
+        }
+      ],
+      "hazards": [
+        {
+          "kind": "GravityRift",
+          "name": "the Crimson Rift",
+          "x": 431.029,
+          "y": 408.622,
+          "radius": 190,
+          "systems": [
+            1,
+            9
+          ],
+          "effect": "a rift in space: the lanes shift and travel takes longer"
+        }
+      ],
+      "monuments": [
+        {
+          "region": 0,
+          "system": 1,
+          "kind": "Shrine",
+          "name": "the Vela Cluster Sanctum",
+          "text": "a holy place where pilgrims gather from across the region"
+        },
+        {
+          "region": 1,
+          "system": 3,
+          "kind": "Battlefield",
+          "name": "the Cygnus Deep Battlefield",
+          "text": "a field of wrecks from the battle that set the region's borders"
+        }
+      ],
+      "beacons": [
+        {
+          "system": 12,
+          "kind": "BeaconStar",
+          "name": "the 70 Ursae Majoris Lantern",
+          "text": "a giant star bright enough to steer by from anywhere in the galaxy"
+        },
+        {
+          "system": 9,
+          "kind": "SignalTower",
+          "name": "the HIP 55923 Signal",
+          "text": "a tower broadcasting on every channel, heard across the galaxy"
+        },
+        {
+          "system": 10,
+          "kind": "NavigationBeacon",
+          "name": "HD 102270 Light",
+          "text": "an ancient navigation light that every chart marks"
+        },
+        {
+          "system": 11,
+          "kind": "NavigationBeacon",
+          "name": "Delta Circini Light",
+          "text": "an ancient navigation light that every chart marks"
+        }
+      ]
+    },
+    {
+      "address": "v1-my-seed/universe/cluster/2/galaxy/0",
+      "factions": [
+        {
+          "name": "TOI-3579 Guild",
+          "kind": "Guild",
+          "capital": 72,
+          "systems": 14,
+          "description": "a guild league based at TOI-3579, holding 14 systems"
+        },
+        {
+          "name": "Free Captains of GJ 753",
+          "kind": "Pirates",
+          "capital": 59,
+          "systems": 11,
+          "description": "pirate clans based at GJ 753, holding 11 systems"
+        }
+      ],
+      "holders": [
+        null,
+        null,
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        null,
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        null,
+        [
+          0,
+          false
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pointsOfInterest": [
+        {
+          "kind": "PrecursorSite",
+          "system": 68,
+          "name": "the Seven Keys at HD 58276",
+          "text": "site 1 of 3 of a precursor trail; its markings point to Kepler-597",
+          "chainStep": 1,
+          "chainLength": 3
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 8,
+          "name": "the Seven Keys at Kepler-597",
+          "text": "site 2 of 3 of a precursor trail; its markings point to HD 218849",
+          "chainStep": 2,
+          "chainLength": 3
+        },
+        {
+          "kind": "PrecursorSite",
+          "system": 19,
+          "name": "the Seven Keys at HD 218849",
+          "text": "the last of 3 sites of a precursor trail; whatever it guards is here",
+          "chainStep": 3,
+          "chainLength": 3
+        },
+        {
+          "kind": "Anomaly",
+          "system": 27,
+          "name": "the Phi Aquarii Anomaly",
+          "text": "a pocket of space where instruments disagree",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Shrine",
+          "system": 75,
+          "name": "the Shrine of Sigma Fornacis",
+          "text": "a pilgrims' shrine, tended by a few",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 42,
+          "name": "the Silent Halls of 18 Comae Berenices",
+          "text": "the ruins of a city older than the lanes",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Wreck",
+          "system": 81,
+          "name": "the wreck of the Far Promise",
+          "text": "a hulk drifting near the lanes, its logs still intact",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Outpost",
+          "system": 51,
+          "name": "HIP 39017 Outpost",
+          "text": "an abandoned outpost at the edge of charted space",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 84,
+          "name": "the Broken Spires of Angetenar",
+          "text": "the ruins of a city older than the lanes",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 87,
+          "name": "the Broken Spires of GJ 683",
+          "text": "the ruins of a city older than the lanes",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 9,
+          "name": "the Silent Halls of HD 190412",
+          "text": "towers half buried in dust, their makers long gone",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Wreck",
+          "system": 23,
+          "name": "the wreck of the Far Promise",
+          "text": "a warship broken in an old battle for this crossing",
+          "chainStep": 0,
+          "chainLength": 0
+        },
+        {
+          "kind": "Ruins",
+          "system": 40,
+          "name": "the Broken Spires of TOI-2522",
+          "text": "the ruins of a city older than the lanes",
+          "chainStep": 0,
+          "chainLength": 0
+        }
+      ],
+      "hazards": [
+        {
+          "kind": "DarkCloud",
+          "name": "the Gilded Dark",
+          "x": 99.68,
+          "y": 374.182,
+          "radius": 108,
+          "systems": [
+            50,
+            56
+          ],
+          "effect": "a dark cloud: no starlight, so pilots navigate by beacon"
+        },
+        {
+          "kind": "DarkCloud",
+          "name": "the Sable Dark",
+          "x": -106.707,
+          "y": -731.129,
+          "radius": 191,
+          "systems": [
+            71,
+            81,
+            92
+          ],
+          "effect": "a dark cloud: no starlight, so pilots navigate by beacon"
+        },
+        {
+          "kind": "DarkCloud",
+          "name": "the Crimson Dark",
+          "x": 453.697,
+          "y": -411.128,
+          "radius": 92,
+          "systems": [
+            93
+          ],
+          "effect": "a dark cloud: no starlight, so pilots navigate by beacon"
+        }
+      ],
+      "monuments": [
+        {
+          "region": 0,
+          "system": 10,
+          "kind": "Battlefield",
+          "name": "the Tucana Expanse Battlefield",
+          "text": "a field of wrecks from the battle that set the region's borders"
+        },
+        {
+          "region": 1,
+          "system": 82,
+          "kind": "Market",
+          "name": "the Great Market of Aquila Expanse",
+          "text": "a market where the whole region trades"
+        },
+        {
+          "region": 2,
+          "system": 64,
+          "kind": "Battlefield",
+          "name": "the Pyxis Deep Battlefield",
+          "text": "a graveyard of fleets, still salvaged and still mourned"
+        },
+        {
+          "region": 3,
+          "system": 25,
+          "kind": "GreatGate",
+          "name": "the Draco March Arch",
+          "text": "a ring of stone and metal wide enough for fleets to pass"
+        },
+        {
+          "region": 4,
+          "system": 53,
+          "kind": "Necropolis",
+          "name": "the Volans Deep Necropolis",
+          "text": "catacombs that run through a hollowed moon"
+        },
+        {
+          "region": 5,
+          "system": 47,
+          "kind": "GreatGate",
+          "name": "the Orion March Arch",
+          "text": "an arch built across the lane by an empire that wanted to be remembered"
+        },
+        {
+          "region": 6,
+          "system": 92,
+          "kind": "Market",
+          "name": "the Great Market of Pyxis Drift",
+          "text": "a market where the whole region trades"
+        },
+        {
+          "region": 7,
+          "system": 48,
+          "kind": "ColossalStatue",
+          "name": "the Colossus of Pavo March",
+          "text": "a giant figure carved from a moon, facing the core"
+        }
+      ],
+      "beacons": [
+        {
+          "system": 20,
+          "kind": "BeaconStar",
+          "name": "the HD 41547 Lantern",
+          "text": "a giant star bright enough to steer by from anywhere in the galaxy"
+        },
+        {
+          "system": 78,
+          "kind": "SignalTower",
+          "name": "the Psi⁴ Aurigae Signal",
+          "text": "a tower broadcasting on every channel, heard across the galaxy"
+        }
+      ]
+    }
+  ]
+}

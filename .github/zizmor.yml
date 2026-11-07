@@ -1,0 +1,8 @@
+# zizmor configuration (https://docs.zizmor.sh/configuration/).
+rules:
+  adhoc-packages:
+    # verify-published installs the version just published from the registry, outside any lockfile: that is what it verifies.
+    ignore:
+      - verify-published.yml
+      # release.yml's next-tag job installs npm 11.21.0 (exact) because no Node release bundles an npm that runs dist-tag over OIDC.
+      - release.yml:269

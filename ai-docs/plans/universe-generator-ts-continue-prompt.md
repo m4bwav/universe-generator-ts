@@ -1,0 +1,11 @@
+# UniverseGenerator TypeScript port and galaxy demo continue prompt
+
+Work from `D:/m4bwa/Claude/Projects/Ai/labs/universe-generator-ts`. The C# source is `D:/m4bwa/Claude/Projects/Ai/labs/UniverseGenerator`; read it, never write to it except through a pull request.
+
+1. Load state: read `ai-docs/HANDOFF.md`, the end of `ai-docs/log.md`, and the plan HANDOFF.md names. Compare HANDOFF.md's age with commits and CI runs, and trust the newer evidence. Read the skills you will use: package-modernize (npm route and templates), chainwright, askwright, and for the demo stage threewright or sitewright, everwrite for prose and wikiwright for the wiki. Read the repository's AGENTS.md once it exists.
+2. Read answers: for any askwright set HANDOFF.md names, run `ask.py read`, act on answered questions and close them. "Not sure" and unanswered questions stay open and the plan's written guess stays in use.
+3. Order of work: take the next item HANDOFF.md names, then the next in the plan, stage by stage. Never start a stage while the one before has failing tests. The goldens from the C# tag are the truth: never edit one to make a test pass. Update HANDOFF.md at each milestone.
+4. Stop before anything that needs Mark, prepare it fully and carry on with other work: publishing to npm or setting up trusted publishing, posting anywhere public, a failed feasibility gate, dropping the same-seed promise, changes to the C# package's output, and anything the plan lists under "Decisions for Mark". Questions go on an askwright page, recorded in HANDOFF.md. Small rulings are decided and flagged in the log.
+5. Stop early if HANDOFF.md says `Status: finished` or nothing can move without Mark; say what waits.
+6. Hand-over rules: pull requests, releases and attribution follow `C:/Users/m4bwa/.claude/CLAUDE.md`; this project is stricter only in that anything published to npm waits for Mark, because a downloadable package is in play. Write lessons to the skill they belong to.
+7. To hand over: run the wrap-up (evergreen-wrapup, if installed), update the log and HANDOFF.md, then tell the next session to do the same and print this start command: `Execute D:/m4bwa/Claude/Projects/Ai/labs/universe-generator-ts/ai-docs/plans/universe-generator-ts-continue-prompt.md`. State goes in HANDOFF.md, never in this file.

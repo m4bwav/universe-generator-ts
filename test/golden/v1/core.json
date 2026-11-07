@@ -1,0 +1,642 @@
+{
+  "generatorVersion": 1,
+  "seeds": [
+    {
+      "text": "my-seed",
+      "fromText": "d7402b45d1c166c0",
+      "galaxy": "v1-my-seed/galaxy",
+      "galaxySeed": "b33df41276b22fbd",
+      "system": "v1-my-seed/galaxy/system/31",
+      "systemSeed": "d6eb27ed3d39e32a",
+      "streams": {
+        "layout": [
+          "e1496cab",
+          "cff073a5",
+          336,
+          -3,
+          0,
+          "3fb0002440010130",
+          "3fbdcb37c81eb3a1",
+          false
+        ],
+        "star": [
+          "20fb8942",
+          "5a241d14",
+          862,
+          3,
+          3,
+          "3fecf7db2f518b9c",
+          "3fcb32f9ce7dc456",
+          false
+        ],
+        "planets": [
+          "4ac968d9",
+          "d53ee7f8",
+          738,
+          -3,
+          2,
+          "3fecf3d2bfd04358",
+          "3fc7e4b827558d9c",
+          false
+        ],
+        "names": [
+          "6b37c479",
+          "f19bc9fe",
+          353,
+          2,
+          3,
+          "3fe23d84645b5b6c",
+          "3fc66a6346d8d582",
+          false
+        ],
+        "lanes": [
+          "e9bd518b",
+          "bfce3506",
+          743,
+          -5,
+          3,
+          "3fe28d238a1bff92",
+          "3fd9b93f312efacb",
+          false
+        ]
+      }
+    },
+    {
+      "text": "42",
+      "fromText": "7f8c6fbfae6c25aa",
+      "galaxy": "v1-42/galaxy",
+      "galaxySeed": "6080d52bf66bb30e",
+      "system": "v1-42/galaxy/system/31",
+      "systemSeed": "c4f2a57676b92eca",
+      "streams": {
+        "layout": [
+          "58a4124a",
+          "09bb172c",
+          267,
+          5,
+          2,
+          "3fe0b1c8b2e3ae76",
+          "3fc0e40ef28e6b60",
+          true
+        ],
+        "star": [
+          "35ff880e",
+          "8a69e203",
+          247,
+          -1,
+          6,
+          "3fdc0259f7cf5072",
+          "3fc18019ced51123",
+          true
+        ],
+        "planets": [
+          "94423ea5",
+          "378aa7cb",
+          15,
+          1,
+          0,
+          "3fe0ca8646ec13ae",
+          "3fd1301c0546618a",
+          false
+        ],
+        "names": [
+          "93817ca0",
+          "99aac447",
+          851,
+          4,
+          3,
+          "3fefffdacb6aad27",
+          "3fd882851c17e799",
+          false
+        ],
+        "lanes": [
+          "90442c90",
+          "ec838e2b",
+          720,
+          -3,
+          0,
+          "3fc35b5c5fe7d528",
+          "3fc50dd1d6c2b492",
+          false
+        ]
+      }
+    },
+    {
+      "text": "-42",
+      "fromText": "e84f799f3caecf4b",
+      "galaxy": "v1--42/galaxy",
+      "galaxySeed": "5a39af1727e661b9",
+      "system": "v1--42/galaxy/system/31",
+      "systemSeed": "cb78e3a2feb6495c",
+      "streams": {
+        "layout": [
+          "fd8f5f21",
+          "08034029",
+          90,
+          1,
+          2,
+          "3fe7cf7a78dbd9c7",
+          "3fccc2aade01faa4",
+          true
+        ],
+        "star": [
+          "bf67837a",
+          "9c6fcc55",
+          558,
+          -1,
+          2,
+          "3fd162eb7773f0f4",
+          "3fc7748f04058c29",
+          true
+        ],
+        "planets": [
+          "bacc4207",
+          "cfeca065",
+          250,
+          5,
+          2,
+          "3fe7997827a6e1e3",
+          "3fda5bf386435bee",
+          false
+        ],
+        "names": [
+          "a1566514",
+          "6b1a1261",
+          721,
+          -3,
+          1,
+          "3fc5a7a851b13a70",
+          "3fdb5d92c9b67259",
+          true
+        ],
+        "lanes": [
+          "8bdfb8aa",
+          "5a2bd60c",
+          226,
+          -3,
+          2,
+          "3fe744aa5c004974",
+          "3fb867aa537948b0",
+          false
+        ]
+      }
+    },
+    {
+      "text": "",
+      "fromText": "add59ec795ad7f61",
+      "galaxy": "v1-/galaxy",
+      "galaxySeed": "8eeed33abc950d81",
+      "system": "v1-/galaxy/system/31",
+      "systemSeed": "feeeb4b40c999745",
+      "streams": {
+        "layout": [
+          "2628be87",
+          "0ad37c77",
+          123,
+          2,
+          5,
+          "3fcc7b049bd325b8",
+          "3fcced65349ea88e",
+          false
+        ],
+        "star": [
+          "fb3e9455",
+          "4fbe8d9b",
+          530,
+          -5,
+          4,
+          "3fe95ddc956ad7ad",
+          "3fc3e41e0707ad2a",
+          false
+        ],
+        "planets": [
+          "c01c1bbf",
+          "bd3fb865",
+          61,
+          -4,
+          0,
+          "3feec790b2d68833",
+          "3fd65b0fcdba1442",
+          false
+        ],
+        "names": [
+          "83ee9f48",
+          "5ec65517",
+          949,
+          -1,
+          1,
+          "3fe18c04715ac556",
+          "3fbfc1523e254f66",
+          true
+        ],
+        "lanes": [
+          "1e5d1659",
+          "b5b85970",
+          575,
+          0,
+          0,
+          "3fdd6e63be859c68",
+          "3fc6d510843a67b4",
+          false
+        ]
+      }
+    },
+    {
+      "text": "Andromeda 7",
+      "fromText": "95f15097d3298c54",
+      "galaxy": "v1-Andromeda%207/galaxy",
+      "galaxySeed": "db77e9f3e831bc4a",
+      "system": "v1-Andromeda%207/galaxy/system/31",
+      "systemSeed": "e782ba6dfde2677e",
+      "streams": {
+        "layout": [
+          "c1be1a0a",
+          "4e2fcd1e",
+          743,
+          4,
+          0,
+          "3fdb23a0c79c6528",
+          "3fbf370788ed2612",
+          true
+        ],
+        "star": [
+          "4211bd16",
+          "6288a73d",
+          378,
+          -5,
+          2,
+          "3fd216b85086f404",
+          "3fc9237dbd8af678",
+          false
+        ],
+        "planets": [
+          "6b24dedc",
+          "0de84b0a",
+          652,
+          0,
+          3,
+          "3fdfbcd3a81d9674",
+          "3fc0598322c7fb90",
+          false
+        ],
+        "names": [
+          "05f79bb9",
+          "f6757237",
+          920,
+          4,
+          2,
+          "3fe7e0ea5f48712f",
+          "3fd8de3f6c808b97",
+          false
+        ],
+        "lanes": [
+          "65ed6c5f",
+          "49c9497c",
+          948,
+          0,
+          1,
+          "3feb6a4c91e9f71b",
+          "3fb635cd672b1d10",
+          false
+        ]
+      }
+    },
+    {
+      "text": "a/b c",
+      "fromText": "416d29b93014d99e",
+      "galaxy": "v1-a%2Fb%20c/galaxy",
+      "galaxySeed": "2dd7ba832bca0627",
+      "system": "v1-a%2Fb%20c/galaxy/system/31",
+      "systemSeed": "0e3864b19f118615",
+      "streams": {
+        "layout": [
+          "137d0e93",
+          "b6248820",
+          227,
+          -3,
+          2,
+          "3fc333333811f0c8",
+          "3fc47a38440cf326",
+          true
+        ],
+        "star": [
+          "e22e55fb",
+          "95261a0c",
+          434,
+          -1,
+          2,
+          "3fe5d28974ffdf0f",
+          "3fc8c66d0bce4caa",
+          true
+        ],
+        "planets": [
+          "a8b96549",
+          "4a992f1f",
+          370,
+          -5,
+          0,
+          "3fd388535843e254",
+          "3fd36447d5532d32",
+          true
+        ],
+        "names": [
+          "83641f36",
+          "2105b8db",
+          744,
+          -1,
+          2,
+          "3fa2809d37115240",
+          "3fd5232d51e506e9",
+          false
+        ],
+        "lanes": [
+          "936b5d34",
+          "9c17ec64",
+          722,
+          -1,
+          0,
+          "3fe871c37f2f06fa",
+          "3fc21bd2664d5cb1",
+          false
+        ]
+      }
+    }
+  ],
+  "math": [
+    [
+      "c0217f7ced916873",
+      "3f24ca6645765a84",
+      "400165a8a623f727",
+      "40629525bc95eb41",
+      "bfe40421fc5ddbab",
+      "bfe8f791209e7f6a",
+      "bff874dce26dc989",
+      "4007bb012d7f730e",
+      "c0c5189df3b645a2"
+    ],
+    [
+      "c02009ba5e353f7d",
+      "3f35923438cc9396",
+      "4000b448d7634c85",
+      "405e73e2146dc0d3",
+      "bfef90b6e6669238",
+      "bfc506d063f53396",
+      "bff8651fe2ca13a0",
+      "4006b98bb8a714ff",
+      "c0c355ffdf3b645a"
+    ],
+    [
+      "c01d27ef9db22d0e",
+      "3f4661825b6a4545",
+      "3fffe428671a7b79",
+      "40587c3a7b2b58d0",
+      "bfeb06f34b6583cd",
+      "3fe121ffd197ca48",
+      "bff8523dc489fb60",
+      "4005ac270f833c91",
+      "c0c19361eb851eb8"
+    ],
+    [
+      "c01a3c6a7ef9db23",
+      "3f573898c2e5332d",
+      "3ffe3704d8bd355e",
+      "40533df99983067e",
+      "bfd16ddeb2fd135e",
+      "3feeca5f4f996a84",
+      "bff83b2ab14dc8df",
+      "400490fe4d2f2a21",
+      "c0bfa187ae147ae1"
+    ],
+    [
+      "c01750e560418937",
+      "3f6817c23993f204",
+      "3ffc57998f0adefe",
+      "404d66c1f02ad008",
+      "3fdc1428825129f9",
+      "3fecc17c1f854c8f",
+      "bff81e556279694c",
+      "400365b6b96f83fd",
+      "c0bc1c4bc6a7ef9e"
+    ],
+    [
+      "c01465604189374b",
+      "3f78ff4c588f7b5a",
+      "3ffa3888fe0927ee",
+      "4045ac7649af7cfe",
+      "3feda35dd18b6062",
+      "3fd8219d9e2fd197",
+      "bff7f9485fca7ddc",
+      "400227334b91960d",
+      "c0b8970f9db22d0e"
+    ],
+    [
+      "c01179db22d0e560",
+      "3f89ef87a2aeaf4a",
+      "3ff7c64d281fedd0",
+      "403e7f048dc5c858",
+      "3fee21be5246f6f2",
+      "bfd58c2ae43bee90",
+      "bff7c7ed5bf8cce4",
+      "4000d12fb3a08f61",
+      "c0b511d3b645a1cb"
+    ],
+    [
+      "c00d1cac083126e9",
+      "3f9ae8c7a0852545",
+      "3ff4e2bc5d09b17d",
+      "403421d3d23da125",
+      "3fde899a8aef5ed5",
+      "bfec1f509040d875",
+      "bff782f1275e8652",
+      "3ffebb17c4a83fb9",
+      "c0b18c978d4fdf3b"
+    ],
+    [
+      "c00745a1cac08312",
+      "3fabeb62fd6f0821",
+      "3ff15b8d1d1d9ef2",
+      "40283f4f295c0bf7",
+      "bfcd810fa8779dfb",
+      "bfef2368026ab329",
+      "bff71bc9b4769589",
+      "3ffb85d59a15805b",
+      "c0ac0eb74bc6a7f0"
+    ],
+    [
+      "c0016e978d4fdf3b",
+      "3fbcf7b3a5b41760",
+      "3fe9a652975588b1",
+      "401946ba40a05ea9",
+      "bfea42f9cb74e66c",
+      "bfe248dc7307979d",
+      "bff6710a91feb780",
+      "3ff7e342c2c80560",
+      "c0a5043ef9db22d1"
+    ],
+    [
+      "bff72f1a9fbe76c9",
+      "3fce0e16e5cc4800",
+      "3fd9e836ca267dac",
+      "40044c0dfbbc6b7b",
+      "bfefc35047f3cd2b",
+      "3fbf1a52efda4f5d",
+      "bff521f4d64c2f4a",
+      "3ff396e1ed72e737",
+      "c09bf38e56041893"
+    ],
+    [
+      "bfe7020c49ba5e35",
+      "3fdf2eed8ad0e43a",
+      "bfd0cf7df6c1ca1b",
+      "3fe17d583a5a1392",
+      "bfe513848aa343ea",
+      "3fe81430ee07d563",
+      "bff1874edd6bcf4c",
+      "3fec0fc80f5d0970",
+      "c08bbd3b645a1cac"
+    ],
+    [
+      "3f86872b020c49ba",
+      "3ff02d4e0212b926",
+      "c00660035cfb2727",
+      "3f5a5803d48e5c16",
+      "3f86870d3bf5752c",
+      "3fefff811fa32879",
+      "3f9e6f2ce5e98b0f",
+      "3fcf9d19576abf82",
+      "402b28f5c28f5c29"
+    ],
+    [
+      "3fe7b645a1cac083",
+      "4000c8c543320b2d",
+      "bfce02b279fcb5d6",
+      "3fe2a9725ea7e871",
+      "3fe599d03749408c",
+      "3fe79c01f4df2274",
+      "3ff1b917c2752173",
+      "3fec75d0d6418b5d",
+      "408c96851eb851ec"
+    ],
+    [
+      "3ff789374bc6a7ef",
+      "40116a1297ccca10",
+      "3fdad6ecef80e35f",
+      "4004fd20a29a98f4",
+      "3fefd73d92fbbff6",
+      "3fb98166c31bd350",
+      "3ff530a7998fbe6d",
+      "3ff3bb8c7fd3473b",
+      "409c60322d0e5604"
+    ],
+    [
+      "40019ba5e353f7cf",
+      "4022116e166ec51d",
+      "3fe9f6c7c908b804",
+      "4019da8fb0ec0c59",
+      "3fe9da60d38f33de",
+      "bfe2db9f37b04c8e",
+      "3ff677cce0e3b550",
+      "3ff8015d7c8ba51c",
+      "40a53a916872b021"
+    ],
+    [
+      "400772b020c49ba6",
+      "4032bf11f0a9fc91",
+      "3ff179e460fe302e",
+      "4028a9f84a174776",
+      "3fcac1ce65066053",
+      "bfef4b04097d6ab7",
+      "3ff71fa2f4bacea4",
+      "3ffb9ffa8391fe6c",
+      "40ac4509374bc6a8"
+    ],
+    [
+      "400d49ba5e353f7d",
+      "4043733a8752d335",
+      "3ff4fb172873a01b",
+      "403468cb3a5a64c7",
+      "bfdfc474c9171a21",
+      "bfebc795f92d46f2",
+      "3ff7856b51af1ca6",
+      "3ffed28430c9346d",
+      "40b1a7c0c49ba5e3"
+    ],
+    [
+      "401190624dd2f1aa",
+      "40542e267f7eb745",
+      "3ff7daa48ae86902",
+      "403ed8b3af92bf2c",
+      "bfee5c8cbbcf838f",
+      "bfd4377492016006",
+      "3ff7c9a71fa56bd2",
+      "4000dbe3c49ad8e9",
+      "40b52cfcac083127"
+    ],
+    [
+      "40147be76c8b4395",
+      "4064f016d84c8f7c",
+      "3ffa49ffac06145e",
+      "4045e3239e167b41",
+      "bfed5d9505bd83dc",
+      "3fd96df01eaa2be3",
+      "3ff7fa8d8be65e46",
+      "4002311e26996f10",
+      "40b8b238d4fdf3b6"
+    ],
+    [
+      "4017676c8b439581",
+      "4075b94f017e7f71",
+      "3ffc66e6255ff7ca",
+      "404da7b28235c4e9",
+      "bfdace8a2127da19",
+      "3fed0ec44db944c4",
+      "3ff81f4ea62dc479",
+      "40036eff0baa77f3",
+      "40bc3774bc6a7efa"
+    ],
+    [
+      "401a52f1a9fbe76d",
+      "40868a14f2ecdeed",
+      "3ffe44a18b22cd58",
+      "405363c560d27659",
+      "3fd2c7962b12eca4",
+      "3fee976363c57b5a",
+      "3ff83befcebb861d",
+      "400499bfc698ec55",
+      "40bfbcb0e5604189"
+    ],
+    [
+      "401d3e76c8b43958",
+      "409762b144da8ba7",
+      "3ffff06afffad38a",
+      "4058a787b1d03c04",
+      "3feb65c29fda95c2",
+      "3fe088bbb91baf2c",
+      "3ff852dd86d78ba7",
+      "4005b476502af60c",
+      "40c1a0f666666666"
+    ],
+    [
+      "402014fdf3b645a1",
+      "40a8436f49330b51",
+      "4000b9dc5bec2d42",
+      "405ea4db6a894120",
+      "3fef7127e9b93917",
+      "bfc7cc8e9420a1f0",
+      "3ff865a3fa108946",
+      "4006c1789ab96dea",
+      "40c363947ae147ae"
+    ],
+    [
+      "40218ac083126e97",
+      "40b92c9d25bb448f",
+      "40016ac5e1c46096",
+      "4062b08c70214341",
+      "3fe3764a25b2003e",
+      "bfe966bdf5f7c019",
+      "3ff8754bea43584e",
+      "4007c2982fb6182e",
+      "40c526326e978d50"
+    ]
+  ]
+}

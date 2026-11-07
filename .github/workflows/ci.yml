@@ -1,0 +1,131 @@
+# Every push to master and every pull request: lint and types, the golden recordings unchanged since their commits, the
+# package's shape and coverage, the packed tarball's files, the suites (the golden cases of the old version, if any) and
+# the suites on each Node line (Linux) and on Windows and macOS. Consumer fixtures, Bun and Deno arrive with Stage 3.
+# The ruleset on master requires the final `ci` job, which passes only when every other job passed.
+name: ci
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  # A pull request's runs share a group and the newest cancels the rest; every other run (a master push, a manual run) has a
+  # group of its own commit, so no master run is cancelled or replaced while release.yml waits for it (L-120).
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.sha }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  lint:
+    name: lint and typecheck
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # The whole history: the next step finds the commit that added each golden file.
+          fetch-depth: 0
+          persist-credentials: false
+      - name: The golden recordings, capture scripts and codec are unchanged since the commits that added them
+        run: test/golden/check-untouched.sh
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - name: Registry signatures of the installed packages
+        run: npm audit signatures
+      - name: No vulnerable runtime dependency (the package has none)
+        run: npm audit --omit=dev
+
+  package:
+    name: package shape and coverage
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      # publint packs without lifecycle scripts, so dist/ must exist first.
+      - run: npm run build
+      - name: publint, attw and the pack file list
+        run: npm run check
+      - name: The packed tarball's files, size and version (the check release.yml runs on the tarball it stages)
+        run: |
+          npm pack --ignore-scripts
+          version=$(node -p "require('./package.json').version")
+          node scripts/check-tarball.mjs "universe-generator-$version.tgz" "$version"
+      - name: Coverage of src/ (95 percent lines, 90 percent branches)
+        run: npm run coverage
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: coverage-lcov
+          path: coverage/lcov.info
+          if-no-files-found: error
+
+  test:
+    name: test (Node ${{ matrix.node }}, ${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04]
+        node: [20, 22, 24, 26]
+        include:
+          - os: windows-latest
+            node: 24
+          - os: macos-latest
+            node: 24
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      # tsdown needs Node 22.18 or later, so every job installs and builds on Node 24, then tests on its own Node.
+      - name: Node 24 to install and build
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Node ${{ matrix.node }} to run the tests
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ matrix.node }}
+      - run: node --version && npm --version
+      - name: Every suite against both builds
+        run: npm run test:dist
+
+  ci:
+    name: ci
+    if: ${{ always() }}
+    needs: [lint, package, test]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Every job passed
+        env:
+          RESULTS: ${{ join(needs.*.result, ' ') }}
+        run: |
+          echo "job results: $RESULTS"
+          for result in $RESULTS; do
+            if [ "$result" != success ]; then
+              exit 1
+            fi
+          done

@@ -1,0 +1,641 @@
+{
+  "generatorVersion": 1,
+  "lists": [
+    {
+      "seed": "my-seed",
+      "class": null,
+      "names": [
+        [
+          "HD 45528",
+          "K"
+        ],
+        [
+          "HD 19029",
+          "F"
+        ],
+        [
+          "Kepler-1971",
+          "F"
+        ],
+        [
+          "HD 210156",
+          "M"
+        ],
+        [
+          "LHS 612",
+          "K"
+        ],
+        [
+          "30 Leonis Minoris",
+          "A"
+        ],
+        [
+          "GJ 898",
+          "K"
+        ],
+        [
+          "GJ 444",
+          "M"
+        ],
+        [
+          "HD 214124",
+          "M"
+        ],
+        [
+          "Ross 964",
+          "F"
+        ],
+        [
+          "TOI-7216",
+          "G"
+        ],
+        [
+          "GJ 267",
+          "K"
+        ],
+        [
+          "TOI-5397",
+          "M"
+        ],
+        [
+          "HIP 13482",
+          "M"
+        ],
+        [
+          "Alrescha",
+          "B"
+        ],
+        [
+          "HD 1325",
+          "K"
+        ],
+        [
+          "Horna",
+          "Supergiant"
+        ],
+        [
+          "Wolf 1043",
+          "M"
+        ],
+        [
+          "HD 197719",
+          "K"
+        ],
+        [
+          "HD 73209",
+          "G"
+        ],
+        [
+          "HIP 85585",
+          "WhiteDwarf"
+        ],
+        [
+          "GJ 223",
+          "F"
+        ],
+        [
+          "HD 61465",
+          "F"
+        ],
+        [
+          "Revati",
+          "M"
+        ],
+        [
+          "57 Sagittarii",
+          "A"
+        ]
+      ]
+    },
+    {
+      "seed": "42",
+      "class": null,
+      "names": [
+        [
+          "HD 73130",
+          "M"
+        ],
+        [
+          "HD 126578",
+          "M"
+        ],
+        [
+          "HD 41818",
+          "M"
+        ],
+        [
+          "Wolf 1354",
+          "M"
+        ],
+        [
+          "TOI-1694",
+          "K"
+        ],
+        [
+          "Theta Chamaeleontis",
+          "M"
+        ],
+        [
+          "GJ 279",
+          "K"
+        ],
+        [
+          "Kepler-1999",
+          "M"
+        ],
+        [
+          "Arcturus",
+          "M"
+        ],
+        [
+          "Wolf 349",
+          "G"
+        ],
+        [
+          "TOI-4921",
+          "M"
+        ],
+        [
+          "WD 0117-461",
+          "WhiteDwarf"
+        ],
+        [
+          "Baltesha",
+          "M"
+        ],
+        [
+          "Wolf 1548",
+          "M"
+        ],
+        [
+          "GJ 343",
+          "M"
+        ],
+        [
+          "WD 0729-690",
+          "WhiteDwarf"
+        ],
+        [
+          "24 Aquilae",
+          "M"
+        ],
+        [
+          "Rho Ophiuchi",
+          "M"
+        ],
+        [
+          "Psi Aquilae",
+          "M"
+        ],
+        [
+          "HD 219686",
+          "M"
+        ],
+        [
+          "GJ 794",
+          "WhiteDwarf"
+        ],
+        [
+          "Wazn",
+          "M"
+        ],
+        [
+          "102 Herculis",
+          "M"
+        ],
+        [
+          "GJ 41",
+          "M"
+        ],
+        [
+          "LHS 4278",
+          "M"
+        ]
+      ]
+    },
+    {
+      "seed": "names",
+      "class": "G",
+      "names": [
+        [
+          "GJ 817",
+          "G"
+        ],
+        [
+          "Wolf 585",
+          "G"
+        ],
+        [
+          "HD 8135",
+          "G"
+        ],
+        [
+          "GJ 792",
+          "G"
+        ],
+        [
+          "Wolf 707",
+          "G"
+        ],
+        [
+          "HD 170105",
+          "G"
+        ],
+        [
+          "TOI-4574",
+          "G"
+        ],
+        [
+          "TOI-3776",
+          "G"
+        ],
+        [
+          "LHS 254",
+          "G"
+        ],
+        [
+          "GJ 676",
+          "G"
+        ],
+        [
+          "51 Cygni",
+          "G"
+        ],
+        [
+          "LHS 3208",
+          "G"
+        ],
+        [
+          "GJ 166",
+          "G"
+        ],
+        [
+          "HD 17934",
+          "G"
+        ],
+        [
+          "Kepler-949",
+          "G"
+        ],
+        [
+          "GJ 159",
+          "G"
+        ],
+        [
+          "HD 27949",
+          "G"
+        ],
+        [
+          "TOI-4852",
+          "G"
+        ],
+        [
+          "TOI-3359",
+          "G"
+        ],
+        [
+          "Wolf 212",
+          "G"
+        ],
+        [
+          "HD 99169",
+          "G"
+        ],
+        [
+          "LHS 1924",
+          "G"
+        ],
+        [
+          "HIP 34772",
+          "G"
+        ],
+        [
+          "HIP 77630",
+          "G"
+        ],
+        [
+          "HD 22140",
+          "G"
+        ]
+      ]
+    },
+    {
+      "seed": "names",
+      "class": "Supergiant",
+      "names": [
+        [
+          "HD 184155",
+          "Supergiant"
+        ],
+        [
+          "Rho Persei",
+          "Supergiant"
+        ],
+        [
+          "Alderamin",
+          "Supergiant"
+        ],
+        [
+          "Maru",
+          "Supergiant"
+        ],
+        [
+          "Shangcheng",
+          "Supergiant"
+        ],
+        [
+          "HD 83582",
+          "Supergiant"
+        ],
+        [
+          "Shama",
+          "Supergiant"
+        ],
+        [
+          "HIP 33464",
+          "Supergiant"
+        ],
+        [
+          "HIP 111531",
+          "Supergiant"
+        ],
+        [
+          "66 Virginis",
+          "Supergiant"
+        ],
+        [
+          "Filetdor",
+          "Supergiant"
+        ],
+        [
+          "HIP 104443",
+          "Supergiant"
+        ],
+        [
+          "Jabbah",
+          "Supergiant"
+        ],
+        [
+          "HD 63683",
+          "Supergiant"
+        ],
+        [
+          "Nunki",
+          "Supergiant"
+        ],
+        [
+          "76 Draconis",
+          "Supergiant"
+        ],
+        [
+          "23 Ursae Majoris",
+          "Supergiant"
+        ],
+        [
+          "HIP 29405",
+          "Supergiant"
+        ],
+        [
+          "HIP 33158",
+          "Supergiant"
+        ],
+        [
+          "Tegmine",
+          "Supergiant"
+        ],
+        [
+          "HD 37734",
+          "Supergiant"
+        ],
+        [
+          "Zibbatu",
+          "Supergiant"
+        ],
+        [
+          "HD 130796",
+          "Supergiant"
+        ],
+        [
+          "39 Tauri",
+          "Supergiant"
+        ],
+        [
+          "Asellus Australis",
+          "Supergiant"
+        ]
+      ]
+    },
+    {
+      "seed": "names",
+      "class": "NeutronStar",
+      "names": [
+        [
+          "PSR J1932-0402",
+          "NeutronStar"
+        ],
+        [
+          "PSR J1452+4256",
+          "NeutronStar"
+        ],
+        [
+          "PSR J0702+5328",
+          "NeutronStar"
+        ],
+        [
+          "PSR J0432-1822",
+          "NeutronStar"
+        ],
+        [
+          "PSR J0748+5726",
+          "NeutronStar"
+        ],
+        [
+          "PSR J2114-7722",
+          "NeutronStar"
+        ],
+        [
+          "PSR J0547-1009",
+          "NeutronStar"
+        ],
+        [
+          "PSR J1745+3541",
+          "NeutronStar"
+        ],
+        [
+          "PSR J1858+3104",
+          "NeutronStar"
+        ],
+        [
+          "PSR J1124-2427",
+          "NeutronStar"
+        ],
+        [
+          "PSR J0220-0438",
+          "NeutronStar"
+        ],
+        [
+          "PSR J2157-8057",
+          "NeutronStar"
+        ],
+        [
+          "PSR J0426+4440",
+          "NeutronStar"
+        ],
+        [
+          "PSR J2311+4053",
+          "NeutronStar"
+        ],
+        [
+          "PSR J0638+3613",
+          "NeutronStar"
+        ],
+        [
+          "PSR J1527+5525",
+          "NeutronStar"
+        ],
+        [
+          "PSR J1308+3815",
+          "NeutronStar"
+        ],
+        [
+          "PSR J1744-7108",
+          "NeutronStar"
+        ],
+        [
+          "PSR J1945+2941",
+          "NeutronStar"
+        ],
+        [
+          "PSR J0652+0637",
+          "NeutronStar"
+        ],
+        [
+          "PSR J2206+1011",
+          "NeutronStar"
+        ],
+        [
+          "PSR J0659+0013",
+          "NeutronStar"
+        ],
+        [
+          "PSR J2022+2809",
+          "NeutronStar"
+        ],
+        [
+          "PSR J1615-5921",
+          "NeutronStar"
+        ],
+        [
+          "PSR J0508+5111",
+          "NeutronStar"
+        ]
+      ]
+    },
+    {
+      "seed": "hé/ü",
+      "class": "WhiteDwarf",
+      "names": [
+        [
+          "HIP 1924",
+          "WhiteDwarf"
+        ],
+        [
+          "GJ 835",
+          "WhiteDwarf"
+        ],
+        [
+          "WD 1014-460",
+          "WhiteDwarf"
+        ],
+        [
+          "WD 1759+766",
+          "WhiteDwarf"
+        ],
+        [
+          "Ross 117",
+          "WhiteDwarf"
+        ],
+        [
+          "TOI-6218",
+          "WhiteDwarf"
+        ],
+        [
+          "WD 2347+619",
+          "WhiteDwarf"
+        ],
+        [
+          "Talitha",
+          "WhiteDwarf"
+        ],
+        [
+          "WD 1920+485",
+          "WhiteDwarf"
+        ],
+        [
+          "Chi² Fornacis",
+          "WhiteDwarf"
+        ],
+        [
+          "HD 30926",
+          "WhiteDwarf"
+        ],
+        [
+          "WD 0259+883",
+          "WhiteDwarf"
+        ],
+        [
+          "WD 1623-263",
+          "WhiteDwarf"
+        ],
+        [
+          "GJ 402",
+          "WhiteDwarf"
+        ],
+        [
+          "WD 0037-109",
+          "WhiteDwarf"
+        ],
+        [
+          "WD 1319+763",
+          "WhiteDwarf"
+        ],
+        [
+          "HIP 23678",
+          "WhiteDwarf"
+        ],
+        [
+          "WD 1153+317",
+          "WhiteDwarf"
+        ],
+        [
+          "Tau³ Gruis",
+          "WhiteDwarf"
+        ],
+        [
+          "WD 2212+746",
+          "WhiteDwarf"
+        ],
+        [
+          "TOI-3782",
+          "WhiteDwarf"
+        ],
+        [
+          "HD 50198",
+          "WhiteDwarf"
+        ],
+        [
+          "WD 2010+090",
+          "WhiteDwarf"
+        ],
+        [
+          "Ross 1006",
+          "WhiteDwarf"
+        ],
+        [
+          "WD 1611-346",
+          "WhiteDwarf"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "generatorVersion": 1,
+  "cases": [
+    {
+      "seed": "my-seed",
+      "options": "",
+      "check": [],
+      "systems": 60,
+      "warnings": []
+    },
+    {
+      "seed": "small-spiral",
+      "options": "systems=40&shape=spiral",
+      "check": [
+        [
+          "ShapeTooSmall",
+          "A spiral galaxy of 40 systems: arms read on a map only from 80 systems."
+        ]
+      ],
+      "systems": 40,
+      "warnings": [
+        [
+          "ShapeTooSmall",
+          "A spiral galaxy of 40 systems: arms read on a map only from 80 systems."
+        ]
+      ]
+    },
+    {
+      "seed": "ring-arms",
+      "options": "shape=ring&arms=3",
+      "check": [
+        [
+          "ArmsIgnored",
+          "Arms = 3 changes nothing: a ring galaxy has no arms."
+        ]
+      ],
+      "systems": 60,
+      "warnings": [
+        [
+          "ArmsIgnored",
+          "Arms = 3 changes nothing: a ring galaxy has no arms."
+        ]
+      ]
+    },
+    {
+      "seed": "auto-arms",
+      "options": "arms=2",
+      "check": [
+        [
+          "ArmsIgnored",
+          "Arms = 2 changes nothing: under 80 systems, Auto picks an elliptical, ring or irregular galaxy."
+        ]
+      ],
+      "systems": 60,
+      "warnings": [
+        [
+          "ArmsIgnored",
+          "Arms = 2 changes nothing: under 80 systems, Auto picks an elliptical, ring or irregular galaxy."
+        ]
+      ]
+    },
+    {
+      "seed": "auto-big-arms",
+      "options": "systems=120&arms=4",
+      "check": [],
+      "systems": 120,
+      "warnings": []
+    },
+    {
+      "seed": "crowded",
+      "options": "systems=2000&shape=ring",
+      "check": [],
+      "systems": 2000,
+      "warnings": []
+    }
+  ]
+}

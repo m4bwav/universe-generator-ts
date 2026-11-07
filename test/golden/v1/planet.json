@@ -1,0 +1,5669 @@
+{
+  "generatorVersion": 1,
+  "alone": [
+    {
+      "planet": {
+        "address": "v1-my-seed/planet",
+        "name": "HIP 38296 b",
+        "kind": "Desert",
+        "zone": "Temperate",
+        "orbit": 1.5282,
+        "period": 662.47,
+        "mass": 1.761,
+        "radius": 1.171,
+        "rings": false,
+        "descriptor": "a temperate desert world under a yellow-white star",
+        "moons": [
+          {
+            "name": "HIP 38296 b I",
+            "kind": "Barren",
+            "orbit": 4.59,
+            "radius": 2206
+          },
+          {
+            "name": "HIP 38296 b II",
+            "kind": "Ice",
+            "orbit": 8.74,
+            "radius": 1753
+          }
+        ]
+      },
+      "detail": {
+        "address": "v1-my-seed/planet",
+        "composition": "Rock",
+        "gravity": 1.28,
+        "escapeVelocity": 13.72,
+        "density": 6.05,
+        "insolation": 0.5941,
+        "albedo": 0.31,
+        "temperature": 236,
+        "dayTemperature": 241,
+        "nightTemperature": 225,
+        "atmosphere": {
+          "class": "Standard",
+          "pressure": 0.6,
+          "gases": [
+            "Nitrogen",
+            "CarbonDioxide"
+          ],
+          "lightestGasKept": 4.3,
+          "breathable": false,
+          "why": "its gravity holds nitrogen and carbon dioxide"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 46.6,
+        "spin": "Free",
+        "tilt": 164,
+        "bands": [
+          [
+            0,
+            15,
+            0.2588,
+            248,
+            "Barren"
+          ],
+          [
+            15,
+            30,
+            0.2412,
+            243,
+            "Barren"
+          ],
+          [
+            30,
+            45,
+            0.2071,
+            235,
+            "Barren"
+          ],
+          [
+            45,
+            60,
+            0.1589,
+            224,
+            "Barren"
+          ],
+          [
+            60,
+            75,
+            0.0999,
+            216,
+            "Barren"
+          ],
+          [
+            75,
+            90,
+            0.0341,
+            210,
+            "Barren"
+          ]
+        ],
+        "biomes": [
+          [
+            "Barren",
+            1
+          ]
+        ],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "an ancient impact basin",
+          "global dust storms"
+        ],
+        "anomaly": "a region where compasses spin",
+        "resources": {
+          "metals": 2,
+          "rareElements": 1,
+          "ices": 0,
+          "gases": 1,
+          "organics": 0
+        },
+        "hazard": 2,
+        "hazards": [
+          "unbreathable air",
+          "cold",
+          "dust storms"
+        ],
+        "similarity": 0.83,
+        "habitability": "Marginal",
+        "summary": "1.3 g, nitrogen air at 0.6 bar, -37 °C; hazard 2"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-42/planet",
+        "name": "126 Tauri b",
+        "kind": "Barren",
+        "zone": "Warm",
+        "orbit": 0.0163,
+        "period": 2.48,
+        "mass": 2.526,
+        "radius": 1.295,
+        "rings": false,
+        "descriptor": "a warm barren rock under a red dwarf",
+        "moons": []
+      },
+      "detail": {
+        "address": "v1-42/planet",
+        "composition": "Rock",
+        "gravity": 1.51,
+        "escapeVelocity": 15.62,
+        "density": 6.41,
+        "insolation": 3.7261,
+        "albedo": 0.1,
+        "temperature": 377,
+        "dayTemperature": 490,
+        "nightTemperature": 113,
+        "atmosphere": {
+          "class": "None",
+          "pressure": 0,
+          "gases": [],
+          "lightestGasKept": 5.5,
+          "breathable": false,
+          "why": "stripped by its star's heat and wind"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 59.5,
+        "spin": "Locked",
+        "tilt": 1.3,
+        "bands": [
+          [
+            0,
+            30,
+            0.067,
+            597,
+            "Barren"
+          ],
+          [
+            30,
+            60,
+            0.183,
+            521,
+            "Barren"
+          ],
+          [
+            60,
+            80,
+            0.1632,
+            427,
+            "Barren"
+          ],
+          [
+            80,
+            100,
+            0.1736,
+            371,
+            "Barren"
+          ],
+          [
+            100,
+            140,
+            0.2962,
+            276,
+            "Barren"
+          ],
+          [
+            140,
+            180,
+            0.117,
+            220,
+            "Barren"
+          ]
+        ],
+        "biomes": [
+          [
+            "Barren",
+            1
+          ]
+        ],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "deep canyons",
+          "an ancient impact basin"
+        ],
+        "anomaly": null,
+        "resources": {
+          "metals": 4,
+          "rareElements": 2,
+          "ices": 0,
+          "gases": 0,
+          "organics": 0
+        },
+        "hazard": 3,
+        "hazards": [
+          "stellar flares",
+          "vacuum",
+          "radiation",
+          "extreme heat",
+          "deep cold",
+          "heavy gravity"
+        ],
+        "similarity": 0.76,
+        "habitability": "Marginal",
+        "summary": "1.5 g, no air, 217 °C by day, -160 °C by night, tidally locked; hazard 3"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1--42/planet",
+        "name": "Epsilon Telescopii b",
+        "kind": "Barren",
+        "zone": "Cold",
+        "orbit": 0.0989,
+        "period": 33.21,
+        "mass": 1.715,
+        "radius": 1.162,
+        "rings": false,
+        "descriptor": "a cold barren rock under a red dwarf",
+        "moons": [
+          {
+            "name": "Epsilon Telescopii b I",
+            "kind": "Barren",
+            "orbit": 4.74,
+            "radius": 1061
+          },
+          {
+            "name": "Epsilon Telescopii b II",
+            "kind": "Barren",
+            "orbit": 7.5,
+            "radius": 403
+          }
+        ]
+      },
+      "detail": {
+        "address": "v1--42/planet",
+        "composition": "Rock",
+        "gravity": 1.27,
+        "escapeVelocity": 13.59,
+        "density": 6.03,
+        "insolation": 0.1677,
+        "albedo": 0.15,
+        "temperature": 171,
+        "dayTemperature": 222,
+        "nightTemperature": 51,
+        "atmosphere": {
+          "class": "None",
+          "pressure": 0,
+          "gases": [],
+          "lightestGasKept": 3.3,
+          "breathable": false,
+          "why": "lost its air long ago"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 797,
+        "spin": "Locked",
+        "tilt": 2.7,
+        "bands": [
+          [
+            0,
+            30,
+            0.067,
+            271,
+            "Barren"
+          ],
+          [
+            30,
+            60,
+            0.183,
+            236,
+            "Barren"
+          ],
+          [
+            60,
+            80,
+            0.1632,
+            194,
+            "Barren"
+          ],
+          [
+            80,
+            100,
+            0.1736,
+            168,
+            "Barren"
+          ],
+          [
+            100,
+            140,
+            0.2962,
+            125,
+            "Barren"
+          ],
+          [
+            140,
+            180,
+            0.117,
+            100,
+            "Barren"
+          ]
+        ],
+        "biomes": [
+          [
+            "Barren",
+            1
+          ]
+        ],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "long days",
+          "deep canyons"
+        ],
+        "anomaly": null,
+        "resources": {
+          "metals": 4,
+          "rareElements": 3,
+          "ices": 2,
+          "gases": 0,
+          "organics": 0
+        },
+        "hazard": 3,
+        "hazards": [
+          "vacuum",
+          "deep cold"
+        ],
+        "similarity": 0.64,
+        "habitability": "Hostile",
+        "summary": "1.3 g, no air, -51 °C by day, -222 °C by night, tidally locked; hazard 3"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-/planet",
+        "name": "HD 175537 b",
+        "kind": "Rocky",
+        "zone": "Temperate",
+        "orbit": 0.8159,
+        "period": 292.64,
+        "mass": 0.89,
+        "radius": 0.968,
+        "rings": false,
+        "descriptor": "a temperate rocky world under a yellow star",
+        "moons": [
+          {
+            "name": "HD 175537 b I",
+            "kind": "Barren",
+            "orbit": 3.31,
+            "radius": 1428
+          },
+          {
+            "name": "HD 175537 b II",
+            "kind": "Barren",
+            "orbit": 4.67,
+            "radius": 1705
+          }
+        ]
+      },
+      "detail": {
+        "address": "v1-/planet",
+        "composition": "Rock",
+        "gravity": 0.95,
+        "escapeVelocity": 10.73,
+        "density": 5.41,
+        "insolation": 0.7699,
+        "albedo": 0.21,
+        "temperature": 301,
+        "dayTemperature": 302,
+        "nightTemperature": 300,
+        "atmosphere": {
+          "class": "Standard",
+          "pressure": 1.3275,
+          "gases": [
+            "CarbonDioxide",
+            "Nitrogen"
+          ],
+          "lightestGasKept": 7.7,
+          "breathable": false,
+          "why": "its gravity holds carbon dioxide and nitrogen"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 8.8,
+        "spin": "Free",
+        "tilt": 4.6,
+        "bands": [
+          [
+            0,
+            15,
+            0.2588,
+            316,
+            "Barren"
+          ],
+          [
+            15,
+            30,
+            0.2412,
+            310,
+            "Barren"
+          ],
+          [
+            30,
+            45,
+            0.2071,
+            299,
+            "Barren"
+          ],
+          [
+            45,
+            60,
+            0.1589,
+            287,
+            "Barren"
+          ],
+          [
+            60,
+            75,
+            0.0999,
+            276,
+            "Barren"
+          ],
+          [
+            75,
+            90,
+            0.0341,
+            270,
+            "Barren"
+          ]
+        ],
+        "biomes": [
+          [
+            "Barren",
+            1
+          ]
+        ],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "volcanic chains"
+        ],
+        "anomaly": null,
+        "resources": {
+          "metals": 4,
+          "rareElements": 1,
+          "ices": 2,
+          "gases": 1,
+          "organics": 0
+        },
+        "hazard": 2,
+        "hazards": [
+          "unbreathable air",
+          "eruptions"
+        ],
+        "similarity": 0.96,
+        "habitability": "Habitable",
+        "summary": "1 g, carbon dioxide air at 1.3 bar, 28 °C; hazard 2"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-Andromeda%207/planet",
+        "name": "Naga b",
+        "kind": "IceGiant",
+        "zone": "Outer",
+        "orbit": 13.3427,
+        "period": 13173.59,
+        "mass": 43.337,
+        "radius": 7.439,
+        "rings": false,
+        "descriptor": "an ice giant far from a white star",
+        "moons": [
+          {
+            "name": "Naga b I",
+            "kind": "Ice",
+            "orbit": 5.84,
+            "radius": 358
+          },
+          {
+            "name": "Naga b II",
+            "kind": "Hazy",
+            "orbit": 7.89,
+            "radius": 200
+          },
+          {
+            "name": "Naga b III",
+            "kind": "Ice",
+            "orbit": 11.95,
+            "radius": 2547
+          }
+        ]
+      },
+      "detail": {
+        "address": "v1-Andromeda%207/planet",
+        "composition": "Ices",
+        "gravity": 0.78,
+        "escapeVelocity": 27,
+        "density": 0.58,
+        "insolation": 0.0625,
+        "albedo": 0.35,
+        "temperature": 125,
+        "dayTemperature": 125,
+        "nightTemperature": 125,
+        "atmosphere": {
+          "class": "Envelope",
+          "pressure": null,
+          "gases": [
+            "Hydrogen",
+            "Helium",
+            "Methane"
+          ],
+          "lightestGasKept": 0.6,
+          "breathable": false,
+          "why": "hydrogen, helium and methane over a mantle of ices; there is no surface"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 12.4,
+        "spin": "Free",
+        "tilt": 9.5,
+        "bands": [],
+        "biomes": [],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "diamond rain",
+          "a great storm"
+        ],
+        "anomaly": null,
+        "resources": {
+          "metals": 0,
+          "rareElements": 0,
+          "ices": 2,
+          "gases": 4,
+          "organics": 0
+        },
+        "hazard": 5,
+        "hazards": [
+          "no surface"
+        ],
+        "similarity": 0.24,
+        "habitability": "Hostile",
+        "summary": "0.8 g, a deep envelope of hydrogen, helium and methane, -148 °C at the cloud tops; hazard 5"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-a%2Fb%20c/planet",
+        "name": "Ross 904 b",
+        "kind": "Rocky",
+        "zone": "Warm",
+        "orbit": 0.0169,
+        "period": 0.77,
+        "mass": 1.169,
+        "radius": 1.045,
+        "rings": false,
+        "descriptor": "a warm rocky world under a white dwarf",
+        "moons": []
+      },
+      "detail": {
+        "address": "v1-a%2Fb%20c/planet",
+        "composition": "Rock",
+        "gravity": 1.07,
+        "escapeVelocity": 11.83,
+        "density": 5.65,
+        "insolation": 4.6567,
+        "albedo": 0.21,
+        "temperature": 436,
+        "dayTemperature": 445,
+        "nightTemperature": 415,
+        "atmosphere": {
+          "class": "Standard",
+          "pressure": 1.361,
+          "gases": [
+            "Nitrogen",
+            "CarbonDioxide"
+          ],
+          "lightestGasKept": 9.9,
+          "breathable": false,
+          "why": "its gravity holds nitrogen and carbon dioxide"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 18.5,
+        "spin": "Locked",
+        "tilt": 0.8,
+        "bands": [
+          [
+            0,
+            30,
+            0.067,
+            453,
+            "Barren"
+          ],
+          [
+            30,
+            60,
+            0.183,
+            447,
+            "Barren"
+          ],
+          [
+            60,
+            80,
+            0.1632,
+            440,
+            "Barren"
+          ],
+          [
+            80,
+            100,
+            0.1736,
+            435,
+            "Barren"
+          ],
+          [
+            100,
+            140,
+            0.2962,
+            428,
+            "Barren"
+          ],
+          [
+            140,
+            180,
+            0.117,
+            423,
+            "Barren"
+          ]
+        ],
+        "biomes": [
+          [
+            "Barren",
+            1
+          ]
+        ],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "auroras",
+          "a twilight band"
+        ],
+        "anomaly": null,
+        "resources": {
+          "metals": 3,
+          "rareElements": 3,
+          "ices": 1,
+          "gases": 1,
+          "organics": 0
+        },
+        "hazard": 3,
+        "hazards": [
+          "extreme heat",
+          "unbreathable air"
+        ],
+        "similarity": 0.72,
+        "habitability": "Hostile",
+        "summary": "1.1 g, nitrogen air at 1.4 bar, 172 °C by day, 142 °C by night, tidally locked; hazard 3"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-s1/planet",
+        "name": "Niandao b",
+        "kind": "SubNeptune",
+        "zone": "Cold",
+        "orbit": 4.1826,
+        "period": 2556.09,
+        "mass": 7.266,
+        "radius": 2.599,
+        "rings": false,
+        "descriptor": "a cold mini-Neptune under a yellow-white star",
+        "moons": []
+      },
+      "detail": {
+        "address": "v1-s1/planet",
+        "composition": "GasEnvelope",
+        "gravity": 1.08,
+        "escapeVelocity": 18.7,
+        "density": 2.28,
+        "insolation": 0.2851,
+        "albedo": 0.32,
+        "temperature": 185,
+        "dayTemperature": 185,
+        "nightTemperature": 185,
+        "atmosphere": {
+          "class": "Envelope",
+          "pressure": null,
+          "gases": [
+            "Hydrogen",
+            "Helium",
+            "WaterVapour"
+          ],
+          "lightestGasKept": 1.9,
+          "breathable": false,
+          "why": "a thick envelope of hydrogen, helium and steam hides any surface"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 21.2,
+        "spin": "Free",
+        "tilt": 23.4,
+        "bands": [],
+        "biomes": [],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "auroras"
+        ],
+        "anomaly": null,
+        "resources": {
+          "metals": 0,
+          "rareElements": 0,
+          "ices": 4,
+          "gases": 3,
+          "organics": 0
+        },
+        "hazard": 5,
+        "hazards": [
+          "no surface"
+        ],
+        "similarity": 0.54,
+        "habitability": "Hostile",
+        "summary": "1.1 g, a deep envelope of hydrogen, helium and water vapour, -88 °C at the cloud tops; hazard 5"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-s2/planet",
+        "name": "Wolf 416 b",
+        "kind": "SubNeptune",
+        "zone": "Outer",
+        "orbit": 1.8183,
+        "period": 1247.9,
+        "mass": 9.258,
+        "radius": 2.997,
+        "rings": false,
+        "descriptor": "a frozen mini-Neptune far from an orange dwarf",
+        "moons": []
+      },
+      "detail": {
+        "address": "v1-s2/planet",
+        "composition": "GasEnvelope",
+        "gravity": 1.03,
+        "escapeVelocity": 19.66,
+        "density": 1.9,
+        "insolation": 0.0213,
+        "albedo": 0.39,
+        "temperature": 94,
+        "dayTemperature": 94,
+        "nightTemperature": 94,
+        "atmosphere": {
+          "class": "Envelope",
+          "pressure": null,
+          "gases": [
+            "Hydrogen",
+            "Helium",
+            "WaterVapour"
+          ],
+          "lightestGasKept": 0.9,
+          "breathable": false,
+          "why": "a thick envelope of hydrogen, helium and steam hides any surface"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 28,
+        "spin": "Free",
+        "tilt": 32.8,
+        "bands": [],
+        "biomes": [],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "a great storm"
+        ],
+        "anomaly": null,
+        "resources": {
+          "metals": 0,
+          "rareElements": 0,
+          "ices": 4,
+          "gases": 2,
+          "organics": 0
+        },
+        "hazard": 5,
+        "hazards": [
+          "no surface"
+        ],
+        "similarity": 0.27,
+        "habitability": "Hostile",
+        "summary": "1 g, a deep envelope of hydrogen, helium and water vapour, -179 °C at the cloud tops; hazard 5"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-s3/planet",
+        "name": "Krios b",
+        "kind": "Ice",
+        "zone": "Cold",
+        "orbit": 0.5938,
+        "period": 225.97,
+        "mass": 0.587,
+        "radius": 0.862,
+        "rings": false,
+        "descriptor": "a cold ice world under an orange dwarf",
+        "moons": []
+      },
+      "detail": {
+        "address": "v1-s3/planet",
+        "composition": "IceAndRock",
+        "gravity": 0.79,
+        "escapeVelocity": 9.23,
+        "density": 5.05,
+        "insolation": 0.2543,
+        "albedo": 0.58,
+        "temperature": 159,
+        "dayTemperature": 207,
+        "nightTemperature": 48,
+        "atmosphere": {
+          "class": "None",
+          "pressure": 0,
+          "gases": [],
+          "lightestGasKept": 6.7,
+          "breathable": false,
+          "why": "its gases lie frozen on the surface"
+        },
+        "water": 0,
+        "ice": 1,
+        "rotation": 3615.5,
+        "spin": "Resonant",
+        "tilt": 1.9,
+        "bands": [
+          [
+            0,
+            15,
+            0.2588,
+            191,
+            "IceSheet"
+          ],
+          [
+            15,
+            30,
+            0.2412,
+            178,
+            "IceSheet"
+          ],
+          [
+            30,
+            45,
+            0.2071,
+            155,
+            "IceSheet"
+          ],
+          [
+            45,
+            60,
+            0.1589,
+            129,
+            "IceSheet"
+          ],
+          [
+            60,
+            75,
+            0.0999,
+            107,
+            "IceSheet"
+          ],
+          [
+            75,
+            90,
+            0.0341,
+            94,
+            "IceSheet"
+          ]
+        ],
+        "biomes": [
+          [
+            "IceSheet",
+            1
+          ]
+        ],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "deep canyons",
+          "ice geysers"
+        ],
+        "anomaly": "a surface that rearranges itself overnight",
+        "resources": {
+          "metals": 1,
+          "rareElements": 1,
+          "ices": 5,
+          "gases": 2,
+          "organics": 0
+        },
+        "hazard": 3,
+        "hazards": [
+          "vacuum",
+          "deep cold"
+        ],
+        "similarity": 0.6,
+        "habitability": "Hostile",
+        "summary": "0.8 g, no air, -114 °C, 100% ice; hazard 3"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-s4/planet",
+        "name": "Theta Pictoris b",
+        "kind": "Rocky",
+        "zone": "Warm",
+        "orbit": 0.6949,
+        "period": 203.61,
+        "mass": 0.274,
+        "radius": 0.697,
+        "rings": false,
+        "descriptor": "a warm rocky world under a yellow-white star",
+        "moons": []
+      },
+      "detail": {
+        "address": "v1-s4/planet",
+        "composition": "Rock",
+        "gravity": 0.56,
+        "escapeVelocity": 7.01,
+        "density": 4.46,
+        "insolation": 2.8221,
+        "albedo": 0.27,
+        "temperature": 348,
+        "dayTemperature": 367,
+        "nightTemperature": 304,
+        "atmosphere": {
+          "class": "Thin",
+          "pressure": 0.453,
+          "gases": [
+            "Nitrogen",
+            "CarbonDioxide"
+          ],
+          "lightestGasKept": 24.4,
+          "breathable": false,
+          "why": "its gravity holds nitrogen and carbon dioxide"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 3257.8,
+        "spin": "Resonant",
+        "tilt": 1.2,
+        "bands": [
+          [
+            0,
+            15,
+            0.2588,
+            372,
+            "Barren"
+          ],
+          [
+            15,
+            30,
+            0.2412,
+            362,
+            "Barren"
+          ],
+          [
+            30,
+            45,
+            0.2071,
+            345,
+            "Barren"
+          ],
+          [
+            45,
+            60,
+            0.1589,
+            325,
+            "Barren"
+          ],
+          [
+            60,
+            75,
+            0.0999,
+            308,
+            "Barren"
+          ],
+          [
+            75,
+            90,
+            0.0341,
+            298,
+            "Barren"
+          ]
+        ],
+        "biomes": [
+          [
+            "Barren",
+            1
+          ]
+        ],
+        "life": "Prebiotic",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "deep canyons",
+          "volcanic chains"
+        ],
+        "anomaly": null,
+        "resources": {
+          "metals": 2,
+          "rareElements": 3,
+          "ices": 1,
+          "gases": 2,
+          "organics": 2
+        },
+        "hazard": 3,
+        "hazards": [
+          "extreme heat",
+          "unbreathable air",
+          "thin air",
+          "eruptions"
+        ],
+        "similarity": 0.79,
+        "habitability": "Marginal",
+        "summary": "0.6 g, thin nitrogen air at 0.45 bar, 75 °C, prebiotic chemistry; hazard 3"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-s5/planet",
+        "name": "Wolf 349 b",
+        "kind": "Barren",
+        "zone": "Hot",
+        "orbit": 0.231,
+        "period": 40.15,
+        "mass": 0.568,
+        "radius": 0.854,
+        "rings": false,
+        "descriptor": "a scorched barren rock skimming a yellow star",
+        "moons": [
+          {
+            "name": "Wolf 349 b I",
+            "kind": "Barren",
+            "orbit": 4.15,
+            "radius": 904
+          },
+          {
+            "name": "Wolf 349 b II",
+            "kind": "Barren",
+            "orbit": 5.64,
+            "radius": 977
+          }
+        ]
+      },
+      "detail": {
+        "address": "v1-s5/planet",
+        "composition": "Rock",
+        "gravity": 0.78,
+        "escapeVelocity": 9.12,
+        "density": 5.03,
+        "insolation": 20.2489,
+        "albedo": 0.12,
+        "temperature": 572,
+        "dayTemperature": 744,
+        "nightTemperature": 172,
+        "atmosphere": {
+          "class": "None",
+          "pressure": 0,
+          "gases": [],
+          "lightestGasKept": 24.7,
+          "breathable": false,
+          "why": "stripped by its star's heat and wind"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 963.6,
+        "spin": "Locked",
+        "tilt": 1.5,
+        "bands": [
+          [
+            0,
+            30,
+            0.067,
+            905,
+            "Barren"
+          ],
+          [
+            30,
+            60,
+            0.183,
+            791,
+            "Barren"
+          ],
+          [
+            60,
+            80,
+            0.1632,
+            648,
+            "Barren"
+          ],
+          [
+            80,
+            100,
+            0.1736,
+            562,
+            "Barren"
+          ],
+          [
+            100,
+            140,
+            0.2962,
+            419,
+            "Barren"
+          ],
+          [
+            140,
+            180,
+            0.117,
+            333,
+            "Barren"
+          ]
+        ],
+        "biomes": [
+          [
+            "Barren",
+            1
+          ]
+        ],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "deep canyons"
+        ],
+        "anomaly": null,
+        "resources": {
+          "metals": 2,
+          "rareElements": 3,
+          "ices": 0,
+          "gases": 0,
+          "organics": 0
+        },
+        "hazard": 5,
+        "hazards": [
+          "searing heat",
+          "vacuum",
+          "radiation",
+          "deep cold"
+        ],
+        "similarity": 0.55,
+        "habitability": "Hostile",
+        "summary": "0.8 g, no air, 471 °C by day, -101 °C by night, tidally locked; hazard 5"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-s6/planet",
+        "name": "Sadachbia b",
+        "kind": "Barren",
+        "zone": "Temperate",
+        "orbit": 6.9577,
+        "period": 4689.77,
+        "mass": 0.152,
+        "radius": 0.591,
+        "rings": false,
+        "descriptor": "a temperate barren rock under a white star",
+        "moons": [
+          {
+            "name": "Sadachbia b I",
+            "kind": "Barren",
+            "orbit": 4.16,
+            "radius": 274
+          }
+        ]
+      },
+      "detail": {
+        "address": "v1-s6/planet",
+        "composition": "Rock",
+        "gravity": 0.44,
+        "escapeVelocity": 5.67,
+        "density": 4.06,
+        "insolation": 0.3524,
+        "albedo": 0.16,
+        "temperature": 206,
+        "dayTemperature": 268,
+        "nightTemperature": 62,
+        "atmosphere": {
+          "class": "None",
+          "pressure": 0,
+          "gases": [],
+          "lightestGasKept": 23,
+          "breathable": false,
+          "why": "lost its air long ago"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 5140,
+        "spin": "Free",
+        "tilt": 18.3,
+        "bands": [
+          [
+            0,
+            15,
+            0.2588,
+            239,
+            "Barren"
+          ],
+          [
+            15,
+            30,
+            0.2412,
+            226,
+            "Barren"
+          ],
+          [
+            30,
+            45,
+            0.2071,
+            202,
+            "Barren"
+          ],
+          [
+            45,
+            60,
+            0.1589,
+            175,
+            "Barren"
+          ],
+          [
+            60,
+            75,
+            0.0999,
+            151,
+            "Barren"
+          ],
+          [
+            75,
+            90,
+            0.0341,
+            137,
+            "Barren"
+          ]
+        ],
+        "biomes": [
+          [
+            "Barren",
+            1
+          ]
+        ],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "deep canyons"
+        ],
+        "anomaly": null,
+        "resources": {
+          "metals": 3,
+          "rareElements": 3,
+          "ices": 0,
+          "gases": 0,
+          "organics": 0
+        },
+        "hazard": 3,
+        "hazards": [
+          "vacuum",
+          "deep cold"
+        ],
+        "similarity": 0.66,
+        "habitability": "Marginal",
+        "summary": "0.4 g, no air, -67 °C; hazard 3"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-s7/planet",
+        "name": "Omicron Ophiuchi b",
+        "kind": "GasGiant",
+        "zone": "Outer",
+        "orbit": 232.6653,
+        "period": 383948.73,
+        "mass": 52.457,
+        "radius": 8.325,
+        "rings": false,
+        "descriptor": "a gas giant far from a blue-white star",
+        "moons": [
+          {
+            "name": "Omicron Ophiuchi b I",
+            "kind": "Ice",
+            "orbit": 5.04,
+            "radius": 2006
+          },
+          {
+            "name": "Omicron Ophiuchi b II",
+            "kind": "Ice",
+            "orbit": 7.47,
+            "radius": 617
+          }
+        ]
+      },
+      "detail": {
+        "address": "v1-s7/planet",
+        "composition": "HydrogenHelium",
+        "gravity": 0.76,
+        "escapeVelocity": 28.08,
+        "density": 0.5,
+        "insolation": 0.1293,
+        "albedo": 0.32,
+        "temperature": 152,
+        "dayTemperature": 152,
+        "nightTemperature": 152,
+        "atmosphere": {
+          "class": "Envelope",
+          "pressure": null,
+          "gases": [
+            "Hydrogen",
+            "Helium"
+          ],
+          "lightestGasKept": 0.7,
+          "breathable": false,
+          "why": "a deep envelope of hydrogen and helium; there is no surface"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 15.8,
+        "spin": "Free",
+        "tilt": 17.9,
+        "bands": [],
+        "biomes": [],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "a great storm"
+        ],
+        "anomaly": "a storm that has not moved in a thousand years",
+        "resources": {
+          "metals": 0,
+          "rareElements": 0,
+          "ices": 0,
+          "gases": 4,
+          "organics": 0
+        },
+        "hazard": 5,
+        "hazards": [
+          "no surface",
+          "hard radiation"
+        ],
+        "similarity": 0.27,
+        "habitability": "Hostile",
+        "summary": "0.8 g, a deep envelope of hydrogen and helium, -121 °C at the cloud tops; hazard 5"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-s8/planet",
+        "name": "Wolf 101 b",
+        "kind": "Barren",
+        "zone": "Outer",
+        "orbit": 0.1742,
+        "period": 92.15,
+        "mass": 0.932,
+        "radius": 0.981,
+        "rings": false,
+        "descriptor": "a frozen barren rock far from a red dwarf",
+        "moons": []
+      },
+      "detail": {
+        "address": "v1-s8/planet",
+        "composition": "Rock",
+        "gravity": 0.97,
+        "escapeVelocity": 10.9,
+        "density": 5.44,
+        "insolation": 0.025,
+        "albedo": 0.13,
+        "temperature": 107,
+        "dayTemperature": 139,
+        "nightTemperature": 32,
+        "atmosphere": {
+          "class": "None",
+          "pressure": 0,
+          "gases": [],
+          "lightestGasKept": 3.2,
+          "breathable": false,
+          "why": "lost its air long ago"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 2211.6,
+        "spin": "Locked",
+        "tilt": 1,
+        "bands": [
+          [
+            0,
+            30,
+            0.067,
+            169,
+            "Barren"
+          ],
+          [
+            30,
+            60,
+            0.183,
+            148,
+            "Barren"
+          ],
+          [
+            60,
+            80,
+            0.1632,
+            121,
+            "Barren"
+          ],
+          [
+            80,
+            100,
+            0.1736,
+            105,
+            "Barren"
+          ],
+          [
+            100,
+            140,
+            0.2962,
+            78,
+            "Barren"
+          ],
+          [
+            140,
+            180,
+            0.117,
+            62,
+            "Barren"
+          ]
+        ],
+        "biomes": [
+          [
+            "Barren",
+            1
+          ]
+        ],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "deep canyons",
+          "long days"
+        ],
+        "anomaly": null,
+        "resources": {
+          "metals": 3,
+          "rareElements": 2,
+          "ices": 2,
+          "gases": 0,
+          "organics": 0
+        },
+        "hazard": 3,
+        "hazards": [
+          "vacuum",
+          "deep cold"
+        ],
+        "similarity": 0.42,
+        "habitability": "Hostile",
+        "summary": "1 g, no air, -134 °C by day, -241 °C by night, tidally locked; hazard 3"
+      }
+    }
+  ],
+  "plausible": [
+    {
+      "planet": {
+        "address": "v1-p1/planet",
+        "name": "GJ 472 b",
+        "kind": "Dwarf",
+        "zone": "Outer",
+        "orbit": 0.8496,
+        "period": 558.79,
+        "mass": 0.034,
+        "radius": 0.388,
+        "rings": false,
+        "descriptor": "a dwarf planet far from a red dwarf",
+        "moons": [
+          {
+            "name": "GJ 472 b I",
+            "kind": "Barren",
+            "orbit": 4.99,
+            "radius": 680
+          }
+        ]
+      },
+      "detail": {
+        "address": "v1-p1/planet",
+        "composition": "IceAndRock",
+        "gravity": 0.23,
+        "escapeVelocity": 3.31,
+        "density": 3.21,
+        "insolation": 0.0146,
+        "albedo": 0.5,
+        "temperature": 81,
+        "dayTemperature": 85,
+        "nightTemperature": 72,
+        "atmosphere": {
+          "class": "None",
+          "pressure": 0,
+          "gases": [],
+          "lightestGasKept": 26.7,
+          "breathable": false,
+          "why": "lost its air long ago"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 16,
+        "spin": "Free",
+        "tilt": 12.3,
+        "bands": [
+          [
+            0,
+            15,
+            0.2588,
+            95,
+            "Barren"
+          ],
+          [
+            15,
+            30,
+            0.2412,
+            89,
+            "Barren"
+          ],
+          [
+            30,
+            45,
+            0.2071,
+            79,
+            "Barren"
+          ],
+          [
+            45,
+            60,
+            0.1589,
+            68,
+            "Barren"
+          ],
+          [
+            60,
+            75,
+            0.0999,
+            58,
+            "Barren"
+          ],
+          [
+            75,
+            90,
+            0.0341,
+            52,
+            "Barren"
+          ]
+        ],
+        "biomes": [
+          [
+            "Barren",
+            1
+          ]
+        ],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "ice geysers"
+        ],
+        "anomaly": null,
+        "resources": {
+          "metals": 3,
+          "rareElements": 2,
+          "ices": 4,
+          "gases": 1,
+          "organics": 0
+        },
+        "hazard": 3,
+        "hazards": [
+          "vacuum",
+          "deep cold"
+        ],
+        "similarity": 0.23,
+        "habitability": "Hostile",
+        "summary": "0.2 g, no air, -192 °C; hazard 3"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-p2/planet",
+        "name": "Ankaa b",
+        "kind": "Desert",
+        "zone": "Temperate",
+        "orbit": 0.1602,
+        "period": 48.33,
+        "mass": 0.856,
+        "radius": 0.957,
+        "rings": false,
+        "descriptor": "a temperate desert world under a red dwarf",
+        "moons": []
+      },
+      "detail": {
+        "address": "v1-p2/planet",
+        "composition": "Rock",
+        "gravity": 0.93,
+        "escapeVelocity": 10.58,
+        "density": 5.39,
+        "insolation": 0.3222,
+        "albedo": 0.23,
+        "temperature": 208,
+        "dayTemperature": 217,
+        "nightTemperature": 187,
+        "atmosphere": {
+          "class": "Standard",
+          "pressure": 0.6,
+          "gases": [
+            "Nitrogen",
+            "CarbonDioxide"
+          ],
+          "lightestGasKept": 6.3,
+          "breathable": false,
+          "why": "its gravity holds nitrogen and carbon dioxide"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 1159.9,
+        "spin": "Locked",
+        "tilt": 3.1,
+        "bands": [
+          [
+            0,
+            30,
+            0.067,
+            225,
+            "Barren"
+          ],
+          [
+            30,
+            60,
+            0.183,
+            219,
+            "Barren"
+          ],
+          [
+            60,
+            80,
+            0.1632,
+            212,
+            "Barren"
+          ],
+          [
+            80,
+            100,
+            0.1736,
+            207,
+            "Barren"
+          ],
+          [
+            100,
+            140,
+            0.2962,
+            200,
+            "Barren"
+          ],
+          [
+            140,
+            180,
+            0.117,
+            195,
+            "Barren"
+          ]
+        ],
+        "biomes": [
+          [
+            "Barren",
+            1
+          ]
+        ],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "salt flats"
+        ],
+        "anomaly": null,
+        "resources": {
+          "metals": 2,
+          "rareElements": 1,
+          "ices": 0,
+          "gases": 1,
+          "organics": 0
+        },
+        "hazard": 3,
+        "hazards": [
+          "stellar flares",
+          "unbreathable air",
+          "cold"
+        ],
+        "similarity": 0.77,
+        "habitability": "Marginal",
+        "summary": "0.9 g, nitrogen air at 0.6 bar, -56 °C by day, -86 °C by night, tidally locked; hazard 3"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-p3/planet",
+        "name": "Ross 1057 b",
+        "kind": "Desert",
+        "zone": "Temperate",
+        "orbit": 0.1564,
+        "period": 45.46,
+        "mass": 0.625,
+        "radius": 0.877,
+        "rings": false,
+        "descriptor": "a temperate desert world under a red dwarf",
+        "moons": [
+          {
+            "name": "Ross 1057 b I",
+            "kind": "Ice",
+            "orbit": 3.25,
+            "radius": 1066
+          },
+          {
+            "name": "Ross 1057 b II",
+            "kind": "Barren",
+            "orbit": 6.09,
+            "radius": 1427
+          }
+        ]
+      },
+      "detail": {
+        "address": "v1-p3/planet",
+        "composition": "Rock",
+        "gravity": 0.81,
+        "escapeVelocity": 9.44,
+        "density": 5.11,
+        "insolation": 0.3786,
+        "albedo": 0.23,
+        "temperature": 227,
+        "dayTemperature": 237,
+        "nightTemperature": 204,
+        "atmosphere": {
+          "class": "Standard",
+          "pressure": 0.6,
+          "gases": [
+            "CarbonDioxide",
+            "Nitrogen"
+          ],
+          "lightestGasKept": 8.2,
+          "breathable": false,
+          "why": "its gravity holds carbon dioxide and nitrogen"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 1091,
+        "spin": "Locked",
+        "tilt": 2.5,
+        "bands": [
+          [
+            0,
+            30,
+            0.067,
+            246,
+            "Barren"
+          ],
+          [
+            30,
+            60,
+            0.183,
+            240,
+            "Barren"
+          ],
+          [
+            60,
+            80,
+            0.1632,
+            231,
+            "Barren"
+          ],
+          [
+            80,
+            100,
+            0.1736,
+            226,
+            "Barren"
+          ],
+          [
+            100,
+            140,
+            0.2962,
+            218,
+            "Barren"
+          ],
+          [
+            140,
+            180,
+            0.117,
+            213,
+            "Barren"
+          ]
+        ],
+        "biomes": [
+          [
+            "Barren",
+            1
+          ]
+        ],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "deep canyons",
+          "a twilight band"
+        ],
+        "anomaly": null,
+        "resources": {
+          "metals": 2,
+          "rareElements": 3,
+          "ices": 0,
+          "gases": 1,
+          "organics": 0
+        },
+        "hazard": 3,
+        "hazards": [
+          "stellar flares",
+          "unbreathable air",
+          "cold"
+        ],
+        "similarity": 0.81,
+        "habitability": "Marginal",
+        "summary": "0.8 g, carbon dioxide air at 0.6 bar, -36 °C by day, -69 °C by night, tidally locked; hazard 3"
+      }
+    }
+  ],
+  "weird": [
+    {
+      "planet": {
+        "address": "v1-w1/planet",
+        "name": "HD 68796 b",
+        "kind": "Garden",
+        "zone": "Temperate",
+        "orbit": 6.6526,
+        "period": 4351.85,
+        "mass": 1.809,
+        "radius": 1.18,
+        "rings": false,
+        "descriptor": "a garden world under a white star",
+        "moons": [
+          {
+            "name": "HD 68796 b I",
+            "kind": "Barren",
+            "orbit": 4.57,
+            "radius": 769
+          }
+        ]
+      },
+      "detail": {
+        "address": "v1-w1/planet",
+        "composition": "Rock",
+        "gravity": 1.3,
+        "escapeVelocity": 13.85,
+        "density": 6.07,
+        "insolation": 0.4062,
+        "albedo": 0.29,
+        "temperature": 286,
+        "dayTemperature": 289,
+        "nightTemperature": 278,
+        "atmosphere": {
+          "class": "Dense",
+          "pressure": 2.3814,
+          "gases": [
+            "Nitrogen",
+            "Oxygen",
+            "CarbonDioxide"
+          ],
+          "lightestGasKept": 3.8,
+          "breathable": true,
+          "why": "life keeps oxygen in the air"
+        },
+        "water": 0.77,
+        "ice": 0.03,
+        "rotation": 729.3,
+        "spin": "Free",
+        "tilt": 13.4,
+        "bands": [
+          [
+            0,
+            15,
+            0.2588,
+            298,
+            "Rainforest"
+          ],
+          [
+            15,
+            30,
+            0.2412,
+            293,
+            "Savanna"
+          ],
+          [
+            30,
+            45,
+            0.2071,
+            285,
+            "TemperateForest"
+          ],
+          [
+            45,
+            60,
+            0.1589,
+            275,
+            "Taiga"
+          ],
+          [
+            60,
+            75,
+            0.0999,
+            267,
+            "Tundra"
+          ],
+          [
+            75,
+            90,
+            0.0341,
+            262,
+            "IceSheet"
+          ]
+        ],
+        "biomes": [
+          [
+            "Ocean",
+            0.77
+          ],
+          [
+            "Savanna",
+            0.05
+          ],
+          [
+            "Rainforest",
+            0.05
+          ],
+          [
+            "TemperateForest",
+            0.04
+          ],
+          [
+            "IceSheet",
+            0.03
+          ],
+          [
+            "Taiga",
+            0.03
+          ],
+          [
+            "Tundra",
+            0.02
+          ]
+        ],
+        "life": "Complex",
+        "flora": 3,
+        "fauna": 3,
+        "traits": [
+          "fungal jungles",
+          "an ancient impact basin"
+        ],
+        "anomaly": "a hollow the size of a moon under the crust",
+        "resources": {
+          "metals": 4,
+          "rareElements": 1,
+          "ices": 5,
+          "gases": 2,
+          "organics": 4
+        },
+        "hazard": 1,
+        "hazards": [],
+        "similarity": 0.95,
+        "habitability": "Ideal",
+        "summary": "1.3 g, breathable air at 2.4 bar, 13 °C, 77% ocean, 3% ice, mostly savanna, complex life; hazard 1"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-w2/planet",
+        "name": "20 Boötis b",
+        "kind": "SubNeptune",
+        "zone": "Temperate",
+        "orbit": 13.6031,
+        "period": 18380.33,
+        "mass": 8.443,
+        "radius": 2.839,
+        "rings": false,
+        "descriptor": "a temperate mini-Neptune under a red giant",
+        "moons": []
+      },
+      "detail": {
+        "address": "v1-w2/planet",
+        "composition": "GasEnvelope",
+        "gravity": 1.05,
+        "escapeVelocity": 19.29,
+        "density": 2.03,
+        "insolation": 1.0571,
+        "albedo": 0.39,
+        "temperature": 250,
+        "dayTemperature": 250,
+        "nightTemperature": 250,
+        "atmosphere": {
+          "class": "Envelope",
+          "pressure": null,
+          "gases": [
+            "Hydrogen",
+            "Helium",
+            "WaterVapour"
+          ],
+          "lightestGasKept": 2.4,
+          "breathable": false,
+          "why": "a thick envelope of hydrogen, helium and steam hides any surface"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 11.5,
+        "spin": "Free",
+        "tilt": 16.5,
+        "bands": [],
+        "biomes": [],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "a thick haze"
+        ],
+        "anomaly": "something the size of a moon hiding in the clouds",
+        "resources": {
+          "metals": 0,
+          "rareElements": 0,
+          "ices": 4,
+          "gases": 3,
+          "organics": 0
+        },
+        "hazard": 5,
+        "hazards": [
+          "no surface"
+        ],
+        "similarity": 0.66,
+        "habitability": "Hostile",
+        "summary": "1.1 g, a deep envelope of hydrogen, helium and water vapour, -23 °C at the cloud tops; hazard 5"
+      }
+    },
+    {
+      "planet": {
+        "address": "v1-w3/planet",
+        "name": "HD 46928 b",
+        "kind": "Barren",
+        "zone": "Warm",
+        "orbit": 0.4123,
+        "period": 104.75,
+        "mass": 1.701,
+        "radius": 1.16,
+        "rings": false,
+        "descriptor": "a warm barren rock under a yellow star",
+        "moons": [
+          {
+            "name": "HD 46928 b I",
+            "kind": "Barren",
+            "orbit": 3.17,
+            "radius": 489
+          },
+          {
+            "name": "HD 46928 b II",
+            "kind": "Barren",
+            "orbit": 4.15,
+            "radius": 498
+          }
+        ]
+      },
+      "detail": {
+        "address": "v1-w3/planet",
+        "composition": "Rock",
+        "gravity": 1.26,
+        "escapeVelocity": 13.55,
+        "density": 6.01,
+        "insolation": 3.1027,
+        "albedo": 0.12,
+        "temperature": 358,
+        "dayTemperature": 465,
+        "nightTemperature": 107,
+        "atmosphere": {
+          "class": "None",
+          "pressure": 0,
+          "gases": [],
+          "lightestGasKept": 7,
+          "breathable": false,
+          "why": "stripped by its star's heat and wind"
+        },
+        "water": 0,
+        "ice": 0,
+        "rotation": 2514,
+        "spin": "Locked",
+        "tilt": 1.5,
+        "bands": [
+          [
+            0,
+            30,
+            0.067,
+            567,
+            "Barren"
+          ],
+          [
+            30,
+            60,
+            0.183,
+            495,
+            "Barren"
+          ],
+          [
+            60,
+            80,
+            0.1632,
+            406,
+            "Barren"
+          ],
+          [
+            80,
+            100,
+            0.1736,
+            352,
+            "Barren"
+          ],
+          [
+            100,
+            140,
+            0.2962,
+            262,
+            "Barren"
+          ],
+          [
+            140,
+            180,
+            0.117,
+            209,
+            "Barren"
+          ]
+        ],
+        "biomes": [
+          [
+            "Barren",
+            1
+          ]
+        ],
+        "life": "None",
+        "flora": 0,
+        "fauna": 0,
+        "traits": [
+          "long days",
+          "deep canyons"
+        ],
+        "anomaly": "auroras that repeat like writing",
+        "resources": {
+          "metals": 3,
+          "rareElements": 2,
+          "ices": 0,
+          "gases": 0,
+          "organics": 0
+        },
+        "hazard": 3,
+        "hazards": [
+          "vacuum",
+          "radiation",
+          "extreme heat",
+          "deep cold"
+        ],
+        "similarity": 0.82,
+        "habitability": "Marginal",
+        "summary": "1.3 g, no air, 192 °C by day, -166 °C by night, tidally locked; hazard 3"
+      }
+    }
+  ],
+  "inSystems": [
+    {
+      "address": "v1-my-seed/system/planet/0",
+      "composition": "Rock",
+      "gravity": 1.17,
+      "escapeVelocity": 12.7,
+      "density": 5.84,
+      "insolation": 0.4835,
+      "albedo": 0.24,
+      "temperature": 253,
+      "dayTemperature": 257,
+      "nightTemperature": 244,
+      "atmosphere": {
+        "class": "Standard",
+        "pressure": 1.7817,
+        "gases": [
+          "Nitrogen",
+          "CarbonDioxide"
+        ],
+        "lightestGasKept": 4.8,
+        "breathable": false,
+        "why": "its gravity holds nitrogen and carbon dioxide"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 856.1,
+      "spin": "Locked",
+      "tilt": 1.9,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          261,
+          "Barren"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          258,
+          "Barren"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          255,
+          "Barren"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          253,
+          "Barren"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          250,
+          "Barren"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          248,
+          "Barren"
+        ]
+      ],
+      "biomes": [
+        [
+          "Barren",
+          1
+        ]
+      ],
+      "life": "Prebiotic",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "volcanic chains",
+        "an ancient impact basin"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 3,
+        "rareElements": 2,
+        "ices": 2,
+        "gases": 2,
+        "organics": 2
+      },
+      "hazard": 3,
+      "hazards": [
+        "stellar flares",
+        "unbreathable air",
+        "cold",
+        "eruptions"
+      ],
+      "similarity": 0.89,
+      "habitability": "Habitable",
+      "summary": "1.2 g, nitrogen air at 1.8 bar, -16 °C by day, -29 °C by night, tidally locked, prebiotic chemistry; hazard 3"
+    },
+    {
+      "address": "v1-my-seed/system/planet/1",
+      "composition": "Rock",
+      "gravity": 1.02,
+      "escapeVelocity": 11.41,
+      "density": 5.56,
+      "insolation": 0.0706,
+      "albedo": 0.11,
+      "temperature": 139,
+      "dayTemperature": 181,
+      "nightTemperature": 42,
+      "atmosphere": {
+        "class": "None",
+        "pressure": 0,
+        "gases": [],
+        "lightestGasKept": 3.8,
+        "breathable": false,
+        "why": "lost its air long ago"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 2418.2,
+      "spin": "Resonant",
+      "tilt": 1.8,
+      "bands": [
+        [
+          0,
+          15,
+          0.2588,
+          167,
+          "Barren"
+        ],
+        [
+          15,
+          30,
+          0.2412,
+          155,
+          "Barren"
+        ],
+        [
+          30,
+          45,
+          0.2071,
+          136,
+          "Barren"
+        ],
+        [
+          45,
+          60,
+          0.1589,
+          113,
+          "Barren"
+        ],
+        [
+          60,
+          75,
+          0.0999,
+          93,
+          "Barren"
+        ],
+        [
+          75,
+          90,
+          0.0341,
+          82,
+          "Barren"
+        ]
+      ],
+      "biomes": [
+        [
+          "Barren",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "deep canyons"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 4,
+        "rareElements": 3,
+        "ices": 1,
+        "gases": 0,
+        "organics": 0
+      },
+      "hazard": 3,
+      "hazards": [
+        "vacuum",
+        "deep cold"
+      ],
+      "similarity": 0.55,
+      "habitability": "Hostile",
+      "summary": "1 g, no air, -134 °C; hazard 3"
+    },
+    {
+      "address": "v1-my-seed/system/planet/2",
+      "composition": "IceAndRock",
+      "gravity": 1.08,
+      "escapeVelocity": 11.95,
+      "density": 5.68,
+      "insolation": 0.0312,
+      "albedo": 0.62,
+      "temperature": 96,
+      "dayTemperature": 97,
+      "nightTemperature": 93,
+      "atmosphere": {
+        "class": "Thin",
+        "pressure": 0.4075,
+        "gases": [
+          "Nitrogen",
+          "Methane"
+        ],
+        "lightestGasKept": 2.3,
+        "breathable": false,
+        "why": "its gravity holds nitrogen and methane"
+      },
+      "water": 0,
+      "ice": 1,
+      "rotation": 20.9,
+      "spin": "Free",
+      "tilt": 27.6,
+      "bands": [
+        [
+          0,
+          15,
+          0.2588,
+          101,
+          "IceSheet"
+        ],
+        [
+          15,
+          30,
+          0.2412,
+          99,
+          "IceSheet"
+        ],
+        [
+          30,
+          45,
+          0.2071,
+          95,
+          "IceSheet"
+        ],
+        [
+          45,
+          60,
+          0.1589,
+          91,
+          "IceSheet"
+        ],
+        [
+          60,
+          75,
+          0.0999,
+          88,
+          "IceSheet"
+        ],
+        [
+          75,
+          90,
+          0.0341,
+          86,
+          "IceSheet"
+        ]
+      ],
+      "biomes": [
+        [
+          "IceSheet",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "deep canyons",
+        "methane lakes"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 1,
+        "rareElements": 1,
+        "ices": 4,
+        "gases": 3,
+        "organics": 1
+      },
+      "hazard": 3,
+      "hazards": [
+        "deep cold",
+        "unbreathable air",
+        "thin air"
+      ],
+      "similarity": 0.38,
+      "habitability": "Hostile",
+      "summary": "1.1 g, thin nitrogen air at 0.41 bar, -177 °C, 100% ice; hazard 3"
+    },
+    {
+      "address": "v1-42/system/planet/0",
+      "composition": "Rock",
+      "gravity": 0.8,
+      "escapeVelocity": 9.34,
+      "density": 5.08,
+      "insolation": 28.052,
+      "albedo": 0.11,
+      "temperature": 623,
+      "dayTemperature": 810,
+      "nightTemperature": 187,
+      "atmosphere": {
+        "class": "None",
+        "pressure": 0,
+        "gases": [],
+        "lightestGasKept": 25.6,
+        "breathable": false,
+        "why": "stripped by its star's heat and wind"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 751.4,
+      "spin": "Locked",
+      "tilt": 1.1,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          986,
+          "Barren"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          862,
+          "Barren"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          706,
+          "Barren"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          612,
+          "Barren"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          457,
+          "Barren"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          363,
+          "Barren"
+        ]
+      ],
+      "biomes": [
+        [
+          "Barren",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "long days",
+        "glass plains"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 2,
+        "rareElements": 1,
+        "ices": 0,
+        "gases": 0,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "searing heat",
+        "vacuum",
+        "radiation",
+        "cold"
+      ],
+      "similarity": 0.51,
+      "habitability": "Hostile",
+      "summary": "0.8 g, no air, 537 °C by day, -86 °C by night, tidally locked; hazard 5"
+    },
+    {
+      "address": "v1-42/system/planet/1",
+      "composition": "Rock",
+      "gravity": 0.99,
+      "escapeVelocity": 11.11,
+      "density": 5.5,
+      "insolation": 12.1508,
+      "albedo": 0.09,
+      "temperature": 508,
+      "dayTemperature": 660,
+      "nightTemperature": 153,
+      "atmosphere": {
+        "class": "Trace",
+        "pressure": 0.0001,
+        "gases": [
+          "RockVapour"
+        ],
+        "lightestGasKept": 14.8,
+        "breathable": false,
+        "why": "too little gravity for its heat: what air it has is leaking away to space"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 1407.6,
+      "spin": "Locked",
+      "tilt": 2.8,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          804,
+          "Volcanic"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          702,
+          "Volcanic"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          575,
+          "Volcanic"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          499,
+          "Volcanic"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          373,
+          "Volcanic"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          297,
+          "Volcanic"
+        ]
+      ],
+      "biomes": [
+        [
+          "Volcanic",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "lava oceans"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 3,
+        "rareElements": 3,
+        "ices": 0,
+        "gases": 0,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "molten rock",
+        "searing heat",
+        "vacuum",
+        "radiation",
+        "deep cold"
+      ],
+      "similarity": 0.64,
+      "habitability": "Hostile",
+      "summary": "1 g, a trace of rock vapour, 387 °C by day, -120 °C by night, tidally locked; hazard 5"
+    },
+    {
+      "address": "v1-42/system/planet/2",
+      "composition": "Rock",
+      "gravity": 0.79,
+      "escapeVelocity": 9.2,
+      "density": 5.05,
+      "insolation": 5.5487,
+      "albedo": 0.25,
+      "temperature": 404,
+      "dayTemperature": 468,
+      "nightTemperature": 255,
+      "atmosphere": {
+        "class": "Thin",
+        "pressure": 0.0904,
+        "gases": [
+          "CarbonDioxide",
+          "Nitrogen"
+        ],
+        "lightestGasKept": 16.9,
+        "breathable": false,
+        "why": "its gravity holds carbon dioxide and nitrogen"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 2533.7,
+      "spin": "Locked",
+      "tilt": 1.8,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          528,
+          "Desert"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          486,
+          "Desert"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          432,
+          "Desert"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          400,
+          "Desert"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          347,
+          "Desert"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          315,
+          "Desert"
+        ]
+      ],
+      "biomes": [
+        [
+          "Desert",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "global dust storms",
+        "deep canyons"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 2,
+        "rareElements": 3,
+        "ices": 0,
+        "gases": 1,
+        "organics": 0
+      },
+      "hazard": 3,
+      "hazards": [
+        "extreme heat",
+        "unbreathable air",
+        "thin air",
+        "dust storms"
+      ],
+      "similarity": 0.74,
+      "habitability": "Hostile",
+      "summary": "0.8 g, thin carbon dioxide air at 0.09 bar, 195 °C by day, -18 °C by night, tidally locked; hazard 3"
+    },
+    {
+      "address": "v1-42/system/planet/3",
+      "composition": "Rock",
+      "gravity": 1.17,
+      "escapeVelocity": 12.71,
+      "density": 5.85,
+      "insolation": 2.7335,
+      "albedo": 0.32,
+      "temperature": 326,
+      "dayTemperature": 404,
+      "nightTemperature": 145,
+      "atmosphere": {
+        "class": "Thin",
+        "pressure": 0.026,
+        "gases": [
+          "Nitrogen",
+          "CarbonDioxide"
+        ],
+        "lightestGasKept": 7.2,
+        "breathable": false,
+        "why": "its gravity holds nitrogen and carbon dioxide"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 2872.6,
+      "spin": "Resonant",
+      "tilt": 1.4,
+      "bands": [
+        [
+          0,
+          15,
+          0.2588,
+          381,
+          "Desert"
+        ],
+        [
+          15,
+          30,
+          0.2412,
+          358,
+          "Desert"
+        ],
+        [
+          30,
+          45,
+          0.2071,
+          320,
+          "Desert"
+        ],
+        [
+          45,
+          60,
+          0.1589,
+          275,
+          "Desert"
+        ],
+        [
+          60,
+          75,
+          0.0999,
+          236,
+          "Barren"
+        ],
+        [
+          75,
+          90,
+          0.0341,
+          214,
+          "Barren"
+        ]
+      ],
+      "biomes": [
+        [
+          "Desert",
+          0.87
+        ],
+        [
+          "Barren",
+          0.13
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "long days"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 1,
+        "rareElements": 2,
+        "ices": 0,
+        "gases": 2,
+        "organics": 0
+      },
+      "hazard": 3,
+      "hazards": [
+        "extreme heat",
+        "deep cold",
+        "unbreathable air",
+        "thin air"
+      ],
+      "similarity": 0.89,
+      "habitability": "Marginal",
+      "summary": "1.2 g, thin nitrogen air at 0.026 bar, 53 °C; hazard 3"
+    },
+    {
+      "address": "v1-42/system/planet/4",
+      "composition": "Water",
+      "gravity": 1.03,
+      "escapeVelocity": 11.46,
+      "density": 5.58,
+      "insolation": 0.9404,
+      "albedo": 0.28,
+      "temperature": 297,
+      "dayTemperature": 298,
+      "nightTemperature": 295,
+      "atmosphere": {
+        "class": "Standard",
+        "pressure": 1.3894,
+        "gases": [
+          "Nitrogen",
+          "CarbonDioxide",
+          "WaterVapour"
+        ],
+        "lightestGasKept": 6.9,
+        "breathable": false,
+        "why": "its gravity holds nitrogen, carbon dioxide and water vapour"
+      },
+      "water": 0.94,
+      "ice": 0,
+      "rotation": 11.9,
+      "spin": "Free",
+      "tilt": 17.6,
+      "bands": [
+        [
+          0,
+          15,
+          0.2588,
+          309,
+          "Rainforest"
+        ],
+        [
+          15,
+          30,
+          0.2412,
+          304,
+          "Savanna"
+        ],
+        [
+          30,
+          45,
+          0.2071,
+          296,
+          "Rainforest"
+        ],
+        [
+          45,
+          60,
+          0.1589,
+          285,
+          "TemperateForest"
+        ],
+        [
+          60,
+          75,
+          0.0999,
+          277,
+          "Taiga"
+        ],
+        [
+          75,
+          90,
+          0.0341,
+          272,
+          "Tundra"
+        ]
+      ],
+      "biomes": [
+        [
+          "Ocean",
+          0.94
+        ],
+        [
+          "Rainforest",
+          0.03
+        ],
+        [
+          "Taiga",
+          0.01
+        ],
+        [
+          "TemperateForest",
+          0.01
+        ],
+        [
+          "Savanna",
+          0.01
+        ]
+      ],
+      "life": "Complex",
+      "flora": 3,
+      "fauna": 3,
+      "traits": [
+        "an ancient impact basin"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 2,
+        "rareElements": 1,
+        "ices": 4,
+        "gases": 1,
+        "organics": 4
+      },
+      "hazard": 2,
+      "hazards": [
+        "unbreathable air"
+      ],
+      "similarity": 0.97,
+      "habitability": "Habitable",
+      "summary": "1 g, nitrogen air at 1.4 bar, 24 °C, 94% ocean, mostly rainforest, complex life; hazard 2"
+    },
+    {
+      "address": "v1-s1/system/planet/0",
+      "composition": "IceAndRock",
+      "gravity": 0.99,
+      "escapeVelocity": 11.08,
+      "density": 5.5,
+      "insolation": 0.2155,
+      "albedo": 0.59,
+      "temperature": 152,
+      "dayTemperature": 198,
+      "nightTemperature": 46,
+      "atmosphere": {
+        "class": "None",
+        "pressure": 0,
+        "gases": [],
+        "lightestGasKept": 4.4,
+        "breathable": false,
+        "why": "its gases lie frozen on the surface"
+      },
+      "water": 0,
+      "ice": 1,
+      "rotation": 1104.5,
+      "spin": "Locked",
+      "tilt": 1.7,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          241,
+          "IceSheet"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          210,
+          "IceSheet"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          172,
+          "IceSheet"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          149,
+          "IceSheet"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          111,
+          "IceSheet"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          89,
+          "IceSheet"
+        ]
+      ],
+      "biomes": [
+        [
+          "IceSheet",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "an ocean under the ice"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 1,
+        "rareElements": 2,
+        "ices": 5,
+        "gases": 2,
+        "organics": 0
+      },
+      "hazard": 3,
+      "hazards": [
+        "vacuum",
+        "deep cold"
+      ],
+      "similarity": 0.6,
+      "habitability": "Hostile",
+      "summary": "1 g, no air, -75 °C by day, -227 °C by night, 100% ice, tidally locked; hazard 3"
+    },
+    {
+      "address": "v1-s1/system/planet/1",
+      "composition": "IceAndRock",
+      "gravity": 0.09,
+      "escapeVelocity": 1.64,
+      "density": 2.21,
+      "insolation": 0.1099,
+      "albedo": 0.41,
+      "temperature": 141,
+      "dayTemperature": 183,
+      "nightTemperature": 42,
+      "atmosphere": {
+        "class": "None",
+        "pressure": 0,
+        "gases": [],
+        "lightestGasKept": 187.7,
+        "breathable": false,
+        "why": "too little gravity for its heat: even carbon dioxide escapes"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 1829.5,
+      "spin": "Locked",
+      "tilt": 0.8,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          223,
+          "Barren"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          195,
+          "Barren"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          160,
+          "Barren"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          139,
+          "Barren"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          103,
+          "Barren"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          82,
+          "Barren"
+        ]
+      ],
+      "biomes": [
+        [
+          "Barren",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "ice geysers"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 1,
+        "rareElements": 2,
+        "ices": 3,
+        "gases": 1,
+        "organics": 0
+      },
+      "hazard": 3,
+      "hazards": [
+        "vacuum",
+        "deep cold"
+      ],
+      "similarity": 0.33,
+      "habitability": "Hostile",
+      "summary": "0.1 g, no air, -90 °C by day, -231 °C by night, tidally locked; hazard 3"
+    },
+    {
+      "address": "v1-s1/system/planet/2",
+      "composition": "Ices",
+      "gravity": 0.82,
+      "escapeVelocity": 25.46,
+      "density": 0.72,
+      "insolation": 0.0406,
+      "albedo": 0.34,
+      "temperature": 113,
+      "dayTemperature": 113,
+      "nightTemperature": 113,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium",
+          "Methane"
+        ],
+        "lightestGasKept": 0.6,
+        "breathable": false,
+        "why": "hydrogen, helium and methane over a mantle of ices; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 14.8,
+      "spin": "Free",
+      "tilt": 11.9,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "auroras"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 2,
+        "gases": 5,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface"
+      ],
+      "similarity": 0.23,
+      "habitability": "Hostile",
+      "summary": "0.8 g, a deep envelope of hydrogen, helium and methane, -160 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-s2/system/planet/0",
+      "composition": "Rock",
+      "gravity": 1.18,
+      "escapeVelocity": 12.81,
+      "density": 5.87,
+      "insolation": 23.701,
+      "albedo": 0.15,
+      "temperature": 590,
+      "dayTemperature": 767,
+      "nightTemperature": 177,
+      "atmosphere": {
+        "class": "None",
+        "pressure": 0,
+        "gases": [],
+        "lightestGasKept": 12.9,
+        "breathable": false,
+        "why": "stripped by its star's heat and wind"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 584.6,
+      "spin": "Locked",
+      "tilt": 2.9,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          934,
+          "Barren"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          816,
+          "Barren"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          668,
+          "Barren"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          580,
+          "Barren"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          432,
+          "Barren"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          344,
+          "Barren"
+        ]
+      ],
+      "biomes": [
+        [
+          "Barren",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "deep canyons"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 3,
+        "rareElements": 3,
+        "ices": 0,
+        "gases": 0,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "searing heat",
+        "vacuum",
+        "radiation",
+        "deep cold"
+      ],
+      "similarity": 0.54,
+      "habitability": "Hostile",
+      "summary": "1.2 g, no air, 494 °C by day, -96 °C by night, tidally locked; hazard 5"
+    },
+    {
+      "address": "v1-s2/system/planet/1",
+      "composition": "Rock",
+      "gravity": 1.54,
+      "escapeVelocity": 15.92,
+      "density": 6.47,
+      "insolation": 9.8825,
+      "albedo": 0.13,
+      "temperature": 477,
+      "dayTemperature": 620,
+      "nightTemperature": 143,
+      "atmosphere": {
+        "class": "Trace",
+        "pressure": 0.0001,
+        "gases": [
+          "RockVapour"
+        ],
+        "lightestGasKept": 6.8,
+        "breathable": false,
+        "why": "too little gravity for its heat: what air it has is leaking away to space"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 1127,
+      "spin": "Locked",
+      "tilt": 1.7,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          755,
+          "Volcanic"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          660,
+          "Volcanic"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          540,
+          "Volcanic"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          469,
+          "Volcanic"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          350,
+          "Volcanic"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          278,
+          "Volcanic"
+        ]
+      ],
+      "biomes": [
+        [
+          "Volcanic",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "long days",
+        "volcanic chains"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 2,
+        "rareElements": 5,
+        "ices": 0,
+        "gases": 0,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "molten rock",
+        "searing heat",
+        "vacuum",
+        "radiation",
+        "deep cold",
+        "heavy gravity",
+        "eruptions"
+      ],
+      "similarity": 0.62,
+      "habitability": "Hostile",
+      "summary": "1.5 g, a trace of rock vapour, 347 °C by day, -130 °C by night, tidally locked; hazard 5"
+    },
+    {
+      "address": "v1-s2/system/planet/2",
+      "composition": "Rock",
+      "gravity": 1.13,
+      "escapeVelocity": 12.35,
+      "density": 5.77,
+      "insolation": 3.9055,
+      "albedo": 0.72,
+      "temperature": 1071,
+      "dayTemperature": 1071,
+      "nightTemperature": 1070,
+      "atmosphere": {
+        "class": "Crushing",
+        "pressure": 135.0026,
+        "gases": [
+          "CarbonDioxide",
+          "Nitrogen",
+          "SulphurDioxide"
+        ],
+        "lightestGasKept": 6.7,
+        "breathable": false,
+        "why": "a runaway greenhouse: carbon dioxide traps the heat"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 2260.6,
+      "spin": "Locked",
+      "tilt": 1.8,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          1072,
+          "Barren"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          1071,
+          "Barren"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          1071,
+          "Barren"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          1071,
+          "Barren"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          1071,
+          "Barren"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          1071,
+          "Barren"
+        ]
+      ],
+      "biomes": [
+        [
+          "Barren",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "a twilight band",
+        "acid clouds"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 3,
+        "rareElements": 2,
+        "ices": 0,
+        "gases": 1,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "crushing pressure",
+        "searing heat"
+      ],
+      "similarity": 0.3,
+      "habitability": "Hostile",
+      "summary": "1.1 g, crushing carbon dioxide air at 135 bar, 798 °C by day, 797 °C by night, tidally locked; hazard 5"
+    },
+    {
+      "address": "v1-s2/system/planet/3",
+      "composition": "Rock",
+      "gravity": 0.99,
+      "escapeVelocity": 11.11,
+      "density": 5.5,
+      "insolation": 2.2582,
+      "albedo": 0.26,
+      "temperature": 319,
+      "dayTemperature": 370,
+      "nightTemperature": 199,
+      "atmosphere": {
+        "class": "Thin",
+        "pressure": 0.0863,
+        "gases": [
+          "Nitrogen",
+          "CarbonDioxide"
+        ],
+        "lightestGasKept": 9.2,
+        "breathable": false,
+        "why": "its gravity holds nitrogen and carbon dioxide"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 2273,
+      "spin": "Resonant",
+      "tilt": 1.5,
+      "bands": [
+        [
+          0,
+          15,
+          0.2588,
+          359,
+          "Barren"
+        ],
+        [
+          15,
+          30,
+          0.2412,
+          343,
+          "Barren"
+        ],
+        [
+          30,
+          45,
+          0.2071,
+          314,
+          "Barren"
+        ],
+        [
+          45,
+          60,
+          0.1589,
+          281,
+          "Barren"
+        ],
+        [
+          60,
+          75,
+          0.0999,
+          253,
+          "Barren"
+        ],
+        [
+          75,
+          90,
+          0.0341,
+          236,
+          "Barren"
+        ]
+      ],
+      "biomes": [
+        [
+          "Barren",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "tidal flexing"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 4,
+        "rareElements": 1,
+        "ices": 2,
+        "gases": 1,
+        "organics": 0
+      },
+      "hazard": 3,
+      "hazards": [
+        "extreme heat",
+        "unbreathable air",
+        "thin air",
+        "cold"
+      ],
+      "similarity": 0.93,
+      "habitability": "Marginal",
+      "summary": "1 g, thin nitrogen air at 0.086 bar, 46 °C; hazard 3"
+    },
+    {
+      "address": "v1-s2/system/planet/4",
+      "composition": "Rock",
+      "gravity": 1.24,
+      "escapeVelocity": 13.34,
+      "density": 5.97,
+      "insolation": 0.1615,
+      "albedo": 0.27,
+      "temperature": 221,
+      "dayTemperature": 224,
+      "nightTemperature": 215,
+      "atmosphere": {
+        "class": "Dense",
+        "pressure": 2.4189,
+        "gases": [
+          "CarbonDioxide",
+          "Nitrogen"
+        ],
+        "lightestGasKept": 3.3,
+        "breathable": false,
+        "why": "its gravity holds carbon dioxide and nitrogen"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 290.7,
+      "spin": "Free",
+      "tilt": 16.9,
+      "bands": [
+        [
+          0,
+          15,
+          0.2588,
+          229,
+          "Barren"
+        ],
+        [
+          15,
+          30,
+          0.2412,
+          226,
+          "Barren"
+        ],
+        [
+          30,
+          45,
+          0.2071,
+          220,
+          "Barren"
+        ],
+        [
+          45,
+          60,
+          0.1589,
+          213,
+          "Barren"
+        ],
+        [
+          60,
+          75,
+          0.0999,
+          207,
+          "Barren"
+        ],
+        [
+          75,
+          90,
+          0.0341,
+          204,
+          "Barren"
+        ]
+      ],
+      "biomes": [
+        [
+          "Barren",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "auroras",
+        "volcanic chains"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 4,
+        "rareElements": 2,
+        "ices": 2,
+        "gases": 1,
+        "organics": 0
+      },
+      "hazard": 2,
+      "hazards": [
+        "unbreathable air",
+        "cold",
+        "eruptions"
+      ],
+      "similarity": 0.79,
+      "habitability": "Marginal",
+      "summary": "1.2 g, dense carbon dioxide air at 2.4 bar, -52 °C; hazard 2"
+    },
+    {
+      "address": "v1-s2/system/planet/5",
+      "composition": "Ices",
+      "gravity": 0.95,
+      "escapeVelocity": 21.62,
+      "density": 1.33,
+      "insolation": 0.0354,
+      "albedo": 0.35,
+      "temperature": 108,
+      "dayTemperature": 108,
+      "nightTemperature": 108,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium",
+          "Methane"
+        ],
+        "lightestGasKept": 0.8,
+        "breathable": false,
+        "why": "hydrogen, helium and methane over a mantle of ices; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 16.9,
+      "spin": "Free",
+      "tilt": 12.4,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "a great storm",
+        "auroras"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 2,
+        "gases": 5,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface"
+      ],
+      "similarity": 0.27,
+      "habitability": "Hostile",
+      "summary": "1 g, a deep envelope of hydrogen, helium and methane, -165 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-s2/system/planet/6",
+      "composition": "HydrogenHelium",
+      "gravity": 0.81,
+      "escapeVelocity": 34.53,
+      "density": 0.38,
+      "insolation": 0.0134,
+      "albedo": 0.31,
+      "temperature": 86,
+      "dayTemperature": 86,
+      "nightTemperature": 86,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium"
+        ],
+        "lightestGasKept": 0.3,
+        "breathable": false,
+        "why": "a deep envelope of hydrogen and helium; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 10.9,
+      "spin": "Free",
+      "tilt": 11.3,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "many moons",
+        "banded clouds"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 0,
+        "gases": 4,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface"
+      ],
+      "similarity": 0.13,
+      "habitability": "Hostile",
+      "summary": "0.8 g, a deep envelope of hydrogen and helium, -187 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-s3/system/planet/0",
+      "composition": "Rock",
+      "gravity": 1.48,
+      "escapeVelocity": 15.38,
+      "density": 6.37,
+      "insolation": 126.7585,
+      "albedo": 0.11,
+      "temperature": 908,
+      "dayTemperature": 1180,
+      "nightTemperature": 272,
+      "atmosphere": {
+        "class": "None",
+        "pressure": 0,
+        "gases": [],
+        "lightestGasKept": 13.8,
+        "breathable": false,
+        "why": "too little gravity for its heat: what air it has is leaking away to space"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 604.3,
+      "spin": "Locked",
+      "tilt": 2.4,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          1437,
+          "Volcanic"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          1256,
+          "Volcanic"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          1029,
+          "Volcanic"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          893,
+          "Volcanic"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          666,
+          "Volcanic"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          529,
+          "Volcanic"
+        ]
+      ],
+      "biomes": [
+        [
+          "Volcanic",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "lava oceans",
+        "volcanic chains"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 2,
+        "rareElements": 4,
+        "ices": 0,
+        "gases": 0,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "molten rock",
+        "searing heat",
+        "vacuum",
+        "radiation",
+        "eruptions"
+      ],
+      "similarity": 0.34,
+      "habitability": "Hostile",
+      "summary": "1.5 g, no air, 907 °C by day, -1 °C by night, tidally locked; hazard 5"
+    },
+    {
+      "address": "v1-s3/system/planet/1",
+      "composition": "Metal",
+      "gravity": 0.97,
+      "escapeVelocity": 10.93,
+      "density": 5.46,
+      "insolation": 65.6209,
+      "albedo": 0.14,
+      "temperature": 764,
+      "dayTemperature": 993,
+      "nightTemperature": 229,
+      "atmosphere": {
+        "class": "None",
+        "pressure": 0,
+        "gases": [],
+        "lightestGasKept": 22.9,
+        "breathable": false,
+        "why": "stripped by its star's heat and wind"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 990.7,
+      "spin": "Locked",
+      "tilt": 0.6,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          1209,
+          "Barren"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          1057,
+          "Barren"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          866,
+          "Barren"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          751,
+          "Barren"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          560,
+          "Barren"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          445,
+          "Barren"
+        ]
+      ],
+      "biomes": [
+        [
+          "Barren",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "a metal-rich crust",
+        "an ancient impact basin"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 5,
+        "rareElements": 4,
+        "ices": 0,
+        "gases": 0,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "searing heat",
+        "vacuum",
+        "radiation",
+        "cold"
+      ],
+      "similarity": 0.43,
+      "habitability": "Hostile",
+      "summary": "1 g, no air, 720 °C by day, -44 °C by night, tidally locked; hazard 5"
+    },
+    {
+      "address": "v1-s3/system/planet/2",
+      "composition": "Rock",
+      "gravity": 1.04,
+      "escapeVelocity": 11.53,
+      "density": 5.59,
+      "insolation": 30.686,
+      "albedo": 0.09,
+      "temperature": 640,
+      "dayTemperature": 832,
+      "nightTemperature": 192,
+      "atmosphere": {
+        "class": "None",
+        "pressure": 0,
+        "gases": [],
+        "lightestGasKept": 17.3,
+        "breathable": false,
+        "why": "stripped by its star's heat and wind"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 1752,
+      "spin": "Locked",
+      "tilt": 2.5,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          1013,
+          "Barren"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          885,
+          "Barren"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          725,
+          "Barren"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          629,
+          "Barren"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          469,
+          "Barren"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          373,
+          "Barren"
+        ]
+      ],
+      "biomes": [
+        [
+          "Barren",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "long days"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 4,
+        "rareElements": 1,
+        "ices": 0,
+        "gases": 0,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "searing heat",
+        "vacuum",
+        "radiation",
+        "cold"
+      ],
+      "similarity": 0.51,
+      "habitability": "Hostile",
+      "summary": "1 g, no air, 559 °C by day, -81 °C by night, tidally locked; hazard 5"
+    },
+    {
+      "address": "v1-s3/system/planet/3",
+      "composition": "Rock",
+      "gravity": 1.28,
+      "escapeVelocity": 13.65,
+      "density": 6.03,
+      "insolation": 11.7676,
+      "albedo": 0.14,
+      "temperature": 497,
+      "dayTemperature": 646,
+      "nightTemperature": 149,
+      "atmosphere": {
+        "class": "None",
+        "pressure": 0,
+        "gases": [],
+        "lightestGasKept": 9.6,
+        "breathable": false,
+        "why": "too little gravity for its heat: what air it has is leaking away to space"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 2397,
+      "spin": "Resonant",
+      "tilt": 1,
+      "bands": [
+        [
+          0,
+          15,
+          0.2588,
+          597,
+          "Volcanic"
+        ],
+        [
+          15,
+          30,
+          0.2412,
+          556,
+          "Volcanic"
+        ],
+        [
+          30,
+          45,
+          0.2071,
+          485,
+          "Volcanic"
+        ],
+        [
+          45,
+          60,
+          0.1589,
+          403,
+          "Volcanic"
+        ],
+        [
+          60,
+          75,
+          0.0999,
+          332,
+          "Volcanic"
+        ],
+        [
+          75,
+          90,
+          0.0341,
+          291,
+          "Volcanic"
+        ]
+      ],
+      "biomes": [
+        [
+          "Volcanic",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "lava oceans",
+        "tidal flexing"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 2,
+        "rareElements": 4,
+        "ices": 0,
+        "gases": 0,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "molten rock",
+        "searing heat",
+        "vacuum",
+        "radiation",
+        "deep cold"
+      ],
+      "similarity": 0.62,
+      "habitability": "Hostile",
+      "summary": "1.3 g, no air, 224 °C; hazard 5"
+    },
+    {
+      "address": "v1-s3/system/planet/4",
+      "composition": "HydrogenHelium",
+      "gravity": 1.23,
+      "escapeVelocity": 42.15,
+      "density": 0.59,
+      "insolation": 0.089,
+      "albedo": 0.39,
+      "temperature": 134,
+      "dayTemperature": 134,
+      "nightTemperature": 134,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium"
+        ],
+        "lightestGasKept": 0.3,
+        "breathable": false,
+        "why": "a deep envelope of hydrogen and helium; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 12.4,
+      "spin": "Free",
+      "tilt": 134.4,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "spins backwards"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 0,
+        "gases": 4,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface"
+      ],
+      "similarity": 0.23,
+      "habitability": "Hostile",
+      "summary": "1.2 g, a deep envelope of hydrogen and helium, -139 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-s3/system/planet/5",
+      "composition": "Ices",
+      "gravity": 0.8,
+      "escapeVelocity": 26.46,
+      "density": 0.63,
+      "insolation": 0.0181,
+      "albedo": 0.34,
+      "temperature": 92,
+      "dayTemperature": 92,
+      "nightTemperature": 92,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium",
+          "Methane"
+        ],
+        "lightestGasKept": 0.5,
+        "breathable": false,
+        "why": "hydrogen, helium and methane over a mantle of ices; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 14.3,
+      "spin": "Free",
+      "tilt": 20.8,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "diamond rain"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 2,
+        "gases": 5,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface"
+      ],
+      "similarity": 0.18,
+      "habitability": "Hostile",
+      "summary": "0.8 g, a deep envelope of hydrogen, helium and methane, -181 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-s3/system/planet/6",
+      "composition": "HydrogenHelium",
+      "gravity": 3.55,
+      "escapeVelocity": 70.02,
+      "density": 1.77,
+      "insolation": 0.0056,
+      "albedo": 0.33,
+      "temperature": 69,
+      "dayTemperature": 69,
+      "nightTemperature": 69,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium"
+        ],
+        "lightestGasKept": 0.1,
+        "breathable": false,
+        "why": "a deep envelope of hydrogen and helium; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 10.7,
+      "spin": "Free",
+      "tilt": 33,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "many moons"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 0,
+        "gases": 5,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface"
+      ],
+      "similarity": 0.14,
+      "habitability": "Hostile",
+      "summary": "3.6 g, a deep envelope of hydrogen and helium, -204 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-s3/system/planet/7",
+      "composition": "HydrogenHelium",
+      "gravity": 2.8,
+      "escapeVelocity": 62.54,
+      "density": 1.39,
+      "insolation": 0.0012,
+      "albedo": 0.33,
+      "temperature": 47,
+      "dayTemperature": 47,
+      "nightTemperature": 47,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium"
+        ],
+        "lightestGasKept": 0,
+        "breathable": false,
+        "why": "a deep envelope of hydrogen and helium; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 14.2,
+      "spin": "Free",
+      "tilt": 23.7,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "a great storm"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 0,
+        "gases": 5,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface"
+      ],
+      "similarity": 0.08,
+      "habitability": "Hostile",
+      "summary": "2.8 g, a deep envelope of hydrogen and helium, -226 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-s4/system/planet/0",
+      "composition": "Water",
+      "gravity": 0.66,
+      "escapeVelocity": 8,
+      "density": 4.74,
+      "insolation": 1.0239,
+      "albedo": 0.33,
+      "temperature": 309,
+      "dayTemperature": 314,
+      "nightTemperature": 298,
+      "atmosphere": {
+        "class": "Standard",
+        "pressure": 1.8034,
+        "gases": [
+          "Nitrogen",
+          "CarbonDioxide",
+          "WaterVapour"
+        ],
+        "lightestGasKept": 14.2,
+        "breathable": false,
+        "why": "its gravity holds nitrogen, carbon dioxide and water vapour"
+      },
+      "water": 0.94,
+      "ice": 0,
+      "rotation": 969.8,
+      "spin": "Locked",
+      "tilt": 1.5,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          318,
+          "Savanna"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          315,
+          "Savanna"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          311,
+          "Rainforest"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          309,
+          "Rainforest"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          305,
+          "Savanna"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          302,
+          "Desert"
+        ]
+      ],
+      "biomes": [
+        [
+          "Ocean",
+          0.94
+        ],
+        [
+          "Savanna",
+          0.03
+        ],
+        [
+          "Rainforest",
+          0.02
+        ],
+        [
+          "Desert",
+          0.01
+        ]
+      ],
+      "life": "Simple",
+      "flora": 1,
+      "fauna": 0,
+      "traits": [
+        "glowing seas",
+        "a twilight band"
+      ],
+      "anomaly": "a region where compasses spin",
+      "resources": {
+        "metals": 1,
+        "rareElements": 1,
+        "ices": 5,
+        "gases": 2,
+        "organics": 1
+      },
+      "hazard": 3,
+      "hazards": [
+        "stellar flares",
+        "unbreathable air"
+      ],
+      "similarity": 0.88,
+      "habitability": "Habitable",
+      "summary": "0.7 g, nitrogen air at 1.8 bar, 41 °C by day, 25 °C by night, 94% ocean, mostly savanna, tidally locked, simple life; hazard 3"
+    },
+    {
+      "address": "v1-s4/system/planet/1",
+      "composition": "Rock",
+      "gravity": 0.63,
+      "escapeVelocity": 7.66,
+      "density": 4.65,
+      "insolation": 0.4969,
+      "albedo": 0.32,
+      "temperature": 294,
+      "dayTemperature": 298,
+      "nightTemperature": 285,
+      "atmosphere": {
+        "class": "Dense",
+        "pressure": 2.2689,
+        "gases": [
+          "Nitrogen",
+          "Oxygen",
+          "CarbonDioxide"
+        ],
+        "lightestGasKept": 13,
+        "breathable": true,
+        "why": "life keeps oxygen in the air"
+      },
+      "water": 0.76,
+      "ice": 0,
+      "rotation": 1668.5,
+      "spin": "Locked",
+      "tilt": 2,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          302,
+          "Rainforest"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          299,
+          "Rainforest"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          296,
+          "Savanna"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          294,
+          "Savanna"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          291,
+          "Desert"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          289,
+          "Desert"
+        ]
+      ],
+      "biomes": [
+        [
+          "Ocean",
+          0.76
+        ],
+        [
+          "Desert",
+          0.1
+        ],
+        [
+          "Savanna",
+          0.08
+        ],
+        [
+          "Rainforest",
+          0.06
+        ]
+      ],
+      "life": "Complex",
+      "flora": 3,
+      "fauna": 3,
+      "traits": [
+        "a twilight band"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 4,
+        "rareElements": 1,
+        "ices": 4,
+        "gases": 1,
+        "organics": 3
+      },
+      "hazard": 3,
+      "hazards": [
+        "stellar flares"
+      ],
+      "similarity": 0.91,
+      "habitability": "Ideal",
+      "summary": "0.6 g, breathable air at 2.3 bar, 25 °C by day, 12 °C by night, 76% ocean, mostly savanna, tidally locked, complex life; hazard 3"
+    },
+    {
+      "address": "v1-s4/system/planet/2",
+      "composition": "GasEnvelope",
+      "gravity": 1.13,
+      "escapeVelocity": 17.64,
+      "density": 2.85,
+      "insolation": 0.1743,
+      "albedo": 0.31,
+      "temperature": 164,
+      "dayTemperature": 164,
+      "nightTemperature": 164,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium",
+          "WaterVapour"
+        ],
+        "lightestGasKept": 1.9,
+        "breathable": false,
+        "why": "a thick envelope of hydrogen, helium and steam hides any surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 12.8,
+      "spin": "Free",
+      "tilt": 26.7,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "a great storm",
+        "auroras"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 2,
+        "gases": 3,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface"
+      ],
+      "similarity": 0.52,
+      "habitability": "Hostile",
+      "summary": "1.1 g, a deep envelope of hydrogen, helium and water vapour, -109 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-s4/system/planet/3",
+      "composition": "IceAndRock",
+      "gravity": 0.71,
+      "escapeVelocity": 8.48,
+      "density": 4.87,
+      "insolation": 0.0866,
+      "albedo": 0.58,
+      "temperature": 122,
+      "dayTemperature": 159,
+      "nightTemperature": 37,
+      "atmosphere": {
+        "class": "None",
+        "pressure": 0,
+        "gases": [],
+        "lightestGasKept": 6.1,
+        "breathable": false,
+        "why": "its gases lie frozen on the surface"
+      },
+      "water": 0,
+      "ice": 1,
+      "rotation": 4122.6,
+      "spin": "Resonant",
+      "tilt": 1.5,
+      "bands": [
+        [
+          0,
+          15,
+          0.2588,
+          146,
+          "IceSheet"
+        ],
+        [
+          15,
+          30,
+          0.2412,
+          136,
+          "IceSheet"
+        ],
+        [
+          30,
+          45,
+          0.2071,
+          119,
+          "IceSheet"
+        ],
+        [
+          45,
+          60,
+          0.1589,
+          99,
+          "IceSheet"
+        ],
+        [
+          60,
+          75,
+          0.0999,
+          82,
+          "IceSheet"
+        ],
+        [
+          75,
+          90,
+          0.0341,
+          72,
+          "IceSheet"
+        ]
+      ],
+      "biomes": [
+        [
+          "IceSheet",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "ice geysers"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 2,
+        "rareElements": 1,
+        "ices": 5,
+        "gases": 1,
+        "organics": 0
+      },
+      "hazard": 3,
+      "hazards": [
+        "vacuum",
+        "deep cold"
+      ],
+      "similarity": 0.46,
+      "habitability": "Hostile",
+      "summary": "0.7 g, no air, -151 °C, 100% ice; hazard 3"
+    },
+    {
+      "address": "v1-s4/system/planet/4",
+      "composition": "HydrogenHelium",
+      "gravity": 10.14,
+      "escapeVelocity": 115.9,
+      "density": 5.28,
+      "insolation": 0.0177,
+      "albedo": 0.29,
+      "temperature": 93,
+      "dayTemperature": 93,
+      "nightTemperature": 93,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium"
+        ],
+        "lightestGasKept": 0,
+        "breathable": false,
+        "why": "a deep envelope of hydrogen and helium; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 15.7,
+      "spin": "Free",
+      "tilt": 29,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "a great storm"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 0,
+        "gases": 5,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface"
+      ],
+      "similarity": 0.21,
+      "habitability": "Hostile",
+      "summary": "10 g, a deep envelope of hydrogen and helium, -180 °C at the cloud tops; hazard 5"
+    }
+  ],
+  "inGalaxy": [
+    {
+      "address": "v1-my-seed/galaxy/system/0/planet/0",
+      "composition": "Rock",
+      "gravity": 1.45,
+      "escapeVelocity": 15.18,
+      "density": 6.33,
+      "insolation": 5.7909,
+      "albedo": 0.3,
+      "temperature": 402,
+      "dayTemperature": 463,
+      "nightTemperature": 260,
+      "atmosphere": {
+        "class": "Thin",
+        "pressure": 0.0986,
+        "gases": [
+          "CarbonDioxide",
+          "Nitrogen"
+        ],
+        "lightestGasKept": 6.2,
+        "breathable": false,
+        "why": "its gravity holds carbon dioxide and nitrogen"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 741.8,
+      "spin": "Locked",
+      "tilt": 2.1,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          520,
+          "Desert"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          480,
+          "Desert"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          429,
+          "Desert"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          399,
+          "Desert"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          348,
+          "Desert"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          317,
+          "Desert"
+        ]
+      ],
+      "biomes": [
+        [
+          "Desert",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "a twilight band"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 1,
+        "rareElements": 3,
+        "ices": 0,
+        "gases": 2,
+        "organics": 0
+      },
+      "hazard": 3,
+      "hazards": [
+        "extreme heat",
+        "unbreathable air",
+        "thin air"
+      ],
+      "similarity": 0.73,
+      "habitability": "Hostile",
+      "summary": "1.5 g, thin carbon dioxide air at 0.099 bar, 190 °C by day, -13 °C by night, tidally locked; hazard 3"
+    },
+    {
+      "address": "v1-my-seed/galaxy/system/0/planet/1",
+      "composition": "Rock",
+      "gravity": 1.58,
+      "escapeVelocity": 16.21,
+      "density": 6.52,
+      "insolation": 3.8701,
+      "albedo": 0.23,
+      "temperature": 488,
+      "dayTemperature": 494,
+      "nightTemperature": 473,
+      "atmosphere": {
+        "class": "Dense",
+        "pressure": 2.2193,
+        "gases": [
+          "CarbonDioxide",
+          "Nitrogen"
+        ],
+        "lightestGasKept": 5,
+        "breathable": false,
+        "why": "its gravity holds carbon dioxide and nitrogen"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 1003.4,
+      "spin": "Locked",
+      "tilt": 1.5,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          500,
+          "Barren"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          496,
+          "Barren"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          491,
+          "Barren"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          488,
+          "Barren"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          482,
+          "Barren"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          479,
+          "Barren"
+        ]
+      ],
+      "biomes": [
+        [
+          "Barren",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "volcanic chains"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 4,
+        "rareElements": 1,
+        "ices": 1,
+        "gases": 2,
+        "organics": 0
+      },
+      "hazard": 3,
+      "hazards": [
+        "extreme heat",
+        "unbreathable air",
+        "heavy gravity",
+        "eruptions"
+      ],
+      "similarity": 0.61,
+      "habitability": "Hostile",
+      "summary": "1.6 g, dense carbon dioxide air at 2.2 bar, 221 °C by day, 200 °C by night, tidally locked; hazard 3"
+    },
+    {
+      "address": "v1-my-seed/galaxy/system/0/planet/2",
+      "composition": "GasEnvelope",
+      "gravity": 1.05,
+      "escapeVelocity": 19.24,
+      "density": 2.06,
+      "insolation": 2.3335,
+      "albedo": 0.39,
+      "temperature": 304,
+      "dayTemperature": 304,
+      "nightTemperature": 304,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium",
+          "WaterVapour"
+        ],
+        "lightestGasKept": 3,
+        "breathable": false,
+        "why": "a thick envelope of hydrogen, helium and steam hides any surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 38.6,
+      "spin": "Free",
+      "tilt": 12.6,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "a thick haze"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 3,
+        "gases": 2,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface"
+      ],
+      "similarity": 0.71,
+      "habitability": "Hostile",
+      "summary": "1.1 g, a deep envelope of hydrogen, helium and water vapour, 31 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-my-seed/galaxy/system/0/planet/3",
+      "composition": "Ices",
+      "gravity": 0.76,
+      "escapeVelocity": 27.77,
+      "density": 0.52,
+      "insolation": 0.0875,
+      "albedo": 0.27,
+      "temperature": 140,
+      "dayTemperature": 140,
+      "nightTemperature": 140,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium",
+          "Methane"
+        ],
+        "lightestGasKept": 0.7,
+        "breathable": false,
+        "why": "hydrogen, helium and methane over a mantle of ices; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 10.2,
+      "spin": "Free",
+      "tilt": 11,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "diamond rain"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 2,
+        "gases": 4,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface"
+      ],
+      "similarity": 0.25,
+      "habitability": "Hostile",
+      "summary": "0.8 g, a deep envelope of hydrogen, helium and methane, -133 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-my-seed/galaxy/system/0/planet/4",
+      "composition": "HydrogenHelium",
+      "gravity": 18.69,
+      "escapeVelocity": 155.43,
+      "density": 9.97,
+      "insolation": 0.0182,
+      "albedo": 0.32,
+      "temperature": 93,
+      "dayTemperature": 93,
+      "nightTemperature": 93,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium"
+        ],
+        "lightestGasKept": 0,
+        "breathable": false,
+        "why": "a deep envelope of hydrogen and helium; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 13.7,
+      "spin": "Free",
+      "tilt": 19.3,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "a great storm"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 0,
+        "gases": 4,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface"
+      ],
+      "similarity": 0.18,
+      "habitability": "Hostile",
+      "summary": "19 g, a deep envelope of hydrogen and helium, -180 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-my-seed/galaxy/system/0/planet/5",
+      "composition": "Ices",
+      "gravity": 0.84,
+      "escapeVelocity": 24.97,
+      "density": 0.78,
+      "insolation": 0.008,
+      "albedo": 0.33,
+      "temperature": 75,
+      "dayTemperature": 75,
+      "nightTemperature": 75,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium",
+          "Methane"
+        ],
+        "lightestGasKept": 0.4,
+        "breathable": false,
+        "why": "hydrogen, helium and methane over a mantle of ices; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 12.2,
+      "spin": "Free",
+      "tilt": 30.9,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "diamond rain",
+        "auroras"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 4,
+        "gases": 3,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface"
+      ],
+      "similarity": 0.15,
+      "habitability": "Hostile",
+      "summary": "0.8 g, a deep envelope of hydrogen, helium and methane, -198 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-my-seed/galaxy/system/43/planet/0",
+      "composition": "Rock",
+      "gravity": 1.21,
+      "escapeVelocity": 13.06,
+      "density": 5.92,
+      "insolation": 134168.5178,
+      "albedo": 0.05,
+      "temperature": 5264,
+      "dayTemperature": 6843,
+      "nightTemperature": 1579,
+      "atmosphere": {
+        "class": "None",
+        "pressure": 0,
+        "gases": [],
+        "lightestGasKept": 110.8,
+        "breathable": false,
+        "why": "too little gravity for its heat: what air it has is leaking away to space"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 525.4,
+      "spin": "Locked",
+      "tilt": 1.1,
+      "bands": [
+        [
+          0,
+          30,
+          0.067,
+          8333,
+          "Volcanic"
+        ],
+        [
+          30,
+          60,
+          0.183,
+          7280,
+          "Volcanic"
+        ],
+        [
+          60,
+          80,
+          0.1632,
+          5964,
+          "Volcanic"
+        ],
+        [
+          80,
+          100,
+          0.1736,
+          5175,
+          "Volcanic"
+        ],
+        [
+          100,
+          140,
+          0.2962,
+          3859,
+          "Volcanic"
+        ],
+        [
+          140,
+          180,
+          0.117,
+          3069,
+          "Volcanic"
+        ]
+      ],
+      "biomes": [
+        [
+          "Volcanic",
+          1
+        ]
+      ],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "lava oceans"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 2,
+        "rareElements": 5,
+        "ices": 0,
+        "gases": 0,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "molten rock",
+        "searing heat",
+        "hard radiation",
+        "vacuum"
+      ],
+      "similarity": 0.04,
+      "habitability": "Hostile",
+      "summary": "1.2 g, no air, 6570 °C by day, 1306 °C by night, tidally locked; hazard 5"
+    },
+    {
+      "address": "v1-my-seed/galaxy/system/43/planet/1",
+      "composition": "HydrogenHelium",
+      "gravity": 0.49,
+      "escapeVelocity": 27.55,
+      "density": 0.22,
+      "insolation": 99642.0905,
+      "albedo": 0.04,
+      "temperature": 4900,
+      "dayTemperature": 4900,
+      "nightTemperature": 4900,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium"
+        ],
+        "lightestGasKept": 23.2,
+        "breathable": false,
+        "why": "hydrogen and helium heated by its star; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 656.6,
+      "spin": "Locked",
+      "tilt": 2,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "an evaporating atmosphere",
+        "a glowing night side"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 0,
+        "gases": 2,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface",
+        "hard radiation"
+      ],
+      "similarity": 0.02,
+      "habitability": "Hostile",
+      "summary": "0.5 g, a deep envelope of hydrogen and helium, 4627 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-my-seed/galaxy/system/43/planet/2",
+      "composition": "Ices",
+      "gravity": 0.86,
+      "escapeVelocity": 24.24,
+      "density": 0.87,
+      "insolation": 0.0989,
+      "albedo": 0.27,
+      "temperature": 144,
+      "dayTemperature": 144,
+      "nightTemperature": 144,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium",
+          "Methane"
+        ],
+        "lightestGasKept": 0.9,
+        "breathable": false,
+        "why": "hydrogen, helium and methane over a mantle of ices; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 15.8,
+      "spin": "Free",
+      "tilt": 14.4,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "diamond rain"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 4,
+        "gases": 5,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface",
+        "hard radiation"
+      ],
+      "similarity": 0.31,
+      "habitability": "Hostile",
+      "summary": "0.9 g, a deep envelope of hydrogen, helium and methane, -129 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-my-seed/galaxy/system/43/planet/3",
+      "composition": "HydrogenHelium",
+      "gravity": 1.3,
+      "escapeVelocity": 43.31,
+      "density": 0.62,
+      "insolation": 0.0207,
+      "albedo": 0.33,
+      "temperature": 96,
+      "dayTemperature": 96,
+      "nightTemperature": 96,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium"
+        ],
+        "lightestGasKept": 0.2,
+        "breathable": false,
+        "why": "a deep envelope of hydrogen and helium; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 17.6,
+      "spin": "Free",
+      "tilt": 28.1,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "bright rings"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 0,
+        "gases": 5,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface",
+        "hard radiation"
+      ],
+      "similarity": 0.16,
+      "habitability": "Hostile",
+      "summary": "1.3 g, a deep envelope of hydrogen and helium, -177 °C at the cloud tops; hazard 5"
+    },
+    {
+      "address": "v1-my-seed/galaxy/system/43/planet/4",
+      "composition": "HydrogenHelium",
+      "gravity": 0.76,
+      "escapeVelocity": 27.82,
+      "density": 0.52,
+      "insolation": 0.0068,
+      "albedo": 0.32,
+      "temperature": 73,
+      "dayTemperature": 73,
+      "nightTemperature": 73,
+      "atmosphere": {
+        "class": "Envelope",
+        "pressure": null,
+        "gases": [
+          "Hydrogen",
+          "Helium"
+        ],
+        "lightestGasKept": 0.3,
+        "breathable": false,
+        "why": "a deep envelope of hydrogen and helium; there is no surface"
+      },
+      "water": 0,
+      "ice": 0,
+      "rotation": 12.9,
+      "spin": "Free",
+      "tilt": 28.4,
+      "bands": [],
+      "biomes": [],
+      "life": "None",
+      "flora": 0,
+      "fauna": 0,
+      "traits": [
+        "many moons"
+      ],
+      "anomaly": null,
+      "resources": {
+        "metals": 0,
+        "rareElements": 0,
+        "ices": 0,
+        "gases": 5,
+        "organics": 0
+      },
+      "hazard": 5,
+      "hazards": [
+        "no surface",
+        "hard radiation"
+      ],
+      "similarity": 0.13,
+      "habitability": "Hostile",
+      "summary": "0.8 g, a deep envelope of hydrogen and helium, -200 °C at the cloud tops; hazard 5"
+    }
+  ]
+}

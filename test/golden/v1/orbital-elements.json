@@ -1,0 +1,253 @@
+{
+  "generatorVersion": 1,
+  "alone": [
+    {
+      "address": "v1-my-seed/planet",
+      "eccentricity": 0.232,
+      "inclination": 6.5,
+      "periapsisAngle": 97.6
+    },
+    {
+      "address": "v1-42/planet",
+      "eccentricity": 0.017,
+      "inclination": 26.4,
+      "periapsisAngle": 112.3
+    },
+    {
+      "address": "v1--42/planet",
+      "eccentricity": 0.113,
+      "inclination": 8.5,
+      "periapsisAngle": 66.6
+    },
+    {
+      "address": "v1-/planet",
+      "eccentricity": 0.572,
+      "inclination": 9.1,
+      "periapsisAngle": 268.6
+    },
+    {
+      "address": "v1-Andromeda%207/planet",
+      "eccentricity": 0.319,
+      "inclination": 9.1,
+      "periapsisAngle": 124.5
+    },
+    {
+      "address": "v1-s1/planet",
+      "eccentricity": 0.12,
+      "inclination": 19.9,
+      "periapsisAngle": 54
+    },
+    {
+      "address": "v1-s2/planet",
+      "eccentricity": 0.222,
+      "inclination": 10.1,
+      "periapsisAngle": 273.9
+    },
+    {
+      "address": "v1-s3/planet",
+      "eccentricity": 0.562,
+      "inclination": 14.4,
+      "periapsisAngle": 154.6
+    }
+  ],
+  "inSystems": [
+    {
+      "address": "v1-my-seed/system/planet/0",
+      "eccentricity": 0.086,
+      "inclination": 1,
+      "periapsisAngle": 18.1
+    },
+    {
+      "address": "v1-my-seed/system/planet/1",
+      "eccentricity": 0.019,
+      "inclination": 2.8,
+      "periapsisAngle": 347.9
+    },
+    {
+      "address": "v1-my-seed/system/planet/2",
+      "eccentricity": 0.066,
+      "inclination": 1.3,
+      "periapsisAngle": 57.3
+    },
+    {
+      "address": "v1-42/system/planet/0",
+      "eccentricity": 0.084,
+      "inclination": 2.9,
+      "periapsisAngle": 298.2
+    },
+    {
+      "address": "v1-42/system/planet/1",
+      "eccentricity": 0.008,
+      "inclination": 1.6,
+      "periapsisAngle": 151.6
+    },
+    {
+      "address": "v1-42/system/planet/2",
+      "eccentricity": 0.031,
+      "inclination": 0.7,
+      "periapsisAngle": 195.6
+    },
+    {
+      "address": "v1-42/system/planet/3",
+      "eccentricity": 0.048,
+      "inclination": 0.8,
+      "periapsisAngle": 10.9
+    },
+    {
+      "address": "v1-42/system/planet/4",
+      "eccentricity": 0.07,
+      "inclination": 0.6,
+      "periapsisAngle": 159.3
+    },
+    {
+      "address": "v1-s1/system/planet/0",
+      "eccentricity": 0.035,
+      "inclination": 0.7,
+      "periapsisAngle": 26.4
+    },
+    {
+      "address": "v1-s1/system/planet/1",
+      "eccentricity": 0.083,
+      "inclination": 2,
+      "periapsisAngle": 158.2
+    },
+    {
+      "address": "v1-s1/system/planet/2",
+      "eccentricity": 0.046,
+      "inclination": 1.3,
+      "periapsisAngle": 234.9
+    },
+    {
+      "address": "v1-s2/system/planet/0",
+      "eccentricity": 0.071,
+      "inclination": 2.6,
+      "periapsisAngle": 228.7
+    },
+    {
+      "address": "v1-s2/system/planet/1",
+      "eccentricity": 0.108,
+      "inclination": 2.8,
+      "periapsisAngle": 251.3
+    },
+    {
+      "address": "v1-s2/system/planet/2",
+      "eccentricity": 0.068,
+      "inclination": 0.8,
+      "periapsisAngle": 337.1
+    },
+    {
+      "address": "v1-s2/system/planet/3",
+      "eccentricity": 0.068,
+      "inclination": 1.5,
+      "periapsisAngle": 153.3
+    },
+    {
+      "address": "v1-s2/system/planet/4",
+      "eccentricity": 0.029,
+      "inclination": 1.7,
+      "periapsisAngle": 14.8
+    },
+    {
+      "address": "v1-s2/system/planet/5",
+      "eccentricity": 0.018,
+      "inclination": 0.9,
+      "periapsisAngle": 359.8
+    },
+    {
+      "address": "v1-s2/system/planet/6",
+      "eccentricity": 0.018,
+      "inclination": 1.2,
+      "periapsisAngle": 181
+    },
+    {
+      "address": "v1-s3/system/planet/0",
+      "eccentricity": 0.051,
+      "inclination": 1.8,
+      "periapsisAngle": 21.2
+    },
+    {
+      "address": "v1-s3/system/planet/1",
+      "eccentricity": 0.044,
+      "inclination": 4.5,
+      "periapsisAngle": 291.5
+    },
+    {
+      "address": "v1-s3/system/planet/2",
+      "eccentricity": 0.04,
+      "inclination": 1.9,
+      "periapsisAngle": 318.5
+    },
+    {
+      "address": "v1-s3/system/planet/3",
+      "eccentricity": 0.045,
+      "inclination": 1.5,
+      "periapsisAngle": 238.8
+    },
+    {
+      "address": "v1-s3/system/planet/4",
+      "eccentricity": 0.016,
+      "inclination": 3.5,
+      "periapsisAngle": 245.1
+    },
+    {
+      "address": "v1-s3/system/planet/5",
+      "eccentricity": 0.021,
+      "inclination": 1.4,
+      "periapsisAngle": 40.1
+    },
+    {
+      "address": "v1-s3/system/planet/6",
+      "eccentricity": 0.038,
+      "inclination": 3.4,
+      "periapsisAngle": 251.2
+    },
+    {
+      "address": "v1-s3/system/planet/7",
+      "eccentricity": 0.071,
+      "inclination": 2.2,
+      "periapsisAngle": 109.6
+    },
+    {
+      "address": "v1-s4/system/planet/0",
+      "eccentricity": 0.082,
+      "inclination": 3.1,
+      "periapsisAngle": 16.9
+    },
+    {
+      "address": "v1-s4/system/planet/1",
+      "eccentricity": 0.089,
+      "inclination": 0.9,
+      "periapsisAngle": 62.5
+    },
+    {
+      "address": "v1-s4/system/planet/2",
+      "eccentricity": 0.087,
+      "inclination": 3.2,
+      "periapsisAngle": 299.5
+    },
+    {
+      "address": "v1-s4/system/planet/3",
+      "eccentricity": 0.074,
+      "inclination": 1.3,
+      "periapsisAngle": 217.7
+    },
+    {
+      "address": "v1-s4/system/planet/4",
+      "eccentricity": 0.046,
+      "inclination": 0.6,
+      "periapsisAngle": 297.3
+    },
+    {
+      "address": "v1-my-seed/galaxy/system/31/planet/0",
+      "eccentricity": 0.032,
+      "inclination": 0.7,
+      "periapsisAngle": 152.3
+    },
+    {
+      "address": "v1-my-seed/galaxy/system/31/planet/1",
+      "eccentricity": 0.084,
+      "inclination": 1.5,
+      "periapsisAngle": 7.6
+    }
+  ]
+}

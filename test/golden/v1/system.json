@@ -1,0 +1,2604 @@
+{
+  "generatorVersion": 1,
+  "default": [
+    {
+      "address": "v1-my-seed/system",
+      "name": "TOI-1313",
+      "age": "Young",
+      "danger": 2,
+      "star": {
+        "class": "M",
+        "spectralType": "M4V",
+        "mass": 0.236,
+        "luminosity": 0.00831,
+        "radius": 0.315028,
+        "temperature": 3108,
+        "colour": "#ffad51",
+        "description": "red dwarf"
+      },
+      "companion": null,
+      "habitableZone": [
+        0.0684,
+        0.1611
+      ],
+      "frostLine": 0.2461,
+      "planets": [
+        {
+          "address": "v1-my-seed/system/planet/0",
+          "name": "TOI-1313 b",
+          "kind": "Rocky",
+          "zone": "Temperate",
+          "orbit": 0.1311,
+          "period": 35.67,
+          "mass": 1.421,
+          "radius": 1.103,
+          "rings": false,
+          "descriptor": "a temperate rocky world under a red dwarf",
+          "moons": [
+            {
+              "name": "TOI-1313 b I",
+              "kind": "Barren",
+              "orbit": 3.53,
+              "radius": 1682
+            }
+          ]
+        },
+        {
+          "address": "v1-my-seed/system/planet/1",
+          "name": "TOI-1313 c",
+          "kind": "Barren",
+          "zone": "Outer",
+          "orbit": 0.3432,
+          "period": 151.14,
+          "mass": 1.057,
+          "radius": 1.016,
+          "rings": false,
+          "descriptor": "a frozen barren rock far from a red dwarf",
+          "moons": []
+        },
+        {
+          "address": "v1-my-seed/system/planet/2",
+          "name": "TOI-1313 d",
+          "kind": "Ice",
+          "zone": "Outer",
+          "orbit": 0.5163,
+          "period": 278.94,
+          "mass": 1.202,
+          "radius": 1.053,
+          "rings": false,
+          "descriptor": "an ice world far from a red dwarf",
+          "moons": [
+            {
+              "name": "TOI-1313 d I",
+              "kind": "Barren",
+              "orbit": 3.02,
+              "radius": 1014
+            },
+            {
+              "name": "TOI-1313 d II",
+              "kind": "Barren",
+              "orbit": 5.76,
+              "radius": 1072
+            }
+          ]
+        }
+      ],
+      "belts": [
+        {
+          "kind": "Asteroid",
+          "inner": 0.1845,
+          "outer": 0.2439
+        },
+        {
+          "kind": "Ice",
+          "inner": 0.8261,
+          "outer": 1.0842
+        }
+      ],
+      "stations": [],
+      "landmarks": [
+        {
+          "kind": "AsteroidBelt",
+          "outlier": false,
+          "text": "an asteroid belt"
+        }
+      ],
+      "tags": [
+        "frontier colony",
+        "mining boom"
+      ],
+      "descriptor": "a red dwarf with 3 planets and an asteroid belt"
+    },
+    {
+      "address": "v1-42/system",
+      "name": "HIP 82733",
+      "age": "Old",
+      "danger": 9,
+      "star": {
+        "class": "G",
+        "spectralType": "G2V",
+        "mass": 1.018,
+        "luminosity": 1.07325,
+        "radius": 1.014238,
+        "temperature": 5840,
+        "colour": "#fff4ea",
+        "description": "yellow star"
+      },
+      "companion": {
+        "orbit": "Wide",
+        "separation": 68.6816,
+        "star": {
+          "class": "M",
+          "spectralType": "M4V",
+          "mass": 0.243,
+          "luminosity": 0.00885,
+          "radius": 0.321977,
+          "temperature": 3123,
+          "colour": "#ffad51",
+          "description": "red dwarf"
+        }
+      },
+      "habitableZone": [
+        0.7774,
+        1.8314
+      ],
+      "frostLine": 2.7971,
+      "planets": [
+        {
+          "address": "v1-42/system/planet/0",
+          "name": "HIP 82733 b",
+          "kind": "Barren",
+          "zone": "Hot",
+          "orbit": 0.1956,
+          "period": 31.31,
+          "mass": 0.607,
+          "radius": 0.87,
+          "rings": false,
+          "descriptor": "a scorched barren rock skimming a yellow star",
+          "moons": [
+            {
+              "name": "HIP 82733 b I",
+              "kind": "Ice",
+              "orbit": 5.21,
+              "radius": 744
+            }
+          ]
+        },
+        {
+          "address": "v1-42/system/planet/1",
+          "name": "HIP 82733 f",
+          "kind": "Lava",
+          "zone": "Hot",
+          "orbit": 0.2972,
+          "period": 58.65,
+          "mass": 0.98,
+          "radius": 0.994,
+          "rings": false,
+          "descriptor": "a lava world skimming a yellow star",
+          "moons": []
+        },
+        {
+          "address": "v1-42/system/planet/2",
+          "name": "HIP 82733 c",
+          "kind": "Desert",
+          "zone": "Warm",
+          "orbit": 0.4398,
+          "period": 105.57,
+          "mass": 0.582,
+          "radius": 0.86,
+          "rings": true,
+          "descriptor": "a ringed warm desert world under a yellow star",
+          "moons": [
+            {
+              "name": "HIP 82733 c I",
+              "kind": "Barren",
+              "orbit": 4.76,
+              "radius": 594
+            }
+          ]
+        },
+        {
+          "address": "v1-42/system/planet/3",
+          "name": "HIP 82733 d",
+          "kind": "Desert",
+          "zone": "Warm",
+          "orbit": 0.6266,
+          "period": 179.54,
+          "mass": 1.423,
+          "radius": 1.103,
+          "rings": false,
+          "descriptor": "a warm desert world under a yellow star",
+          "moons": [
+            {
+              "name": "HIP 82733 d I",
+              "kind": "Ice",
+              "orbit": 5.15,
+              "radius": 511
+            }
+          ]
+        },
+        {
+          "address": "v1-42/system/planet/4",
+          "name": "HIP 82733 e",
+          "kind": "Ocean",
+          "zone": "Temperate",
+          "orbit": 1.0683,
+          "period": 399.7,
+          "mass": 1.068,
+          "radius": 1.018,
+          "rings": false,
+          "descriptor": "a temperate ocean world under a yellow star",
+          "moons": [
+            {
+              "name": "HIP 82733 e I",
+              "kind": "Barren",
+              "orbit": 3.95,
+              "radius": 1196
+            },
+            {
+              "name": "HIP 82733 e II",
+              "kind": "Barren",
+              "orbit": 6.55,
+              "radius": 1055
+            }
+          ]
+        }
+      ],
+      "belts": [],
+      "stations": [],
+      "landmarks": [
+        {
+          "kind": "BinaryStar",
+          "outlier": false,
+          "text": "a red dwarf companion"
+        }
+      ],
+      "tags": [
+        "pirate haven"
+      ],
+      "descriptor": "a yellow star and red dwarf pair with 5 planets"
+    },
+    {
+      "address": "v1--42/system",
+      "name": "Sterrennacht",
+      "age": "Mature",
+      "danger": 5,
+      "star": {
+        "class": "M",
+        "spectralType": "M6V",
+        "mass": 0.149,
+        "luminosity": 0.0029,
+        "radius": 0.218425,
+        "temperature": 2869,
+        "colour": "#ffad51",
+        "description": "red dwarf"
+      },
+      "companion": null,
+      "habitableZone": [
+        0.0404,
+        0.0952
+      ],
+      "frostLine": 0.1454,
+      "planets": [],
+      "belts": [
+        {
+          "kind": "Asteroid",
+          "inner": 0.1163,
+          "outer": 0.1745
+        }
+      ],
+      "stations": [],
+      "landmarks": [
+        {
+          "kind": "AsteroidBelt",
+          "outlier": false,
+          "text": "an asteroid belt"
+        }
+      ],
+      "tags": [
+        "mining boom"
+      ],
+      "descriptor": "a red dwarf with no planets but an asteroid belt"
+    },
+    {
+      "address": "v1-/system",
+      "name": "HD 80598",
+      "age": "Young",
+      "danger": 3,
+      "star": {
+        "class": "M",
+        "spectralType": "M4V",
+        "mass": 0.245,
+        "luminosity": 0.00902,
+        "radius": 0.324207,
+        "temperature": 3128,
+        "colour": "#ffad51",
+        "description": "red dwarf"
+      },
+      "companion": null,
+      "habitableZone": [
+        0.0713,
+        0.1679
+      ],
+      "frostLine": 0.2564,
+      "planets": [
+        {
+          "address": "v1-/system/planet/0",
+          "name": "HD 80598 c",
+          "kind": "Desert",
+          "zone": "Warm",
+          "orbit": 0.0385,
+          "period": 5.58,
+          "mass": 2.8,
+          "radius": 1.333,
+          "rings": false,
+          "descriptor": "a warm desert world under a red dwarf",
+          "moons": [
+            {
+              "name": "HD 80598 c I",
+              "kind": "Barren",
+              "orbit": 4.96,
+              "radius": 2546
+            }
+          ]
+        },
+        {
+          "address": "v1-/system/planet/1",
+          "name": "HD 80598 b",
+          "kind": "IceGiant",
+          "zone": "Outer",
+          "orbit": 0.3832,
+          "period": 175.01,
+          "mass": 32.884,
+          "radius": 6.323,
+          "rings": false,
+          "descriptor": "an ice giant far from a red dwarf",
+          "moons": [
+            {
+              "name": "HD 80598 b I",
+              "kind": "Barren",
+              "orbit": 3.62,
+              "radius": 1845
+            }
+          ]
+        }
+      ],
+      "belts": [],
+      "stations": [
+        {
+          "address": "v1-/system/station/0",
+          "name": "Kestrel Relay",
+          "kind": "Relay",
+          "planet": 0
+        }
+      ],
+      "landmarks": [
+        {
+          "kind": "Anomaly",
+          "outlier": false,
+          "text": "a signal no one can explain"
+        }
+      ],
+      "tags": [
+        "gas mining",
+        "holy site"
+      ],
+      "descriptor": "a red dwarf with 2 planets"
+    },
+    {
+      "address": "v1-Andromeda%207/system",
+      "name": "Lusitânia",
+      "age": "Mature",
+      "danger": 8,
+      "star": {
+        "class": "K",
+        "spectralType": "K7V",
+        "mass": 0.571,
+        "luminosity": 0.10649,
+        "radius": 0.638941,
+        "temperature": 4129,
+        "colour": "#ffd2a1",
+        "description": "orange dwarf"
+      },
+      "companion": null,
+      "habitableZone": [
+        0.2449,
+        0.5769
+      ],
+      "frostLine": 0.8811,
+      "planets": [
+        {
+          "address": "v1-Andromeda%207/system/planet/0",
+          "name": "Lusitânia b",
+          "kind": "SubNeptune",
+          "zone": "Warm",
+          "orbit": 0.2408,
+          "period": 57.12,
+          "mass": 5.027,
+          "radius": 2.092,
+          "rings": false,
+          "descriptor": "a warm mini-Neptune under an orange dwarf",
+          "moons": [
+            {
+              "name": "Lusitânia b I",
+              "kind": "Barren",
+              "orbit": 3.14,
+              "radius": 2571
+            }
+          ]
+        }
+      ],
+      "belts": [
+        {
+          "kind": "Ice",
+          "inner": 0.3853,
+          "outer": 0.5057
+        }
+      ],
+      "stations": [],
+      "landmarks": [
+        {
+          "kind": "Nebula",
+          "outlier": false,
+          "text": "a glowing nebula around the system"
+        }
+      ],
+      "tags": [
+        "pirate haven",
+        "mining boom"
+      ],
+      "descriptor": "an orange dwarf with one planet"
+    },
+    {
+      "address": "v1-a%2Fb%20c/system",
+      "name": "HD 114265",
+      "age": "Young",
+      "danger": 3,
+      "star": {
+        "class": "F",
+        "spectralType": "F2V",
+        "mass": 1.413,
+        "luminosity": 3.98731,
+        "radius": 1.31867,
+        "temperature": 7110,
+        "colour": "#f8f7ff",
+        "description": "yellow-white star"
+      },
+      "companion": null,
+      "habitableZone": [
+        1.4984,
+        3.5299
+      ],
+      "frostLine": 5.3914,
+      "planets": [
+        {
+          "address": "v1-a%2Fb%20c/system/planet/0",
+          "name": "HD 114265 d",
+          "kind": "Barren",
+          "zone": "Hot",
+          "orbit": 0.2233,
+          "period": 32.43,
+          "mass": 0.369,
+          "radius": 0.757,
+          "rings": false,
+          "descriptor": "a scorched barren rock skimming a yellow-white star",
+          "moons": []
+        },
+        {
+          "address": "v1-a%2Fb%20c/system/planet/1",
+          "name": "HD 114265 f",
+          "kind": "Barren",
+          "zone": "Hot",
+          "orbit": 0.2591,
+          "period": 40.54,
+          "mass": 0.395,
+          "radius": 0.772,
+          "rings": false,
+          "descriptor": "a scorched barren rock skimming a yellow-white star",
+          "moons": [
+            {
+              "name": "HD 114265 f I",
+              "kind": "Barren",
+              "orbit": 3.41,
+              "radius": 601
+            }
+          ]
+        },
+        {
+          "address": "v1-a%2Fb%20c/system/planet/2",
+          "name": "HD 114265 c",
+          "kind": "Iron",
+          "zone": "Hot",
+          "orbit": 0.3852,
+          "period": 73.47,
+          "mass": 0.32,
+          "radius": 0.728,
+          "rings": false,
+          "descriptor": "a scorched iron world skimming a yellow-white star",
+          "moons": [
+            {
+              "name": "HD 114265 c I",
+              "kind": "Barren",
+              "orbit": 5.95,
+              "radius": 117
+            }
+          ]
+        },
+        {
+          "address": "v1-a%2Fb%20c/system/planet/3",
+          "name": "HD 114265 g",
+          "kind": "HotJupiter",
+          "zone": "Hot",
+          "orbit": 0.4495,
+          "period": 92.59,
+          "mass": 118.94,
+          "radius": 14.034,
+          "rings": false,
+          "descriptor": "a hot Jupiter skimming a yellow-white star",
+          "moons": []
+        },
+        {
+          "address": "v1-a%2Fb%20c/system/planet/4",
+          "name": "HD 114265 h",
+          "kind": "Barren",
+          "zone": "Hot",
+          "orbit": 0.7445,
+          "period": 197.37,
+          "mass": 0.317,
+          "radius": 0.726,
+          "rings": false,
+          "descriptor": "a scorched barren rock skimming a yellow-white star",
+          "moons": [
+            {
+              "name": "HD 114265 h I",
+              "kind": "Barren",
+              "orbit": 5.04,
+              "radius": 171
+            }
+          ]
+        },
+        {
+          "address": "v1-a%2Fb%20c/system/planet/5",
+          "name": "HD 114265 e",
+          "kind": "GasGiant",
+          "zone": "Outer",
+          "orbit": 8.0207,
+          "period": 6979.67,
+          "mass": 311.081,
+          "radius": 11.211,
+          "rings": true,
+          "descriptor": "a ringed gas giant far from a yellow-white star",
+          "moons": [
+            {
+              "name": "HD 114265 e I",
+              "kind": "Hazy",
+              "orbit": 3.68,
+              "radius": 203
+            },
+            {
+              "name": "HD 114265 e II",
+              "kind": "Ice",
+              "orbit": 6.76,
+              "radius": 269
+            },
+            {
+              "name": "HD 114265 e III",
+              "kind": "Ice",
+              "orbit": 9.07,
+              "radius": 1130
+            },
+            {
+              "name": "HD 114265 e IV",
+              "kind": "Ice",
+              "orbit": 11.88,
+              "radius": 208
+            },
+            {
+              "name": "HD 114265 e V",
+              "kind": "Ice",
+              "orbit": 15.54,
+              "radius": 2455
+            },
+            {
+              "name": "HD 114265 e VI",
+              "kind": "Ice",
+              "orbit": 26.68,
+              "radius": 296
+            },
+            {
+              "name": "HD 114265 e VII",
+              "kind": "Ocean",
+              "orbit": 52.77,
+              "radius": 201
+            }
+          ]
+        },
+        {
+          "address": "v1-a%2Fb%20c/system/planet/6",
+          "name": "HD 114265 i",
+          "kind": "GasGiant",
+          "zone": "Outer",
+          "orbit": 15.3679,
+          "period": 18511.47,
+          "mass": 76.131,
+          "radius": 10.367,
+          "rings": false,
+          "descriptor": "a gas giant far from a yellow-white star",
+          "moons": [
+            {
+              "name": "HD 114265 i I",
+              "kind": "Ice",
+              "orbit": 4.34,
+              "radius": 1803
+            },
+            {
+              "name": "HD 114265 i II",
+              "kind": "Ocean",
+              "orbit": 6.63,
+              "radius": 1760
+            },
+            {
+              "name": "HD 114265 i III",
+              "kind": "Ice",
+              "orbit": 9.87,
+              "radius": 1743
+            },
+            {
+              "name": "HD 114265 i IV",
+              "kind": "Ice",
+              "orbit": 15.37,
+              "radius": 1320
+            },
+            {
+              "name": "HD 114265 i V",
+              "kind": "Volcanic",
+              "orbit": 30.09,
+              "radius": 442
+            },
+            {
+              "name": "HD 114265 i VI",
+              "kind": "Ocean",
+              "orbit": 55.82,
+              "radius": 258
+            }
+          ]
+        },
+        {
+          "address": "v1-a%2Fb%20c/system/planet/7",
+          "name": "HD 114265 b",
+          "kind": "Ice",
+          "zone": "Outer",
+          "orbit": 29.2547,
+          "period": 48619.75,
+          "mass": 0.437,
+          "radius": 0.794,
+          "rings": false,
+          "descriptor": "an ice world far from a yellow-white star",
+          "moons": [
+            {
+              "name": "HD 114265 b I",
+              "kind": "Barren",
+              "orbit": 4.17,
+              "radius": 432
+            },
+            {
+              "name": "HD 114265 b II",
+              "kind": "Barren",
+              "orbit": 6.64,
+              "radius": 211
+            }
+          ]
+        }
+      ],
+      "belts": [],
+      "stations": [
+        {
+          "address": "v1-a%2Fb%20c/system/station/0",
+          "name": "Keystone Trade Hub",
+          "kind": "TradeHub",
+          "planet": 0
+        },
+        {
+          "address": "v1-a%2Fb%20c/system/station/1",
+          "name": "HD 114265 Refinery",
+          "kind": "Refinery",
+          "planet": 0
+        }
+      ],
+      "landmarks": [
+        {
+          "kind": "HotJupiter",
+          "outlier": false,
+          "text": "HD 114265 g, a hot Jupiter"
+        },
+        {
+          "kind": "RingedGiant",
+          "outlier": false,
+          "text": "the rings of HD 114265 e"
+        }
+      ],
+      "tags": [
+        "corporate enclave",
+        "trade crossroads"
+      ],
+      "descriptor": "a yellow-white star with 8 planets"
+    },
+    {
+      "address": "v1-s1/system",
+      "name": "Gudja",
+      "age": "Old",
+      "danger": 6,
+      "star": {
+        "class": "M",
+        "spectralType": "M5V",
+        "mass": 0.177,
+        "luminosity": 0.00429,
+        "radius": 0.25038,
+        "temperature": 2956,
+        "colour": "#ffad51",
+        "description": "red dwarf"
+      },
+      "companion": null,
+      "habitableZone": [
+        0.0491,
+        0.1158
+      ],
+      "frostLine": 0.1768,
+      "planets": [
+        {
+          "address": "v1-s1/system/planet/0",
+          "name": "Gudja d",
+          "kind": "Ice",
+          "zone": "Cold",
+          "orbit": 0.1411,
+          "period": 46.02,
+          "mass": 0.973,
+          "radius": 0.992,
+          "rings": false,
+          "descriptor": "a cold ice world under a red dwarf",
+          "moons": [
+            {
+              "name": "Gudja d I",
+              "kind": "Barren",
+              "orbit": 5.6,
+              "radius": 234
+            }
+          ]
+        },
+        {
+          "address": "v1-s1/system/planet/1",
+          "name": "Gudja b",
+          "kind": "Dwarf",
+          "zone": "Outer",
+          "orbit": 0.1976,
+          "period": 76.23,
+          "mass": 0.005,
+          "radius": 0.232,
+          "rings": false,
+          "descriptor": "a dwarf planet far from a red dwarf",
+          "moons": [
+            {
+              "name": "Gudja b I",
+              "kind": "Barren",
+              "orbit": 3.71,
+              "radius": 126
+            }
+          ]
+        },
+        {
+          "address": "v1-s1/system/planet/2",
+          "name": "Gudja c",
+          "kind": "IceGiant",
+          "zone": "Outer",
+          "orbit": 0.3249,
+          "period": 160.76,
+          "mass": 32.6,
+          "radius": 6.291,
+          "rings": false,
+          "descriptor": "an ice giant far from a red dwarf",
+          "moons": [
+            {
+              "name": "Gudja c I",
+              "kind": "Barren",
+              "orbit": 5.96,
+              "radius": 1304
+            },
+            {
+              "name": "Gudja c II",
+              "kind": "Hazy",
+              "orbit": 11.38,
+              "radius": 573
+            },
+            {
+              "name": "Gudja c III",
+              "kind": "Ice",
+              "orbit": 14.87,
+              "radius": 283
+            }
+          ]
+        }
+      ],
+      "belts": [
+        {
+          "kind": "Ice",
+          "inner": 0.5198,
+          "outer": 0.6823
+        }
+      ],
+      "stations": [],
+      "landmarks": [
+        {
+          "kind": "Anomaly",
+          "outlier": false,
+          "text": "a signal no one can explain"
+        }
+      ],
+      "tags": [
+        "mining boom",
+        "gas mining"
+      ],
+      "descriptor": "a red dwarf with 3 planets"
+    },
+    {
+      "address": "v1-s2/system",
+      "name": "TOI-1873",
+      "age": "Mature",
+      "danger": 10,
+      "star": {
+        "class": "G",
+        "spectralType": "G8V",
+        "mass": 0.875,
+        "luminosity": 0.58644,
+        "radius": 0.898762,
+        "temperature": 5333,
+        "colour": "#fff4ea",
+        "description": "yellow star"
+      },
+      "companion": null,
+      "habitableZone": [
+        0.5746,
+        1.3537
+      ],
+      "frostLine": 2.0676,
+      "planets": [
+        {
+          "address": "v1-s2/system/planet/0",
+          "name": "TOI-1873 d",
+          "kind": "Barren",
+          "zone": "Hot",
+          "orbit": 0.1573,
+          "period": 24.36,
+          "mass": 1.456,
+          "radius": 1.11,
+          "rings": false,
+          "descriptor": "a scorched barren rock skimming a yellow star",
+          "moons": []
+        },
+        {
+          "address": "v1-s2/system/planet/1",
+          "name": "TOI-1873 e",
+          "kind": "Lava",
+          "zone": "Hot",
+          "orbit": 0.2436,
+          "period": 46.96,
+          "mass": 2.662,
+          "radius": 1.314,
+          "rings": false,
+          "descriptor": "a lava world skimming a yellow star",
+          "moons": [
+            {
+              "name": "TOI-1873 e I",
+              "kind": "Barren",
+              "orbit": 5.62,
+              "radius": 2269
+            },
+            {
+              "name": "TOI-1873 e II",
+              "kind": "Barren",
+              "orbit": 9.29,
+              "radius": 663
+            }
+          ]
+        },
+        {
+          "address": "v1-s2/system/planet/2",
+          "name": "TOI-1873 b",
+          "kind": "Greenhouse",
+          "zone": "Warm",
+          "orbit": 0.3875,
+          "period": 94.19,
+          "mass": 1.315,
+          "radius": 1.079,
+          "rings": false,
+          "descriptor": "a greenhouse world under a yellow star",
+          "moons": []
+        },
+        {
+          "address": "v1-s2/system/planet/3",
+          "name": "TOI-1873 c",
+          "kind": "Rocky",
+          "zone": "Warm",
+          "orbit": 0.5096,
+          "period": 142.06,
+          "mass": 0.982,
+          "radius": 0.995,
+          "rings": false,
+          "descriptor": "a warm rocky world under a yellow star",
+          "moons": [
+            {
+              "name": "TOI-1873 c I",
+              "kind": "Barren",
+              "orbit": 4.07,
+              "radius": 1737
+            },
+            {
+              "name": "TOI-1873 c II",
+              "kind": "Barren",
+              "orbit": 6.9,
+              "radius": 1032
+            }
+          ]
+        },
+        {
+          "address": "v1-s2/system/planet/4",
+          "name": "TOI-1873 g",
+          "kind": "Rocky",
+          "zone": "Cold",
+          "orbit": 1.9056,
+          "period": 1027.15,
+          "mass": 1.629,
+          "radius": 1.146,
+          "rings": false,
+          "descriptor": "a cold rocky world under a yellow star",
+          "moons": []
+        },
+        {
+          "address": "v1-s2/system/planet/5",
+          "name": "TOI-1873 f",
+          "kind": "IceGiant",
+          "zone": "Outer",
+          "orbit": 4.0723,
+          "period": 3208.8,
+          "mass": 14.689,
+          "radius": 3.933,
+          "rings": false,
+          "descriptor": "an ice giant far from a yellow star",
+          "moons": [
+            {
+              "name": "TOI-1873 f I",
+              "kind": "Ice",
+              "orbit": 3.75,
+              "radius": 1692
+            },
+            {
+              "name": "TOI-1873 f II",
+              "kind": "Ice",
+              "orbit": 7.11,
+              "radius": 564
+            },
+            {
+              "name": "TOI-1873 f III",
+              "kind": "Ice",
+              "orbit": 11.34,
+              "radius": 311
+            },
+            {
+              "name": "TOI-1873 f IV",
+              "kind": "Ocean",
+              "orbit": 18.96,
+              "radius": 1726
+            },
+            {
+              "name": "TOI-1873 f V",
+              "kind": "Ocean",
+              "orbit": 36.75,
+              "radius": 2389
+            }
+          ]
+        },
+        {
+          "address": "v1-s2/system/planet/6",
+          "name": "TOI-1873 h",
+          "kind": "GasGiant",
+          "zone": "Outer",
+          "orbit": 6.6111,
+          "period": 6637.44,
+          "mass": 111.727,
+          "radius": 11.728,
+          "rings": true,
+          "descriptor": "a ringed gas giant far from a yellow star",
+          "moons": [
+            {
+              "name": "TOI-1873 h I",
+              "kind": "Barren",
+              "orbit": 4.7,
+              "radius": 2304
+            },
+            {
+              "name": "TOI-1873 h II",
+              "kind": "Ice",
+              "orbit": 9.18,
+              "radius": 530
+            },
+            {
+              "name": "TOI-1873 h III",
+              "kind": "Hazy",
+              "orbit": 17.32,
+              "radius": 2679
+            },
+            {
+              "name": "TOI-1873 h IV",
+              "kind": "Ice",
+              "orbit": 25.95,
+              "radius": 1371
+            },
+            {
+              "name": "TOI-1873 h V",
+              "kind": "Ice",
+              "orbit": 44.61,
+              "radius": 1876
+            }
+          ]
+        }
+      ],
+      "belts": [
+        {
+          "kind": "Ice",
+          "inner": 10.5778,
+          "outer": 13.8833
+        }
+      ],
+      "stations": [
+        {
+          "address": "v1-s2/system/station/0",
+          "name": "Waypoint Shipyard",
+          "kind": "Shipyard",
+          "planet": null
+        }
+      ],
+      "landmarks": [
+        {
+          "kind": "RingedGiant",
+          "outlier": false,
+          "text": "the rings of TOI-1873 h"
+        }
+      ],
+      "tags": [
+        "mining boom"
+      ],
+      "descriptor": "a yellow star with 7 planets"
+    },
+    {
+      "address": "v1-s3/system",
+      "name": "Wolf 1234",
+      "age": "Old",
+      "danger": 8,
+      "star": {
+        "class": "F",
+        "spectralType": "F1V",
+        "mass": 1.467,
+        "luminosity": 4.62912,
+        "radius": 1.358625,
+        "temperature": 7271,
+        "colour": "#f8f7ff",
+        "description": "yellow-white star"
+      },
+      "companion": null,
+      "habitableZone": [
+        1.6145,
+        3.8034
+      ],
+      "frostLine": 5.8092,
+      "planets": [
+        {
+          "address": "v1-s3/system/planet/0",
+          "name": "Wolf 1234 d",
+          "kind": "Lava",
+          "zone": "Hot",
+          "orbit": 0.1911,
+          "period": 25.18,
+          "mass": 2.417,
+          "radius": 1.279,
+          "rings": false,
+          "descriptor": "a lava world skimming a yellow-white star",
+          "moons": [
+            {
+              "name": "Wolf 1234 d I",
+              "kind": "Barren",
+              "orbit": 5.87,
+              "radius": 312
+            },
+            {
+              "name": "Wolf 1234 d II",
+              "kind": "Barren",
+              "orbit": 8.69,
+              "radius": 1005
+            }
+          ]
+        },
+        {
+          "address": "v1-s3/system/planet/1",
+          "name": "Wolf 1234 g",
+          "kind": "Iron",
+          "zone": "Hot",
+          "orbit": 0.2656,
+          "period": 41.28,
+          "mass": 0.938,
+          "radius": 0.982,
+          "rings": false,
+          "descriptor": "a scorched iron world skimming a yellow-white star",
+          "moons": []
+        },
+        {
+          "address": "v1-s3/system/planet/2",
+          "name": "Wolf 1234 c",
+          "kind": "Barren",
+          "zone": "Hot",
+          "orbit": 0.3884,
+          "period": 73,
+          "mass": 1.086,
+          "radius": 1.023,
+          "rings": false,
+          "descriptor": "a scorched barren rock skimming a yellow-white star",
+          "moons": [
+            {
+              "name": "Wolf 1234 c I",
+              "kind": "Ice",
+              "orbit": 4.17,
+              "radius": 659
+            }
+          ]
+        },
+        {
+          "address": "v1-s3/system/planet/3",
+          "name": "Wolf 1234 h",
+          "kind": "Lava",
+          "zone": "Hot",
+          "orbit": 0.6272,
+          "period": 149.81,
+          "mass": 1.738,
+          "radius": 1.167,
+          "rings": false,
+          "descriptor": "a lava world skimming a yellow-white star",
+          "moons": [
+            {
+              "name": "Wolf 1234 h I",
+              "kind": "Barren",
+              "orbit": 3.82,
+              "radius": 102
+            }
+          ]
+        },
+        {
+          "address": "v1-s3/system/planet/4",
+          "name": "Wolf 1234 e",
+          "kind": "GasGiant",
+          "zone": "Outer",
+          "orbit": 7.2107,
+          "period": 5839.02,
+          "mass": 163.711,
+          "radius": 11.532,
+          "rings": false,
+          "descriptor": "a gas giant far from a yellow-white star",
+          "moons": [
+            {
+              "name": "Wolf 1234 e I",
+              "kind": "Volcanic",
+              "orbit": 5.26,
+              "radius": 981
+            }
+          ]
+        },
+        {
+          "address": "v1-s3/system/planet/5",
+          "name": "Wolf 1234 f",
+          "kind": "IceGiant",
+          "zone": "Outer",
+          "orbit": 15.9853,
+          "period": 19273.3,
+          "mass": 39.28,
+          "radius": 7.021,
+          "rings": true,
+          "descriptor": "a ringed ice giant far from a yellow-white star",
+          "moons": [
+            {
+              "name": "Wolf 1234 f I",
+              "kind": "Ice",
+              "orbit": 3.87,
+              "radius": 263
+            }
+          ]
+        },
+        {
+          "address": "v1-s3/system/planet/6",
+          "name": "Wolf 1234 b",
+          "kind": "GasGiant",
+          "zone": "Outer",
+          "orbit": 28.6496,
+          "period": 46243.76,
+          "mass": 432.923,
+          "radius": 11.049,
+          "rings": false,
+          "descriptor": "a gas giant far from a yellow-white star",
+          "moons": [
+            {
+              "name": "Wolf 1234 b I",
+              "kind": "Volcanic",
+              "orbit": 5.13,
+              "radius": 223
+            },
+            {
+              "name": "Wolf 1234 b II",
+              "kind": "Ice",
+              "orbit": 8.38,
+              "radius": 667
+            },
+            {
+              "name": "Wolf 1234 b III",
+              "kind": "Barren",
+              "orbit": 13.73,
+              "radius": 2008
+            },
+            {
+              "name": "Wolf 1234 b IV",
+              "kind": "Ice",
+              "orbit": 23.34,
+              "radius": 282
+            },
+            {
+              "name": "Wolf 1234 b V",
+              "kind": "Ocean",
+              "orbit": 38.27,
+              "radius": 474
+            },
+            {
+              "name": "Wolf 1234 b VI",
+              "kind": "Ice",
+              "orbit": 51.05,
+              "radius": 958
+            }
+          ]
+        },
+        {
+          "address": "v1-s3/system/planet/7",
+          "name": "Wolf 1234 i",
+          "kind": "GasGiant",
+          "zone": "Outer",
+          "orbit": 61.3683,
+          "period": 144974.26,
+          "mass": 348.67,
+          "radius": 11.155,
+          "rings": false,
+          "descriptor": "a gas giant far from a yellow-white star",
+          "moons": [
+            {
+              "name": "Wolf 1234 i I",
+              "kind": "Barren",
+              "orbit": 5.24,
+              "radius": 1348
+            },
+            {
+              "name": "Wolf 1234 i II",
+              "kind": "Ice",
+              "orbit": 6.85,
+              "radius": 1215
+            },
+            {
+              "name": "Wolf 1234 i III",
+              "kind": "Ice",
+              "orbit": 10.63,
+              "radius": 490
+            },
+            {
+              "name": "Wolf 1234 i IV",
+              "kind": "Ice",
+              "orbit": 18.65,
+              "radius": 2365
+            },
+            {
+              "name": "Wolf 1234 i V",
+              "kind": "Ice",
+              "orbit": 26.54,
+              "radius": 353
+            },
+            {
+              "name": "Wolf 1234 i VI",
+              "kind": "Ice",
+              "orbit": 49.28,
+              "radius": 471
+            }
+          ]
+        }
+      ],
+      "belts": [
+        {
+          "kind": "Ice",
+          "inner": 98.1893,
+          "outer": 128.8734
+        }
+      ],
+      "stations": [],
+      "landmarks": [
+        {
+          "kind": "RingedGiant",
+          "outlier": false,
+          "text": "the rings of Wolf 1234 f"
+        }
+      ],
+      "tags": [
+        "holy site"
+      ],
+      "descriptor": "a yellow-white star with 8 planets"
+    },
+    {
+      "address": "v1-s4/system",
+      "name": "HIP 17598",
+      "age": "Mature",
+      "danger": 10,
+      "star": {
+        "class": "M",
+        "spectralType": "M2V",
+        "mass": 0.414,
+        "luminosity": 0.03022,
+        "radius": 0.49365,
+        "temperature": 3429,
+        "colour": "#ffad51",
+        "description": "red dwarf"
+      },
+      "companion": null,
+      "habitableZone": [
+        0.1304,
+        0.3073
+      ],
+      "frostLine": 0.4694,
+      "planets": [
+        {
+          "address": "v1-s4/system/planet/0",
+          "name": "HIP 17598 e",
+          "kind": "Ocean",
+          "zone": "Temperate",
+          "orbit": 0.1718,
+          "period": 40.41,
+          "mass": 0.394,
+          "radius": 0.771,
+          "rings": false,
+          "descriptor": "a temperate ocean world under a red dwarf",
+          "moons": [
+            {
+              "name": "HIP 17598 e I",
+              "kind": "Ice",
+              "orbit": 3.09,
+              "radius": 151
+            },
+            {
+              "name": "HIP 17598 e II",
+              "kind": "Barren",
+              "orbit": 4.26,
+              "radius": 351
+            }
+          ]
+        },
+        {
+          "address": "v1-s4/system/planet/1",
+          "name": "HIP 17598 d",
+          "kind": "Garden",
+          "zone": "Temperate",
+          "orbit": 0.2466,
+          "period": 69.52,
+          "mass": 0.35,
+          "radius": 0.746,
+          "rings": false,
+          "descriptor": "a garden world under a red dwarf",
+          "moons": []
+        },
+        {
+          "address": "v1-s4/system/planet/2",
+          "name": "HIP 17598 c",
+          "kind": "SubNeptune",
+          "zone": "Cold",
+          "orbit": 0.4164,
+          "period": 152.52,
+          "mass": 5.457,
+          "radius": 2.195,
+          "rings": false,
+          "descriptor": "a cold mini-Neptune under a red dwarf",
+          "moons": []
+        },
+        {
+          "address": "v1-s4/system/planet/3",
+          "name": "HIP 17598 b",
+          "kind": "Ice",
+          "zone": "Outer",
+          "orbit": 0.5906,
+          "period": 257.66,
+          "mass": 0.464,
+          "radius": 0.807,
+          "rings": false,
+          "descriptor": "an ice world far from a red dwarf",
+          "moons": [
+            {
+              "name": "HIP 17598 b I",
+              "kind": "Barren",
+              "orbit": 4.61,
+              "radius": 769
+            },
+            {
+              "name": "HIP 17598 b II",
+              "kind": "Barren",
+              "orbit": 9.19,
+              "radius": 439
+            }
+          ]
+        },
+        {
+          "address": "v1-s4/system/planet/4",
+          "name": "HIP 17598 f",
+          "kind": "GasGiant",
+          "zone": "Outer",
+          "orbit": 1.3065,
+          "period": 847.69,
+          "mass": 1136.861,
+          "radius": 10.589,
+          "rings": false,
+          "descriptor": "a gas giant far from a red dwarf",
+          "moons": [
+            {
+              "name": "HIP 17598 f I",
+              "kind": "Hazy",
+              "orbit": 4.71,
+              "radius": 1467
+            },
+            {
+              "name": "HIP 17598 f II",
+              "kind": "Ice",
+              "orbit": 7.51,
+              "radius": 511
+            },
+            {
+              "name": "HIP 17598 f III",
+              "kind": "Ice",
+              "orbit": 14.69,
+              "radius": 1728
+            },
+            {
+              "name": "HIP 17598 f IV",
+              "kind": "Ice",
+              "orbit": 20.96,
+              "radius": 2565
+            },
+            {
+              "name": "HIP 17598 f V",
+              "kind": "Ice",
+              "orbit": 31.51,
+              "radius": 310
+            },
+            {
+              "name": "HIP 17598 f VI",
+              "kind": "Barren",
+              "orbit": 61.22,
+              "radius": 225
+            }
+          ]
+        }
+      ],
+      "belts": [
+        {
+          "kind": "Asteroid",
+          "inner": 0.7642,
+          "outer": 1.0102
+        },
+        {
+          "kind": "Ice",
+          "inner": 2.0904,
+          "outer": 2.7437
+        }
+      ],
+      "stations": [],
+      "landmarks": [
+        {
+          "kind": "LivingWorld",
+          "outlier": false,
+          "text": "life on HIP 17598 d"
+        },
+        {
+          "kind": "AsteroidBelt",
+          "outlier": false,
+          "text": "an asteroid belt"
+        }
+      ],
+      "tags": [
+        "pirate haven"
+      ],
+      "descriptor": "a red dwarf with 5 planets and an asteroid belt"
+    },
+    {
+      "address": "v1-s5/system",
+      "name": "HIP 96923",
+      "age": "Mature",
+      "danger": 6,
+      "star": {
+        "class": "K",
+        "spectralType": "K7V",
+        "mass": 0.557,
+        "luminosity": 0.09592,
+        "radius": 0.625725,
+        "temperature": 4065,
+        "colour": "#ffd2a1",
+        "description": "orange dwarf"
+      },
+      "companion": {
+        "orbit": "Wide",
+        "separation": 140.9423,
+        "star": {
+          "class": "M",
+          "spectralType": "M5V",
+          "mass": 0.169,
+          "luminosity": 0.00383,
+          "radius": 0.240598,
+          "temperature": 2930,
+          "colour": "#ffad51",
+          "description": "red dwarf"
+        }
+      },
+      "habitableZone": [
+        0.2324,
+        0.5475
+      ],
+      "frostLine": 0.8362,
+      "planets": [
+        {
+          "address": "v1-s5/system/planet/0",
+          "name": "HIP 96923 b",
+          "kind": "SubNeptune",
+          "zone": "Warm",
+          "orbit": 0.1849,
+          "period": 38.9,
+          "mass": 6.431,
+          "radius": 2.418,
+          "rings": false,
+          "descriptor": "a warm mini-Neptune under an orange dwarf",
+          "moons": [
+            {
+              "name": "HIP 96923 b I",
+              "kind": "Barren",
+              "orbit": 3.38,
+              "radius": 1955
+            }
+          ]
+        },
+        {
+          "address": "v1-s5/system/planet/1",
+          "name": "HIP 96923 c",
+          "kind": "Barren",
+          "zone": "Temperate",
+          "orbit": 0.3198,
+          "period": 88.52,
+          "mass": 1.157,
+          "radius": 1.041,
+          "rings": false,
+          "descriptor": "a temperate barren rock under an orange dwarf",
+          "moons": []
+        }
+      ],
+      "belts": [
+        {
+          "kind": "Asteroid",
+          "inner": 0.2116,
+          "outer": 0.2796
+        }
+      ],
+      "stations": [],
+      "landmarks": [
+        {
+          "kind": "BinaryStar",
+          "outlier": false,
+          "text": "a red dwarf companion"
+        },
+        {
+          "kind": "AsteroidBelt",
+          "outlier": false,
+          "text": "an asteroid belt"
+        }
+      ],
+      "tags": [
+        "smuggler route",
+        "mining boom"
+      ],
+      "descriptor": "an orange dwarf and red dwarf pair with 2 planets and an asteroid belt"
+    },
+    {
+      "address": "v1-s6/system",
+      "name": "HIP 101880",
+      "age": "Mature",
+      "danger": 10,
+      "star": {
+        "class": "G",
+        "spectralType": "G8V",
+        "mass": 0.861,
+        "luminosity": 0.54956,
+        "radius": 0.887162,
+        "temperature": 5282,
+        "colour": "#fff4ea",
+        "description": "yellow star"
+      },
+      "companion": null,
+      "habitableZone": [
+        0.5563,
+        1.3105
+      ],
+      "frostLine": 2.0016,
+      "planets": [
+        {
+          "address": "v1-s6/system/planet/0",
+          "name": "HIP 101880 f",
+          "kind": "Greenhouse",
+          "zone": "Hot",
+          "orbit": 0.1683,
+          "period": 27.18,
+          "mass": 1.501,
+          "radius": 1.12,
+          "rings": false,
+          "descriptor": "a greenhouse world skimming a yellow star",
+          "moons": [
+            {
+              "name": "HIP 101880 f I",
+              "kind": "Barren",
+              "orbit": 5.08,
+              "radius": 1096
+            }
+          ]
+        },
+        {
+          "address": "v1-s6/system/planet/1",
+          "name": "HIP 101880 c",
+          "kind": "SubNeptune",
+          "zone": "Hot",
+          "orbit": 0.2166,
+          "period": 39.69,
+          "mass": 7.36,
+          "radius": 2.618,
+          "rings": false,
+          "descriptor": "a scorched mini-Neptune skimming a yellow star",
+          "moons": [
+            {
+              "name": "HIP 101880 c I",
+              "kind": "Barren",
+              "orbit": 4.64,
+              "radius": 2574
+            },
+            {
+              "name": "HIP 101880 c II",
+              "kind": "Barren",
+              "orbit": 9.26,
+              "radius": 255
+            }
+          ]
+        },
+        {
+          "address": "v1-s6/system/planet/2",
+          "name": "HIP 101880 d",
+          "kind": "GasGiant",
+          "zone": "Outer",
+          "orbit": 2.8815,
+          "period": 1925.36,
+          "mass": 103.552,
+          "radius": 11.767,
+          "rings": true,
+          "descriptor": "a ringed gas giant far from a yellow star",
+          "moons": [
+            {
+              "name": "HIP 101880 d I",
+              "kind": "Volcanic",
+              "orbit": 5.1,
+              "radius": 831
+            },
+            {
+              "name": "HIP 101880 d II",
+              "kind": "Ice",
+              "orbit": 9.15,
+              "radius": 2071
+            },
+            {
+              "name": "HIP 101880 d III",
+              "kind": "Barren",
+              "orbit": 17.68,
+              "radius": 725
+            },
+            {
+              "name": "HIP 101880 d IV",
+              "kind": "Volcanic",
+              "orbit": 30.37,
+              "radius": 487
+            },
+            {
+              "name": "HIP 101880 d V",
+              "kind": "Hazy",
+              "orbit": 56.96,
+              "radius": 499
+            },
+            {
+              "name": "HIP 101880 d VI",
+              "kind": "Barren",
+              "orbit": 80.45,
+              "radius": 2287
+            },
+            {
+              "name": "HIP 101880 d VII",
+              "kind": "Ice",
+              "orbit": 141.25,
+              "radius": 219
+            }
+          ]
+        },
+        {
+          "address": "v1-s6/system/planet/3",
+          "name": "HIP 101880 b",
+          "kind": "IceGiant",
+          "zone": "Outer",
+          "orbit": 5.9643,
+          "period": 5733.67,
+          "mass": 12.032,
+          "radius": 3.497,
+          "rings": true,
+          "descriptor": "a ringed ice giant far from a yellow star",
+          "moons": [
+            {
+              "name": "HIP 101880 b I",
+              "kind": "Ice",
+              "orbit": 4.53,
+              "radius": 279
+            },
+            {
+              "name": "HIP 101880 b II",
+              "kind": "Barren",
+              "orbit": 6.6,
+              "radius": 1448
+            },
+            {
+              "name": "HIP 101880 b III",
+              "kind": "Barren",
+              "orbit": 12.75,
+              "radius": 1733
+            }
+          ]
+        },
+        {
+          "address": "v1-s6/system/planet/4",
+          "name": "HIP 101880 g",
+          "kind": "IceGiant",
+          "zone": "Outer",
+          "orbit": 12.8065,
+          "period": 18040,
+          "mass": 41.554,
+          "radius": 7.257,
+          "rings": false,
+          "descriptor": "an ice giant far from a yellow star",
+          "moons": [
+            {
+              "name": "HIP 101880 g I",
+              "kind": "Ocean",
+              "orbit": 3.46,
+              "radius": 2560
+            },
+            {
+              "name": "HIP 101880 g II",
+              "kind": "Hazy",
+              "orbit": 5.6,
+              "radius": 2496
+            },
+            {
+              "name": "HIP 101880 g III",
+              "kind": "Barren",
+              "orbit": 7.5,
+              "radius": 1096
+            },
+            {
+              "name": "HIP 101880 g IV",
+              "kind": "Barren",
+              "orbit": 13.86,
+              "radius": 1698
+            }
+          ]
+        },
+        {
+          "address": "v1-s6/system/planet/5",
+          "name": "HIP 101880 e",
+          "kind": "IceGiant",
+          "zone": "Outer",
+          "orbit": 22.8415,
+          "period": 42971.13,
+          "mass": 29.05,
+          "radius": 5.878,
+          "rings": false,
+          "descriptor": "an ice giant far from a yellow star",
+          "moons": [
+            {
+              "name": "HIP 101880 e I",
+              "kind": "Barren",
+              "orbit": 5.74,
+              "radius": 540
+            },
+            {
+              "name": "HIP 101880 e II",
+              "kind": "Ice",
+              "orbit": 7.7,
+              "radius": 642
+            }
+          ]
+        }
+      ],
+      "belts": [
+        {
+          "kind": "Asteroid",
+          "inner": 0.6873,
+          "outer": 0.9085
+        }
+      ],
+      "stations": [],
+      "landmarks": [
+        {
+          "kind": "RingedGiant",
+          "outlier": false,
+          "text": "the rings of HIP 101880 d"
+        },
+        {
+          "kind": "RingedGiant",
+          "outlier": false,
+          "text": "the rings of HIP 101880 b"
+        },
+        {
+          "kind": "AsteroidBelt",
+          "outlier": false,
+          "text": "an asteroid belt"
+        }
+      ],
+      "tags": [
+        "mining boom"
+      ],
+      "descriptor": "a yellow star with 6 planets and an asteroid belt"
+    }
+  ],
+  "plausible": [
+    {
+      "address": "v1-p1/system",
+      "name": "Wolf 180",
+      "age": "Mature",
+      "danger": 10,
+      "star": {
+        "class": "M",
+        "spectralType": "M2V",
+        "mass": 0.358,
+        "luminosity": 0.02161,
+        "radius": 0.439268,
+        "temperature": 3342,
+        "colour": "#ffad51",
+        "description": "red dwarf"
+      },
+      "companion": {
+        "orbit": "Close",
+        "separation": 0.0269,
+        "star": {
+          "class": "M",
+          "spectralType": "M6V",
+          "mass": 0.156,
+          "luminosity": 0.00319,
+          "radius": 0.225925,
+          "temperature": 2890,
+          "colour": "#ffad51",
+          "description": "red dwarf"
+        }
+      },
+      "habitableZone": [
+        0.1182,
+        0.2784
+      ],
+      "frostLine": 0.4252,
+      "planets": [
+        {
+          "address": "v1-p1/system/planet/0",
+          "name": "Wolf 180 d",
+          "kind": "SubNeptune",
+          "zone": "Temperate",
+          "orbit": 0.1774,
+          "period": 38.08,
+          "mass": 6.196,
+          "radius": 2.366,
+          "rings": false,
+          "descriptor": "a temperate mini-Neptune under a red dwarf",
+          "moons": [
+            {
+              "name": "Wolf 180 d I",
+              "kind": "Barren",
+              "orbit": 4.94,
+              "radius": 1521
+            }
+          ]
+        },
+        {
+          "address": "v1-p1/system/planet/1",
+          "name": "Wolf 180 c",
+          "kind": "Garden",
+          "zone": "Temperate",
+          "orbit": 0.2768,
+          "period": 74.19,
+          "mass": 1.745,
+          "radius": 1.168,
+          "rings": false,
+          "descriptor": "a garden world under a red dwarf",
+          "moons": []
+        },
+        {
+          "address": "v1-p1/system/planet/2",
+          "name": "Wolf 180 e",
+          "kind": "Ice",
+          "zone": "Cold",
+          "orbit": 0.3664,
+          "period": 112.98,
+          "mass": 1.877,
+          "radius": 1.192,
+          "rings": false,
+          "descriptor": "a cold ice world under a red dwarf",
+          "moons": [
+            {
+              "name": "Wolf 180 e I",
+              "kind": "Barren",
+              "orbit": 4.11,
+              "radius": 170
+            },
+            {
+              "name": "Wolf 180 e II",
+              "kind": "Barren",
+              "orbit": 8.1,
+              "radius": 876
+            }
+          ]
+        },
+        {
+          "address": "v1-p1/system/planet/3",
+          "name": "Wolf 180 b",
+          "kind": "IceGiant",
+          "zone": "Outer",
+          "orbit": 0.5129,
+          "period": 187.15,
+          "mass": 38.83,
+          "radius": 6.973,
+          "rings": true,
+          "descriptor": "a ringed ice giant far from a red dwarf",
+          "moons": [
+            {
+              "name": "Wolf 180 b I",
+              "kind": "Hazy",
+              "orbit": 3.45,
+              "radius": 1928
+            },
+            {
+              "name": "Wolf 180 b II",
+              "kind": "Barren",
+              "orbit": 5.43,
+              "radius": 1261
+            },
+            {
+              "name": "Wolf 180 b III",
+              "kind": "Volcanic",
+              "orbit": 10.19,
+              "radius": 1731
+            },
+            {
+              "name": "Wolf 180 b IV",
+              "kind": "Ocean",
+              "orbit": 17.92,
+              "radius": 903
+            },
+            {
+              "name": "Wolf 180 b V",
+              "kind": "Hazy",
+              "orbit": 31.59,
+              "radius": 311
+            }
+          ]
+        }
+      ],
+      "belts": [
+        {
+          "kind": "Ice",
+          "inner": 0.8206,
+          "outer": 1.0771
+        }
+      ],
+      "stations": [
+        {
+          "address": "v1-p1/system/station/0",
+          "name": "Magellan Pirate Den",
+          "kind": "PirateDen",
+          "planet": 1
+        }
+      ],
+      "landmarks": [
+        {
+          "kind": "BinaryStar",
+          "outlier": false,
+          "text": "a red dwarf companion"
+        },
+        {
+          "kind": "LivingWorld",
+          "outlier": false,
+          "text": "life on Wolf 180 c"
+        },
+        {
+          "kind": "RingedGiant",
+          "outlier": false,
+          "text": "the rings of Wolf 180 b"
+        }
+      ],
+      "tags": [
+        "abandoned colony",
+        "frontier colony"
+      ],
+      "descriptor": "a red dwarf and red dwarf in a close pair with 4 planets"
+    },
+    {
+      "address": "v1-p2/system",
+      "name": "HD 187159",
+      "age": "Young",
+      "danger": 4,
+      "star": {
+        "class": "M",
+        "spectralType": "M7V",
+        "mass": 0.097,
+        "luminosity": 0.00108,
+        "radius": 0.154961,
+        "temperature": 2661,
+        "colour": "#ffad51",
+        "description": "red dwarf"
+      },
+      "companion": null,
+      "habitableZone": [
+        0.0247,
+        0.0581
+      ],
+      "frostLine": 0.0887,
+      "planets": [
+        {
+          "address": "v1-p2/system/planet/0",
+          "name": "HD 187159 d",
+          "kind": "SubNeptune",
+          "zone": "Cold",
+          "orbit": 0.0683,
+          "period": 20.92,
+          "mass": 8.716,
+          "radius": 2.892,
+          "rings": false,
+          "descriptor": "a cold mini-Neptune under a red dwarf",
+          "moons": [
+            {
+              "name": "HD 187159 d I",
+              "kind": "Barren",
+              "orbit": 4.16,
+              "radius": 599
+            }
+          ]
+        },
+        {
+          "address": "v1-p2/system/planet/1",
+          "name": "HD 187159 c",
+          "kind": "Ice",
+          "zone": "Cold",
+          "orbit": 0.0831,
+          "period": 28.1,
+          "mass": 0.871,
+          "radius": 0.962,
+          "rings": false,
+          "descriptor": "a cold ice world under a red dwarf",
+          "moons": [
+            {
+              "name": "HD 187159 c I",
+              "kind": "Barren",
+              "orbit": 3.74,
+              "radius": 871
+            }
+          ]
+        },
+        {
+          "address": "v1-p2/system/planet/2",
+          "name": "HD 187159 b",
+          "kind": "IceGiant",
+          "zone": "Outer",
+          "orbit": 0.1164,
+          "period": 46.56,
+          "mass": 28.531,
+          "radius": 5.816,
+          "rings": true,
+          "descriptor": "a ringed ice giant far from a red dwarf",
+          "moons": [
+            {
+              "name": "HD 187159 b I",
+              "kind": "Barren",
+              "orbit": 3.21,
+              "radius": 267
+            },
+            {
+              "name": "HD 187159 b II",
+              "kind": "Ice",
+              "orbit": 5.36,
+              "radius": 2370
+            },
+            {
+              "name": "HD 187159 b III",
+              "kind": "Ice",
+              "orbit": 9.77,
+              "radius": 554
+            },
+            {
+              "name": "HD 187159 b IV",
+              "kind": "Ice",
+              "orbit": 14.7,
+              "radius": 621
+            }
+          ]
+        }
+      ],
+      "belts": [],
+      "stations": [
+        {
+          "address": "v1-p2/system/station/0",
+          "name": "Vanguard Naval Base",
+          "kind": "NavalBase",
+          "planet": 1
+        }
+      ],
+      "landmarks": [
+        {
+          "kind": "RingedGiant",
+          "outlier": false,
+          "text": "the rings of HD 187159 b"
+        }
+      ],
+      "tags": [
+        "smuggler route",
+        "naval stronghold"
+      ],
+      "descriptor": "a red dwarf with 3 planets"
+    },
+    {
+      "address": "v1-p3/system",
+      "name": "GJ 835",
+      "age": "Young",
+      "danger": 8,
+      "star": {
+        "class": "M",
+        "spectralType": "M2V",
+        "mass": 0.394,
+        "luminosity": 0.02697,
+        "radius": 0.474504,
+        "temperature": 3399,
+        "colour": "#ffad51",
+        "description": "red dwarf"
+      },
+      "companion": null,
+      "habitableZone": [
+        0.1232,
+        0.2903
+      ],
+      "frostLine": 0.4434,
+      "planets": [
+        {
+          "address": "v1-p3/system/planet/0",
+          "name": "GJ 835 d",
+          "kind": "Rocky",
+          "zone": "Temperate",
+          "orbit": 0.2069,
+          "period": 54.75,
+          "mass": 0.333,
+          "radius": 0.736,
+          "rings": false,
+          "descriptor": "a temperate rocky world under a red dwarf",
+          "moons": [
+            {
+              "name": "GJ 835 d I",
+              "kind": "Barren",
+              "orbit": 5.63,
+              "radius": 653
+            }
+          ]
+        },
+        {
+          "address": "v1-p3/system/planet/1",
+          "name": "GJ 835 c",
+          "kind": "Desert",
+          "zone": "Temperate",
+          "orbit": 0.2543,
+          "period": 74.6,
+          "mass": 0.325,
+          "radius": 0.731,
+          "rings": false,
+          "descriptor": "a temperate desert world under a red dwarf",
+          "moons": []
+        },
+        {
+          "address": "v1-p3/system/planet/2",
+          "name": "GJ 835 b",
+          "kind": "IceGiant",
+          "zone": "Cold",
+          "orbit": 0.3627,
+          "period": 127.13,
+          "mass": 24.736,
+          "radius": 5.347,
+          "rings": false,
+          "descriptor": "an ice giant under a red dwarf",
+          "moons": [
+            {
+              "name": "GJ 835 b I",
+              "kind": "Barren",
+              "orbit": 4.76,
+              "radius": 1159
+            }
+          ]
+        }
+      ],
+      "belts": [],
+      "stations": [],
+      "landmarks": [
+        {
+          "kind": "Nebula",
+          "outlier": false,
+          "text": "a glowing nebula around the system"
+        }
+      ],
+      "tags": [
+        "refugee haven",
+        "pirate haven"
+      ],
+      "descriptor": "a red dwarf with 3 planets"
+    }
+  ],
+  "weird": [
+    {
+      "address": "v1-w1/system",
+      "name": "HD 196301",
+      "age": "Old",
+      "danger": 7,
+      "star": {
+        "class": "M",
+        "spectralType": "M6V",
+        "mass": 0.151,
+        "luminosity": 0.00298,
+        "radius": 0.220463,
+        "temperature": 2875,
+        "colour": "#ffad51",
+        "description": "red dwarf"
+      },
+      "companion": null,
+      "habitableZone": [
+        0.041,
+        0.0965
+      ],
+      "frostLine": 0.1474,
+      "planets": [
+        {
+          "address": "v1-w1/system/planet/0",
+          "name": "HD 196301 c",
+          "kind": "SubNeptune",
+          "zone": "Cold",
+          "orbit": 0.1304,
+          "period": 44.28,
+          "mass": 7.239,
+          "radius": 2.593,
+          "rings": false,
+          "descriptor": "a cold mini-Neptune under a red dwarf",
+          "moons": [
+            {
+              "name": "HD 196301 c I",
+              "kind": "Barren",
+              "orbit": 3.78,
+              "radius": 3267
+            },
+            {
+              "name": "HD 196301 c II",
+              "kind": "Barren",
+              "orbit": 7.34,
+              "radius": 3994
+            }
+          ]
+        },
+        {
+          "address": "v1-w1/system/planet/1",
+          "name": "HD 196301 b",
+          "kind": "IceGiant",
+          "zone": "Outer",
+          "orbit": 0.1826,
+          "period": 73.35,
+          "mass": 27.853,
+          "radius": 5.734,
+          "rings": false,
+          "descriptor": "an ice giant far from a red dwarf",
+          "moons": [
+            {
+              "name": "HD 196301 b I",
+              "kind": "Ice",
+              "orbit": 5.03,
+              "radius": 633
+            }
+          ]
+        },
+        {
+          "address": "v1-w1/system/planet/2",
+          "name": "HD 196301 d",
+          "kind": "IceGiant",
+          "zone": "Outer",
+          "orbit": 0.368,
+          "period": 209.85,
+          "mass": 45.316,
+          "radius": 7.637,
+          "rings": false,
+          "descriptor": "an ice giant far from a red dwarf",
+          "moons": [
+            {
+              "name": "HD 196301 d I",
+              "kind": "Hazy",
+              "orbit": 5.9,
+              "radius": 2179
+            },
+            {
+              "name": "HD 196301 d II",
+              "kind": "Volcanic",
+              "orbit": 8.89,
+              "radius": 476
+            },
+            {
+              "name": "HD 196301 d III",
+              "kind": "Hazy",
+              "orbit": 14.31,
+              "radius": 204
+            },
+            {
+              "name": "HD 196301 d IV",
+              "kind": "Ice",
+              "orbit": 28.51,
+              "radius": 981
+            }
+          ]
+        }
+      ],
+      "belts": [
+        {
+          "kind": "Asteroid",
+          "inner": 0.2255,
+          "outer": 0.2981
+        }
+      ],
+      "stations": [
+        {
+          "address": "v1-w1/system/station/0",
+          "name": "Anchor Naval Base",
+          "kind": "NavalBase",
+          "planet": 2
+        }
+      ],
+      "landmarks": [
+        {
+          "kind": "AsteroidBelt",
+          "outlier": false,
+          "text": "an asteroid belt"
+        },
+        {
+          "kind": "ShatteredWorld",
+          "outlier": true,
+          "text": "the remains of a shattered world"
+        }
+      ],
+      "tags": [
+        "naval stronghold"
+      ],
+      "descriptor": "a red dwarf with 3 planets and an asteroid belt"
+    },
+    {
+      "address": "v1-w2/system",
+      "name": "HD 184610",
+      "age": "Mature",
+      "danger": 6,
+      "star": {
+        "class": "K",
+        "spectralType": "K8V",
+        "mass": 0.52,
+        "luminosity": 0.07316,
+        "radius": 0.592734,
+        "temperature": 3903,
+        "colour": "#ffd2a1",
+        "description": "orange dwarf"
+      },
+      "companion": null,
+      "habitableZone": [
+        0.203,
+        0.4781
+      ],
+      "frostLine": 0.7303,
+      "planets": [
+        {
+          "address": "v1-w2/system/planet/0",
+          "name": "HD 184610 d",
+          "kind": "Lava",
+          "zone": "Hot",
+          "orbit": 0.0426,
+          "period": 4.45,
+          "mass": 0.185,
+          "radius": 0.624,
+          "rings": false,
+          "descriptor": "a lava world skimming an orange dwarf",
+          "moons": []
+        },
+        {
+          "address": "v1-w2/system/planet/1",
+          "name": "HD 184610 b",
+          "kind": "Barren",
+          "zone": "Hot",
+          "orbit": 0.0718,
+          "period": 9.75,
+          "mass": 0.286,
+          "radius": 0.705,
+          "rings": false,
+          "descriptor": "a scorched barren rock skimming an orange dwarf",
+          "moons": []
+        },
+        {
+          "address": "v1-w2/system/planet/2",
+          "name": "HD 184610 c",
+          "kind": "Barren",
+          "zone": "Hot",
+          "orbit": 0.1007,
+          "period": 16.19,
+          "mass": 0.346,
+          "radius": 0.744,
+          "rings": false,
+          "descriptor": "a scorched barren rock skimming an orange dwarf",
+          "moons": []
+        }
+      ],
+      "belts": [],
+      "stations": [],
+      "landmarks": [
+        {
+          "kind": "Ruins",
+          "outlier": false,
+          "text": "ruins on HD 184610 c"
+        },
+        {
+          "kind": "AncientBeacon",
+          "outlier": true,
+          "text": "an ancient beacon still transmitting"
+        }
+      ],
+      "tags": [
+        "precursor ruins"
+      ],
+      "descriptor": "an orange dwarf with 3 planets"
+    },
+    {
+      "address": "v1-w3/system",
+      "name": "89 Tauri",
+      "age": "Old",
+      "danger": 9,
+      "star": {
+        "class": "K",
+        "spectralType": "K1V",
+        "mass": 0.791,
+        "luminosity": 0.39168,
+        "radius": 0.82906,
+        "temperature": 5020,
+        "colour": "#ffd2a1",
+        "description": "orange dwarf"
+      },
+      "companion": null,
+      "habitableZone": [
+        0.4696,
+        1.1063
+      ],
+      "frostLine": 1.6898,
+      "planets": [
+        {
+          "address": "v1-w3/system/planet/0",
+          "name": "89 Tauri c",
+          "kind": "Iron",
+          "zone": "Hot",
+          "orbit": 0.0505,
+          "period": 4.67,
+          "mass": 0.476,
+          "radius": 0.813,
+          "rings": false,
+          "descriptor": "a scorched iron world skimming an orange dwarf",
+          "moons": [
+            {
+              "name": "89 Tauri c I",
+              "kind": "Barren",
+              "orbit": 3.86,
+              "radius": 1497
+            }
+          ]
+        },
+        {
+          "address": "v1-w3/system/planet/1",
+          "name": "89 Tauri d",
+          "kind": "Barren",
+          "zone": "Hot",
+          "orbit": 0.0586,
+          "period": 5.83,
+          "mass": 0.388,
+          "radius": 0.768,
+          "rings": false,
+          "descriptor": "a scorched barren rock skimming an orange dwarf",
+          "moons": [
+            {
+              "name": "89 Tauri d I",
+              "kind": "Barren",
+              "orbit": 4.17,
+              "radius": 1425
+            },
+            {
+              "name": "89 Tauri d II",
+              "kind": "Barren",
+              "orbit": 6.03,
+              "radius": 307
+            }
+          ]
+        },
+        {
+          "address": "v1-w3/system/planet/2",
+          "name": "89 Tauri b",
+          "kind": "Barren",
+          "zone": "Cold",
+          "orbit": 1.4119,
+          "period": 688.99,
+          "mass": 0.457,
+          "radius": 0.804,
+          "rings": false,
+          "descriptor": "a cold barren rock under an orange dwarf",
+          "moons": [
+            {
+              "name": "89 Tauri b I",
+              "kind": "Barren",
+              "orbit": 3.11,
+              "radius": 322
+            }
+          ]
+        }
+      ],
+      "belts": [
+        {
+          "kind": "Asteroid",
+          "inner": 0.2502,
+          "outer": 0.3308
+        }
+      ],
+      "stations": [
+        {
+          "address": "v1-w3/system/station/0",
+          "name": "89 Tauri Naval Base",
+          "kind": "NavalBase",
+          "planet": null
+        },
+        {
+          "address": "v1-w3/system/station/1",
+          "name": "Tethys Pirate Den",
+          "kind": "PirateDen",
+          "planet": null
+        }
+      ],
+      "landmarks": [
+        {
+          "kind": "AsteroidBelt",
+          "outlier": false,
+          "text": "an asteroid belt"
+        },
+        {
+          "kind": "AncientBeacon",
+          "outlier": true,
+          "text": "an ancient beacon still transmitting"
+        }
+      ],
+      "tags": [
+        "precursor ruins",
+        "mining boom"
+      ],
+      "descriptor": "an orange dwarf with 3 planets and an asteroid belt"
+    }
+  ]
+}

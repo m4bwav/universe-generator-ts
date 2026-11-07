@@ -1,0 +1,23 @@
+{
+  "source": "m4bwav/UniverseGenerator tag v1.0.0, tests/Golden/v1 (unchanged at fc41277)",
+  "sha256": {
+  "cluster.json": "13f67952ad0037282de6cfef4fa1172d04c6538c982b6d467ff43a35f64625c0",
+  "constraints.json": "3a74e2141960b4354400f6097eef2c92f104e8f55322ad8cde0a6996b65e52a4",
+  "core.json": "e613f12c31f4f2c3ffeff1d6bc231131089c3fb3f9a24526ccc7d9a07af8b957",
+  "diagnostics.json": "ee26de98a455006bf2e280d617e9ce016209a8ae79aea34805737b63f0f61ee5",
+  "export.json": "6e66666d488d34f08b99a236af57717ea87fa283ca7e39a6c97ab3f4d0ddb6fa",
+  "galaxy-extras.json": "842530b29a37db2202cba951991f63d8fcc9685bbad25faaa890a64402646784",
+  "galaxy.json": "f2e38a4c5262fe2d4cf985de61f7ab2c569153ba3f459da9f64b32304a030ecd",
+  "hooks.json": "9b340dbe9fb510a3cb5243c9d5cd496aea4f715c68ca932b86c30fd294877b38",
+  "moon-belt.json": "cdd61af77d1f132f173cbc85122f0e7c2cd4f44f8fe8ea8553d68be94a9bee71",
+  "names.json": "6c1c29a38945bf1ec3a8e434fa9a95459e22d54eaedab5e3d8f38bbd5ca65429",
+  "orbital-elements.json": "dce7a0aef6c755f1c2514a1d4f0ca8ba4437c8a1f9407d6524e1abb2f18f6483",
+  "planet.json": "ada616a0e8b5de3517db7f14d0135c6c9b98c0a66872496ff43f558f0c674a34",
+  "presets.json": "fc9c5d890fbceaf8d65ca6a82f97e89f329bb5a4ef8f8176c5cc114f675ec5c9",
+  "shapes.json": "aaca5ebea5835cd9c1dc324f96cff504776f903a6b8752798685e812bceaf4bd",
+  "star-name.json": "33d6d194310a71a3dc8601d668270aaaefe6f0b74b0160368f28edbde86fb643",
+  "system.json": "d44d3a0c4b92c5be00ac14c12a6d3091a424d62b44559306d7a2e81af21b30f5",
+  "tables.json": "ce770b1d2a6087baf4640eb19d3e5871e768c67c3969a248d27b4cb1335dd882",
+  "universe.json": "edcb7dc59190a0b9d657b08ea7416f80be5e1ef80d331b3615a716bfb0c95335"
+  }
+}
