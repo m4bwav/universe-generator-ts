@@ -819,6 +819,32 @@ function discoveryLetters(count: number, rng: Pcg32): string[] {
 }
 
 /**
+A planet from its draft. C# `StarSystemGenerator.BuildPlanet` (without the detail layers).
+*/
+function buildPlanet(d: Draft, index: number, planetSeed: bigint, planetAddress: Address, planetName: string, star: Star, totalMass: number, multi: boolean, cap: number, tables: GeneratorTables): Planet {
+  const [eccentricity, inclination, periapsisAngle] = elements(Seeds.stream(planetSeed, 'elements'), d.orbit, multi, cap);
+  const moonRng = Seeds.stream(planetSeed, 'moons');
+  const isRings = moonRng.chance(ringPercent(d.kind), 100);
+  return {
+    address: planetAddress.toString(),
+    index,
+    name: planetName,
+    kind: d.kind,
+    zone: d.zone,
+    orbit: DMath.round(d.orbit, 4),
+    period: DMath.round(d.period, 2),
+    eccentricity,
+    inclination,
+    periapsisAngle,
+    mass: DMath.round(d.mass, 3),
+    radius: DMath.round(d.radius, 3),
+    rings: isRings,
+    moons: drawMoons(moonRng, d, totalMass, planetAddress, planetName, tables),
+    descriptor: planetDescriptor(d.kind, d.zone, isRings, star),
+  };
+}
+
+/**
 Builds a system at its address. C# `StarSystemGenerator.Generate`.
 */
 export function generateSystemAt(address: Address, context: SystemInput, options: GeneratorOptions): StarSystem {
@@ -836,30 +862,9 @@ export function generateSystemAt(address: Address, context: SystemInput, options
   const drafts = drawPlanets(Seeds.stream(seed, 'planets'), star, companion, totalMass, hzInner, hzOuter, frost, context.richness ?? 100, tables)
     .slice(0, options.maxPlanetsPerSystem);
   const letters = discoveryLetters(drafts.length, Seeds.stream(seed, 'letters'));
-  const planets: Planet[] = drafts.map((d, i) => {
-    const planetSeed = Seeds.child(seed, 'planet', i);
-    const planetAddress = address.child('planet', i);
+  const planets = drafts.map((d, i) => {
     const planetName = name + ' ' + letters[i]!;
-    const [eccentricity, inclination, periapsisAngle] = elements(Seeds.stream(planetSeed, 'elements'), d.orbit, drafts.length > 1, eccentricityCap(drafts, i));
-    const moonRng = Seeds.stream(planetSeed, 'moons');
-    const isRings = moonRng.chance(ringPercent(d.kind), 100);
-    return {
-      address: planetAddress.toString(),
-      index: i,
-      name: planetName,
-      kind: d.kind,
-      zone: d.zone,
-      orbit: DMath.round(d.orbit, 4),
-      period: DMath.round(d.period, 2),
-      eccentricity,
-      inclination,
-      periapsisAngle,
-      mass: DMath.round(d.mass, 3),
-      radius: DMath.round(d.radius, 3),
-      rings: isRings,
-      moons: drawMoons(moonRng, d, totalMass, planetAddress, planetName, tables),
-      descriptor: planetDescriptor(d.kind, d.zone, isRings, star),
-    };
+    return buildPlanet(d, i, Seeds.child(seed, 'planet', i), address.child('planet', i), planetName, star, totalMass, drafts.length > 1, eccentricityCap(drafts, i), tables);
   });
   const belts = drawBelts(Seeds.stream(seed, 'belts'), planets, frost);
   const stations = drawStations(Seeds.stream(seed, 'stations'), address, name, planets.length);
@@ -891,4 +896,50 @@ export function generateSystem(seed: string | number | bigint, options?: Partial
   validateOptions(o);
   const text = typeof seed === 'string' ? checkSeed(seed) : seedText(seed);
   return generateSystemAt(new Address(1, text, 'system'), {}, o);
+}
+
+// Hot, warm, temperate, cold, outer: games want temperate worlds more often than a real system holds them.
+const zoneWeights = [10, 15, 35, 15, 25];
+const orbitZones: OrbitZone[] = ['Hot', 'Warm', 'Temperate', 'Cold', 'Outer'];
+
+/**
+Builds a planet alone at its address. C# `PlanetGenerator.Generate`.
+*/
+export function generatePlanetAt(address: Address, options: GeneratorOptions): Planet {
+  const seed = address.objectSeed;
+  const age = ages[Seeds.stream(seed, 'age').weighted(ageWeights)]!;
+  const {star} = rollStar(Seeds.stream(seed, 'star'), age, options);
+  const starName = systemName(Seeds.stream(seed, 'names'), star.class, options.names);
+  const light = Math.max(star.luminosity, 0.0001);
+  const [hzInner, hzOuter, frost] = zones(light);
+  const body = Seeds.stream(seed, 'body');
+  const bands: Record<OrbitZone, [number, number]> = {
+    Hot: [hzInner * 0.1, hzInner * 0.5],
+    Warm: [hzInner * 0.5, hzInner],
+    Temperate: [hzInner, hzOuter],
+    Cold: [hzOuter, frost],
+    Outer: [frost, frost * 4],
+  };
+  let [low, high] = bands[orbitZones[body.weighted(zoneWeights)]!];
+  // Never inside three star radii; the zone is then read back from the orbit, so it always agrees with it.
+  low = Math.max(low, 0.01, star.radius * auPerSolarRadius * 3);
+  high = Math.max(high, low * 1.2);
+  const orbit = logUniform(body, low, high);
+  const zone = zoneOf(orbit, hzInner, hzOuter, frost);
+  const giantWeight = Math.trunc(30 * DMath.clamp(star.mass, 0.15, 1.6));
+  const rocky = logUniform(body, 0.25, 2.2);
+  const pod = {rocky, gassy: logUniform(body, 4.7, 12)};
+  const tables = tablesFor(options);
+  const draft = draw(body, orbit, star.mass, zone, giantWeight, false, pod, noGardenClasses.has(star.class), tables);
+  return buildPlanet(draft, 0, seed, address, starName + ' b', star, star.mass, false, 0.6, tables);
+}
+
+/**
+Generates a planet on its own from any seed text or number. C# `Planet.Generate(seed, options)`.
+*/
+export function generatePlanet(seed: string | number | bigint, options?: Partial<GeneratorOptions>): Planet {
+  const o = resolveOptions(options);
+  validateOptions(o);
+  const text = typeof seed === 'string' ? checkSeed(seed) : seedText(seed);
+  return generatePlanetAt(new Address(1, text, 'planet'), o);
 }

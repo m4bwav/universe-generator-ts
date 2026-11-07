@@ -107,7 +107,7 @@ const xoConfig = [
   },
   {
     // Each golden test calls the helper for its kind of case, and the helpers assert.
-    files: ['test/golden/golden.test.js', 'test/golden/shapes.test.js', 'test/golden/system.test.js', 'test/golden/galaxy.test.js'],
+    files: ['test/golden/golden.test.js', 'test/golden/shapes.test.js', 'test/golden/system.test.js', 'test/golden/galaxy.test.js', 'test/golden/names.test.js', 'test/golden/tables.test.js'],
     rules: {
       'node-test/require-assertion': 'off',
     },

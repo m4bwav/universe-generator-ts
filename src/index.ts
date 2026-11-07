@@ -25,7 +25,7 @@ export {
   generateGalaxy, type Galaxy, type MapEntry, type Lane, type GalaxyRegion, type GeneratorWarning, type WarningCode, type SystemContext,
 } from './galaxies/galaxy.ts';
 export {
-  generateSystem, type StarSystem, type Planet, type Moon, type Belt, type Station, type Landmark, type PlanetKind, type MoonKind,
+  generateSystem, generatePlanet, type StarSystem, type Planet, type Moon, type Belt, type Station, type Landmark, type PlanetKind, type MoonKind,
   type BeltKind, type OrbitZone, type LandmarkKind, type StationKind,
 } from './systems/star-system.ts';
 
