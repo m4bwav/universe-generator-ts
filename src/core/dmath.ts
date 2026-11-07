@@ -108,12 +108,10 @@ function sin(x: number): number {
   const r = x - (q * halfPi);
   const r2 = r * r;
   // Taylor series to r^21 and r^20 on |r| <= pi/4, nested exactly as in the C# source.
-  /* eslint-disable @stylistic/no-mixed-operators -- kept character for character as DMath.cs writes it */
   const s = r * (1 - r2 / 6 * (1 - r2 / 20 * (1 - r2 / 42 * (1 - r2 / 72 * (1 - r2 / 110 * (1 - r2 / 156
     * (1 - r2 / 210 * (1 - r2 / 272 * (1 - r2 / 342 * (1 - r2 / 420))))))))));
   const c = 1 - r2 / 2 * (1 - r2 / 12 * (1 - r2 / 30 * (1 - r2 / 56 * (1 - r2 / 90 * (1 - r2 / 132
     * (1 - r2 / 182 * (1 - r2 / 240 * (1 - r2 / 306 * (1 - r2 / 380)))))))));
-  /* eslint-enable @stylistic/no-mixed-operators */
   switch ((((q % 4) + 4) % 4)) {
     case 0: {
       return s;

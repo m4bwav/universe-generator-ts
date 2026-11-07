@@ -38,6 +38,19 @@ const xoConfig = [
       '@typescript-eslint/switch-exhaustiveness-check': 'off',
       'no-bitwise': 'off',
       'unicorn/no-break-in-nested-loop': 'off',
+      // Math.hypot and the other "modern" Math functions are not exactly rounded and differ from the C# expressions they
+      // would replace (xo --fix once turned sqrt(x * x + y * y) into hypot and would have moved every galaxy map).
+      'unicorn/prefer-modern-math-apis': 'off',
+      // Ported arithmetic keeps the C# expression text so it can be checked against it line by line; precedence is the same
+      // in both languages, and extra parentheses there are a place to make a typo that moves the bits.
+      '@stylistic/no-mixed-operators': 'off',
+      // C# signatures and field names (Draw, Landmarks, BuildPlanet, spiral, giant, habitable) are kept so each function maps to its source.
+      'max-params': 'off',
+      'unicorn/consistent-boolean-name': 'off',
+      // Reordering an && or || can skip or add a random draw (rng.chance(...) && x), which moves every later value.
+      'unicorn/prefer-simple-condition-first': 'off',
+      // Members stay in the C# source order so a port can be read next to its source.
+      'unicorn/consistent-class-member-order': 'off',
     },
   },
   {
@@ -83,8 +96,18 @@ const xoConfig = [
     },
   },
   {
+    // The golden-file writers mirror the C# test-side writers (GalaxyJson.cs, SystemJson.cs); their parameters are the C# ones.
+    files: ['test/helpers/golden-json.js'],
+    rules: {
+      'jsdoc/require-param': 'off',
+      'jsdoc/require-param-type': 'off',
+      'jsdoc/require-param-description': 'off',
+      'unicorn/name-replacements': 'off',
+    },
+  },
+  {
     // Each golden test calls the helper for its kind of case, and the helpers assert.
-    files: ['test/golden/golden.test.js'],
+    files: ['test/golden/golden.test.js', 'test/golden/shapes.test.js', 'test/golden/system.test.js', 'test/golden/galaxy.test.js'],
     rules: {
       'node-test/require-assertion': 'off',
     },

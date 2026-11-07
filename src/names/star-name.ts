@@ -1,3 +1,4 @@
+import {rootSeed} from '../core/address.ts';
 import {Seeds} from '../core/seeds.ts';
 import {
   checkSeed,
@@ -20,13 +21,6 @@ export type StarName = {readonly name: string; readonly class: StarClass};
 The most names one call makes.
 */
 export const maxStarNames = 1000;
-
-/**
-The seed of an object generated directly from a seed text at a root level. C# `Address.RootSeed`.
-*/
-export function rootSeed(generatorVersion: number, seed: string, root: string): bigint {
-  return Seeds.child(Seeds.fromText(seed, generatorVersion), root, 0);
-}
 
 /**
 `count` different catalogue-style star names from any seed (1 to {@link maxStarNames}). With `starClass`, names for that class;
