@@ -1,7 +1,7 @@
 /**
 A galaxy: a map of star systems joined by lanes, grouped into named regions, with danger growing away from the core. A
 port of `Galaxies/Galaxy.cs` (GalaxyGenerator), `Core/Diagnostics.cs` and the lone-galaxy parts of `GalaxyTypes`.
-Clusters, extras (factions, points of interest, hazards, monuments, beacons), guarantees and hooks are not ported yet.
+Clusters, guarantees and hooks are not ported yet; the extras are in `galaxy-extras.ts`.
 */
 import {Address} from '../core/address.ts';
 import {DMath} from '../core/dmath.ts';
@@ -18,7 +18,13 @@ import {
 } from '../options.ts';
 import {rollStar, type StarClass, type StellarAge} from '../stars/star-generator.ts';
 import type {Pcg32} from '../core/pcg32.ts';
-import {generateSystemAt, type StarSystem} from '../systems/star-system.ts';
+import {generateSystemAt, type StarSystem, type SystemInput} from '../systems/star-system.ts';
+import {
+  constrainPlanets,
+  constrainPrecursor,
+  constrainStars,
+  constraintsStream,
+} from './constraints.ts';
 import {
   firstSpiralCount,
   galaxyRadius,
@@ -26,6 +32,14 @@ import {
   noTuning,
   systemSeed,
 } from './galaxy-layout.ts';
+import {
+  generateGalaxyExtras,
+  type Beacon,
+  type Faction,
+  type GalaxyHazard,
+  type Monument,
+  type PointOfInterest,
+} from './galaxy-extras.ts';
 
 /**
 The kinds of soft problem the generator reports instead of throwing. C# `WarningCode`.
@@ -38,7 +52,7 @@ A soft problem: generation went on, and this says what was changed or ignored. C
 export type GeneratorWarning = {readonly code: WarningCode; readonly message: string};
 
 /**
-A system as the galaxy map shows it, without its planets. C# `MapEntry` (faction fields not ported yet).
+A system as the galaxy map shows it, without its planets. C# `MapEntry`.
 */
 export type MapEntry = {
   readonly index: number;
@@ -51,6 +65,14 @@ export type MapEntry = {
   readonly hops: number;
   readonly danger: number;
   readonly chokepoint: boolean;
+  /**
+  The index of the faction holding it, or undefined when it is independent.
+  */
+  readonly faction: number | undefined;
+  /**
+  Whether a lane joins it to a system held by another faction.
+  */
+  readonly contested: boolean;
 };
 
 /**
@@ -66,7 +88,7 @@ export type GalaxyRegion = {readonly index: number; readonly name: string; reado
 /**
 What a galaxy gives one of its systems: name, region age, danger and richness. C# `SystemContext`.
 */
-export type SystemContext = {readonly name: string; readonly age: StellarAge; readonly danger: number; readonly richness: number};
+export type SystemContext = SystemInput & {readonly name: string; readonly age: StellarAge; readonly danger: number; readonly richness: number};
 
 /**
 A generated galaxy. C# `Galaxy`.
@@ -84,6 +106,11 @@ export type Galaxy = {
   readonly map: readonly MapEntry[];
   readonly lanes: readonly Lane[];
   readonly regions: readonly GalaxyRegion[];
+  readonly factions: readonly Faction[];
+  readonly pointsOfInterest: readonly PointOfInterest[];
+  readonly hazards: readonly GalaxyHazard[];
+  readonly monuments: readonly Monument[];
+  readonly beacons: readonly Beacon[];
   readonly warnings: readonly GeneratorWarning[];
   /**
   What each system's generation takes from the galaxy, in map order.
@@ -275,17 +302,25 @@ export function generateGalaxyAt(address: Address, options: GeneratorOptions): G
 
   const richness = 100;
   const names = new Set<string>();
-  const map: MapEntry[] = [];
+  const draft: Array<Omit<MapEntry, 'faction' | 'contested'>> = [];
   const contexts: SystemContext[] = [];
+  const stars = Array.from({length: n}, (_, i) => rollStar(Seeds.stream(systemSeed(seed, i), 'star'), regions[layout.region[i]!]!.age, options));
+  // Guarantees draw only from the galaxy's constraints stream and with none set draw nothing.
+  const constraints = constraintsStream(seed);
+  const forcedStar = constrainStars(constraints, options.require, seed, layout.core, stars, warnings);
   for (let i = 0; i < n; i++) {
     const own = systemSeed(seed, i);
     const {age} = (regions[layout.region[i]!]!);
-    const {star} = rollStar(Seeds.stream(own, 'star'), age, options);
+    const {star} = stars[i]!;
     const name = uniqueName(Seeds.stream(own, 'names'), star.class, names, i, options.names, warnings);
-    contexts.push({
-      name, age, danger: layout.danger[i]!, richness,
-    });
-    map.push({
+    contexts.push(forcedStar[i] === true
+      ? {
+        name, age, danger: layout.danger[i]!, richness, star,
+      }
+      : {
+        name, age, danger: layout.danger[i]!, richness,
+      });
+    draft.push({
       index: i,
       address: address.child('system', i).toString(),
       name,
@@ -299,7 +334,10 @@ export function generateGalaxyAt(address: Address, options: GeneratorOptions): G
     });
   }
 
-  const made: Array<StarSystem | undefined> = [];
+  const made = constrainPlanets(constraints, options.require, address, contexts, options, warnings);
+  const extras = generateGalaxyExtras(seed, layout.lanes, layout.core, regions, draft);
+  const pointsOfInterest = constrainPrecursor(constraints, options.require, extras.points, draft, warnings);
+  const map: MapEntry[] = draft.map((m, i) => ({...m, ...extras.holders[i]!}));
   const system = (index: number): StarSystem => {
     if (!Number.isSafeInteger(index) || index < 0 || index >= n) {
       throw new RangeError(`This galaxy has ${n} systems, numbered 0 to ${n - 1}; you asked for ${index}.`);
@@ -324,6 +362,11 @@ export function generateGalaxyAt(address: Address, options: GeneratorOptions): G
     map,
     lanes: layout.lanes.map(([a, b, bridge]) => ({a, b, bridge})),
     regions,
+    factions: extras.factions,
+    pointsOfInterest,
+    hazards: extras.hazards,
+    monuments: extras.monuments,
+    beacons: extras.beacons,
     warnings,
     contexts,
     system,

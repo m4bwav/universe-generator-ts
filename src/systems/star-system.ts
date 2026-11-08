@@ -109,6 +109,15 @@ export type SystemInput = {
   readonly age?: StellarAge;
   readonly danger?: number;
   readonly richness?: number;
+  /**
+  A star a guarantee forced on the system, used instead of its own star draw (a lone star, no companion).
+  */
+  readonly star?: Star;
+  /**
+  The index of the planet a guarantee turns into `forcedKind`.
+  */
+  readonly forcedPlanet?: number;
+  readonly forcedKind?: PlanetKind;
 };
 
 const auPerSolarRadius = 0.00465;
@@ -201,7 +210,10 @@ const outliers: LandmarkKind[] = ['Megastructure', 'RoguePlanet', 'AncientBeacon
 type Draft = {orbit: number; period: number; mass: number; radius: number; kind: PlanetKind; zone: OrbitZone};
 type Pod = {rocky: number; gassy: number};
 
-const noGardenClasses = new Set<StarClass>(['O', 'B', 'Giant', 'Supergiant', 'WhiteDwarf', 'NeutronStar', 'BlackHole']);
+/**
+Star classes that never hold a garden world. C# `StarSystemGenerator.NoGarden`.
+*/
+export const noGardenClasses: ReadonlySet<StarClass> = new Set<StarClass>(['O', 'B', 'Giant', 'Supergiant', 'WhiteDwarf', 'NeutronStar', 'BlackHole']);
 
 function zones(light: number): [number, number, number] {
   return [DMath.round(Math.sqrt(light / 1.776), 4), DMath.round(Math.sqrt(light / 0.32), 4), DMath.round(2.7 * Math.sqrt(light), 4)];
@@ -852,7 +864,7 @@ export function generateSystemAt(address: Address, context: SystemInput, options
   const age = context.age ?? ages[Seeds.stream(seed, 'age').weighted(ageWeights)]!;
   // A galaxy's map already holds the shifted danger; a system alone shifts its own draw.
   const danger = context.danger ?? DMath.clamp(Seeds.stream(seed, 'danger').range(1, 10) + options.dangerShift, 1, 10);
-  const {star, companion} = rollStar(Seeds.stream(seed, 'star'), age, options);
+  const {star, companion} = context.star === undefined ? rollStar(Seeds.stream(seed, 'star'), age, options) : {star: context.star, companion: undefined};
   const name = context.name ?? systemName(Seeds.stream(seed, 'names'), star.class, options.names);
   const isClose = companion?.orbit === 'Close';
   const totalMass = star.mass + (isClose ? companion.star.mass : 0);
@@ -861,6 +873,12 @@ export function generateSystemAt(address: Address, context: SystemInput, options
   const tables = tablesFor(options);
   const drafts = drawPlanets(Seeds.stream(seed, 'planets'), star, companion, totalMass, hzInner, hzOuter, frost, context.richness ?? 100, tables)
     .slice(0, options.maxPlanetsPerSystem);
+  // A galaxy's guarantee changes one temperate planet's kind after every draw of the system.
+  const forced = context.forcedPlanet ?? -1;
+  if (forced >= 0 && forced < drafts.length) {
+    drafts[forced]!.kind = context.forcedKind!;
+  }
+
   const letters = discoveryLetters(drafts.length, Seeds.stream(seed, 'letters'));
   const host: PlanetHost = {
     star, totalMass, light, age,

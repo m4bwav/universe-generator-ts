@@ -119,6 +119,10 @@ const xoConfig = [
       'test/golden/planet.test.js',
       'test/golden/moon-belt.test.js',
       'test/golden/orbital-elements.test.js',
+      'test/golden/galaxy-extras.test.js',
+      'test/golden/constraints.test.js',
+      'test/golden/diagnostics.test.js',
+      'test/golden/presets.test.js',
     ],
     rules: {
       'node-test/require-assertion': 'off',
