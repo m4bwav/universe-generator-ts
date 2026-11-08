@@ -90,7 +90,7 @@ const preset = (changes: Partial<GeneratorOptions>): GeneratorOptions => Object.
 /**
 Ready-made settings, the same as the C# `Preset` class.
 */
-export const Preset = Object.freeze({
+export const Preset: Readonly<Record<'default' | 'spaceOpera' | 'plausible' | 'pocket' | 'roguelike' | 'cozy' | 'epic', GeneratorOptions>> = Object.freeze({
   default: defaults,
   spaceOpera: preset({weirdness: 10}),
   plausible: preset({starMix: 'Plausible', weirdness: 1}),

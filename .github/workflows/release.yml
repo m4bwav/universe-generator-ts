@@ -1,0 +1,358 @@
+# A tag v<version> (pushed by `npm version` and `git push --follow-tags`) on a master commit whose ci passed builds and tests
+# the package, packs it once, checks that tarball's files and runs the consumer fixtures on it (Linux with Node 24 and 20,
+# Windows), stages exactly that tarball on npm through trusted publishing, publishes src/ to JSR as @m4bwav/universe-generator
+# (OIDC, the jsr package linked to this repository), and creates the GitHub Release. Nothing goes live
+# until the maintainer approves the staged version on npmjs.com with two-factor authentication; then run verify-published.yml
+# with the version.
+# `npm version` pushes the version commit and its tag together, so ci on that commit is still running when this starts: the
+# build job waits for it (up to 30 minutes) and stops unless it succeeded (L-120, L-127 in package-modernize).
+# No npm token exists anywhere: npm exchanges the job's OIDC token for a short-lived one, and adds provenance itself.
+# The trusted publisher on npmjs.com names this file, release.yml; renaming it breaks publishing.
+# After a stable release (not a prerelease) the next-tag job waits for the maintainer's approval to go live, then moves
+# `next` to the release if it still points below it. That needs the trusted publisher's dist-tag permission, ticked once per
+# package by the maintainer on npmjs.com (off by default). Without it the job fails and prints the command for his terminal.
+name: release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    name: build and test the release
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    permissions:
+      contents: read
+      actions: read
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      dist-tag: ${{ steps.version.outputs.dist-tag }}
+      prerelease: ${{ steps.version.outputs.prerelease }}
+      tarball: ${{ steps.version.outputs.tarball }}
+      sha512: ${{ steps.tarball.outputs.sha512 }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: The tag must equal the package.json version
+        id: version
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          version=$(node -p "require('./package.json').version")
+          if [ "$TAG" != "v$version" ]; then
+            echo "::error::tag $TAG does not match the package.json version $version"
+            exit 1
+          fi
+          # A prerelease such as 2.0.0-beta.1 is staged under the next dist-tag, a release under latest.
+          if [[ "$version" == *-* ]]; then
+            echo "dist-tag=next" >> "$GITHUB_OUTPUT"
+            echo "prerelease=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "dist-tag=latest" >> "$GITHUB_OUTPUT"
+            echo "prerelease=false" >> "$GITHUB_OUTPUT"
+          fi
+          jsr=$(node -p "require('./jsr.json').version")
+          if [ "$jsr" != "$version" ]; then
+            echo "::error::jsr.json version $jsr does not match package.json $version"
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "tarball=universe-generator-$version.tgz" >> "$GITHUB_OUTPUT"
+      - name: The tagged commit is on master
+        run: |
+          git fetch --no-tags origin master
+          if ! git merge-base --is-ancestor "$GITHUB_SHA" FETCH_HEAD; then
+            echo "::error::$GITHUB_SHA is not on master; tag only commits on master"
+            exit 1
+          fi
+      - name: Release notes from the changelog
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          # The lines under "## [<version>]" up to the next "## " heading.
+          section() {
+            awk -v heading="## [$1]" '
+              /^## / { if (found) exit; found = (index($0, heading) == 1); next }
+              found { print }
+            ' CHANGELOG.md
+          }
+          notes=$(section "$VERSION")
+          # A prerelease takes the section of the release it leads to: 2.0.0-beta.1 uses 2.0.0.
+          if [ -z "$notes" ] && [[ "$VERSION" == *-* ]]; then
+            notes=$(section "${VERSION%%-*}")
+          fi
+          if [ -z "$notes" ]; then
+            echo "::error::CHANGELOG.md has no section for $VERSION"
+            exit 1
+          fi
+          # A release needs its date in the heading, not "Unreleased".
+          if [[ "$VERSION" != *-* ]] && ! grep -Eq "^## \[${VERSION//./\\.}\] - [0-9]{4}-[0-9]{2}-[0-9]{2}" CHANGELOG.md; then
+            echo "::error::the CHANGELOG.md heading for $VERSION has no date"
+            exit 1
+          fi
+          printf '%s\n' "$notes" > release-notes.md
+      - name: ci passed on the tagged commit's push to master (waits up to 30 minutes for the run the same push started)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Only ci.yml's run for the push of this commit to master counts: a pull request run on the same commit tested a merge
+          # ref, and a cancelled one says nothing. The newest such run decides. One verdict word from gh's own jq, compared
+          # exactly, so a missing tool or an API error stops the job instead of passing it (L-128).
+          verdict='.workflow_runs | if length == 0 then "waiting" else (max_by(.created_at) | if .status != "completed" then "waiting" elif .conclusion == "success" then "success" else "failed" end) end'
+          for attempt in $(seq 1 60); do
+            state=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ci.yml/runs?head_sha=$GITHUB_SHA&event=push&branch=master&per_page=20" --jq "$verdict") || state=error
+            case "$state" in
+              success)
+                echo "ci succeeded on $GITHUB_SHA"
+                exit 0
+                ;;
+              failed)
+                echo "::error::ci's push run on $GITHUB_SHA finished without success"
+                exit 1
+                ;;
+              waiting)
+                echo "waiting for ci on $GITHUB_SHA (attempt $attempt of 60)"
+                sleep 30
+                ;;
+              *)
+                echo "::error::could not read the ci check runs of $GITHUB_SHA ($state)"
+                exit 1
+                ;;
+            esac
+          done
+          echo "::error::no finished ci check on $GITHUB_SHA after 30 minutes"
+          exit 1
+      - run: npm ci --ignore-scripts
+      - run: npm run lint
+      - run: npm run typecheck
+      - name: The golden recordings, capture scripts and codec are unchanged since the commits that added them
+        run: test/golden/check-untouched.sh
+      # check comes before the tests: attw packs with lifecycle scripts, and prepack rebuilds dist/. The dist/ that npm test
+      # builds and tests is the one packed below. publint reads dist/ from disk, so build first, as ci.yml does (L-132).
+      - run: npm run build
+      - name: publint, attw and the pack file list
+        run: npm run check
+      - run: npm test
+      - name: Pack the tarball that gets staged, once, from the dist/ the tests ran on
+        run: npm pack --ignore-scripts
+      - name: The tarball's files, size and version, and its SHA-512 for the jobs that test and stage it
+        id: tarball
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+          TARBALL: ${{ steps.version.outputs.tarball }}
+        run: |
+          node scripts/check-tarball.mjs "$TARBALL" "$VERSION"
+          echo "sha512=$(sha512sum "$TARBALL" | cut -d ' ' -f 1)" >> "$GITHUB_OUTPUT"
+      - name: Consumer fixtures on the tarball that gets staged
+        env:
+          CONSUMER_PACKAGE: ${{ github.workspace }}/${{ steps.version.outputs.tarball }}
+        run: node --test test/consumers/consumers.test.js
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: release
+          path: |
+            ${{ steps.version.outputs.tarball }}
+            release-notes.md
+          if-no-files-found: error
+
+  consumers:
+    name: consumers of the tarball to stage (Node ${{ matrix.node }}, ${{ matrix.os }})
+    needs: build
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-24.04
+            node: 20
+          - os: windows-latest
+            node: 24
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      # The fixtures install TypeScript and the Node types at the versions the checkout locks.
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - run: npm ci --ignore-scripts
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: release
+      - name: Node ${{ matrix.node }} to run the fixtures
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ matrix.node }}
+          package-manager-cache: false
+      - name: The tarball is the one the build job tested (SHA-512), with the right files, size and version
+        env:
+          VERSION: ${{ needs.build.outputs.version }}
+          TARBALL: ${{ needs.build.outputs.tarball }}
+          SHA512: ${{ needs.build.outputs.sha512 }}
+        run: |
+          echo "$SHA512  $TARBALL" | sha512sum -c -
+          node scripts/check-tarball.mjs "$TARBALL" "$VERSION"
+      - name: Consumer fixtures on the tarball that gets staged
+        env:
+          CONSUMER_PACKAGE: ${{ github.workspace }}/${{ needs.build.outputs.tarball }}
+        run: node --test test/consumers/consumers.test.js
+
+  publish:
+    name: stage on npm
+    needs: [build, consumers]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    # The only job that can publish (id-token: write), so it installs nothing, runs no dependency code and uses only
+    # first-party actions: it stages the tarball the build job tested. The GitHub Release is a separate job without id-token.
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+      - name: npm must be 11.15 or later to stage
+        run: |
+          npm --version
+          node -e "const [major, minor] = process.argv[1].split('.').map(Number); process.exit(major > 11 || (major === 11 && minor >= 15) ? 0 : 1)" "$(npm --version)"
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: release
+      - name: Stage on npm for the maintainer's approval, only the tarball the build and consumers jobs tested (SHA-512)
+        env:
+          TARBALL: ${{ needs.build.outputs.tarball }}
+          DIST_TAG: ${{ needs.build.outputs.dist-tag }}
+          SHA512: ${{ needs.build.outputs.sha512 }}
+        run: |
+          echo "$SHA512  $TARBALL" | sha512sum -c -
+          npm stage publish "./$TARBALL" --tag "$DIST_TAG" --ignore-scripts
+
+  jsr:
+    name: publish on JSR
+    needs: [build, consumers]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    # JSR trades the job's OIDC token for a publish token; the package on jsr.io must be linked to this repository.
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - run: npx --yes jsr@0.14.3 publish
+
+  next-tag:
+    name: move next to the release once it is live
+    needs: [build, publish]
+    if: needs.build.outputs.prerelease == 'false'
+    runs-on: ubuntu-24.04
+    # Polls for up to 2 hours. If the maintainer approves later, re-run this job after approving (a re-run gets a new token).
+    timeout-minutes: 125
+    # The same trust as the publish job: this file, no environment, id-token for npm's OIDC exchange. It runs no package code.
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+      # npm runs dist-tag over OIDC from 11.21.0 (12.2.0 on the 12 line); no Node release bundles it yet (2026-10-11).
+      - name: npm 11.21.0, the first 11.x that runs dist-tag over OIDC
+        run: |
+          npm install --global --ignore-scripts npm@11.21.0
+          npm --version
+      - name: Wait until the maintainer's approval makes the version live (up to 2 hours)
+        env:
+          PACKAGE: 'universe-generator'
+          VERSION: ${{ needs.build.outputs.version }}
+        run: |
+          for attempt in $(seq 1 120); do
+            if [ "$(npm view "$PACKAGE@$VERSION" version 2>/dev/null)" = "$VERSION" ]; then
+              echo "$PACKAGE@$VERSION is live"
+              exit 0
+            fi
+            echo "waiting for the approval of $PACKAGE@$VERSION (attempt $attempt of 120)"
+            sleep 60
+          done
+          echo "::error::$PACKAGE@$VERSION is not live after 2 hours; approve it on npmjs.com, then re-run this job"
+          exit 1
+      - name: Move next to the release when next points below it (absent stays absent)
+        env:
+          PACKAGE: 'universe-generator'
+          VERSION: ${{ needs.build.outputs.version }}
+        run: |
+          next=$(npm view "$PACKAGE" dist-tags.next 2>/dev/null || true)
+          if [ -z "$next" ]; then
+            echo "$PACKAGE has no next tag; nothing to move"
+            exit 0
+          fi
+          # Semver order with a prerelease below its release (2.0.0-beta.1 < 2.0.0): major, minor, patch, then release over
+          # prerelease. VERSION is a release here, so prerelease identifiers never need comparing.
+          below=$(node -e '
+            const [a, b] = process.argv.slice(1);
+            const parse = v => { const [core, pre] = v.split("-"); return [...core.split(".").map(Number), pre === undefined ? 1 : 0]; };
+            const x = parse(a), y = parse(b);
+            for (let i = 0; i < 4; i++) { if (x[i] !== y[i]) { console.log(x[i] < y[i]); process.exit(0); } }
+            console.log(false);
+          ' "$next" "$VERSION")
+          if [ "$below" != true ]; then
+            echo "next is $next, not below $VERSION; leaving it"
+            exit 0
+          fi
+          if ! npm dist-tag add "$PACKAGE@$VERSION" next; then
+            echo "::error::npm refused to move next. Tick the trusted publisher's dist-tag permission on npmjs.com for $PACKAGE, or run in your own terminal: npm dist-tag add $PACKAGE@$VERSION next"
+            exit 1
+          fi
+          echo "next now points to $(npm view "$PACKAGE" dist-tags.next)"
+
+  github-release:
+    name: GitHub Release
+    needs: [build, publish]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: release
+      - name: GitHub Release with the changelog section
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          PRERELEASE: ${{ needs.build.outputs.prerelease }}
+        run: |
+          flags=()
+          if [ "$PRERELEASE" = true ]; then
+            flags+=(--prerelease)
+          fi
+          gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --verify-tag --title "$TAG" --notes-file release-notes.md "${flags[@]}"
