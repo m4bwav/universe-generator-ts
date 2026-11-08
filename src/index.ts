@@ -1,6 +1,6 @@
 /**
 Universe-generator: seeded galaxies, star systems, planets and moons; the same output as the C# UniverseGenerator for
-the same seed. Stage 2 is porting the generators one golden file at a time.
+the same seed.
 */
 export {Pcg32} from './core/pcg32.ts';
 export {Seeds} from './core/seeds.ts';
