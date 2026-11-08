@@ -21,6 +21,7 @@ export {
 export {
   Units, type LengthUnit, type MassUnit, type TemperatureUnit, type TimeUnit,
 } from './core/units.ts';
+export {optionsToCode, optionsFromCode, checkOptions} from './options-code.ts';
 export {JsonWriter} from './core/json-writer.ts';
 export {Address, rootSeed} from './core/address.ts';
 export {drawInventedName} from './names/invented-names.ts';
