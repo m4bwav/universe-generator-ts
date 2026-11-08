@@ -14,9 +14,9 @@ Updated 2026-11-08 (chain session 6, branch stage2-clusters, not pushed). Status
 
 ## Next
 
-1. Push `stage2-clusters`, open the PR, merge once `ci` passes (standing rules).
+1. Work on a branch, open a PR, merge it yourself once `ci` passes (standing rules).
 2. Port `Address.TryParse`, `Universe.At` and `Universe.Link` with unit tests mirroring the C# ones (AddressTests, HookTests "Every_object_reached_by_At", ExportTests "same object reached two ways").
-3. Stage 3 (packaging, see the plan): README API docs for the new exports, consumers (Bun/Deno), release.yml, then drop `private: true` and publish (granted once the port is complete).
+3. Stage 3 (packaging, see the plan): README API docs for the new exports, consumers (Bun/Deno), release.yml, add `jsr.json` and a JSR publish job (OIDC), then drop `private: true` and publish to npm and JSR (both granted once the port is complete).
 
 ## Waiting on Mark
 
