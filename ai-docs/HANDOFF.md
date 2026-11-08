@@ -1,6 +1,6 @@
 # HANDOFF
 
-Updated 2026-11-08 (chain session 15, later). Status: in progress, **1.0.0 released and verified; only Mark's items left**. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
+Updated 2026-11-08 (chain session 15, later). Status: in progress, **1.1.0 released (npm, JSR, GitHub) and verified; wiki at 1.1.0; only Mark's items left**. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
 
 ## Where it stands
 
@@ -10,12 +10,11 @@ Updated 2026-11-08 (chain session 15, later). Status: in progress, **1.0.0 relea
 
 ## Next
 
-1. After Mark approves npm 1.1.0: `gh workflow run verify-published.yml -f version=1.1.0`, then update the wiki (ai-docs/notes/2026-11-08-github-wiki.md, 'Updating at a release'; the FAQ/errors pages describe the old checkOptions and seed errors).
+1. Nothing agent-side; launch posts wait on Mark's sign-ins (below).
 
 ## Waiting on Mark
 
 - Launch posts (`ai-docs/launch/drafts.md`): Mark said post them (2026-11-08, manual mode). Blocked on sign-in: Chrome is logged out of Bluesky and Hacker News, Reddit is blocked by the Chrome extension, Mastodon instance unknown. Once he signs in, the agent posts.
-- Approve staged npm 1.1.0 (npmjs.com, Settings, Staged Packages, 2FA). Release run 42505299531 waits on it; JSR 1.1.0 and the GitHub Release are already out.
 
 ## Decisions made
 
