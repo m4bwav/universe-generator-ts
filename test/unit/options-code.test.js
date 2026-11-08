@@ -65,6 +65,16 @@ for (const {name, lib} of builds) {
       assert.deepEqual(lib.checkOptions({...d, maxPlanetsPerSystem: 0, require: g.OceanWorld}).map(w => w.code), ['GuaranteeUnmet']);
       assert.deepEqual(lib.checkOptions({...d, maxPlanetsPerSystem: 0}), []);
       assert.throws(() => lib.checkOptions({...d, systems: 0}), RangeError);
+      assert.deepEqual(lib.checkOptions({maxPlanetsPerSystem: 0, require: g.OceanWorld}).map(w => w.code), ['GuaranteeUnmet']);
+      assert.deepEqual(lib.checkOptions({shape: 'Ring', arms: 3}), lib.checkOptions({...d, shape: 'Ring', arms: 3}));
+      assert.deepEqual(lib.checkOptions(), []);
+      assert.throws(() => lib.checkOptions({weirdness: 101}), RangeError);
+    });
+
+    test('a missing seed throws a TypeError naming the seed', () => {
+      for (const seed of [undefined, null, {}]) {
+        assert.throws(() => lib.generateGalaxy(seed), {name: 'TypeError', message: /A seed is required/u});
+      }
     });
 
     test('a precursor site cannot be added when every system already holds a point of interest', () => {
