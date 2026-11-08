@@ -2,13 +2,13 @@
 
 PR #4 (stage2-extras) merged to master 2026-11-08 as a40e98c, CI green on all jobs.
 
-Updated 2026-11-08 (chain session 5, branch `stage2-extras`, not pushed). Status: in progress, Stage 2 under way. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
+Updated 2026-11-08 (chain session 5, merged as PR #4). Status: in progress, Stage 2 under way. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
 
 ## Where it stands
 
 - Stage 0 gate passed; Stage 1 done (local repo, branch `master`).
 - Stage 2: **10 of 18 goldens bit-exact**: core, star-name, shapes, system, galaxy, names, tables, planet, moon-belt, orbital-elements (commits 5badca0, f2c7d89, 2dd3182, a598f07). Ported: options, tables, stars, star names, JsonWriter, Address (no parsing), invented names, galaxy layout + lone galaxy generator, star systems, planets alone, the planet/moon/belt detail layers and Units (no `Units.map`); repo rules test. 120 tests, 100% coverage, lint and types clean.
-- Session 5 (branch `stage2-extras`, commits 85d908e, 0c321a8, fde67c7, unpushed): galaxy extras, guarantees (`require` honoured), options code and Check ported. **13 of 18 goldens bit-exact** (+ constraints, diagnostics, presets) and galaxy-extras.json bit-exact for its 8 lone galaxies (prefix test until clusters land). 138 tests, 100% coverage.
+- Session 5 (branch `stage2-extras`, commits 85d908e, 0c321a8, fde67c7, merged in PR #4 as a40e98c): galaxy extras, guarantees (`require` honoured), options code and Check ported. **13 of 18 goldens bit-exact** (+ constraints, diagnostics, presets) and galaxy-extras.json bit-exact for its 8 lone galaxies (prefix test until clusters land). 138 tests, 100% coverage.
 - Not ported yet: hooks (hooks.json needs GeneratorHooks + JsonExport + Universe), clusters/universe, Address.TryParse, export, `Units.Map` (needs Distances).
 - **On GitHub**: https://github.com/m4bwav/universe-generator-ts (public, 2026-11-08). CI green on all jobs; ruleset `master` requires `ci` (admin bypass); Discussions, private vulnerability reporting and the social preview are on. Scripts need the git exec bit (`git update-index --chmod=+x`) since commits come from Windows.
 
