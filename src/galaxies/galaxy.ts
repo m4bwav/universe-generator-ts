@@ -4,6 +4,12 @@ port of `Galaxies/Galaxy.cs` (GalaxyGenerator), `Core/Diagnostics.cs` and `Galax
 galaxies a `GalaxyContext`; a lone galaxy gets `aloneGalaxy`. Hooks are not ported yet; the extras are in `galaxy-extras.ts`.
 */
 import {Address} from '../core/address.ts';
+import {
+  hookGalaxy,
+  hookSystem,
+  type CustomFields,
+  type GeneratorHooks,
+} from '../hooks.ts';
 import {DMath} from '../core/dmath.ts';
 import {Seeds} from '../core/seeds.ts';
 import {systemName} from '../names/invented-names.ts';
@@ -146,6 +152,10 @@ export type SystemContext = SystemInput & {readonly name: string; readonly age: 
 A generated galaxy. C# `Galaxy`.
 */
 export type Galaxy = {
+  /**
+  Your own fields, set by a hook or your code; undefined from the generator. C# `Custom`.
+  */
+  readonly custom?: CustomFields;
   readonly address: string;
   readonly name: string;
   readonly type: string;
@@ -371,7 +381,7 @@ function uniqueName(rng: Pcg32, c: StarClass, used: Set<string>, index: number, 
 /**
 Builds a galaxy from its address and what its cluster decided. C# `GalaxyGenerator.Generate`.
 */
-export function generateGalaxyAt(address: Address, options: GeneratorOptions, context: GalaxyContext = aloneGalaxy): Galaxy {
+export function generateGalaxyAt(address: Address, options: GeneratorOptions, context: GalaxyContext = aloneGalaxy, hooks?: GeneratorHooks): Galaxy {
   const seed = address.objectSeed;
   const requestedShape = context.shape ?? options.shape;
   const requested = context.systems ?? options.systems;
@@ -477,17 +487,19 @@ export function generateGalaxyAt(address: Address, options: GeneratorOptions, co
   const extras = generateGalaxyExtras(seed, layout.lanes, layout.core, regions, draft, context.coreActivity, hazardRadius(context.coreActivity));
   const pointsOfInterest = constrainPrecursor(constraints, options.require, extras.points, draft, warnings);
   const map: MapEntry[] = draft.map((m, i) => ({...m, ...extras.holders[i]!}));
+  const hooked: Array<StarSystem | undefined> = Array.from({length: n});
   const system = (index: number): StarSystem => {
     if (!Number.isSafeInteger(index) || index < 0 || index >= n) {
       throw new RangeError(`This galaxy has ${n} systems, numbered 0 to ${n - 1}; you asked for ${index}.`);
     }
 
-    made[index] ??= generateSystemAt(address.child('system', index), contexts[index]!, options);
-    return made[index];
+    // The guarantees' systems are kept raw, so the hooks run once, on first read, as for every other system.
+    hooked[index] ??= hookSystem(hooks, made[index] ?? generateSystemAt(address.child('system', index), contexts[index]!, options));
+    return hooked[index];
   };
 
   const type = context.type ?? deriveGalaxyType(layout.shape, layout.pitch, layout.ellipse);
-  return {
+  return hookGalaxy(hooks, {
     address: address.toString(),
     name: context.name ?? loneName(Seeds.stream(seed, 'name')),
     type,
@@ -513,15 +525,15 @@ export function generateGalaxyAt(address: Address, options: GeneratorOptions, co
     warnings,
     contexts,
     system,
-  };
+  });
 }
 
 /**
 Generates a galaxy from any seed text or number. C# `Galaxy.Generate(seed, options)`.
 */
-export function generateGalaxy(seed: string | number | bigint, options?: Partial<GeneratorOptions>): Galaxy {
+export function generateGalaxy(seed: string | number | bigint, options?: Partial<GeneratorOptions>, hooks?: GeneratorHooks): Galaxy {
   const o = resolveOptions(options);
   validateOptions(o);
   const text = typeof seed === 'string' ? checkSeed(seed) : seedText(seed);
-  return generateGalaxyAt(new Address(1, text, 'galaxy'), o);
+  return generateGalaxyAt(new Address(1, text, 'galaxy'), o, aloneGalaxy, hooks);
 }

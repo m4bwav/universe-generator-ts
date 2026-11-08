@@ -8,6 +8,13 @@ import {DMath} from '../core/dmath.ts';
 import type {Pcg32} from '../core/pcg32.ts';
 import {Seeds} from '../core/seeds.ts';
 import {
+  hookCluster,
+  hookSystem,
+  hookUniverse,
+  type CustomFields,
+  type GeneratorHooks,
+} from '../hooks.ts';
+import {
   generateClusterAt,
   ageOf,
   uniqueRoot,
@@ -60,6 +67,10 @@ export type Filament = {readonly a: number; readonly b: number; readonly length:
 A void between the clusters, with a few lonely systems. C# `CosmicVoid`.
 */
 export type CosmicVoid = {
+  /**
+  Your own fields, set by a hook or your code; undefined from the generator. C# `Custom`.
+  */
+  readonly custom?: CustomFields;
   readonly index: number;
   readonly address: string;
   readonly name: string;
@@ -93,6 +104,10 @@ export type UniverseMerger = {
 A generated universe. C# `Universe`.
 */
 export type Universe = {
+  /**
+  Your own fields, set by a hook or your code; undefined from the generator. C# `Custom`.
+  */
+  readonly custom?: CustomFields;
   readonly address: string;
   readonly name: string;
   readonly age: StellarAge;
@@ -155,7 +170,7 @@ const voidRoots = [
   'Widow',
   'Yawning',
 ];
-const hooks = [
+const storyHooks = [
   'Both galaxies claim the stars the collision threw loose.',
   'Refugees from the starburst flood the frontier, and neither galaxy will take them.',
   'A precursor relay has surfaced in the tidal stream, and two navies race to reach it.',
@@ -292,6 +307,7 @@ function voidSystem(system: Address): SystemInput {
 function voidsOf(
   address: Address,
   options: GeneratorOptions,
+  hooks: GeneratorHooks | undefined,
   names: Pcg32,
   slots: number,
   systems: readonly number[],
@@ -348,7 +364,7 @@ function voidsOf(
           throw new RangeError(`This void has ${count} systems, numbered 0 to ${count - 1}; you asked for ${index}.`);
         }
 
-        made[index] ??= generateSystemAt(where.child('system', index), contexts[index]!, options);
+        made[index] ??= hookSystem(hooks, generateSystemAt(where.child('system', index), contexts[index]!, options));
         return made[index];
       },
     });
@@ -365,7 +381,7 @@ const rootOf = (galaxy: string): string => {
 /**
 Builds a universe from its address. C# `UniverseGenerator.Generate`.
 */
-export function generateUniverseAt(address: Address, options: GeneratorOptions): Universe {
+export function generateUniverseAt(address: Address, options: GeneratorOptions, hooks?: GeneratorHooks): Universe {
   const seed = address.objectSeed;
   const drawnAge = ages[Seeds.stream(seed, 'epoch').weighted(ageWeights)]!;
   const age = options.epoch === 'Auto' ? drawnAge : ageOf(options.epoch);
@@ -389,7 +405,7 @@ export function generateUniverseAt(address: Address, options: GeneratorOptions):
   const name = 'the ' + universeRoots[names.nextInt(universeRoots.length)]! + ' Reach';
   const used = new Set<number>();
   const clusterNames = kinds.map(kind => nameRoots[uniqueRoot(names, used, nameRoots.length)]! + (kind === 'Group' ? ' Group' : ' Cluster'));
-  const hook = hooks[Seeds.stream(seed, 'story').nextInt(hooks.length)]!;
+  const hook = storyHooks[Seeds.stream(seed, 'story').nextInt(storyHooks.length)]!;
 
   // The distant quasar: the field node farthest from home, ties to the lowest index.
   let quasar = 3;
@@ -438,14 +454,14 @@ export function generateUniverseAt(address: Address, options: GeneratorOptions):
       });
     }
 
-    const cluster = generateClusterAt(address.child('cluster', i), options, {
+    const cluster = hookCluster(hooks, generateClusterAt(address.child('cluster', i), options, {
       ...bases[i],
       filaments: ends,
       landmarkName: landmark.name,
       landmarkAddress: landmark.address,
       landmarkX,
       landmarkY,
-    });
+    }, hooks));
     clusters.push(cluster);
     nodes.push({
       index: i,
@@ -459,7 +475,7 @@ export function generateUniverseAt(address: Address, options: GeneratorOptions):
     });
   }
 
-  const voids = voidsOf(address, options, names, voidSlots, voidSystems, x, y, filaments);
+  const voids = voidsOf(address, options, hooks, names, voidSlots, voidSystems, x, y, filaments);
   const pairA = clusters[2]!.map[0]!;
   const pairB = clusters[2]!.map[1]!;
   const merger: UniverseMerger = {
@@ -479,7 +495,7 @@ export function generateUniverseAt(address: Address, options: GeneratorOptions):
     {kind: 'Quasar', name: landmark.name, address: landmark.address},
     {kind: 'Merger', name: merger.name, address: clusters[2]!.address},
   ];
-  return {
+  return hookUniverse(hooks, {
     address: address.toString(),
     name,
     age,
@@ -497,15 +513,15 @@ export function generateUniverseAt(address: Address, options: GeneratorOptions):
 
       return clusters[index]!;
     },
-  };
+  });
 }
 
 /**
 Generates a universe from any seed text or number. C# `Universe.Generate(seed, options)`.
 */
-export function generateUniverse(seed: string | number | bigint, options?: Partial<GeneratorOptions>): Universe {
+export function generateUniverse(seed: string | number | bigint, options?: Partial<GeneratorOptions>, hooks?: GeneratorHooks): Universe {
   const o = resolveOptions(options);
   validateOptions(o);
   const text = typeof seed === 'string' ? checkSeed(seed) : seedText(seed);
-  return generateUniverseAt(new Address(1, text, 'universe'), o);
+  return generateUniverseAt(new Address(1, text, 'universe'), o, hooks);
 }

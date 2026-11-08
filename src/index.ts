@@ -43,6 +43,7 @@ export {
 export {
   toJson, exportSchema, type ExportType, type ExportOptions,
 } from './export/json-export.ts';
+export {withCustom, type GeneratorHooks, type CustomFields} from './hooks.ts';
 export {Distances, type MapLevel, type LinkTier} from './core/distances.ts';
 export {
   generateSystem, generatePlanet, type StarSystem, type Planet, type Moon, type Belt, type Station, type Landmark, type PlanetKind, type MoonKind,

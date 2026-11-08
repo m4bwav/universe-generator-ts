@@ -3,6 +3,12 @@ A star system: star, companion, zones, planets with moons, belts, stations, land
 `Systems/StarSystemGenerator.cs` and `Systems/Story.cs`. The detail layers (PlanetDetail, MoonDetail, BeltDetail and
 their stories, in src/planets, src/moons and src/belts) draw only from their own streams and add fields.
 */
+import {
+  hookPlanet,
+  hookSystem,
+  type CustomFields,
+  type GeneratorHooks,
+} from '../hooks.ts';
 import {Address} from '../core/address.ts';
 import {DMath} from '../core/dmath.ts';
 import type {Pcg32} from '../core/pcg32.ts';
@@ -76,14 +82,30 @@ type PlanetBase = {
   readonly descriptor: string;
 };
 
-export type Planet = Omit<PlanetBase, 'moons'> & PlanetDetailFields & {readonly moons: readonly Moon[]};
+export type Planet = Omit<PlanetBase, 'moons'> & PlanetDetailFields & {
+  readonly moons: readonly Moon[];
+  /**
+  Your own fields, set by a hook or your code; undefined from the generator. C# `Custom`.
+  */
+  readonly custom?: CustomFields;
+};
 
 type BeltBase = {readonly kind: BeltKind; readonly inner: number; readonly outer: number};
 export type Belt = BeltBase & BeltDetailFields;
-export type Station = {readonly address: string; readonly name: string; readonly kind: StationKind; readonly planet: number | undefined};
+export type Station = {
+  readonly address: string; readonly name: string; readonly kind: StationKind; readonly planet: number | undefined;
+  /**
+  Your own fields, set by a hook or your code; undefined from the generator. C# `Custom`.
+  */
+  readonly custom?: CustomFields;
+};
 export type Landmark = {readonly kind: LandmarkKind; readonly planet: number | undefined; readonly outlier: boolean; readonly text: string};
 
 export type StarSystem = {
+  /**
+  Your own fields, set by a hook or your code; undefined from the generator. C# `Custom`.
+  */
+  readonly custom?: CustomFields;
   readonly address: string;
   readonly name: string;
   readonly star: Star;
@@ -912,11 +934,11 @@ export function generateSystemAt(address: Address, context: SystemInput, options
 /**
 Generates a star system on its own from any seed text or number. C# `StarSystem.Generate(seed, options)`.
 */
-export function generateSystem(seed: string | number | bigint, options?: Partial<GeneratorOptions>): StarSystem {
+export function generateSystem(seed: string | number | bigint, options?: Partial<GeneratorOptions>, hooks?: GeneratorHooks): StarSystem {
   const o = resolveOptions(options);
   validateOptions(o);
   const text = typeof seed === 'string' ? checkSeed(seed) : seedText(seed);
-  return generateSystemAt(new Address(1, text, 'system'), {}, o);
+  return hookSystem(hooks, generateSystemAt(new Address(1, text, 'system'), {}, o));
 }
 
 // Hot, warm, temperate, cold, outer: games want temperate worlds more often than a real system holds them.
@@ -961,9 +983,9 @@ export function generatePlanetAt(address: Address, options: GeneratorOptions): P
 /**
 Generates a planet on its own from any seed text or number. C# `Planet.Generate(seed, options)`.
 */
-export function generatePlanet(seed: string | number | bigint, options?: Partial<GeneratorOptions>): Planet {
+export function generatePlanet(seed: string | number | bigint, options?: Partial<GeneratorOptions>, hooks?: GeneratorHooks): Planet {
   const o = resolveOptions(options);
   validateOptions(o);
   const text = typeof seed === 'string' ? checkSeed(seed) : seedText(seed);
-  return generatePlanetAt(new Address(1, text, 'planet'), o);
+  return hookPlanet(hooks, generatePlanetAt(new Address(1, text, 'planet'), o));
 }

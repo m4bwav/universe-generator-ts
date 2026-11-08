@@ -126,6 +126,7 @@ const xoConfig = [
       'test/golden/cluster.test.js',
       'test/golden/universe.test.js',
       'test/golden/export.test.js',
+      'test/golden/hooks.test.js',
     ],
     rules: {
       'node-test/require-assertion': 'off',

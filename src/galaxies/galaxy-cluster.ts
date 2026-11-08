@@ -8,6 +8,7 @@ import {DMath} from '../core/dmath.ts';
 import {Distances, type LinkTier} from '../core/distances.ts';
 import type {Pcg32} from '../core/pcg32.ts';
 import {Seeds} from '../core/seeds.ts';
+import {hookCluster, type CustomFields, type GeneratorHooks} from '../hooks.ts';
 import {
   checkSeed,
   maxSystems,
@@ -95,6 +96,10 @@ export type SkyLandmark = {readonly name: string; readonly address: string; read
 A generated group or cluster. C# `GalaxyCluster`.
 */
 export type GalaxyCluster = {
+  /**
+  Your own fields, set by a hook or your code; undefined from the generator. C# `Custom`.
+  */
+  readonly custom?: CustomFields;
   readonly address: string;
   readonly name: string;
   readonly kind: Exclude<ClusterKind, 'Auto'>;
@@ -659,7 +664,7 @@ function landmark(context: ClusterContext, address: string, d: Draft): SkyLandma
 /**
 Builds a group or cluster from its address. C# `ClusterGenerator.Generate`.
 */
-export function generateClusterAt(address: Address, options: GeneratorOptions, context: ClusterContext = aloneCluster): GalaxyCluster {
+export function generateClusterAt(address: Address, options: GeneratorOptions, context: ClusterContext = aloneCluster, hooks?: GeneratorHooks): GalaxyCluster {
   const seed = address.objectSeed;
   const kindStream = Seeds.stream(seed, 'kind');
   const rolledKind = kindStream.weighted(kindWeights) === 0 ? 'Group' : 'Cluster';
@@ -764,7 +769,7 @@ export function generateClusterAt(address: Address, options: GeneratorOptions, c
         throw new RangeError(`This cluster has ${made.length} galaxies, numbered 0 to ${made.length - 1}; you asked for ${index}.`);
       }
 
-      made[index] ??= generateGalaxyAt(address.child('galaxy', index), options, contexts[index]);
+      made[index] ??= generateGalaxyAt(address.child('galaxy', index), options, contexts[index], hooks);
       return made[index];
     },
   };
@@ -773,9 +778,9 @@ export function generateClusterAt(address: Address, options: GeneratorOptions, c
 /**
 Generates a group or cluster of galaxies from any seed text or number. C# `GalaxyCluster.Generate(seed, options)`.
 */
-export function generateCluster(seed: string | number | bigint, options?: Partial<GeneratorOptions>): GalaxyCluster {
+export function generateCluster(seed: string | number | bigint, options?: Partial<GeneratorOptions>, hooks?: GeneratorHooks): GalaxyCluster {
   const o = resolveOptions(options);
   validateOptions(o);
   const text = typeof seed === 'string' ? checkSeed(seed) : seedText(seed);
-  return generateClusterAt(new Address(1, text, 'cluster'), o);
+  return hookCluster(hooks, generateClusterAt(new Address(1, text, 'cluster'), o, aloneCluster, hooks));
 }
