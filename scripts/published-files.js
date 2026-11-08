@@ -12,5 +12,5 @@ export const PUBLISHED_FILES = [
   'package.json',
 ];
 
-// Stage 0 placeholder; set from the first full build in Stage 3 (ports budget: yellow 1 MB, red 3 MB).
-export const TARBALL_BUDGET = 1_000_000;
+// Set from the first full build in Stage 3 (452 KB packed, 2026-11-08) with room to grow; ports budget: yellow 1 MB, red 3 MB.
+export const TARBALL_BUDGET = 600_000;
