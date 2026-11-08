@@ -6,7 +6,7 @@ Updated 2026-11-08 (chain session 15). Status: in progress, **1.0.0 released and
 
 - **1.0.0 is live** on npm, JSR and GitHub; demo and wiki live. `verify-published.yml` added (PR #12, merged) and run against 1.0.0: all green (3 OS x Node 20-26, Bun, Deno, signatures, provenance).
 - C# PR m4bwav/UniverseGenerator#68 merged.
-- Blog post with an embedded galaxy island: https://github.com/m4bwav/markdavidrogers-web/pull/51, merged by Mark 2026-11-08 but the post still has `draft: true` (content/posts/2026-11-08-universe-generator-typescript.md), so it is not public yet.
+- Blog post with an embedded galaxy island: https://github.com/m4bwav/markdavidrogers-web/pull/51, merged; flipped to `draft: false` in PR #52 (merged) and live at https://markdavidrogers.com/universe-generator-typescript/.
 
 ## Next
 
@@ -14,9 +14,8 @@ Updated 2026-11-08 (chain session 15). Status: in progress, **1.0.0 released and
 
 ## Waiting on Mark
 
-- Flip the merged blog post to `draft: false` when he wants it public.
-- Posting the launch drafts (`ai-docs/launch/drafts.md`).
-- Two API questions from the wiki note: `checkOptions` with partial options, and the message for a missing seed.
+- Launch posts (`ai-docs/launch/drafts.md`): Mark said post them (2026-11-08, manual mode). Blocked on sign-in: Chrome is logged out of Bluesky and Hacker News, Reddit is blocked by the Chrome extension, Mastodon instance unknown. Once he signs in, the agent posts.
+- Two API questions on askwright set `ask/ugts-api-1` (checkOptions partial options; missing-seed message). Run `ask.py read`, then ship 1.1.0 via release.yml and verify-published.
 
 ## Decisions made
 

@@ -136,3 +136,4 @@ Picked over a new plugin and the Python name port: the most attention that can p
 ## 2026-11-08 chain session 15
 
 - Nothing agent-side. Found blog PR #51 merged by Mark, post still `draft: true`; HANDOFF updated. No askwright questions, no open issues or PRs.
+- Mark (manual mode): publish the post, post the launch drafts, askwright the questions. Post PR #52 merged, live. Askwright set ugts-api-1 served (2 questions, guesses: partial options yes; TypeError 'seed is required'). Posting stopped at sign-in (Bluesky, HN logged out; Reddit blocked by extension; no Mastodon instance known).
