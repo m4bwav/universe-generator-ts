@@ -132,3 +132,7 @@ Picked over a new plugin and the Python name port: the most attention that can p
 - Mark asked for a blog post: draft post with a `galaxy` React island using the npm package, plus highlights since the 2026-10-04 posts (from GitHub releases), in markdavidrogers-web PR #51, assigned to Mark.
 - Small ruling (flagged): the island is a small map (seed, preset, click a star) linking the full demo, not an iframe, so the site CSP stays unchanged.
 - Wrap-up: template placeholder check must ignore GitHub `${{ }}` expressions (search `{{[A-Z_]`). No askwright questions.
+
+## 2026-11-08 chain session 15
+
+- Nothing agent-side. Found blog PR #51 merged by Mark, post still `draft: true`; HANDOFF updated. No askwright questions, no open issues or PRs.

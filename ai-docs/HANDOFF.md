@@ -1,12 +1,12 @@
 # HANDOFF
 
-Updated 2026-11-08 (chain session 14). Status: in progress, **1.0.0 released and verified; only Mark's items left**. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
+Updated 2026-11-08 (chain session 15). Status: in progress, **1.0.0 released and verified; only Mark's items left**. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
 
 ## Where it stands
 
 - **1.0.0 is live** on npm, JSR and GitHub; demo and wiki live. `verify-published.yml` added (PR #12, merged) and run against 1.0.0: all green (3 OS x Node 20-26, Bun, Deno, signatures, provenance).
 - C# PR m4bwav/UniverseGenerator#68 merged.
-- Blog post draft with an embedded galaxy island: https://github.com/m4bwav/markdavidrogers-web/pull/51 (assigned to Mark; posts are his to merge).
+- Blog post with an embedded galaxy island: https://github.com/m4bwav/markdavidrogers-web/pull/51, merged by Mark 2026-11-08 but the post still has `draft: true` (content/posts/2026-11-08-universe-generator-typescript.md), so it is not public yet.
 
 ## Next
 
@@ -14,7 +14,7 @@ Updated 2026-11-08 (chain session 14). Status: in progress, **1.0.0 released and
 
 ## Waiting on Mark
 
-- Merge the blog post PR above (flip `draft: false`).
+- Flip the merged blog post to `draft: false` when he wants it public.
 - Posting the launch drafts (`ai-docs/launch/drafts.md`).
 - Two API questions from the wiki note: `checkOptions` with partial options, and the message for a missing seed.
 
