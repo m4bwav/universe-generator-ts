@@ -28,6 +28,10 @@ export {
   generateGalaxy, type Galaxy, type MapEntry, type Lane, type GalaxyRegion, type GeneratorWarning, type WarningCode, type SystemContext,
 } from './galaxies/galaxy.ts';
 export {
+  generateGalaxyExtras, frontierTheme, type Faction, type FactionKind, type PointOfInterest, type PointOfInterestKind, type GalaxyHazard, type HazardKind,
+  type Monument, type MonumentKind, type Beacon, type BeaconKind, type CoreActivity, type GalaxyExtras, type ExtrasMapEntry, type ExtrasRegion,
+} from './galaxies/galaxy-extras.ts';
+export {
   generateSystem, generatePlanet, type StarSystem, type Planet, type Moon, type Belt, type Station, type Landmark, type PlanetKind, type MoonKind,
   type BeltKind, type OrbitZone, type LandmarkKind, type StationKind,
 } from './systems/star-system.ts';

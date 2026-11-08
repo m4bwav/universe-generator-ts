@@ -320,3 +320,81 @@ export function writeBeltDetail(w, b) {
   w.name('summary').string(b.summary);
   w.endObject();
 }
+
+/**
+Compares generated text with the start of a golden file, for goldens whose later cases need generators not ported yet.
+The last `open` lines of `actual` (the closing brackets of a document cut short) are left out.
+@param file
+@param actual
+@param open
+*/
+export function assertGoldenPrefix(file, actual, open) {
+  const expected = readFileSync(new URL(`../golden/v1/${file}`, import.meta.url), 'utf8').split('\n');
+  const a = actual.split('\n').slice(0, -open);
+  let line = 0;
+  while (line < a.length && expected[line] === a[line]) {
+    line++;
+  }
+
+  if (line < a.length) {
+    assert.fail(`${file} differs at line ${line + 1}:\n  golden: ${expected[line] ?? '(end)'}\n  actual: ${a[line]}`);
+  }
+}
+
+/**
+ExtrasJson.Write.
+@param w
+@param g
+*/
+export function writeExtras(w, g) {
+  w.beginObject().name('address').string(g.address);
+  w.name('factions').beginArray();
+  for (const f of g.factions) {
+    w.beginObject().name('name').string(f.name).name('kind').string(f.kind).name('capital').int(f.capital);
+    w.name('systems').int(f.systems).name('description').string(f.description).endObject();
+  }
+
+  w.endArray();
+  w.name('holders').beginArray();
+  for (const m of g.map) {
+    if (m.faction === undefined) {
+      w.null();
+    } else {
+      w.beginArray().int(m.faction).bool(m.contested).endArray();
+    }
+  }
+
+  w.endArray();
+  w.name('pointsOfInterest').beginArray();
+  for (const p of g.pointsOfInterest) {
+    w.beginObject().name('kind').string(p.kind).name('system').int(p.system).name('name').string(p.name).name('text').string(p.text);
+    w.name('chainStep').int(p.chainStep).name('chainLength').int(p.chainLength).endObject();
+  }
+
+  w.endArray();
+  w.name('hazards').beginArray();
+  for (const h of g.hazards) {
+    w.beginObject().name('kind').string(h.kind).name('name').string(h.name).name('x').number(h.x, 3).name('y').number(h.y, 3);
+    w.name('radius').number(h.radius, 3).name('systems').beginArray();
+    for (const s of h.systems) {
+      w.int(s);
+    }
+
+    w.endArray().name('effect').string(h.effect).endObject();
+  }
+
+  w.endArray();
+  w.name('monuments').beginArray();
+  for (const m of g.monuments) {
+    w.beginObject().name('region').int(m.region).name('system').int(m.system).name('kind').string(m.kind);
+    w.name('name').string(m.name).name('text').string(m.text).endObject();
+  }
+
+  w.endArray();
+  w.name('beacons').beginArray();
+  for (const b of g.beacons) {
+    w.beginObject().name('system').int(b.system).name('kind').string(b.kind).name('name').string(b.name).name('text').string(b.text).endObject();
+  }
+
+  w.endArray().endObject();
+}

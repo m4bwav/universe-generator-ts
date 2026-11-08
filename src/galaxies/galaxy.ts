@@ -1,7 +1,7 @@
 /**
 A galaxy: a map of star systems joined by lanes, grouped into named regions, with danger growing away from the core. A
 port of `Galaxies/Galaxy.cs` (GalaxyGenerator), `Core/Diagnostics.cs` and the lone-galaxy parts of `GalaxyTypes`.
-Clusters, extras (factions, points of interest, hazards, monuments, beacons), guarantees and hooks are not ported yet.
+Clusters, guarantees and hooks are not ported yet; the extras are in `galaxy-extras.ts`.
 */
 import {Address} from '../core/address.ts';
 import {DMath} from '../core/dmath.ts';
@@ -26,6 +26,14 @@ import {
   noTuning,
   systemSeed,
 } from './galaxy-layout.ts';
+import {
+  generateGalaxyExtras,
+  type Beacon,
+  type Faction,
+  type GalaxyHazard,
+  type Monument,
+  type PointOfInterest,
+} from './galaxy-extras.ts';
 
 /**
 The kinds of soft problem the generator reports instead of throwing. C# `WarningCode`.
@@ -38,7 +46,7 @@ A soft problem: generation went on, and this says what was changed or ignored. C
 export type GeneratorWarning = {readonly code: WarningCode; readonly message: string};
 
 /**
-A system as the galaxy map shows it, without its planets. C# `MapEntry` (faction fields not ported yet).
+A system as the galaxy map shows it, without its planets. C# `MapEntry`.
 */
 export type MapEntry = {
   readonly index: number;
@@ -51,6 +59,14 @@ export type MapEntry = {
   readonly hops: number;
   readonly danger: number;
   readonly chokepoint: boolean;
+  /**
+  The index of the faction holding it, or undefined when it is independent.
+  */
+  readonly faction: number | undefined;
+  /**
+  Whether a lane joins it to a system held by another faction.
+  */
+  readonly contested: boolean;
 };
 
 /**
@@ -84,6 +100,11 @@ export type Galaxy = {
   readonly map: readonly MapEntry[];
   readonly lanes: readonly Lane[];
   readonly regions: readonly GalaxyRegion[];
+  readonly factions: readonly Faction[];
+  readonly pointsOfInterest: readonly PointOfInterest[];
+  readonly hazards: readonly GalaxyHazard[];
+  readonly monuments: readonly Monument[];
+  readonly beacons: readonly Beacon[];
   readonly warnings: readonly GeneratorWarning[];
   /**
   What each system's generation takes from the galaxy, in map order.
@@ -275,7 +296,7 @@ export function generateGalaxyAt(address: Address, options: GeneratorOptions): G
 
   const richness = 100;
   const names = new Set<string>();
-  const map: MapEntry[] = [];
+  const draft: Array<Omit<MapEntry, 'faction' | 'contested'>> = [];
   const contexts: SystemContext[] = [];
   for (let i = 0; i < n; i++) {
     const own = systemSeed(seed, i);
@@ -285,7 +306,7 @@ export function generateGalaxyAt(address: Address, options: GeneratorOptions): G
     contexts.push({
       name, age, danger: layout.danger[i]!, richness,
     });
-    map.push({
+    draft.push({
       index: i,
       address: address.child('system', i).toString(),
       name,
@@ -299,6 +320,8 @@ export function generateGalaxyAt(address: Address, options: GeneratorOptions): G
     });
   }
 
+  const extras = generateGalaxyExtras(seed, layout.lanes, layout.core, regions, draft);
+  const map: MapEntry[] = draft.map((m, i) => ({...m, ...extras.holders[i]!}));
   const made: Array<StarSystem | undefined> = [];
   const system = (index: number): StarSystem => {
     if (!Number.isSafeInteger(index) || index < 0 || index >= n) {
@@ -324,6 +347,11 @@ export function generateGalaxyAt(address: Address, options: GeneratorOptions): G
     map,
     lanes: layout.lanes.map(([a, b, bridge]) => ({a, b, bridge})),
     regions,
+    factions: extras.factions,
+    pointsOfInterest: extras.points,
+    hazards: extras.hazards,
+    monuments: extras.monuments,
+    beacons: extras.beacons,
     warnings,
     contexts,
     system,
