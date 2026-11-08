@@ -1,5 +1,5 @@
 ## installed
-universe-generator@0.0.0 on Node v24.18.0
+universe-generator@1.0.0 on Node v24.18.0
 
 ## esm exports
 [

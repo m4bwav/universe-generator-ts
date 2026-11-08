@@ -28,7 +28,7 @@ import {fileURLToPath} from 'node:url';
 process.chdir(path.dirname(fileURLToPath(import.meta.url)));
 
 const PACKAGE = 'universe-generator';
-const VERSION = '0.0.0'; // the master tarball that ships as 1.0.0 (not on npm yet)
+const VERSION = '1.0.0';
 const require = createRequire(import.meta.url);
 
 function show(label, value) {

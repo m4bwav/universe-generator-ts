@@ -33,3 +33,7 @@ Home, Getting-Started, API-Reference, Same-Seed-Same-Universe, Errors-and-Edge-C
 2. In a scratch folder: `npm install universe-generator@<version> typescript@6`, copy the script, set VERSION, run it and again with `OLDEST_NODE=20.20.2`; `wikiwright.py diffout` against the saved outputs.
 3. Pages that name the version or the unpublished state: Home ("Not on npm or JSR yet" paragraph), Getting-Started (Install, In the browser), FAQ ("Can I install it yet?"), Versions-and-Upgrading (table and date), _Footer.
 4. Run check, outputs, snippets, tells, live; update this note.
+
+## 1.0.0 update (2026-11-08)
+
+- Re-ran the script against `universe-generator@1.0.0` from npm on Node 24 and 20.20.2: every section equal to the master-tarball run except the version line. Saved outputs replaced. Pages updated: Home, FAQ (now "Where do I install it from?"), Getting-Started, Versions-and-Upgrading, _Footer. `live` 9 pages, 0 failures.

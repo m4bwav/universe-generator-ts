@@ -119,3 +119,9 @@ Picked over a new plugin and the Python name port: the most attention that can p
 
 - npm still shows only 0.0.0-stage and 0.0.0 (1.0.0 staged, not approved); C# PR #68 still open. Nothing can move without Mark; stopped.
 - Wrap-up: nothing new worth keeping. No askwright questions.
+
+## 2026-11-08, chain session 12 (end)
+
+- Mark approved the staged npm 1.0.0; `npm view universe-generator version` = 1.0.0; release.yml all jobs green including "move next".
+- verify-published.yml does not exist in this repo (release.yml and zizmor.yml name it). Did the check by hand instead: the wiki script against the npm package on Node 24 and 20 gave output identical to the pre-release run. Adding the workflow is open work.
+- Wiki updated for 1.0.0 and pushed; live check 0 failures.
