@@ -1,26 +1,23 @@
 # HANDOFF
 
-Updated 2026-11-08 (chain session 12; stale-docs fix PR merged, nothing else moved). Status: in progress, **Stages 0-5 and 7 drafts done; release (Stage 6) waits on Mark's first npm publish and the JSR package**. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
+Updated 2026-11-08 (chain session 12; stale-docs fix PR merged, nothing else moved). Status: in progress, **1.0.0 on JSR and GitHub; npm 1.0.0 staged, waits on Mark's approval**. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
 
 ## Where it stands
 
-- Port complete (18/18 goldens, 190 tests). Demo live at https://m4bwav.github.io/universe-generator-ts/ (PR #8 merged, pages run green, page and bundle return 200).
-- Stage 5: README already done. C# README link PR https://github.com/m4bwav/UniverseGenerator/pull/68 is open: its required checks do not run on docs-only changes, so the branch policy blocks the merge; assigned to Mark (needs-review). Not merged with --admin.
-- Stage 7: drafts in `ai-docs/launch/drafts.md` (Show HN, r/proceduralgeneration, Bluesky). Post after 1.0.0 is live.
-- Version stays 0.0.0 on purpose: release.yml expects `npm version 1.0.0` to make the commit and tag together.
+- 1.0.0 released on JSR (https://jsr.io/@m4bwav/universe-generator) and as a GitHub Release. npm 1.0.0 is **staged** and waits for Mark's approval. Demo live at https://m4bwav.github.io/universe-generator-ts/.
+- npm trusted publisher set (release.yml). JSR package linked to the repo.
 
 ## Next
 
-1. Wiki is live (pre-release, examples run on the master tarball): after 1.0.0 is published, run its update procedure in `ai-docs/notes/2026-11-08-github-wiki.md`.
-2. If Mark has published to npm and created the JSR package: on master run `npm version 1.0.0` (also set jsr.json to 1.0.0 and date the CHANGELOG in the same commit; check release.yml's jsr version check), `git push --follow-tags`, watch release.yml, then verify-published.yml. Then the wiki update (above).
-2. If #68 is still open, leave it for Mark.
-3. Otherwise nothing moves: stop and say what waits.
+1. If npm shows 1.0.0 live (`npm view universe-generator version`): run verify-published.yml with 1.0.0, check release.yml's "move next" job, then update the wiki per `ai-docs/notes/2026-11-08-github-wiki.md`.
+2. If it is still staged, stop and say it waits on Mark.
+3. If #68 on the C# repo is still open, leave it.
+4. After 1.0.0 is live on npm: Stage 7 posts wait on Mark.
 
 ## Waiting on Mark
 
-- Merge https://github.com/m4bwav/UniverseGenerator/pull/68 (C# README link; required checks never start on docs-only PRs).
-- First npm publish: npm trusted publishing can only be set on a package that exists. Mark runs on master: `npm run build && npm publish --access public` (a 0.0.x placeholder is fine), then on npmjs.com adds the trusted publisher (GitHub Actions, m4bwav/universe-generator-ts, workflow `release.yml`, no environment).
-- JSR: create `@m4bwav/universe-generator` on jsr.io (scope `m4bwav`) and link it to the GitHub repo.
+- Approve the staged npm 1.0.0: npmjs.com, Settings, Staged Packages, Approve (security key).
+- Merge https://github.com/m4bwav/UniverseGenerator/pull/68.
 - Posting the launch drafts.
 
 ## Decisions made

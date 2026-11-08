@@ -106,3 +106,11 @@ Picked over a new plugin and the Python name port: the most attention that can p
 - npm and JSR still 404; C# PR #68 still open. Stage 6 cannot move.
 - Fixed the two stale docs found in session 11: AGENTS.md publishing rule (no longer `private: true`; releases through release.yml after Mark's first publish) and the index.ts doc comment. checkOptions behaviour left for Mark.
 - Wrap-up: nothing new worth keeping. No askwright questions.
+
+## 2026-11-08, chain session 12 (continued, Mark driving the browser steps)
+
+- Mark signed in to npm; `npm publish` from the agent shell fails with EOTP (no TTY, the auth URL is masked), so Mark published the placeholder (0.0.0-stage). Trusted publisher added on npmjs.com (m4bwav/universe-generator-ts, release.yml, npm publish allowed; security key tap).
+- JSR: Mark passed the Cloudflare check; scope `m4bwav` and package `@m4bwav/universe-generator` created and linked to the repo.
+- v1.0.0: first release run failed because release.yml wants `## [1.0.0] - YYYY-MM-DD` in CHANGELOG.md; fixed (0f960af) and the unpublished tag moved. Second run: JSR 1.0.0 published, npm 1.0.0 staged, GitHub Release made.
+- Approving the staged npm version was refused by the auto-mode classifier; waits on Mark (npmjs.com, Settings, Staged Packages, Approve). Then verify-published.yml and the wiki update.
+- repo-traffic now counts JSR downloads (m4bwav/repo-traffic#26).
