@@ -1,25 +1,26 @@
 # HANDOFF
 
-Updated 2026-11-07 (chain session 9). Status: in progress, **Stage 4 demo done in PR #8 (all checks green), waiting for Mark's merge**: the agent's merge was refused by the auto-mode permission check, and the PR adds a deploy workflow (pages.yml), so it is assigned to him with `needs-review`. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
+Updated 2026-11-07 (chain session 10). Status: in progress, **Stages 0-5 and 7 drafts done; release (Stage 6) waits on Mark's first npm publish and the JSR package**. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
 
 ## Where it stands
 
-- Stages 0-3 done and merged (master 77a4e78 + Dependabot #3). Port complete: 18 of 18 goldens bit-exact, 190 tests, 100% coverage.
-- Stage 4 (PR #8, branch `stage4-demo`): `demo/` static page, `npm run demo` builds `site/`, `.github/workflows/pages.yml` deploys on push to master. GitHub Pages is already switched on (build type: workflow), so the site goes live at https://m4bwav.github.io/universe-generator-ts/ on the first master push after #8 merges. Screenshot at `docs/images/demo-desktop.png`, linked from the README.
-- **On GitHub**: https://github.com/m4bwav/universe-generator-ts (public). Ruleset `master` requires `ci`. Scripts need the git exec bit (`git update-index --chmod=+x`) since commits come from Windows.
+- Port complete (18/18 goldens, 190 tests). Demo live at https://m4bwav.github.io/universe-generator-ts/ (PR #8 merged, pages run green, page and bundle return 200).
+- Stage 5: README already done. C# README link PR https://github.com/m4bwav/UniverseGenerator/pull/68 is open: its required checks do not run on docs-only changes, so the branch policy blocks the merge; assigned to Mark (needs-review). Not merged with --admin.
+- Stage 7: drafts in `ai-docs/launch/drafts.md` (Show HN, r/proceduralgeneration, Bluesky). Post after 1.0.0 is live.
+- Version stays 0.0.0 on purpose: release.yml expects `npm version 1.0.0` to make the commit and tag together.
 
 ## Next
 
-1. If PR #8 is merged: check that the `pages` run passed and that the live URL loads and draws (Claude in Chrome JS checks; screenshots may time out, see log). If it is still open: branch Stage 5 from `stage4-demo`.
-2. Stage 5 docs: README pass (quick start, demo link is in), and a PR to m4bwav/UniverseGenerator's README linking the TS port and the demo. Wiki with wikiwright after the first release.
-3. Stage 6 release: bump package.json and jsr.json to 1.0.0 together, date the CHANGELOG heading, tag `v1.0.0` only after the two first-publish steps below are done.
-4. Stage 7 launch kit drafts in `ai-docs/launch/` (posting is Mark's).
+1. If Mark has published to npm and created the JSR package: on master run `npm version 1.0.0` (also set jsr.json to 1.0.0 and date the CHANGELOG in the same commit; check release.yml's jsr version check), `git push --follow-tags`, watch release.yml, then verify-published.yml. Then the wiki (wikiwright) and update installed docs.
+2. If #68 is still open, leave it for Mark.
+3. Otherwise nothing moves: stop and say what waits.
 
 ## Waiting on Mark
 
-- Merge PR #8: https://github.com/m4bwav/universe-generator-ts/pull/8 (demo + Pages deploy workflow).
-- First npm publish: npm trusted publishing can only be set on a package that exists, and the agent shell cannot log in to npm. Mark runs, in the repo on master: `npm run build && npm publish --access public` (version 1.0.0 after the bump), then on npmjs.com adds the trusted publisher (GitHub Actions, m4bwav/universe-generator-ts, workflow `release.yml`, no environment). Alternative: he publishes 0.0.x as a placeholder now so the trusted publisher can be added and 1.0.0 goes through release.yml.
-- JSR: create `@m4bwav/universe-generator` on jsr.io (scope `m4bwav`) and link it to the GitHub repo in its settings, so release.yml's OIDC publish is accepted.
+- Merge https://github.com/m4bwav/UniverseGenerator/pull/68 (C# README link; required checks never start on docs-only PRs).
+- First npm publish: npm trusted publishing can only be set on a package that exists. Mark runs on master: `npm run build && npm publish --access public` (a 0.0.x placeholder is fine), then on npmjs.com adds the trusted publisher (GitHub Actions, m4bwav/universe-generator-ts, workflow `release.yml`, no environment).
+- JSR: create `@m4bwav/universe-generator` on jsr.io (scope `m4bwav`) and link it to the GitHub repo.
+- Posting the launch drafts.
 
 ## Decisions made
 
