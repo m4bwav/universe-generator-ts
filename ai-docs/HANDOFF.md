@@ -5,7 +5,7 @@ Updated 2026-11-07 (chain session 4). Status: in progress, Stage 2 under way. Pl
 ## Where it stands
 
 - Stage 0 gate passed; Stage 1 done (local repo, branch `master`).
-- Stage 2: **10 of 18 goldens bit-exact**: core, star-name, shapes, system, galaxy, names, tables, planet, moon-belt, orbital-elements (commits 5badca0, f2c7d89, 2dd3182, COMMIT). Ported: options, tables, stars, star names, JsonWriter, Address (no parsing), invented names, galaxy layout + lone galaxy generator, star systems, planets alone, the planet/moon/belt detail layers and Units (no `Units.map`); repo rules test. 120 tests, 100% coverage, lint and types clean.
+- Stage 2: **10 of 18 goldens bit-exact**: core, star-name, shapes, system, galaxy, names, tables, planet, moon-belt, orbital-elements (commits 5badca0, f2c7d89, 2dd3182, a598f07). Ported: options, tables, stars, star names, JsonWriter, Address (no parsing), invented names, galaxy layout + lone galaxy generator, star systems, planets alone, the planet/moon/belt detail layers and Units (no `Units.map`); repo rules test. 120 tests, 100% coverage, lint and types clean.
 - Not ported yet (absent, not faked): galaxy extras (factions, POIs, hazards, monuments, beacons), guarantees (`require` validated but ignored), hooks, clusters/universe, Address.TryParse, export, `Units.Map` (needs Distances).
 - **Not on GitHub yet**: `gh repo create` refused by the permission classifier in sessions 1 and 2.
 
