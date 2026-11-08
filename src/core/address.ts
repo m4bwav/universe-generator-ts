@@ -1,6 +1,6 @@
 /**
 Where an object sits: generator version, seed text, the level it was generated from and the path below it, as a URL-safe
-text such as `v1-my-seed/galaxy/system/31/planet/2`. A port of `Core/Address.cs` (parsing is not ported yet).
+text such as `v1-my-seed/galaxy/system/31/planet/2`. A port of `Core/Address.cs`.
 */
 import {Seeds} from './seeds.ts';
 
@@ -65,6 +65,10 @@ export class Address {
   readonly path: ReadonlyArray<readonly [string, number]>;
 
   constructor(version: number, seed: string, root: string, path: ReadonlyArray<readonly [string, number]> = []) {
+    if (!Number.isSafeInteger(version) || version < 1) {
+      throw new RangeError('Generator versions start at 1.');
+    }
+
     this.version = version;
     this.seed = seed;
     this.root = root;
@@ -91,6 +95,10 @@ export class Address {
       throw new RangeError(`A label is lowercase letters a to z; got "${label}".`);
     }
 
+    if (!Number.isSafeInteger(index) || index < 0) {
+      throw new RangeError('An index cannot be negative.');
+    }
+
     return new Address(this.version, this.seed, this.root, [...this.path, [label, index]]);
   }
 
@@ -102,4 +110,97 @@ export class Address {
 
     return text;
   }
+
+  /**
+  Reads an address. C# `Address.TryParse`: on failure `error` says what is wrong in words.
+  */
+  static tryParse(text: string | undefined): {readonly address: Address; readonly error?: undefined} | {readonly address?: undefined; readonly error: string} {
+    if (text === undefined || text.length === 0) {
+      return {error: 'The address is empty.'};
+    }
+
+    const parts = text.split('/');
+    const head = parts[0]!;
+    const dash = head.indexOf('-');
+    const version = dash < 2 ? undefined : readIndex(head.slice(1, dash));
+    if (head.length < 3 || !head.startsWith('v') || version === undefined || version < 1) {
+      return {error: `An address starts with v, the generator version and a dash, as in v1-my-seed/galaxy; got "${head}".`};
+    }
+
+    const seed = unescapeSeed(head.slice(dash + 1));
+    if (seed === undefined) {
+      return {error: 'The seed part of the address has a character that must be percent-encoded, or a broken %XX sequence.'};
+    }
+
+    if (parts.length < 2 || !isLabel(parts[1]!)) {
+      return {error: 'After the seed comes the level it was generated from, as in v1-my-seed/galaxy.'};
+    }
+
+    if (parts.length % 2 !== 0) {
+      return {error: 'Below the level, the address alternates a name and an index, as in /system/31/planet/2.'};
+    }
+
+    const path: Array<readonly [string, number]> = [];
+    for (let i = 2; i < parts.length; i += 2) {
+      const label = parts[i]!;
+      const indexText = parts[i + 1]!;
+      const index = readIndex(indexText);
+      if (!isLabel(label) || index === undefined) {
+        return {error: `"${label}/${indexText}" is not a name followed by an index (0, 1, 2, ... without leading zeros).`};
+      }
+
+      path.push([label, index]);
+    }
+
+    return {address: new Address(version, seed, parts[1]!, path)};
+  }
+}
+
+/**
+A non-negative int without leading zeros, as the C# `TryReadIndex` reads it; undefined when it is not one.
+*/
+function readIndex(s: string): number | undefined {
+  if (!/^(?:0|[1-9]\d{0,9})$/u.test(s)) {
+    return undefined;
+  }
+
+  const v = Number(s);
+  return v > 2_147_483_647 ? undefined : v;
+}
+
+function hexValue(c: string): number {
+  return /^[0-9a-f]$/iu.test(c) ? Number.parseInt(c, 16) : -1;
+}
+
+/**
+The seed text back from its escaped form; undefined for a character that must be escaped, a broken %XX, or bytes that are
+not UTF-8 written the way `escapeSeed` writes them.
+*/
+function unescapeSeed(escaped: string): string | undefined {
+  const bytes: number[] = [];
+  for (let i = 0; i < escaped.length; i++) {
+    const c = escaped.charCodeAt(i);
+    if (c === 0x25) {
+      if (i + 2 >= escaped.length) {
+        return undefined;
+      }
+
+      const high = hexValue(escaped[i + 1]!);
+      const low = hexValue(escaped[i + 2]!);
+      if (high < 0 || low < 0) {
+        return undefined;
+      }
+
+      bytes.push((high * 16) + low);
+      i += 2;
+    } else if (isUnreserved(c)) {
+      bytes.push(c);
+    } else {
+      return undefined;
+    }
+  }
+
+  const seed = new TextDecoder('utf-8', {ignoreBOM: true}).decode(new Uint8Array(bytes));
+  const again = encode(seed);
+  return again.length === bytes.length && again.every((b, i) => b === bytes[i]) ? seed : undefined;
 }

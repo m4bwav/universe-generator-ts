@@ -40,6 +40,7 @@ export {
   generateUniverse, type Universe, type UniverseNode, type Filament, type CosmicVoid, type UniverseLandmark, type UniverseMerger,
   type NodeRole, type UniverseLandmarkKind,
 } from './universe/universe.ts';
+export {generateAt, linkTo, type AddressedObject} from './universe/at.ts';
 export {
   toJson, exportSchema, type ExportType, type ExportOptions,
 } from './export/json-export.ts';
