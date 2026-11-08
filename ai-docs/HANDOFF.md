@@ -1,6 +1,6 @@
 # HANDOFF
 
-PR #4 (stage2-extras) merged to master 2026-11-08 as a40e98c, CI green on all jobs.
+PR #5 (stage2-clusters) merged to master 2026-11-08 as 92e1983, CI green on all jobs. All 18 goldens bit-exact.
 
 Updated 2026-11-08 (chain session 6, branch stage2-clusters, not pushed). Status: in progress, Stage 2 under way. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
 
