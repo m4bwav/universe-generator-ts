@@ -1,6 +1,6 @@
 # HANDOFF
 
-Updated 2026-11-08 (chain session 7). PR #6 merged as d594daf, CI green. Status: in progress, **Stage 2 complete, Stage 3 (packaging and release) next**. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
+Updated 2026-11-08 (chain session 8). Status: in progress, **Stage 3 packaging done in PR #7 (CI green), waiting for Mark's review** because it adds the release/publish workflow. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
 
 ## Where it stands
 
@@ -12,12 +12,15 @@ Updated 2026-11-08 (chain session 7). PR #6 merged as d594daf, CI green. Status:
 
 ## Next
 
-1. Work on a branch, open a PR, merge it yourself once `ci` passes (standing rules).
-2. Stage 3 (packaging, see the plan): README API docs for the new exports, consumers (Bun/Deno), release.yml, add `jsr.json` and a JSR publish job (OIDC), then drop `private: true` and publish to npm and JSR (both granted once the port is complete).
+1. Work on a branch, open a PR, merge it yourself once `ci` passes (standing rules); PRs that change release.yml or ci.yml publish steps stay open for Mark (assign + `needs-review`).
+2. If PR #7 is merged: start Stage 4 (demo site in `demo/`, GitHub Pages) on a new branch from master. If it is still open: branch Stage 4 from `stage3-package` or from master (demo touches no release files) and keep going.
+3. Stage 5 docs, then Stage 6 release: bump package.json and jsr.json to 1.0.0 together (CI checks they match), date the CHANGELOG heading, tag `v1.0.0` only after the two first-publish steps below are done.
 
 ## Waiting on Mark
 
-- Nothing. npm publish is granted once the port is complete and `private: true` is dropped.
+- Review and merge PR #7: https://github.com/m4bwav/universe-generator-ts/pull/7 (release.yml with npm staging + JSR publish, consumers, Bun/Deno CI).
+- First npm publish: npm trusted publishing can only be set on a package that exists, and the agent shell cannot log in to npm. Mark runs, in the repo on master after #7: `npm run build && npm publish --access public` (version 1.0.0 after the bump), then on npmjs.com adds the trusted publisher (GitHub Actions, m4bwav/universe-generator-ts, workflow `release.yml`, no environment). Alternative: he publishes 0.0.x as a placeholder now so the trusted publisher can be added and 1.0.0 goes through release.yml.
+- JSR: create `@m4bwav/universe-generator` on jsr.io (scope `m4bwav`) and link it to the GitHub repo in its settings, so release.yml's OIDC publish is accepted.
 
 ## Decisions made
 
