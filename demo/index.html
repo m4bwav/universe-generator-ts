@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Universe Generator</title>
+    <link href="style.css" rel="stylesheet">
+    <meta content="Type a seed, get a galaxy: stars, lanes, factions, hazards, and every planet and moon. The same seed gives the same galaxy in TypeScript, C# and Unity." name="description">
+    <meta content="Universe Generator" property="og:title">
+    <meta content="Type a seed, get a galaxy. The same seed gives the same galaxy in TypeScript, C# and Unity." property="og:description">
+    <meta content="website" property="og:type">
+    <meta content="https://m4bwav.github.io/universe-generator-ts/" property="og:url">
+    <meta content="https://m4bwav.github.io/universe-generator-ts/social-preview.jpg" property="og:image">
+    <meta content="summary_large_image" name="twitter:card">
+    <link
+      type="image/svg+xml"
+      href="favicon.svg"
+      rel="icon"
+    >
+  </head>
+  <body>
+    <header class="bar">
+      <h1>Universe Generator</h1>
+      <form
+        id="controls"
+        autocomplete="off"
+        method="get"
+      >
+        <label>
+          Seed
+          <input
+            id="seed"
+            maxlength="200"
+            name="seed"
+            value="my-seed"
+          >
+        </label>
+        <label>
+          Preset
+          <select id="preset"></select>
+        </label>
+        <label>
+          Systems
+          <input
+            id="systems"
+            type="number"
+            max="2000"
+            min="1"
+            value="60"
+          >
+        </label>
+        <label>
+          Shape
+          <select id="shape"></select>
+        </label>
+        <label>
+          Names
+          <select id="names">
+            <option>Catalogue</option>
+            <option>Invented</option>
+          </select>
+        </label>
+        <button type="submit">Generate</button>
+        <button id="random" type="button">Random seed</button>
+        <button id="share" type="button">Copy link</button>
+      </form>
+    </header>
+    <main>
+      <div id="stage">
+        <canvas id="map" aria-label="Galaxy map: click a star to open its system"></canvas>
+        <div id="legend"></div>
+      </div>
+      <aside id="panel" aria-live="polite"></aside>
+    </main>
+    <footer class="bar small">
+      <span id="promise">Same seed, same galaxy in TypeScript, C# and Unity.</span>
+      <code>npm install universe-generator</code>
+      <code>dotnet add package UniverseGenerator</code>
+      <a href="https://github.com/m4bwav/universe-generator-ts">TypeScript source</a>
+      <a href="https://github.com/m4bwav/UniverseGenerator">C# and Unity source</a>
+      <a id="game-link" href="#">Made for a game in progress</a>
+    </footer>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

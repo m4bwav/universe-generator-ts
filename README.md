@@ -10,6 +10,10 @@ Zero dependencies. ES module and CommonJS builds with types, Node 20 or later, B
 
 **Status: the port is complete; not on npm or JSR yet.**
 
+**[Try the galaxy demo](https://m4bwav.github.io/universe-generator-ts/)**: type a seed, pan and zoom the map, click a star for its planets, moons and stories, and copy a link that rebuilds the same galaxy.
+
+![The demo: a barred galaxy for seed my-seed with lanes, faction rings and hazard clouds, and the panel for system LHS 1589 listing its planets, belt and landmarks](https://raw.githubusercontent.com/m4bwav/universe-generator-ts/master/docs/images/demo-desktop.png)
+
 ## Install
 
 ```sh

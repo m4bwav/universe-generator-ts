@@ -71,6 +71,26 @@ const xoConfig = [
     },
   },
   {
+    // The demo page runs in browsers (Safari 16 included), so it uses browser globals, and Iterator#toArray is too new there.
+    // Path2D reuse and ResizeObserver would not pay for themselves on a map redrawn only on input.
+    files: ['demo/**/*.js'],
+    languageOptions: {
+      globals: {
+        window: 'readonly', document: 'readonly', location: 'readonly', history: 'readonly', navigator: 'readonly', Option: 'readonly',
+      },
+    },
+    rules: {
+      'unicorn/prefer-iterator-to-array': 'off',
+      'unicorn/prefer-path2d': 'off',
+      'unicorn/prefer-observer-apis': 'off',
+      // Small UI code: a lookup by a user-chosen preset key, an and-chain of UI states and a wrapped tap handler read better as written.
+      'unicorn/no-computed-property-existence-check': 'off',
+      'unicorn/prefer-simple-condition-first': 'off',
+      'unicorn/prefer-early-return': 'off',
+      'unicorn/max-nested-calls': 'off',
+    },
+  },
+  {
     files: ['package.json'],
     rules: {
       // The shape publint and attw approved in every resolution mode: main, module and types stay for older resolvers, and the declaration files are found by sibling name, so no types or default conditions.
