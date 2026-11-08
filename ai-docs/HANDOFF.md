@@ -1,22 +1,22 @@
 # HANDOFF
 
-Updated 2026-11-08 (chain session 13; npm 1.0.0 still staged, nothing moved). Status: in progress, **1.0.0 released on npm, JSR and GitHub; small follow-ups left**. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
+Updated 2026-11-08 (chain session 14). Status: in progress, **1.0.0 released and verified; only Mark's items left**. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
 
 ## Where it stands
 
-- **1.0.0 is live** on npm (`universe-generator`), JSR (`@m4bwav/universe-generator`) and as a GitHub Release. Demo live. Wiki updated for 1.0.0 (examples re-run against npm).
+- **1.0.0 is live** on npm, JSR and GitHub; demo and wiki live. `verify-published.yml` added (PR #12, merged) and run against 1.0.0: all green (3 OS x Node 20-26, Bun, Deno, signatures, provenance).
+- C# PR m4bwav/UniverseGenerator#68 merged.
+- Blog post draft with an embedded galaxy island: https://github.com/m4bwav/markdavidrogers-web/pull/51 (assigned to Mark; posts are his to merge).
 
 ## Next
 
-1. Add the missing `.github/workflows/verify-published.yml` (release.yml and zizmor.yml expect it; package-modernize npm template has one), PR, merge when green.
-2. Mark's open API questions from the wiki note (`checkOptions` partial options, missing-seed message) wait on him.
-3. If #68 on the C# repo is still open, leave it.
+1. Nothing agent-side. If Mark answers the API questions, act on them (a 1.0.1 or 1.1 through release.yml, then run verify-published).
 
 ## Waiting on Mark
 
-- Merge https://github.com/m4bwav/UniverseGenerator/pull/68.
-- Posting the launch drafts (`ai-docs/launch/drafts.md`); the package is live now.
-- The two API questions above.
+- Merge the blog post PR above (flip `draft: false`).
+- Posting the launch drafts (`ai-docs/launch/drafts.md`).
+- Two API questions from the wiki note: `checkOptions` with partial options, and the message for a missing seed.
 
 ## Decisions made
 

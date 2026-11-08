@@ -125,3 +125,10 @@ Picked over a new plugin and the Python name port: the most attention that can p
 - Mark approved the staged npm 1.0.0; `npm view universe-generator version` = 1.0.0; release.yml all jobs green including "move next".
 - verify-published.yml does not exist in this repo (release.yml and zizmor.yml name it). Did the check by hand instead: the wiki script against the npm package on Node 24 and 20 gave output identical to the pre-release run. Adding the workflow is open work.
 - Wiki updated for 1.0.0 and pushed; live check 0 failures.
+
+## 2026-11-08, chain session 14
+
+- C# PR #68 found merged. Added verify-published.yml from the package-modernize npm template (smoke answers from the C# golden: my-seed is a Ring, first region Musca Drift); PR #12 green and merged; run 42500436239 against 1.0.0 all green.
+- Mark asked for a blog post: draft post with a `galaxy` React island using the npm package, plus highlights since the 2026-10-04 posts (from GitHub releases), in markdavidrogers-web PR #51, assigned to Mark.
+- Small ruling (flagged): the island is a small map (seed, preset, click a star) linking the full demo, not an iframe, so the site CSP stays unchanged.
+- Wrap-up: template placeholder check must ignore GitHub `${{ }}` expressions (search `{{[A-Z_]`). No askwright questions.
