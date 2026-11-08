@@ -100,3 +100,9 @@ Picked over a new plugin and the Python name port: the most attention that can p
 - Merged the stage7-launch-kit branch to master (PR #10, CI green) and Dependabot PRs #1 (upload-artifact 7.0.2) and #2 (setup-node 7.1.0), all green.
 - Wrap-up: nothing new worth keeping. No askwright questions.
 - Mark saved the wiki's first page; wiki written with wikiwright and pushed: nine pages + sidebar/footer, live check 0 failures. Examples verified on the master tarball (not published yet) on Node 24 and 20; galaxy fingerprint equals the C# wiki's. Note and saved verification in ai-docs/notes/2026-11-08-*. Found: AGENTS.md still says private:true/no publish (stale); index.ts doc comment stale; checkOptions needs whole options and an undefined seed gives the engine TypeError (left for Mark, behaviour changes).
+
+## 2026-11-08, chain session 12
+
+- npm and JSR still 404; C# PR #68 still open. Stage 6 cannot move.
+- Fixed the two stale docs found in session 11: AGENTS.md publishing rule (no longer `private: true`; releases through release.yml after Mark's first publish) and the index.ts doc comment. checkOptions behaviour left for Mark.
+- Wrap-up: nothing new worth keeping. No askwright questions.
