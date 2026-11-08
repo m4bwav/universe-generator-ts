@@ -25,3 +25,7 @@ Updated 2026-11-08 (chain session 15, later). Status: in progress, **1.1.0 relea
 - 2026-11-07: Mark approved building this through chained sessions ("I'm in"). Creating the public repo, merging own PRs, tagging and GitHub releases follow the standing rules in `C:/Users/m4bwa/.claude/CLAUDE.md`. npm publishing and public posts were not granted then.
 - 2026-11-07 session 3 kickoff: "I allow all publishing and merging and settings changes do it all don't forget a hero image for the repo". npm publish is now granted once the port is complete and `private: true` is dropped; the banner is done (commit 2cc4489).
 - 2026-11-08 chain session 6: Mark granted JSR too ("you have full access, sure lets do jsr too"). At release, publish to npm as `universe-generator` and to JSR as `@m4bwav/universe-generator` (add `jsr.json`, tokenless publish from GitHub Actions via OIDC).
+
+## 2026-11-08 chain session 16
+
+- Nothing agent-side; no open issues or PRs; npm 1.1.0. Stopped, waiting on Mark's sign-ins.
