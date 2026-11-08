@@ -40,6 +40,9 @@ export {
   generateUniverse, type Universe, type UniverseNode, type Filament, type CosmicVoid, type UniverseLandmark, type UniverseMerger,
   type NodeRole, type UniverseLandmarkKind,
 } from './universe/universe.ts';
+export {
+  toJson, exportSchema, type ExportType, type ExportOptions,
+} from './export/json-export.ts';
 export {Distances, type MapLevel, type LinkTier} from './core/distances.ts';
 export {
   generateSystem, generatePlanet, type StarSystem, type Planet, type Moon, type Belt, type Station, type Landmark, type PlanetKind, type MoonKind,
