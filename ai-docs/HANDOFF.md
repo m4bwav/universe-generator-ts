@@ -15,7 +15,7 @@ Updated 2026-11-08 (chain session 5, merged as PR #4). Status: in progress, Stag
 ## Next
 
 1. Work on branches, open a PR, merge it yourself once `ci` passes (standing rules).
-2. Push `stage2-extras`, open a PR, merge once `ci` passes. Then hooks (`hooks.json`) together with export and universe.
+2. Clusters and universe (finishes galaxy-extras.json; switch its test to assertGolden), then hooks (`hooks.json`) with export.
 3. Clusters and universe (then switch galaxy-extras.test.js from `assertGoldenPrefix` to `assertGolden`): ClusterGenerator, GalaxyCluster, Universe, UniverseGenerator, Distances (`cluster.json`, `universe.json`), then JsonExport/JsonReader (`export.json`); add `Units.map` with Distances.
 4. Keep using `test/helpers/golden-json.js` for the C# test-side writers; add each new golden test to `test:dist`, `coverage` and the xo golden-test list.
 
