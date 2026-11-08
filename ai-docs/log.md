@@ -114,3 +114,8 @@ Picked over a new plugin and the Python name port: the most attention that can p
 - v1.0.0: first release run failed because release.yml wants `## [1.0.0] - YYYY-MM-DD` in CHANGELOG.md; fixed (0f960af) and the unpublished tag moved. Second run: JSR 1.0.0 published, npm 1.0.0 staged, GitHub Release made.
 - Approving the staged npm version was refused by the auto-mode classifier; waits on Mark (npmjs.com, Settings, Staged Packages, Approve). Then verify-published.yml and the wiki update.
 - repo-traffic now counts JSR downloads (m4bwav/repo-traffic#26).
+
+## 2026-11-08, chain session 13
+
+- npm still shows only 0.0.0-stage and 0.0.0 (1.0.0 staged, not approved); C# PR #68 still open. Nothing can move without Mark; stopped.
+- Wrap-up: nothing new worth keeping. No askwright questions.

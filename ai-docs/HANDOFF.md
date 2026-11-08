@@ -1,6 +1,6 @@
 # HANDOFF
 
-Updated 2026-11-08 (chain session 12; stale-docs fix PR merged, nothing else moved). Status: in progress, **1.0.0 on JSR and GitHub; npm 1.0.0 staged, waits on Mark's approval**. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
+Updated 2026-11-08 (chain session 13; npm 1.0.0 still staged, nothing moved). Status: in progress, **1.0.0 on JSR and GitHub; npm 1.0.0 staged, waits on Mark's approval**. Plan: [plans/2026-11-07-universe-generator-ts-plan.md](plans/2026-11-07-universe-generator-ts-plan.md). Log: [log.md](log.md). Continue prompt: [plans/universe-generator-ts-continue-prompt.md](plans/universe-generator-ts-continue-prompt.md).
 
 ## Where it stands
 
