@@ -85,3 +85,11 @@ Picked over a new plugin and the Python name port: the most attention that can p
 - Small rulings (flagged): Canvas 2D, no three.js; the "Random seed" button uses Math.random only to pick a seed (outside the library, so the determinism rule holds); shareable link format is the page URL, not `linkTo`'s address form, because the page needs the preset too; the game link goes to markdavidrogers.com (one constant `game` at the top of app.js); no per-seed share image (not cheap on a static host), the social preview is shared by all.
 - PR #8 opened, all checks green; `gh pr merge` refused by the auto-mode classifier ("Merge Without Review"), so it is assigned to Mark with `needs-review` (it adds a deploy workflow, which the standing rules leave for him anyway). Pages enabled through the API (`POST /repos/.../pages build_type=workflow`).
 - Wrap-up: the lessons worth keeping are in this entry's traps (Chrome screenshot timeouts with JS still working, sitewright shoot writing nothing, headless phone width clamp). No askwright questions this session.
+
+## 2026-11-07, chain session 10
+
+- PR #8 had been merged by Mark; pages run green; the live page and `universe-generator.mjs` return 200.
+- Stage 5: the TS README already had the quick start, demo link and screenshot. Opened m4bwav/UniverseGenerator#68 (one Install bullet linking the port and demo). `gh pr merge` refused: "base branch policy prohibits the merge", because the required checks have path filters and never start on a README-only change. Assigned to Mark rather than using --admin.
+- Stage 6: no version bump. release.yml is driven by `npm version`, which makes the commit and tag together; a pre-bump would break that.
+- Stage 7: launch drafts in ai-docs/launch/drafts.md, checked with everwrite (0 strong).
+- Wrap-up: one lesson, docs-only PRs on repos with path-filtered required checks cannot merge without admin (noted here and in HANDOFF). No askwright questions.
