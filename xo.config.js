@@ -99,7 +99,7 @@ const xoConfig = [
   },
   {
     // The golden-file writers mirror the C# test-side writers (GalaxyJson.cs, SystemJson.cs, PlanetJson.cs, MoonBeltJson.cs); their parameters are the C# ones.
-    files: ['test/helpers/golden-json.js'],
+    files: ['test/helpers/golden-json.js', 'test/helpers/json-key-filter.js'],
     rules: {
       'jsdoc/require-param': 'off',
       'jsdoc/require-param-type': 'off',
@@ -123,6 +123,10 @@ const xoConfig = [
       'test/golden/constraints.test.js',
       'test/golden/diagnostics.test.js',
       'test/golden/presets.test.js',
+      'test/golden/cluster.test.js',
+      'test/golden/universe.test.js',
+      'test/golden/export.test.js',
+      'test/golden/hooks.test.js',
     ],
     rules: {
       'node-test/require-assertion': 'off',

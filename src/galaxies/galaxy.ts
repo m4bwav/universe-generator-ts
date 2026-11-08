@@ -1,9 +1,15 @@
 /**
 A galaxy: a map of star systems joined by lanes, grouped into named regions, with danger growing away from the core. A
-port of `Galaxies/Galaxy.cs` (GalaxyGenerator), `Core/Diagnostics.cs` and the lone-galaxy parts of `GalaxyTypes`.
-Clusters, guarantees and hooks are not ported yet; the extras are in `galaxy-extras.ts`.
+port of `Galaxies/Galaxy.cs` (GalaxyGenerator), `Core/Diagnostics.cs` and `GalaxyTypes`. A cluster hands each of its
+galaxies a `GalaxyContext`; a lone galaxy gets `aloneGalaxy`. Hooks are not ported yet; the extras are in `galaxy-extras.ts`.
 */
 import {Address} from '../core/address.ts';
+import {
+  hookGalaxy,
+  hookSystem,
+  type CustomFields,
+  type GeneratorHooks,
+} from '../hooks.ts';
 import {DMath} from '../core/dmath.ts';
 import {Seeds} from '../core/seeds.ts';
 import {systemName} from '../names/invented-names.ts';
@@ -19,6 +25,7 @@ import {
 import {rollStar, type StarClass, type StellarAge} from '../stars/star-generator.ts';
 import type {Pcg32} from '../core/pcg32.ts';
 import {generateSystemAt, type StarSystem, type SystemInput} from '../systems/star-system.ts';
+import type {LinkTier} from '../core/distances.ts';
 import {
   constrainPlanets,
   constrainPrecursor,
@@ -31,8 +38,16 @@ import {
   GalaxyLayout,
   noTuning,
   systemSeed,
+  type LayoutTuning,
 } from './galaxy-layout.ts';
+import type {
+  CoreActivity,
+  GalaxyGate,
+  GalaxyRichness,
+  SkyLandmark,
+} from './galaxy-cluster.ts';
 import {
+  frontierTheme,
   generateGalaxyExtras,
   type Beacon,
   type Faction,
@@ -40,6 +55,49 @@ import {
   type Monument,
   type PointOfInterest,
 } from './galaxy-extras.ts';
+
+/**
+One end of a cluster link as a galaxy's context holds it: the other galaxy, its name, the tier, the direction to it on the
+map the link crosses, and for a filament the other galaxy's cluster in the universe (-1 inside a cluster).
+*/
+export type GalaxyLinkEnd = {
+  readonly other: number;
+  readonly name: string;
+  readonly tier: LinkTier;
+  readonly dx: number;
+  readonly dy: number;
+  readonly cluster: number;
+};
+
+/**
+What a cluster decides for one of its galaxies; `aloneGalaxy` leaves a lone galaxy as it was. C# `GalaxyContext`.
+*/
+export type GalaxyContext = {
+  readonly name?: string;
+  readonly type?: string;
+  readonly shape?: GalaxyShape;
+  readonly systems?: number;
+  readonly age: StellarAge;
+  readonly richness: GalaxyRichness;
+  readonly coreActivity: CoreActivity;
+  readonly host?: string;
+  readonly tuning: LayoutTuning;
+  readonly links: readonly GalaxyLinkEnd[];
+  readonly frontier: boolean;
+  readonly landmark?: SkyLandmark;
+};
+
+/**
+C# `GalaxyContext.Alone`.
+*/
+export const aloneGalaxy: GalaxyContext = Object.freeze({
+  age: 'Mature', richness: 'Normal', coreActivity: 'Quiet', tuning: noTuning, links: [], frontier: false,
+});
+
+/**
+The radius around a merging galaxy's tidal link that becomes a lawless frontier. C# `GalaxyGenerator.FrontierRadius`.
+*/
+const frontierRadius = 300;
 
 /**
 The kinds of soft problem the generator reports instead of throwing. C# `WarningCode`.
@@ -94,11 +152,29 @@ export type SystemContext = SystemInput & {readonly name: string; readonly age: 
 A generated galaxy. C# `Galaxy`.
 */
 export type Galaxy = {
+  /**
+  Your own fields, set by a hook or your code; undefined from the generator. C# `Custom`.
+  */
+  readonly custom?: CustomFields;
   readonly address: string;
   readonly name: string;
   readonly type: string;
   readonly descriptor: string;
   readonly age: StellarAge;
+  readonly richness: GalaxyRichness;
+  readonly coreActivity: CoreActivity;
+  /**
+  The radius around the core where an active core's radiation adds danger, in game units; 0 for a quiet core.
+  */
+  readonly coreHazardRadius: number;
+  /**
+  The links to other galaxies, where each opens; empty for a lone galaxy.
+  */
+  readonly gates: readonly GalaxyGate[];
+  /**
+  Where the universe's sky landmark appears from this galaxy; undefined alone.
+  */
+  readonly landmark: SkyLandmark | undefined;
   readonly shape: GalaxyShape;
   readonly arms: number;
   readonly radius: number;
@@ -122,7 +198,10 @@ export type Galaxy = {
   system(index: number): StarSystem;
 };
 
-const loneNames = [
+/**
+The name roots of clusters and galaxies. C# `ClusterGenerator.Roots`.
+*/
+export const nameRoots: readonly string[] = [
   'Aster',
   'Brontes',
   'Calyx',
@@ -156,6 +235,11 @@ const loneNames = [
   'Zephyr',
   'Zenith',
 ];
+
+/**
+A lone galaxy's name, from its own `name` stream. C# `ClusterGenerator.LoneName`.
+*/
+const loneName = (rng: Pcg32): string => nameRoots[rng.nextInt(nameRoots.length)]! + ' Galaxy';
 
 const shapeName = (shape: GalaxyShape): string => shape.toLowerCase();
 
@@ -250,11 +334,31 @@ function noun(type: string): string {
 }
 
 /**
-A lone galaxy in words (Normal richness, quiet core, no host). C# `GalaxyTypes.Describe`.
+A galaxy in words: "an old giant elliptical galaxy, rich in metals, with a quasar at its core". C# `GalaxyTypes.Describe`.
 */
-export function describeGalaxy(type: string, age: StellarAge): string {
+export function describeGalaxy(type: string, age: StellarAge, richness: GalaxyRichness = 'Normal', core: CoreActivity = 'Quiet', host?: string): string {
   const words = (age === 'Young' ? 'young ' : (age === 'Old' ? 'old ' : '')) + noun(type);
-  return ('aeiou'.includes(words[0]!) ? 'an ' : 'a ') + words;
+  let text = ('aeiou'.includes(words[0]!) ? 'an ' : 'a ') + words;
+  if (richness !== 'Normal') {
+    text += richness === 'Rich' ? ', rich in metals' : ', poor in metals';
+  }
+
+  if (core !== 'Quiet') {
+    text += (richness === 'Normal' ? '' : ',') + (core === 'Quasar' ? ' with a quasar at its core' : ' with a bright active core');
+  }
+
+  if (host !== undefined) {
+    text += ', a satellite of ' + host;
+  }
+
+  return text;
+}
+
+/**
+The hazard radius of a core, in a galaxy's game units. C# `ClusterGenerator.HazardRadius`.
+*/
+export function hazardRadius(core: CoreActivity): number {
+  return core === 'Quasar' ? 300 : (core === 'Seyfert' ? 150 : 0);
 }
 
 function uniqueName(rng: Pcg32, c: StarClass, used: Set<string>, index: number, style: NameStyle, warnings: GeneratorWarning[]): string {
@@ -275,24 +379,69 @@ function uniqueName(rng: Pcg32, c: StarClass, used: Set<string>, index: number, 
 }
 
 /**
-Builds a lone galaxy from its address. C# `GalaxyGenerator.Generate` with `GalaxyContext.Alone`.
+Builds a galaxy from its address and what its cluster decided. C# `GalaxyGenerator.Generate`.
 */
-export function generateGalaxyAt(address: Address, options: GeneratorOptions): Galaxy {
+export function generateGalaxyAt(address: Address, options: GeneratorOptions, context: GalaxyContext = aloneGalaxy, hooks?: GeneratorHooks): Galaxy {
   const seed = address.objectSeed;
-  const layout = GalaxyLayout.generate(seed, options.systems, options.shape, noTuning, options);
+  const requestedShape = context.shape ?? options.shape;
+  const requested = context.systems ?? options.systems;
+  const layout = GalaxyLayout.generate(seed, requested, requestedShape, context.tuning, options);
   const n = layout.count;
   const regions: GalaxyRegion[] = layout.regions.map((r, index) => ({
     index, name: r.name, age: r.age, theme: r.theme, centre: r.centre,
   }));
 
-  const warnings: GeneratorWarning[] = [];
-  const requested = options.systems;
-  if (n < requested) {
-    warnings.push({code: 'SystemsTrimmed', message: `The ${shapeName(layout.shape)} shape held ${n} of the ${requested} systems asked for.`});
+  // Cluster links open at the core (gates) or at the system farthest out towards the other galaxy.
+  const gates: GalaxyGate[] = [];
+  let frontier = -1;
+  for (const {
+    other, name, tier, dx, dy, cluster,
+  } of context.links) {
+    let system = layout.core;
+    if (tier !== 'Gate') {
+      let farthest = -Number.MAX_VALUE;
+      for (let i = 0; i < n; i++) {
+        const reach = layout.x[i]! * dx + layout.y[i]! * dy;
+        if (!(reach > farthest)) {
+          continue;
+        }
+
+        farthest = reach;
+        system = i;
+      }
+    }
+
+    gates.push({
+      galaxy: other, name, tier, system, cluster,
+    });
+    if (tier === 'Tidal' && context.frontier) {
+      frontier = system;
+    }
   }
 
-  shapeWarnings(warnings, options.shape, requested, options.arms);
-  if (options.arms !== undefined && options.shape === 'Auto' && requested >= firstSpiralCount
+  // A merging pair's tidal frontier: 2 more danger within 300 units of the tidal link, and its region themed for it.
+  let {danger} = layout;
+  if (frontier >= 0) {
+    const raised = [...layout.danger];
+    for (let i = 0; i < n; i++) {
+      const fx = layout.x[i]! - layout.x[frontier]!;
+      const fy = layout.y[i]! - layout.y[frontier]!;
+      if (fx * fx + fy * fy <= frontierRadius * frontierRadius) {
+        raised[i] = Math.min(10, raised[i]! + 2);
+      }
+    }
+
+    danger = raised;
+    const r = layout.region[frontier]!;
+    regions[r] = {...regions[r]!, theme: frontierTheme};
+  }
+
+  const warnings: GeneratorWarning[] = n < requested
+    ? [{code: 'SystemsTrimmed', message: `The ${shapeName(layout.shape)} shape held ${n} of the ${requested} systems asked for.`}]
+    : [];
+
+  shapeWarnings(warnings, requestedShape, requested, options.arms);
+  if (options.arms !== undefined && requestedShape === 'Auto' && requested >= firstSpiralCount
     && layout.shape !== 'Spiral' && layout.shape !== 'Barred') {
     warnings.push({
       code: 'ArmsIgnored',
@@ -300,7 +449,7 @@ export function generateGalaxyAt(address: Address, options: GeneratorOptions): G
     });
   }
 
-  const richness = 100;
+  const richness = context.richness === 'Rich' ? 160 : (context.richness === 'Poor' ? 50 : 100);
   const names = new Set<string>();
   const draft: Array<Omit<MapEntry, 'faction' | 'contested'>> = [];
   const contexts: SystemContext[] = [];
@@ -315,10 +464,10 @@ export function generateGalaxyAt(address: Address, options: GeneratorOptions): G
     const name = uniqueName(Seeds.stream(own, 'names'), star.class, names, i, options.names, warnings);
     contexts.push(forcedStar[i] === true
       ? {
-        name, age, danger: layout.danger[i]!, richness, star,
+        name, age, danger: danger[i]!, richness, star,
       }
       : {
-        name, age, danger: layout.danger[i]!, richness,
+        name, age, danger: danger[i]!, richness,
       });
     draft.push({
       index: i,
@@ -329,32 +478,38 @@ export function generateGalaxyAt(address: Address, options: GeneratorOptions): G
       starClass: star.class,
       region: layout.region[i]!,
       hops: layout.hops[i]!,
-      danger: layout.danger[i]!,
+      danger: danger[i]!,
       chokepoint: layout.chokepoint[i]!,
     });
   }
 
   const made = constrainPlanets(constraints, options.require, address, contexts, options, warnings);
-  const extras = generateGalaxyExtras(seed, layout.lanes, layout.core, regions, draft);
+  const extras = generateGalaxyExtras(seed, layout.lanes, layout.core, regions, draft, context.coreActivity, hazardRadius(context.coreActivity));
   const pointsOfInterest = constrainPrecursor(constraints, options.require, extras.points, draft, warnings);
   const map: MapEntry[] = draft.map((m, i) => ({...m, ...extras.holders[i]!}));
+  const hooked: Array<StarSystem | undefined> = Array.from({length: n});
   const system = (index: number): StarSystem => {
     if (!Number.isSafeInteger(index) || index < 0 || index >= n) {
       throw new RangeError(`This galaxy has ${n} systems, numbered 0 to ${n - 1}; you asked for ${index}.`);
     }
 
-    made[index] ??= generateSystemAt(address.child('system', index), contexts[index]!, options);
-    return made[index];
+    // The guarantees' systems are kept raw, so the hooks run once, on first read, as for every other system.
+    hooked[index] ??= hookSystem(hooks, made[index] ?? generateSystemAt(address.child('system', index), contexts[index]!, options));
+    return hooked[index];
   };
 
-  const type = deriveGalaxyType(layout.shape, layout.pitch, layout.ellipse);
-  const rng = Seeds.stream(seed, 'name');
-  return {
+  const type = context.type ?? deriveGalaxyType(layout.shape, layout.pitch, layout.ellipse);
+  return hookGalaxy(hooks, {
     address: address.toString(),
-    name: loneNames[rng.nextInt(loneNames.length)]! + ' Galaxy',
+    name: context.name ?? loneName(Seeds.stream(seed, 'name')),
     type,
-    descriptor: describeGalaxy(type, 'Mature'),
-    age: 'Mature',
+    descriptor: describeGalaxy(type, context.age, context.richness, context.coreActivity, context.host),
+    age: context.age,
+    richness: context.richness,
+    coreActivity: context.coreActivity,
+    coreHazardRadius: hazardRadius(context.coreActivity),
+    gates,
+    landmark: context.landmark,
     shape: layout.shape,
     arms: layout.shape === 'Spiral' || layout.shape === 'Barred' ? layout.arms : 0,
     radius: galaxyRadius,
@@ -370,15 +525,15 @@ export function generateGalaxyAt(address: Address, options: GeneratorOptions): G
     warnings,
     contexts,
     system,
-  };
+  });
 }
 
 /**
 Generates a galaxy from any seed text or number. C# `Galaxy.Generate(seed, options)`.
 */
-export function generateGalaxy(seed: string | number | bigint, options?: Partial<GeneratorOptions>): Galaxy {
+export function generateGalaxy(seed: string | number | bigint, options?: Partial<GeneratorOptions>, hooks?: GeneratorHooks): Galaxy {
   const o = resolveOptions(options);
   validateOptions(o);
   const text = typeof seed === 'string' ? checkSeed(seed) : seedText(seed);
-  return generateGalaxyAt(new Address(1, text, 'galaxy'), o);
+  return generateGalaxyAt(new Address(1, text, 'galaxy'), o, aloneGalaxy, hooks);
 }

@@ -1,15 +1,12 @@
 // Galaxy-extras.json from the C# UniverseGenerator 1.0.0 (GoldenExtrasTests.cs builds it): the extras of the eight
-// galaxies of galaxy.json, then of two cluster galaxies and a universe's merging galaxy. Clusters and universes are not
-// ported yet, so this checks the file up to the end of the eighth galaxy; the whole file once they are.
-import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+// galaxies of galaxy.json, then of two cluster galaxies and a universe's merging galaxy.
 import {describe, test} from 'node:test';
 import {builds} from '../helpers/builds.js';
-import {assertGoldenPrefix, writeExtras} from '../helpers/golden-json.js';
+import {assertGolden, writeExtras} from '../helpers/golden-json.js';
 
 for (const {name, lib} of builds) {
   describe(`galaxy-extras.json (${name} build)`, () => {
-    test('matches the golden file as text, as far as the lone galaxies go', () => {
+    test('matches the golden file as text', () => {
       const d = lib.Preset.default;
       const cases = [
         ['my-seed', d],
@@ -28,12 +25,14 @@ for (const {name, lib} of builds) {
         writeExtras(w, lib.generateGalaxy(seed, options));
       }
 
+      const cluster = lib.generateCluster('Virgo', {...d, clusterKind: 'Cluster'});
+      const active = cluster.map.find(entry => entry.coreActivity !== 'Quiet');
+      writeExtras(w, cluster.galaxy(active.index));
+      writeExtras(w, cluster.galaxy(cluster.map.length - 1));
+      const universe = lib.generateUniverse('my-seed');
+      writeExtras(w, universe.cluster(universe.merger.cluster).galaxy(0));
       w.endArray().endObject();
-      const text = w.toString();
-      // The closing "    }", "  ]", "}" and final newline of the cut document; the golden goes on with "    }," and the cluster galaxies.
-      assertGoldenPrefix('galaxy-extras.json', text, 4);
-      const golden = readFileSync(new URL('../golden/v1/galaxy-extras.json', import.meta.url), 'utf8').split('\n');
-      assert.equal(golden[text.split('\n').length - 4], '    },');
+      assertGolden('galaxy-extras.json', w.toString());
     });
   });
 }
