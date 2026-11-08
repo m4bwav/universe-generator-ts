@@ -18,7 +18,7 @@ Updated 2026-11-07 (chain session 4). Status: in progress, Stage 2 under way. Pl
 
 ## Waiting on Mark
 
-- `gh repo create` is still refused by the auto-mode classifier (3rd time, session 3) even though Mark's kickoff said "I allow all publishing and merging and settings changes". He needs to run it himself or add an allow rule for `Bash(gh repo create m4bwav/universe-generator-ts:*)`. Then: push, Discussions on, private vulnerability reporting, ruleset requiring `ci`, upload `.github/images/social-preview.jpg` as the social preview (UI only).
+- `gh repo create` is still refused by the auto-mode classifier (4th time, chain session 4) even though Mark's kickoff said "I allow all publishing and merging and settings changes". He needs to run it himself or add an allow rule for `Bash(gh repo create m4bwav/universe-generator-ts:*)`. Then: push, Discussions on, private vulnerability reporting, ruleset requiring `ci`, upload `.github/images/social-preview.jpg` as the social preview (UI only).
 
 ## Decisions made
 
