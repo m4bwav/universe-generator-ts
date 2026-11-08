@@ -36,3 +36,7 @@ Picked over a new plugin and the Python name port: the most attention that can p
 - Small rulings (flagged): C# `Species.Human` is exported as `humanSpecies` (xo refuses a type and a value both named Species); `Units.Convert` overloads became `Units.length/mass/time/temperature`, and an unknown unit is a RangeError with the C# message; xo `numeric-separators-style` and `no-zero-fractions` are off for `src/core/` (C# literals kept verbatim); a few xo-driven rewrites that draw nothing (Set lookups, `lightest <= 44` for `44 >= lightest`, a small `byRoll` helper for moon life thresholds). New public exports: `Units`, `humanSpecies` and the record types.
 
 - (main session, chain session 4) `gh repo create` refused a 4th time; detail layers done by a subagent and verified (120/120 tests). Wrap-up: nothing new worth a skill change beyond the log entries above.
+
+## 2026-11-08, chain session 4 (continued, manual mode)
+
+- Mark switched to manual mode; `gh repo create` then went through. Repo public at m4bwav/universe-generator-ts. First CI run failed: `test/golden/check-untouched.sh` lacked the exec bit (committed from Windows); fixed with `git update-index --chmod=+x`, CI green. Ruleset requiring `ci`, Discussions, private vulnerability reporting and the social preview (uploaded through Chrome) set.
