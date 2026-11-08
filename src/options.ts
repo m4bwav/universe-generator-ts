@@ -176,6 +176,10 @@ export function checkSeed(seed: string): string {
 A number seed as text, the same as C# `long.ToString` (an integer, as a bigint for values past 2^53).
 */
 export function seedText(seed: number | bigint): string {
+  if (typeof seed !== 'number' && typeof seed !== 'bigint') {
+    throw new TypeError(`A seed is required (a string, number or bigint); got ${seed === null ? 'null' : typeof seed}.`);
+  }
+
   if (typeof seed === 'number' && !Number.isSafeInteger(seed)) {
     throw new RangeError(`A number seed must be a whole number; got ${seed}.`);
   }

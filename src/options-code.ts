@@ -6,6 +6,7 @@ import {shapeWarnings, type GeneratorWarning} from './galaxies/galaxy.ts';
 import {
   Guarantee,
   Preset,
+  resolveOptions,
   validateOptions,
   type Epoch,
   type GalaxyShape,
@@ -242,9 +243,10 @@ export function optionsFromCode(code: string): GeneratorOptions {
 
 /**
 Soft problems with these settings that validation lets through, such as arms for a shape without arms. Throws as
-`validateOptions` does for an invalid setting. C# `GeneratorOptions.Check`.
+`validateOptions` does for an invalid setting. Missing settings take their defaults, as in the generators. C# `GeneratorOptions.Check`.
 */
-export function checkOptions(o: GeneratorOptions): GeneratorWarning[] {
+export function checkOptions(options?: Partial<GeneratorOptions>): GeneratorWarning[] {
+  const o = resolveOptions(options);
   validateOptions(o);
   const warnings: GeneratorWarning[] = [];
   shapeWarnings(warnings, o.shape, o.systems, o.arms);
