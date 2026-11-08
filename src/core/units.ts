@@ -1,7 +1,9 @@
 /**
 Unit conversions for the generator's fields. A port of `Core/Units.cs`; C# overloads of `Convert` become one function per
-kind of unit. `Units.Map` (map units to a length) waits for the Distances port with clusters and universes.
+kind of unit. `Units.map` turns map units into a length through Distances.
 */
+import {Distances, type MapLevel} from './distances.ts';
+
 export type LengthUnit = 'Kilometres' | 'EarthRadii' | 'JupiterRadii' | 'SolarRadii' | 'AstronomicalUnits' | 'LightYears' | 'Parsecs';
 export type MassUnit = 'Kilograms' | 'EarthMasses' | 'JupiterMasses' | 'SolarMasses';
 export type TemperatureUnit = 'Kelvin' | 'Celsius' | 'Fahrenheit';
@@ -74,6 +76,13 @@ function temperature(value: number, from: TemperatureUnit, to: TemperatureUnit):
 /**
 Converts between units, as C# `Units.Convert`: the same multiplications and divisions, so the same doubles.
 */
+/**
+Map units at a level as a length in `to`. C# `Units.Map`.
+*/
+function map(level: MapLevel, units: number, to: LengthUnit): number {
+  return length(Distances.lightYears(level, units), 'LightYears', to);
+}
+
 export const Units = {
-  length, mass, time, temperature,
+  length, mass, time, temperature, map,
 } as const;

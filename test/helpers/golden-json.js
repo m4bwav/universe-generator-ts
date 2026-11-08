@@ -322,26 +322,6 @@ export function writeBeltDetail(w, b) {
 }
 
 /**
-Compares generated text with the start of a golden file, for goldens whose later cases need generators not ported yet.
-The last `open` lines of `actual` (the closing brackets of a document cut short) are left out.
-@param file
-@param actual
-@param open
-*/
-export function assertGoldenPrefix(file, actual, open) {
-  const expected = readFileSync(new URL(`../golden/v1/${file}`, import.meta.url), 'utf8').split('\n');
-  const a = actual.split('\n').slice(0, -open);
-  let line = 0;
-  while (line < a.length && expected[line] === a[line]) {
-    line++;
-  }
-
-  if (line < a.length) {
-    assert.fail(`${file} differs at line ${line + 1}:\n  golden: ${expected[line] ?? '(end)'}\n  actual: ${a[line]}`);
-  }
-}
-
-/**
 ExtrasJson.Write.
 @param w
 @param g
@@ -394,6 +374,120 @@ export function writeExtras(w, g) {
   w.name('beacons').beginArray();
   for (const b of g.beacons) {
     w.beginObject().name('system').int(b.system).name('kind').string(b.kind).name('name').string(b.name).name('text').string(b.text).endObject();
+  }
+
+  w.endArray().endObject();
+}
+
+/**
+ClusterJson.Write.
+@param w
+@param c
+*/
+export function writeCluster(w, c) {
+  w.beginObject();
+  w.name('address').string(c.address).name('name').string(c.name).name('kind').string(c.kind);
+  w.name('age').string(c.age).name('radius').number(c.radius, 3);
+  w.name('map').beginArray();
+  for (const e of c.map) {
+    w.beginObject().name('address').string(e.address).name('name').string(e.name).name('type').string(e.type);
+    w.name('shape').string(e.shape).name('role').string(e.role).name('host').int(e.host);
+    w.name('x').number(e.x, 3).name('y').number(e.y, 3).name('size').number(e.size, 3).name('systems').int(e.systems);
+    w.name('age').string(e.age).name('richness').string(e.richness).name('core').string(e.coreActivity);
+    w.endObject();
+  }
+
+  w.endArray();
+  w.name('links').beginArray();
+  for (const l of c.links) {
+    w.beginArray().int(l.a).int(l.b).string(l.tier).number(l.length, 3).endArray();
+  }
+
+  w.endArray().endObject();
+}
+
+/**
+ClusterJson.WriteGalaxy.
+@param w
+@param g
+*/
+export function writeClusterGalaxy(w, g) {
+  w.beginObject();
+  w.name('address').string(g.address).name('name').string(g.name).name('type').string(g.type);
+  w.name('descriptor').string(g.descriptor).name('age').string(g.age).name('richness').string(g.richness);
+  w.name('core').string(g.coreActivity).name('coreHazardRadius').number(g.coreHazardRadius, 3);
+  w.name('systems').int(g.map.length);
+  w.name('gates').beginArray();
+  for (const gate of g.gates) {
+    w.beginArray().int(gate.galaxy).string(gate.name).string(gate.tier).int(gate.system).endArray();
+  }
+
+  w.endArray().endObject();
+}
+
+/**
+UniverseJson.Write.
+@param w
+@param u
+*/
+export function writeUniverse(w, u) {
+  w.beginObject();
+  w.name('address').string(u.address).name('name').string(u.name).name('age').string(u.age).name('radius').number(u.radius, 3);
+  w.name('nodes').beginArray();
+  for (const n of u.nodes) {
+    w.beginObject().name('address').string(n.address).name('name').string(n.name).name('kind').string(n.kind);
+    w.name('role').string(n.role).name('x').number(n.x, 3).name('y').number(n.y, 3).name('galaxies').int(n.galaxies);
+    w.endObject();
+  }
+
+  w.endArray();
+  w.name('filaments').beginArray();
+  for (const f of u.filaments) {
+    w.beginArray().int(f.a).int(f.b).number(f.length, 3).int(f.galaxyA).int(f.galaxyB).endArray();
+  }
+
+  w.endArray();
+  w.name('voids').beginArray();
+  for (const v of u.voids) {
+    w.beginObject().name('address').string(v.address).name('name').string(v.name);
+    w.name('x').number(v.x, 3).name('y').number(v.y, 3).name('radius').number(v.radius, 3);
+    w.name('systems').beginArray();
+    for (let s = 0; s < v.systemCount; s++) {
+      writeSystem(w, v.system(s));
+    }
+
+    w.endArray().endObject();
+  }
+
+  w.endArray();
+  w.name('landmarks').beginArray();
+  for (const l of u.landmarks) {
+    w.beginArray().string(l.kind).string(l.name).string(l.address).endArray();
+  }
+
+  w.endArray();
+  const m = u.merger;
+  w.name('merger').beginObject().name('name').string(m.name).name('cluster').int(m.cluster);
+  w.name('galaxyA').string(m.galaxyA).name('galaxyB').string(m.galaxyB).name('hook').string(m.hook).endObject();
+  w.endObject();
+}
+
+/**
+UniverseJson.WriteGalaxy.
+@param w
+@param g
+*/
+export function writeUniverseGalaxy(w, g) {
+  w.beginObject().name('address').string(g.address).name('landmark');
+  if (g.landmark === undefined) {
+    w.null();
+  } else {
+    w.beginArray().string(g.landmark.name).string(g.landmark.address).int(g.landmark.bearing).int(g.landmark.lightYears).endArray();
+  }
+
+  w.name('gateClusters').beginArray();
+  for (const gate of g.gates) {
+    w.int(gate.cluster);
   }
 
   w.endArray().endObject();

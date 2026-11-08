@@ -7,6 +7,7 @@ import {DMath} from '../core/dmath.ts';
 import type {Pcg32} from '../core/pcg32.ts';
 import {Seeds} from '../core/seeds.ts';
 import type {StarClass, StellarAge} from '../stars/star-generator.ts';
+import type {CoreActivity} from './galaxy-cluster.ts';
 
 /**
 What kind of power a faction is. C# `FactionKind`.
@@ -90,11 +91,6 @@ export type Beacon = {
   readonly name: string;
   readonly text: string;
 };
-
-/**
-How active a galaxy's core is. C# `CoreActivity`.
-*/
-export type CoreActivity = 'Quiet' | 'Seyfert' | 'Quasar';
 
 /**
 The map fields the extras read. A subset of `MapEntry`.

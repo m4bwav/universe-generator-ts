@@ -123,6 +123,8 @@ const xoConfig = [
       'test/golden/constraints.test.js',
       'test/golden/diagnostics.test.js',
       'test/golden/presets.test.js',
+      'test/golden/cluster.test.js',
+      'test/golden/universe.test.js',
     ],
     rules: {
       'node-test/require-assertion': 'off',

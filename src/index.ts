@@ -30,8 +30,17 @@ export {
 } from './galaxies/galaxy.ts';
 export {
   generateGalaxyExtras, frontierTheme, type Faction, type FactionKind, type PointOfInterest, type PointOfInterestKind, type GalaxyHazard, type HazardKind,
-  type Monument, type MonumentKind, type Beacon, type BeaconKind, type CoreActivity, type GalaxyExtras, type ExtrasMapEntry, type ExtrasRegion,
+  type Monument, type MonumentKind, type Beacon, type BeaconKind, type GalaxyExtras, type ExtrasMapEntry, type ExtrasRegion,
 } from './galaxies/galaxy-extras.ts';
+export {
+  generateCluster, type GalaxyCluster, type ClusterEntry, type ClusterLink, type GalaxyGate, type SkyLandmark, type GalaxyRole,
+  type GalaxyRichness, type CoreActivity,
+} from './galaxies/galaxy-cluster.ts';
+export {
+  generateUniverse, type Universe, type UniverseNode, type Filament, type CosmicVoid, type UniverseLandmark, type UniverseMerger,
+  type NodeRole, type UniverseLandmarkKind,
+} from './universe/universe.ts';
+export {Distances, type MapLevel, type LinkTier} from './core/distances.ts';
 export {
   generateSystem, generatePlanet, type StarSystem, type Planet, type Moon, type Belt, type Station, type Landmark, type PlanetKind, type MoonKind,
   type BeltKind, type OrbitZone, type LandmarkKind, type StationKind,
