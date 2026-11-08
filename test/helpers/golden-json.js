@@ -160,3 +160,163 @@ export function writeSystem(w, s) {
   w.name('descriptor').string(s.descriptor);
   w.endObject();
 }
+
+/**
+PlanetJson.Atmosphere.
+@param w
+@param a
+*/
+export function writeAtmosphere(w, a) {
+  w.beginObject().name('class').string(a.class).name('pressure');
+  if (a.pressure === undefined) {
+    w.null();
+  } else {
+    w.number(a.pressure, 4);
+  }
+
+  w.name('gases').beginArray();
+  for (const g of a.gases) {
+    w.string(g);
+  }
+
+  w.endArray();
+  w.name('lightestGasKept').number(a.lightestGasKept, 1).name('breathable').bool(a.breathable).name('why').string(a.why).endObject();
+}
+
+function writeBands(w, bands) {
+  w.beginArray();
+  for (const b of bands) {
+    w.beginArray().int(b.from).int(b.to).number(b.share, 4).number(b.temperature, 0).string(b.biome).endArray();
+  }
+
+  w.endArray();
+}
+
+function writeBiomes(w, biomes) {
+  w.beginArray();
+  for (const b of biomes) {
+    w.beginArray().string(b.biome).number(b.share, 2).endArray();
+  }
+
+  w.endArray();
+}
+
+function writeResources(w, r) {
+  w.beginObject().name('metals').int(r.metals).name('rareElements').int(r.rareElements).name('ices').int(r.ices)
+    .name('gases').int(r.gases).name('organics').int(r.organics).endObject();
+}
+
+function writeStrings(w, items) {
+  w.beginArray();
+  for (const s of items) {
+    w.string(s);
+  }
+
+  w.endArray();
+}
+
+function writeNullableString(w, s) {
+  if (s === undefined) {
+    w.null();
+  } else {
+    w.string(s);
+  }
+}
+
+/**
+PlanetJson.Detail.
+@param w
+@param p
+*/
+export function writePlanetDetail(w, p) {
+  w.beginObject();
+  w.name('address').string(p.address).name('composition').string(p.composition);
+  w.name('gravity').number(p.gravity, 2).name('escapeVelocity').number(p.escapeVelocity, 2).name('density').number(p.density, 2);
+  w.name('insolation').number(p.insolation, 4).name('albedo').number(p.albedo, 2);
+  w.name('temperature').number(p.temperature, 0).name('dayTemperature').number(p.dayTemperature, 0).name('nightTemperature').number(p.nightTemperature, 0);
+  w.name('atmosphere');
+  writeAtmosphere(w, p.atmosphere);
+  w.name('water').number(p.water, 2).name('ice').number(p.ice, 2);
+  w.name('rotation').number(p.rotation, 1).name('spin').string(p.spin).name('tilt').number(p.tilt, 1);
+  w.name('bands');
+  writeBands(w, p.bands);
+  w.name('biomes');
+  writeBiomes(w, p.biomes);
+  w.name('life').string(p.life).name('flora').int(p.flora).name('fauna').int(p.fauna);
+  w.name('traits');
+  writeStrings(w, p.traits);
+  w.name('anomaly');
+  writeNullableString(w, p.anomaly);
+  w.name('resources');
+  writeResources(w, p.resources);
+  w.name('hazard').int(p.hazard).name('hazards');
+  writeStrings(w, p.hazards);
+  w.name('similarity').number(p.similarity, 2).name('habitability').string(p.habitability);
+  w.name('summary').string(p.summary);
+  w.endObject();
+}
+
+/**
+PlanetJson.Lone.
+@param w
+@param p
+*/
+export function writeLonePlanet(w, p) {
+  w.beginObject().name('planet');
+  writePlanet(w, p);
+  w.name('detail');
+  writePlanetDetail(w, p);
+  w.endObject();
+}
+
+/**
+MoonBeltJson.Moon.
+@param w
+@param m
+*/
+export function writeMoonDetail(w, m) {
+  w.beginObject();
+  w.name('address').string(m.address).name('descriptor').string(m.descriptor);
+  w.name('distance').number(m.distance, 0).name('period').number(m.period, 3).name('composition').string(m.composition);
+  w.name('density').number(m.density, 2).name('mass').number(m.mass, 6).name('gravity').number(m.gravity, 3).name('escapeVelocity').number(m.escapeVelocity, 2);
+  w.name('insolation').number(m.insolation, 4).name('albedo').number(m.albedo, 2).name('tidalHeating').number(m.tidalHeating, 4);
+  w.name('temperature').number(m.temperature, 0).name('dayTemperature').number(m.dayTemperature, 0).name('nightTemperature').number(m.nightTemperature, 0);
+  w.name('atmosphere');
+  writeAtmosphere(w, m.atmosphere);
+  w.name('water').number(m.water, 2).name('ice').number(m.ice, 2).name('subsurfaceOcean').bool(m.subsurfaceOcean);
+  w.name('rotation').number(m.rotation, 1).name('tilt').number(m.tilt, 1);
+  w.name('bands');
+  writeBands(w, m.bands);
+  w.name('biomes');
+  writeBiomes(w, m.biomes);
+  w.name('life').string(m.life).name('flora').int(m.flora).name('fauna').int(m.fauna);
+  w.name('traits');
+  writeStrings(w, m.traits);
+  w.name('anomaly');
+  writeNullableString(w, m.anomaly);
+  w.name('resources');
+  writeResources(w, m.resources);
+  w.name('hazard').int(m.hazard).name('hazards');
+  writeStrings(w, m.hazards);
+  w.name('similarity').number(m.similarity, 2).name('habitability').string(m.habitability);
+  w.name('summary').string(m.summary);
+  w.endObject();
+}
+
+/**
+MoonBeltJson.Belt.
+@param w
+@param b
+*/
+export function writeBeltDetail(w, b) {
+  const c = b.composition;
+  w.beginObject();
+  w.name('address').string(b.address).name('index').int(b.index).name('name').string(b.name);
+  w.name('composition').beginObject().name('silicate').int(c.silicate).name('carbonaceous').int(c.carbonaceous)
+    .name('metal').int(c.metal).name('ice').int(c.ice).endObject();
+  w.name('mass').number(b.mass, 6).name('largestBody').number(b.largestBody, 0).name('temperature').number(b.temperature, 0);
+  w.name('resources');
+  writeResources(w, b.resources);
+  w.name('summary').string(b.summary);
+  w.endObject();
+}

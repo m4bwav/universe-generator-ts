@@ -64,6 +64,8 @@ const xoConfig = [
       'unicorn/prefer-minimal-ternary': 'off',
       '@typescript-eslint/naming-convention': 'off',
       'unicorn/number-literal-case': 'off',
+      'unicorn/numeric-separators-style': 'off',
+      'unicorn/no-zero-fractions': 'off',
       'unicorn/prefer-code-point': 'off',
       'unicorn/max-nested-calls': 'off',
     },
@@ -96,7 +98,7 @@ const xoConfig = [
     },
   },
   {
-    // The golden-file writers mirror the C# test-side writers (GalaxyJson.cs, SystemJson.cs); their parameters are the C# ones.
+    // The golden-file writers mirror the C# test-side writers (GalaxyJson.cs, SystemJson.cs, PlanetJson.cs, MoonBeltJson.cs); their parameters are the C# ones.
     files: ['test/helpers/golden-json.js'],
     rules: {
       'jsdoc/require-param': 'off',
@@ -107,7 +109,17 @@ const xoConfig = [
   },
   {
     // Each golden test calls the helper for its kind of case, and the helpers assert.
-    files: ['test/golden/golden.test.js', 'test/golden/shapes.test.js', 'test/golden/system.test.js', 'test/golden/galaxy.test.js', 'test/golden/names.test.js', 'test/golden/tables.test.js'],
+    files: [
+      'test/golden/golden.test.js',
+      'test/golden/shapes.test.js',
+      'test/golden/system.test.js',
+      'test/golden/galaxy.test.js',
+      'test/golden/names.test.js',
+      'test/golden/tables.test.js',
+      'test/golden/planet.test.js',
+      'test/golden/moon-belt.test.js',
+      'test/golden/orbital-elements.test.js',
+    ],
     rules: {
       'node-test/require-assertion': 'off',
     },

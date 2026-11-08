@@ -1,13 +1,21 @@
 /**
 A star system: star, companion, zones, planets with moons, belts, stations, landmarks, tags and a descriptor. A port of
 `Systems/StarSystemGenerator.cs` and `Systems/Story.cs`. The detail layers (PlanetDetail, MoonDetail, BeltDetail and
-their stories) draw only from their own streams and add fields; they are not ported yet.
+their stories, in src/planets, src/moons and src/belts) draw only from their own streams and add fields.
 */
 import {Address} from '../core/address.ts';
 import {DMath} from '../core/dmath.ts';
 import type {Pcg32} from '../core/pcg32.ts';
 import {Seeds} from '../core/seeds.ts';
 import {systemName} from '../names/invented-names.ts';
+import {applyBeltDetail, type BeltDetailFields} from '../belts/belt-detail.ts';
+import {applyMoonDetail, type MoonDetailFields} from '../moons/moon-detail.ts';
+import {
+  applyPlanetDetail,
+  logUniform,
+  type PlanetDetailFields,
+  type PlanetHost,
+} from '../planets/planet-detail.ts';
 import {
   checkSeed,
   resolveOptions,
@@ -31,6 +39,7 @@ import {
   type StarClass,
   type StellarAge,
 } from '../stars/star-generator.ts';
+import {planetNouns, withArticle} from './words.ts';
 
 export type PlanetKind = 'Lava' | 'Iron' | 'Barren' | 'Desert' | 'Rocky' | 'Greenhouse' | 'Ocean' | 'Garden' | 'Ice' | 'Dwarf' | 'SubNeptune' | 'GasGiant' | 'IceGiant' | 'HotJupiter';
 export type MoonKind = 'Barren' | 'Ice' | 'Volcanic' | 'Ocean' | 'Hazy' | 'Garden';
@@ -40,11 +49,16 @@ export type LandmarkKind = 'UnusualStar' | 'BinaryStar' | 'LivingWorld' | 'Ringe
   | 'Nebula' | 'Comet' | 'Anomaly' | 'Megastructure' | 'RoguePlanet' | 'AncientBeacon' | 'ShatteredWorld' | 'TemporalAnomaly' | 'DerelictFleet';
 export type StationKind = 'TradeHub' | 'Shipyard' | 'MiningPlatform' | 'ResearchStation' | 'NavalBase' | 'PirateDen' | 'Refinery' | 'Relay';
 
-export type Moon = {
+/**
+A moon's fields before its detail layer.
+*/
+export type StarSystemMoonCore = {
   readonly address: string; readonly index: number; readonly name: string; readonly kind: MoonKind; readonly orbit: number; readonly radius: number;
 };
 
-export type Planet = {
+export type Moon = StarSystemMoonCore & MoonDetailFields;
+
+type PlanetBase = {
   readonly address: string;
   readonly index: number;
   readonly name: string;
@@ -58,11 +72,14 @@ export type Planet = {
   readonly mass: number;
   readonly radius: number;
   readonly rings: boolean;
-  readonly moons: readonly Moon[];
+  readonly moons: readonly StarSystemMoonCore[];
   readonly descriptor: string;
 };
 
-export type Belt = {readonly kind: BeltKind; readonly inner: number; readonly outer: number};
+export type Planet = Omit<PlanetBase, 'moons'> & PlanetDetailFields & {readonly moons: readonly Moon[]};
+
+type BeltBase = {readonly kind: BeltKind; readonly inner: number; readonly outer: number};
+export type Belt = BeltBase & BeltDetailFields;
 export type Station = {readonly address: string; readonly name: string; readonly kind: StationKind; readonly planet: number | undefined};
 export type Landmark = {readonly kind: LandmarkKind; readonly planet: number | undefined; readonly outlier: boolean; readonly text: string};
 
@@ -183,10 +200,6 @@ const outliers: LandmarkKind[] = ['Megastructure', 'RoguePlanet', 'AncientBeacon
 // Size classes: 0 dwarf, 1 terrestrial, 2 sub-Neptune, 3 ice giant, 4 gas giant.
 type Draft = {orbit: number; period: number; mass: number; radius: number; kind: PlanetKind; zone: OrbitZone};
 type Pod = {rocky: number; gassy: number};
-
-const logUniform = (rng: Pcg32, low: number, high: number): number => low * DMath.exp(rng.nextDouble() * DMath.log(high / low));
-
-const withArticle = (words: string): string => ('aeiou'.includes(words[0]!) ? 'an ' : 'a ') + words;
 
 const noGardenClasses = new Set<StarClass>(['O', 'B', 'Giant', 'Supergiant', 'WhiteDwarf', 'NeutronStar', 'BlackHole']);
 
@@ -508,13 +521,13 @@ function moonCount(rng: Pcg32, planet: Draft): number {
   }
 }
 
-function drawMoons(rng: Pcg32, planet: Draft, totalMass: number, planetAddress: Address, planetName: string, tables: GeneratorTables): Moon[] {
+function drawMoons(rng: Pcg32, planet: Draft, totalMass: number, planetAddress: Address, planetName: string, tables: GeneratorTables): StarSystemMoonCore[] {
   const isGiant = planet.kind === 'GasGiant' || planet.kind === 'IceGiant';
   const count = moonCount(rng, planet);
   const planetKm = planet.radius * kmPerEarthRadius;
   // Half the Hill radius, in planet radii: moons beyond it would not stay.
   const hillHalf = 0.5 * planet.orbit * kmPerAu * DMath.pow(planet.mass * sunsPerEarthMass / (3 * totalMass), 1 / 3) / planetKm;
-  const moons: Moon[] = [];
+  const moons: StarSystemMoonCore[] = [];
   let orbit = rng.rangeDouble(3, 6);
   let isGarden = false;
   for (let j = 0; j < count && orbit < hillHalf; j++) {
@@ -546,23 +559,6 @@ function drawMoons(rng: Pcg32, planet: Draft, totalMass: number, planetAddress: 
 
 const zoneWords: Record<OrbitZone, string> = {
   Hot: 'scorched', Warm: 'warm', Temperate: 'temperate', Cold: 'cold', Outer: 'frozen',
-};
-
-const planetNouns: Record<PlanetKind, string> = {
-  Lava: 'lava world',
-  Iron: 'iron world',
-  Barren: 'barren rock',
-  Desert: 'desert world',
-  Rocky: 'rocky world',
-  Greenhouse: 'greenhouse world',
-  Ocean: 'ocean world',
-  Garden: 'garden world',
-  Ice: 'ice world',
-  Dwarf: 'dwarf planet',
-  SubNeptune: 'mini-Neptune',
-  GasGiant: 'gas giant',
-  IceGiant: 'ice giant',
-  HotJupiter: 'hot Jupiter',
 };
 
 function planetDescriptor(kind: PlanetKind, zone: OrbitZone, rings: boolean, star: Star): string {
@@ -746,8 +742,8 @@ function systemTags(rng: Pcg32, planets: readonly Planet[], belts: readonly Belt
   return !isWantSecond || weights.every(w => !(w > 0)) ? [candidates[first]![0]] : [candidates[first]![0], candidates[rng.weighted(weights)]![0]];
 }
 
-function drawBelts(rng: Pcg32, planets: readonly Planet[], frost: number): Belt[] {
-  const belts: Belt[] = [];
+function drawBelts(rng: Pcg32, planets: readonly Planet[], frost: number): BeltBase[] {
+  const belts: BeltBase[] = [];
   if (planets.length === 0) {
     if (rng.chance(60, 100)) {
       belts.push({kind: 'Asteroid', inner: DMath.round(frost * 0.8, 4), outer: DMath.round(frost * 1.2, 4)});
@@ -819,13 +815,15 @@ function discoveryLetters(count: number, rng: Pcg32): string[] {
 }
 
 /**
-A planet from its draft. C# `StarSystemGenerator.BuildPlanet` (without the detail layers).
+A planet from its draft: rings and moons from its `moons` stream, then the planet level's detail, then each moon's detail
+from the moon's own seed. C# `StarSystemGenerator.BuildPlanet`.
 */
-function buildPlanet(d: Draft, index: number, planetSeed: bigint, planetAddress: Address, planetName: string, star: Star, totalMass: number, multi: boolean, cap: number, tables: GeneratorTables): Planet {
+function buildPlanet(d: Draft, index: number, planetSeed: bigint, planetAddress: Address, planetName: string, host: PlanetHost, weirdness: number,
+  multi: boolean, cap: number, tables: GeneratorTables): Planet {
   const [eccentricity, inclination, periapsisAngle] = elements(Seeds.stream(planetSeed, 'elements'), d.orbit, multi, cap);
   const moonRng = Seeds.stream(planetSeed, 'moons');
   const isRings = moonRng.chance(ringPercent(d.kind), 100);
-  return {
+  const base: PlanetBase = {
     address: planetAddress.toString(),
     index,
     name: planetName,
@@ -839,9 +837,11 @@ function buildPlanet(d: Draft, index: number, planetSeed: bigint, planetAddress:
     mass: DMath.round(d.mass, 3),
     radius: DMath.round(d.radius, 3),
     rings: isRings,
-    moons: drawMoons(moonRng, d, totalMass, planetAddress, planetName, tables),
-    descriptor: planetDescriptor(d.kind, d.zone, isRings, star),
+    moons: drawMoons(moonRng, d, host.totalMass, planetAddress, planetName, tables),
+    descriptor: planetDescriptor(d.kind, d.zone, isRings, host.star),
   };
+  const planet = applyPlanetDetail(base, host, planetSeed, weirdness);
+  return {...planet, moons: planet.moons.map((m, j) => applyMoonDetail(m, planet, host, Seeds.child(planetSeed, 'moon', j), weirdness))};
 }
 
 /**
@@ -862,11 +862,14 @@ export function generateSystemAt(address: Address, context: SystemInput, options
   const drafts = drawPlanets(Seeds.stream(seed, 'planets'), star, companion, totalMass, hzInner, hzOuter, frost, context.richness ?? 100, tables)
     .slice(0, options.maxPlanetsPerSystem);
   const letters = discoveryLetters(drafts.length, Seeds.stream(seed, 'letters'));
+  const host: PlanetHost = {
+    star, totalMass, light, age,
+  };
   const planets = drafts.map((d, i) => {
     const planetName = name + ' ' + letters[i]!;
-    return buildPlanet(d, i, Seeds.child(seed, 'planet', i), address.child('planet', i), planetName, star, totalMass, drafts.length > 1, eccentricityCap(drafts, i), tables);
+    return buildPlanet(d, i, Seeds.child(seed, 'planet', i), address.child('planet', i), planetName, host, options.weirdness, drafts.length > 1, eccentricityCap(drafts, i), tables);
   });
-  const belts = drawBelts(Seeds.stream(seed, 'belts'), planets, frost);
+  const belts = drawBelts(Seeds.stream(seed, 'belts'), planets, frost).map((b, k) => applyBeltDetail(b, k, address, seed, name, light, frost));
   const stations = drawStations(Seeds.stream(seed, 'stations'), address, name, planets.length);
   const landmarks = landmarksOf(seed, star, companion, planets, belts, options.weirdness);
   return {
@@ -931,7 +934,10 @@ export function generatePlanetAt(address: Address, options: GeneratorOptions): P
   const pod = {rocky, gassy: logUniform(body, 4.7, 12)};
   const tables = tablesFor(options);
   const draft = draw(body, orbit, star.mass, zone, giantWeight, false, pod, noGardenClasses.has(star.class), tables);
-  return buildPlanet(draft, 0, seed, address, starName + ' b', star, star.mass, false, 0.6, tables);
+  const host: PlanetHost = {
+    star, totalMass: star.mass, light, age,
+  };
+  return buildPlanet(draft, 0, seed, address, starName + ' b', host, options.weirdness, false, 0.6, tables);
 }
 
 /**

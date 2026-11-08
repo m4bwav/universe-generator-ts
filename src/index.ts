@@ -18,6 +18,9 @@ export {
 export {
   generateStarName, generateStarNames, maxStarNames, type StarName,
 } from './names/star-name.ts';
+export {
+  Units, type LengthUnit, type MassUnit, type TemperatureUnit, type TimeUnit,
+} from './core/units.ts';
 export {JsonWriter} from './core/json-writer.ts';
 export {Address, rootSeed} from './core/address.ts';
 export {drawInventedName} from './names/invented-names.ts';
@@ -28,6 +31,11 @@ export {
   generateSystem, generatePlanet, type StarSystem, type Planet, type Moon, type Belt, type Station, type Landmark, type PlanetKind, type MoonKind,
   type BeltKind, type OrbitZone, type LandmarkKind, type StationKind,
 } from './systems/star-system.ts';
+export {
+  humanSpecies, type Species, type Composition, type AtmosphereClass, type Gas, type Spin, type Biome, type LifeLevel, type Habitability, type Atmosphere,
+  type ClimateBand, type BiomeShare, type ResourceGrades,
+} from './planets/planet-records.ts';
+export type {BeltComposition} from './belts/belt-detail.ts';
 
 /**
 The generator version: part of every seed's identity.
