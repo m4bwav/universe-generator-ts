@@ -1,6 +1,6 @@
 {
   "name": "universe-generator",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Seeded galaxies, star systems, planets and moons: the same universe as the C# and Unity UniverseGenerator for the same seed. Zero dependencies, TypeScript, ESM and CommonJS, Node 20+.",
   "license": "MIT",
   "repository": {
