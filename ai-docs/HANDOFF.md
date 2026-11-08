@@ -11,7 +11,8 @@ Updated 2026-11-08 (chain session 11). Status: in progress, **Stages 0-5 and 7 d
 
 ## Next
 
-1. If Mark has published to npm and created the JSR package: on master run `npm version 1.0.0` (also set jsr.json to 1.0.0 and date the CHANGELOG in the same commit; check release.yml's jsr version check), `git push --follow-tags`, watch release.yml, then verify-published.yml. Then the wiki (wikiwright) and update installed docs.
+1. Wiki is live (pre-release, examples run on the master tarball): after 1.0.0 is published, run its update procedure in `ai-docs/notes/2026-11-08-github-wiki.md`.
+2. If Mark has published to npm and created the JSR package: on master run `npm version 1.0.0` (also set jsr.json to 1.0.0 and date the CHANGELOG in the same commit; check release.yml's jsr version check), `git push --follow-tags`, watch release.yml, then verify-published.yml. Then the wiki update (above).
 2. If #68 is still open, leave it for Mark.
 3. Otherwise nothing moves: stop and say what waits.
 
